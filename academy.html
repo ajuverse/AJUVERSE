@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AjuVerse Academy | Learn Digital Skills</title>
+
+    <meta
+        name="description"
+        content="Learn practical digital skills with AjuVerse Academy including digital products, video editing and AI-powered website design."
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <style>
+
+        /* =====================================================
+           AJUVERSE ACADEMY
+           ===================================================== */
+
+        .academy-page {
+            background: #000;
+            color: #fff;
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .academy-hero {
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding: 130px 40px 100px;
+
+        }
+
+
+        .academy-label {
+
+            color: #ffb000;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 5px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .academy-hero h1 {
+
+            margin: 0;
+
+            max-width: 1050px;
+
+            font-size: clamp(
+                55px,
+                8vw,
+                110px
+            );
+
+            line-height: .9;
+
+            letter-spacing: -5px;
+
+            font-weight: 900;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .academy-hero p {
+
+            max-width: 720px;
+
+            margin-top: 35px;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+
+            color: #aaa;
+
+        }
+
+
+        /* =====================================================
+           COURSE SECTION
+           ===================================================== */
+
+        .courses-section {
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding: 80px 40px 120px;
+
+        }
+
+
+        .courses-heading {
+
+            margin-bottom: 45px;
+
+        }
+
+
+        .courses-heading span {
+
+            display: block;
+
+            color: #ffb000;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .courses-heading h2 {
+
+            margin: 0;
+
+            max-width: 900px;
+
+            font-size: clamp(
+                42px,
+                6vw,
+                75px
+            );
+
+            line-height: .95;
+
+            letter-spacing: -3px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        /* =====================================================
+           COURSE GRID
+           ===================================================== */
+
+        .course-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            border-top: 1px solid #252525;
+
+            border-left: 1px solid #252525;
+
+        }
+
+
+        .course-card {
+
+            min-height: 400px;
+
+            padding: 40px;
+
+            border-right:
+                1px solid #252525;
+
+            border-bottom:
+                1px solid #252525;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            transition: .3s ease;
+
+        }
+
+
+        .course-card:hover {
+
+            background: #080808;
+
+        }
+
+
+        .course-number {
+
+            color: #ffb000;
+
+            font-size: 13px;
+
+            letter-spacing: 3px;
+
+            font-weight: 700;
+
+        }
+
+
+        .course-card h3 {
+
+            margin:
+
+                80px 0 15px;
+
+            font-size: 34px;
+
+            line-height: 1.05;
+
+            letter-spacing: -1px;
+
+        }
+
+
+        .course-card p {
+
+            max-width: 500px;
+
+            color: #999;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+
+        }
+
+
+        .course-topics {
+
+            margin-top: 25px;
+
+            padding: 0;
+
+            list-style: none;
+
+        }
+
+
+        .course-topics li {
+
+            margin-bottom: 10px;
+
+            color: #bbb;
+
+        }
+
+
+        .course-topics li::before {
+
+            content: "✓";
+
+            color: #ffb000;
+
+            margin-right: 10px;
+
+        }
+
+
+        .course-link {
+
+            display: inline-block;
+
+            margin-top: 30px;
+
+            width: fit-content;
+
+            color: #fff;
+
+            font-weight: 700;
+
+            text-decoration: none;
+
+            border-bottom:
+                1px solid #555;
+
+            padding-bottom: 7px;
+
+        }
+
+
+        .course-link:hover {
+
+            color: #ffb000;
+
+            border-color: #ffb000;
+
+        }
+
+
+        /* =====================================================
+           WHY LEARN
+           ===================================================== */
+
+        .academy-benefits {
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding: 80px 40px 120px;
+
+        }
+
+
+        .benefits-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            border-top:
+                1px solid #252525;
+
+            border-left:
+                1px solid #252525;
+
+        }
+
+
+        .benefit-card {
+
+            min-height: 260px;
+
+            padding: 35px;
+
+            border-right:
+                1px solid #252525;
+
+            border-bottom:
+                1px solid #252525;
+
+        }
+
+
+        .benefit-number {
+
+            color: #ffb000;
+
+            font-size: 12px;
+
+            letter-spacing: 3px;
+
+        }
+
+
+        .benefit-card h3 {
+
+            margin-top: 55px;
+
+            font-size: 24px;
+
+        }
+
+
+        .benefit-card p {
+
+            color: #999;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =====================================================
+           CTA
+           ===================================================== */
+
+        .academy-cta {
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding: 40px;
+
+        }
+
+
+        .academy-cta-box {
+
+            border:
+                1px solid #252525;
+
+            padding: 70px 50px;
+
+            text-align: center;
+
+        }
+
+
+        .academy-cta-box span {
+
+            color: #ffb000;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 4px;
+
+        }
+
+
+        .academy-cta-box h2 {
+
+            max-width: 850px;
+
+            margin: 20px auto;
+
+            font-size: clamp(
+                40px,
+                6vw,
+                70px
+            );
+
+            line-height: .95;
+
+            letter-spacing: -3px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .academy-cta-box p {
+
+            max-width: 650px;
+
+            margin: 0 auto 30px;
+
+            color: #999;
+
+            line-height: 1.7;
+
+        }
+
+
+        .academy-button {
+
+            display: inline-block;
+
+            padding: 15px 25px;
+
+            background: #fff;
+
+            color: #000;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+        }
+
+
+        .academy-button:hover {
+
+            background: #ffb000;
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+           ===================================================== */
+
+        @media (max-width: 700px) {
+
+            .academy-hero {
+
+                padding:
+                    100px 25px 70px;
+
+            }
+
+
+            .academy-hero h1 {
+
+                font-size: 55px;
+
+                letter-spacing: -3px;
+
+            }
+
+
+            .courses-section {
+
+                padding:
+                    60px 25px 80px;
+
+            }
+
+
+            .course-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .course-card {
+
+                min-height: 350px;
+
+                padding: 30px;
+
+            }
+
+
+            .course-card h3 {
+
+                margin-top: 50px;
+
+                font-size: 29px;
+
+            }
+
+
+            .academy-benefits {
+
+                padding:
+                    60px 25px 80px;
+
+            }
+
+
+            .benefits-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .academy-cta {
+
+                padding:
+                    20px 25px 70px;
+
+            }
+
+
+            .academy-cta-box {
+
+                padding:
+                    50px 25px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="academy-page">
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header">
+
+        <div class="container">
+
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+
+                <img
+                    src="assets/logo.png"
+                    alt="AjuVerse Logo"
+                >
+
+                <div>
+
+                    <strong>
+                        AjuVerse
+                    </strong>
+
+                    <small>
+                        Create • Design • Publish • Grow
+                    </small>
+
+                </div>
+
+            </a>
+
+
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="portfolio.html">
+                    Portfolio
+                </a>
+
+                <a
+                    href="academy.html"
+                    class="active"
+                >
+                    Academy
+                </a>
+
+                <a href="books.html">
+                    Books
+                </a>
+
+                <a href="store.html">
+                    Store
+                </a>
+
+                <a href="free-ai-starter-kit.html">
+                    Free Resources
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <a
+                href="#courses"
+                class="header-login"
+            >
+                Login
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             ACADEMY HERO
+             ================================================= -->
+
+        <section class="academy-hero">
+
+            <div class="academy-label">
+                AJUVERSE ACADEMY
+            </div>
+
+
+            <h1>
+
+                BUILD SKILLS
+                FOR THE NEXT
+                DIGITAL ERA
+
+            </h1>
+
+
+            <p>
+
+                Learn practical digital skills through
+                step-by-step courses designed for creators,
+                entrepreneurs and modern digital builders.
+
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             COURSES
+             ================================================= -->
+
+        <section
+            class="courses-section"
+            id="courses"
+        >
+
+            <div class="courses-heading">
+
+                <span>
+                    LEARN
+                </span>
+
+                <h2>
+                    CHOOSE YOUR
+                    SKILL PATH
+                </h2>
+
+            </div>
+
+
+            <div class="course-grid">
+
+
+                <!-- COURSE 01 -->
+
+                <article class="course-card">
+
+                    <div>
+
+                        <div class="course-number">
+                            01
+                        </div>
+
+
+                        <h3>
+                            Digital Product
+                            Creation
+                        </h3>
+
+
+                        <p>
+
+                            Learn how to plan, create,
+                            design and publish practical
+                            digital products.
+
+                        </p>
+
+
+                        <ul class="course-topics">
+
+                            <li>
+                                Product research
+                            </li>
+
+                            <li>
+                                PDF creation
+                            </li>
+
+                            <li>
+                                Canva workflows
+                            </li>
+
+                            <li>
+                                Digital product publishing
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <a
+                        href="#coming-soon"
+                        class="course-link"
+                    >
+                        Explore Course →
+                    </a>
+
+                </article>
+
+
+                <!-- COURSE 02 -->
+
+                <article class="course-card">
+
+                    <div>
+
+                        <div class="course-number">
+                            02
+                        </div>
+
+
+                        <h3>
+                            Video Editing
+                            & Content
+                        </h3>
+
+
+                        <p>
+
+                            Learn how to create engaging
+                            short-form videos for modern
+                            social platforms.
+
+                        </p>
+
+
+                        <ul class="course-topics">
+
+                            <li>
+                                Reels
+                            </li>
+
+                            <li>
+                                YouTube Shorts
+                            </li>
+
+                            <li>
+                                AI-assisted editing
+                            </li>
+
+                            <li>
+                                Content workflows
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <a
+                        href="#coming-soon"
+                        class="course-link"
+                    >
+                        Explore Course →
+                    </a>
+
+                </article>
+
+
+                <!-- COURSE 03 -->
+
+                <article class="course-card">
+
+                    <div>
+
+                        <div class="course-number">
+                            03
+                        </div>
+
+
+                        <h3>
+                            AI Website
+                            Design
+                        </h3>
+
+
+                        <p>
+
+                            Learn how to create modern
+                            websites using AI-assisted
+                            design and development workflows.
+
+                        </p>
+
+
+                        <ul class="course-topics">
+
+                            <li>
+                                Website planning
+                            </li>
+
+                            <li>
+                                AI-assisted design
+                            </li>
+
+                            <li>
+                                HTML & CSS
+                            </li>
+
+                            <li>
+                                Git & GitHub
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <a
+                        href="#coming-soon"
+                        class="course-link"
+                    >
+                        Explore Course →
+                    </a>
+
+                </article>
+
+
+                <!-- COURSE 04 -->
+
+                <article class="course-card">
+
+                    <div>
+
+                        <div class="course-number">
+                            04
+                        </div>
+
+
+                        <h3>
+                            AI Content
+                            Workflows
+                        </h3>
+
+
+                        <p>
+
+                            Build practical AI workflows
+                            for content creation, productivity
+                            and digital businesses.
+
+                        </p>
+
+
+                        <ul class="course-topics">
+
+                            <li>
+                                AI prompting
+                            </li>
+
+                            <li>
+                                Content systems
+                            </li>
+
+                            <li>
+                                AI tools
+                            </li>
+
+                            <li>
+                                Creative workflows
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <a
+                        href="#coming-soon"
+                        class="course-link"
+                    >
+                        Coming Soon →
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             BENEFITS
+             ================================================= -->
+
+        <section class="academy-benefits">
+
+            <div class="courses-heading">
+
+                <span>
+                    WHY AJUVERSE
+                </span>
+
+                <h2>
+                    LEARN BY
+                    BUILDING
+                </h2>
+
+            </div>
+
+
+            <div class="benefits-grid">
+
+
+                <article class="benefit-card">
+
+                    <div class="benefit-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Practical
+                    </h3>
+
+                    <p>
+                        Learn skills through real
+                        projects rather than only
+                        theory.
+                    </p>
+
+                </article>
+
+
+                <article class="benefit-card">
+
+                    <div class="benefit-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Step-by-Step
+                    </h3>
+
+                    <p>
+                        Follow simple workflows that
+                        make complex digital skills easier
+                        to understand.
+                    </p>
+
+                </article>
+
+
+                <article class="benefit-card">
+
+                    <div class="benefit-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Build Real Things
+                    </h3>
+
+                    <p>
+                        Apply what you learn by creating
+                        actual products, websites and
+                        content.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CTA
+             ================================================= -->
+
+        <section
+            class="academy-cta"
+            id="coming-soon"
+        >
+
+            <div class="academy-cta-box">
+
+                <span>
+                    START YOUR JOURNEY
+                </span>
+
+
+                <h2>
+                    LEARN.
+                    BUILD.
+                    GROW.
+                </h2>
+
+
+                <p>
+
+                    AjuVerse courses are being developed
+                    step-by-step. Join the free resources
+                    first and get notified when new courses
+                    launch.
+
+                </p>
+
+
+                <a
+                    href="free-ai-starter-kit.html"
+                    class="academy-button"
+                >
+                    Get Free Resources →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <div>
+
+                    <h2>
+                        AjuVerse
+                    </h2>
+
+                    <p>
+                        Building ideas with creativity,
+                        technology and AI.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="portfolio.html">
+                        Portfolio
+                    </a>
+
+                    <a href="academy.html">
+                        Academy
+                    </a>
+
+                    <a href="books.html">
+                        Books
+                    </a>
+
+                    <a href="store.html">
+                        Store
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Courses
+                    </h3>
+
+                    <a href="#courses">
+                        Digital Products
+                    </a>
+
+                    <a href="#courses">
+                        Video Editing
+                    </a>
+
+                    <a href="#courses">
+                        AI Website Design
+                    </a>
+
+                    <a href="#courses">
+                        AI Content
+                    </a>
+
+                </div>
+
+
+                <div id="contact">
+
+                    <h3>
+                        Contact
+                    </h3>
+
+                    <p>
+                        jeniaju112@gmail.com
+                    </p>
+
+                    <a
+                        href="mailto:jeniaju112@gmail.com"
+                    >
+                        Send Email →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 AjuVerse. All rights reserved.
+            </span>
+
+            <span>
+                Create • Design • Publish • Grow
+            </span>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

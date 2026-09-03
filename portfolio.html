@@ -1,0 +1,3061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AjuVerse | Portfolio</title>
+
+    <meta
+        name="description"
+        content="Explore selected AjuVerse projects across publishing, digital products, video editing, visual design and AI-powered website design."
+    >
+
+    <style>
+
+        /* =========================================================
+           AJUVERSE PORTFOLIO V1
+           BLACK / WHITE / GOLD
+        ========================================================= */
+
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --gold: #ffb000;
+            --gold-light: #ffd36a;
+            --text: #b8b8b8;
+            --border: rgba(255,255,255,0.14);
+            --card: #050505;
+            --max-width: 1180px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--black);
+            color: var(--white);
+            font-family: Arial, Helvetica, sans-serif;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+
+        /* =========================================================
+           BACKGROUND EFFECTS
+        ========================================================= */
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -5;
+
+            background:
+                radial-gradient(
+                    circle at 78% 20%,
+                    rgba(255,176,0,0.08),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 15% 65%,
+                    rgba(255,176,0,0.035),
+                    transparent 28%
+                );
+        }
+
+        .ambient-glow {
+            position: fixed;
+            width: 420px;
+            height: 420px;
+
+            border-radius: 50%;
+
+            background: rgba(255,176,0,0.035);
+            filter: blur(100px);
+
+            pointer-events: none;
+            z-index: -3;
+
+            animation: ambientMove 12s ease-in-out infinite alternate;
+        }
+
+        .ambient-one {
+            top: 20%;
+            right: 5%;
+        }
+
+        .ambient-two {
+            bottom: 10%;
+            left: -150px;
+            animation-delay: 3s;
+        }
+
+        @keyframes ambientMove {
+
+            from {
+                transform: translate3d(0,0,0) scale(1);
+            }
+
+            to {
+                transform: translate3d(-60px,30px,0) scale(1.15);
+            }
+        }
+
+
+        /* =========================================================
+           PARTICLES
+        ========================================================= */
+
+        .particle {
+            position: fixed;
+
+            width: 3px;
+            height: 3px;
+
+            border-radius: 50%;
+
+            background: var(--gold);
+
+            opacity: 0.35;
+
+            pointer-events: none;
+
+            z-index: -1;
+
+            animation: particleFloat linear infinite;
+        }
+
+        .p1 {
+            left: 8%;
+            bottom: -10px;
+            animation-duration: 11s;
+        }
+
+        .p2 {
+            left: 24%;
+            bottom: -20px;
+            animation-duration: 14s;
+            animation-delay: 2s;
+        }
+
+        .p3 {
+            left: 46%;
+            bottom: -10px;
+            animation-duration: 10s;
+            animation-delay: 4s;
+        }
+
+        .p4 {
+            left: 68%;
+            bottom: -20px;
+            animation-duration: 13s;
+            animation-delay: 1s;
+        }
+
+        .p5 {
+            left: 88%;
+            bottom: -10px;
+            animation-duration: 16s;
+            animation-delay: 5s;
+        }
+
+        @keyframes particleFloat {
+
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 0.35;
+            }
+
+            80% {
+                opacity: 0.15;
+            }
+
+            100% {
+                transform: translateY(-100vh) scale(0.3);
+                opacity: 0;
+            }
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        header {
+            position: sticky;
+            top: 0;
+
+            width: 100%;
+
+            height: 90px;
+
+            display: flex;
+            align-items: center;
+
+            background: rgba(0,0,0,0.88);
+
+            backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid var(--border);
+
+            z-index: 100;
+        }
+
+        .nav-container {
+            width: min(var(--max-width), calc(100% - 80px));
+
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* LOGO */
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            transition: transform 0.3s ease;
+        }
+
+        .brand:hover {
+            transform: translateY(-2px);
+        }
+
+        .brand-mark img {
+            transition: transform 0.35s ease, filter 0.35s ease;
+        }
+
+        .brand:hover .brand-mark img {
+            transform: scale(1.04);
+            filter:
+                drop-shadow(0 0 10px rgba(255,255,255,0.12))
+                drop-shadow(0 0 18px rgba(255,176,0,0.08));
+        }
+
+        .brand-mark {
+            width: 92px;
+            height: 68px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid rgba(255,255,255,0.04);
+
+            background: rgba(255,255,255,0.015);
+
+            box-shadow:
+                0 0 25px rgba(255,255,255,0.03);
+        }
+
+        .brand-mark img {
+            width: 88px;
+            height: 64px;
+
+            display: block;
+
+            object-fit: contain;
+        }
+
+        .brand-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-size: 33px;
+            font-weight: 900;
+            line-height: 0.95;
+        }
+
+        .brand-tagline {
+            margin-top: 7px;
+
+            font-size: 12px;
+
+            letter-spacing: 4px;
+
+            color: #8b8b8b;
+        }
+
+
+        /* NAVIGATION */
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 34px;
+        }
+
+        nav a {
+            position: relative;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            color: #d0d0d0;
+
+            padding: 10px 0;
+
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        nav a::after {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            bottom: 0;
+
+            width: 0;
+            height: 2px;
+
+            background: var(--gold);
+
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        nav a.active {
+            color: var(--gold);
+        }
+
+        .login-btn {
+            padding: 13px 29px;
+
+            border: 1px solid rgba(255,255,255,0.25);
+
+            font-size: 13px;
+            font-weight: 700;
+
+            transition: all 0.3s ease;
+        }
+
+        .login-btn:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+
+            box-shadow:
+                0 0 20px rgba(255,176,0,0.12);
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================================
+           COMMON
+        ========================================================= */
+
+        .container {
+            width: min(var(--max-width), calc(100% - 80px));
+            margin: auto;
+        }
+
+        .eyebrow {
+            display: inline-block;
+
+            color: var(--gold);
+
+            font-size: 24px;
+            font-weight: 800;
+
+            letter-spacing: 5px;
+
+            margin-bottom: 22px;
+        }
+
+        .section-heading {
+            font-size: clamp(34px, 3.6vw, 48px);
+
+            line-height: 0.92;
+
+            letter-spacing: -4px;
+
+            font-weight: 900;
+
+            max-width: 1000px;
+        }
+
+        .section-description {
+            margin-top: 28px;
+
+            max-width: 760px;
+
+            color: var(--text);
+
+            font-size: 18px;
+
+            line-height: 1.75;
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .portfolio-hero {
+            position: relative;
+
+            min-height: 540px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 65px 0 55px;
+
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+
+            grid-template-columns: 1.05fr 0.95fr;
+
+            align-items: center;
+
+            gap: 55px;
+        }
+
+        .hero-title {
+            font-size: clamp(38px, 3.9vw, 50px);
+
+            line-height: 0.88;
+
+            letter-spacing: -5px;
+
+            font-weight: 900;
+        }
+
+        .hero-title .gold {
+            color: var(--gold);
+        }
+
+        .hero-description {
+            max-width: 650px;
+
+            margin-top: 22px;
+
+            color: var(--text);
+
+            font-size: 18px;
+
+            line-height: 1.75;
+        }
+
+
+        /* HERO VISUAL */
+
+        .hero-visual {
+            position: relative;
+
+            height: 390px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-ring {
+            position: absolute;
+
+            width: 390px;
+            height: 390px;
+
+            border: 1px solid rgba(255,176,0,0.25);
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 0 70px rgba(255,176,0,0.07);
+
+            animation:
+                ringPulse 5s ease-in-out infinite,
+                ringRotate 18s linear infinite;
+        }
+
+        .hero-ring::before,
+        .hero-ring::after {
+            content: "";
+
+            position: absolute;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(255,176,0,0.12);
+        }
+
+        .hero-ring::before {
+            inset: 35px;
+        }
+
+        .hero-ring::after {
+            inset: -30px;
+
+            border-style: dashed;
+
+            opacity: 0.4;
+        }
+
+        @keyframes ringPulse {
+
+            0%,100% {
+                transform: scale(0.98);
+                opacity: 0.65;
+            }
+
+            50% {
+                transform: scale(1.04);
+                opacity: 1;
+            }
+        }
+
+        @keyframes ringRotate {
+            from {
+                rotate: 0deg;
+            }
+
+            to {
+                rotate: 360deg;
+            }
+        }
+
+        .hero-project {
+            position: relative;
+
+            width: 410px;
+            height: 300px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid rgba(255,255,255,0.15);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #101010,
+                    #020202
+                );
+
+            box-shadow:
+                0 30px 80px rgba(0,0,0,0.7),
+                0 0 50px rgba(255,176,0,0.06);
+
+            transform: rotate(-4deg);
+
+            animation: projectFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes projectFloat {
+
+            0%,100% {
+                transform: rotate(-4deg) translateY(0);
+            }
+
+            50% {
+                transform: rotate(-2deg) translateY(-10px);
+            }
+        }
+
+        .hero-project-content {
+            text-align: center;
+        }
+
+        .hero-project-number {
+            color: var(--gold);
+
+            font-size: 12px;
+            font-weight: 800;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 18px;
+        }
+
+        .hero-project-title {
+            font-size: 34px;
+            font-weight: 900;
+
+            line-height: 1;
+        }
+
+        .hero-project-subtitle {
+            margin-top: 12px;
+
+            color: #8d8d8d;
+
+            font-size: 13px;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* =========================================================
+           BUTTONS
+        ========================================================= */
+
+        .hero-buttons {
+            display: flex;
+
+            gap: 14px;
+
+            margin-top: 26px;
+        }
+
+        .btn {
+            position: relative;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-width: 150px;
+
+            padding: 15px 23px;
+
+            border: 1px solid rgba(255,255,255,0.25);
+
+            font-size: 13px;
+            font-weight: 800;
+
+            overflow: hidden;
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .btn::before {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background: var(--gold);
+
+            transform: translateX(-105%);
+
+            transition: transform 0.35s ease;
+
+            z-index: -1;
+        }
+
+        .btn:hover {
+            color: #000;
+
+            border-color: var(--gold);
+
+            box-shadow:
+                0 0 25px rgba(255,176,0,0.15);
+
+            transform: translateY(-3px);
+        }
+
+        .btn:hover::before {
+            transform: translateX(0);
+        }
+
+        .btn.primary {
+            background: var(--white);
+            color: #000;
+            border-color: var(--white);
+        }
+
+        .btn.primary::before {
+            background: var(--gold);
+        }
+
+
+        /* =========================================================
+           FILTER
+        ========================================================= */
+
+        .portfolio-work {
+            padding: 55px 0 80px;
+        }
+
+        .filter-row {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin: 30px 0 36px;
+        }
+
+        .filter-btn {
+            padding: 13px 20px;
+
+            background: transparent;
+
+            color: #bcbcbc;
+
+            border: 1px solid var(--border);
+
+            cursor: pointer;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--gold);
+
+            color: var(--gold);
+
+            transform: translateY(-2px);
+        }
+
+        .filter-btn.active {
+            background: var(--white);
+
+            color: #000;
+
+            border-color: var(--white);
+        }
+
+
+        /* =========================================================
+           PROJECT GRID
+        ========================================================= */
+
+        .project-grid {
+            display: grid;
+
+            /* Desktop: 4 projects per row */
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+
+            gap: 18px;
+
+            align-items: stretch;
+        }
+
+        .project-card {
+            position: relative;
+
+            min-height: 0;
+
+            border: 1px solid var(--border);
+
+            background: var(--card);
+
+            overflow: hidden;
+
+            cursor: pointer;
+
+            transition:
+                transform 0.45s ease,
+                border-color 0.45s ease,
+                box-shadow 0.45s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+
+            border-color: rgba(255,176,0,0.55);
+
+            box-shadow:
+                0 25px 70px rgba(0,0,0,0.7),
+                0 0 35px rgba(255,176,0,0.07);
+        }
+
+
+        /* PROJECT VISUAL */
+
+        .project-image {
+            position: relative;
+
+            aspect-ratio: 1 / 1;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 70% 30%,
+                    rgba(255,176,0,0.22),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #171717,
+                    #020202
+                );
+        }
+
+        .project-image::before {
+            content: "";
+
+            position: absolute;
+
+            width: 230px;
+            height: 230px;
+
+            border: 1px solid rgba(255,176,0,0.25);
+
+            border-radius: 50%;
+
+            left: 50%;
+            top: 50%;
+
+            transform:
+                translate(-50%,-50%);
+
+            transition:
+                transform 0.7s ease,
+                border-color 0.7s ease;
+        }
+
+        .project-card:hover .project-image::before {
+            transform:
+                translate(-50%,-50%)
+                scale(1.18);
+
+            border-color: rgba(255,176,0,0.5);
+        }
+
+        .project-image::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    110deg,
+                    transparent 30%,
+                    rgba(255,255,255,0.08) 50%,
+                    transparent 70%
+                );
+
+            transform: translateX(-100%);
+
+            transition: transform 0.8s ease;
+        }
+
+        .project-card:hover .project-image::after {
+            transform: translateX(100%);
+        }
+
+        .project-number {
+            position: absolute;
+
+            top: 22px;
+            left: 22px;
+
+            color: var(--gold);
+
+            font-size: 24px;
+            font-weight: 800;
+
+            letter-spacing: 3px;
+
+            z-index: 2;
+        }
+
+        .project-visual-title {
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+
+            transform:
+                translate(-50%,-50%);
+
+            width: 100%;
+
+            text-align: center;
+
+            font-size: clamp(28px, 3vw, 38px);
+
+            font-weight: 900;
+
+            letter-spacing: -2px;
+
+            transition:
+                transform 0.5s ease,
+                color 0.5s ease;
+        }
+
+        .project-card:hover .project-visual-title {
+            transform:
+                translate(-50%,-50%)
+                scale(1.08);
+
+            color: var(--gold-light);
+        }
+
+
+        /* PROJECT INFO */
+
+        .project-info {
+            padding: 24px;
+        }
+
+        .project-category {
+            color: var(--gold);
+
+            font-size: 22px;
+            font-weight: 800;
+
+            letter-spacing: 3px;
+        }
+
+        .project-name {
+            margin-top: 10px;
+
+            font-size: 29px;
+
+            font-weight: 900;
+        }
+
+        .project-description {
+            margin-top: 12px;
+
+            max-width: 560px;
+
+            color: #8e8e8e;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+        .project-link {
+            display: inline-flex;
+
+            margin-top: 22px;
+
+            color: var(--white);
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            border-bottom: 1px solid #555;
+
+            padding-bottom: 6px;
+
+            transition:
+                color 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .project-card:hover .project-link {
+            color: var(--gold);
+
+            border-color: var(--gold);
+
+            transform: translateX(5px);
+        }
+
+
+        /* =========================================================
+           CAPABILITIES
+        ========================================================= */
+
+        .capabilities {
+            padding: 100px 0;
+        }
+
+        .capability-grid {
+            margin-top: 55px;
+
+            display: grid;
+
+            grid-template-columns: repeat(2,1fr);
+
+            border-top: 1px solid var(--border);
+            border-left: 1px solid var(--border);
+        }
+
+        .capability {
+            position: relative;
+
+            min-height: 230px;
+
+            padding: 38px;
+
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+
+            overflow: hidden;
+
+            transition:
+                background 0.4s ease,
+                transform 0.4s ease;
+        }
+
+        .capability::before {
+            content: "";
+
+            position: absolute;
+
+            width: 120px;
+            height: 120px;
+
+            right: -35px;
+            bottom: -35px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(255,176,0,0.08);
+
+            transition:
+                transform 0.5s ease,
+                border-color 0.5s ease;
+        }
+
+        .capability:hover {
+            background: rgba(255,255,255,0.015);
+        }
+
+        .capability:hover::before {
+            transform: scale(1.6);
+
+            border-color: rgba(255,176,0,0.22);
+        }
+
+        .capability-number {
+            color: var(--gold);
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: 3px;
+        }
+
+        .capability h3 {
+            margin-top: 25px;
+
+            font-size: 27px;
+
+            font-weight: 900;
+        }
+
+        .capability p {
+            margin-top: 12px;
+
+            max-width: 460px;
+
+            color: #8e8e8e;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================================================
+           CTA
+        ========================================================= */
+
+        .portfolio-cta {
+            padding: 75px 0 100px;
+        }
+
+        .cta-box {
+            position: relative;
+
+            padding: 100px 50px;
+
+            text-align: center;
+
+            border: 1px solid var(--border);
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 50% 50%,
+                    rgba(255,176,0,0.06),
+                    transparent 50%
+                );
+        }
+
+        .cta-box::before {
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(255,176,0,0.08);
+
+            left: 50%;
+            top: 50%;
+
+            transform:
+                translate(-50%,-50%);
+
+            animation:
+                ctaPulse 6s ease-in-out infinite;
+        }
+
+        @keyframes ctaPulse {
+
+            0%,100% {
+                transform:
+                    translate(-50%,-50%)
+                    scale(0.85);
+
+                opacity: 0.3;
+            }
+
+            50% {
+                transform:
+                    translate(-50%,-50%)
+                    scale(1.1);
+
+                opacity: 1;
+            }
+        }
+
+        .cta-box > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title {
+            margin: auto;
+
+            max-width: 900px;
+
+            font-size: clamp(50px,7vw,90px);
+
+            line-height: 0.9;
+
+            letter-spacing: -4px;
+
+            font-weight: 900;
+        }
+
+        .cta-text {
+            margin: 25px auto 0;
+
+            max-width: 650px;
+
+            color: var(--text);
+
+            line-height: 1.7;
+
+            font-size: 16px;
+        }
+
+        .cta-buttons {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 14px;
+
+            margin-top: 35px;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            border-top: 1px solid var(--border);
+
+            padding: 60px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+
+            gap: 50px;
+        }
+
+        .footer-brand h3 {
+            font-size: 30px;
+            font-weight: 900;
+        }
+
+        .footer-brand p {
+            margin-top: 15px;
+
+            max-width: 330px;
+
+            color: #777;
+
+            line-height: 1.7;
+        }
+
+        .footer-column h4 {
+            font-size: 14px;
+
+            margin-bottom: 18px;
+        }
+
+        .footer-column a {
+            display: block;
+
+            color: #777;
+
+            font-size: 13px;
+
+            margin-bottom: 12px;
+
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            margin-top: 60px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid var(--border);
+
+            display: flex;
+
+            justify-content: space-between;
+
+            color: #555;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================================================
+           SCROLL REVEAL
+        ========================================================= */
+
+        .reveal {
+            opacity: 0;
+
+            transform: translateY(35px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+
+        /* =========================================================
+           PROJECT MODAL
+        ========================================================= */
+
+        .modal {
+            position: fixed;
+
+            inset: 0;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 30px;
+
+            background: rgba(0,0,0,0.82);
+
+            backdrop-filter: blur(12px);
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition:
+                opacity 0.35s ease,
+                visibility 0.35s ease;
+
+            z-index: 500;
+        }
+
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-box {
+            position: relative;
+
+            width: min(850px,100%);
+
+            max-height: 90vh;
+
+            overflow-y: auto;
+
+            padding: 45px;
+
+            background: #070707;
+
+            border: 1px solid rgba(255,176,0,0.25);
+
+            box-shadow:
+                0 30px 100px rgba(0,0,0,0.8),
+                0 0 50px rgba(255,176,0,0.08);
+
+            transform: translateY(30px) scale(0.97);
+
+            transition: transform 0.4s ease;
+        }
+
+        .modal.active .modal-box {
+            transform: translateY(0) scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+
+            top: 20px;
+            right: 20px;
+
+            width: 38px;
+            height: 38px;
+
+            border: 1px solid var(--border);
+
+            background: transparent;
+
+            color: white;
+
+            font-size: 20px;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: #000;
+
+            background: var(--gold);
+
+            border-color: var(--gold);
+        }
+
+        .modal-category {
+            color: var(--gold);
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 3px;
+        }
+
+        .modal-title {
+            margin-top: 12px;
+
+            font-size: 48px;
+
+            font-weight: 900;
+
+            line-height: 1;
+        }
+
+        .modal-description {
+            margin-top: 22px;
+
+            color: #aaa;
+
+            line-height: 1.8;
+        }
+
+        .modal-details {
+            display: grid;
+
+            grid-template-columns: repeat(3,1fr);
+
+            gap: 20px;
+
+            margin-top: 35px;
+
+            padding-top: 25px;
+
+            border-top: 1px solid var(--border);
+        }
+
+        .modal-detail span {
+            display: block;
+
+            color: #666;
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 8px;
+        }
+
+        .modal-detail strong {
+            font-size: 14px;
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 900px) {
+
+            .nav-container,
+            .container {
+                width: min(
+                    var(--max-width),
+                    calc(100% - 40px)
+                );
+            }
+
+            header {
+                height: 78px;
+            }
+
+            .brand-mark {
+                width: 68px;
+                height: 54px;
+            }
+
+            .brand-mark img {
+                width: 64px;
+                height: 50px;
+            }
+
+            .brand-name {
+                font-size: 25px;
+            }
+
+            .brand-tagline {
+                font-size: 8px;
+                letter-spacing: 2px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 11px;
+            }
+
+            .login-btn {
+                display: none;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-hero {
+                min-height: auto;
+                padding: 65px 0 55px;
+            }
+
+            .hero-visual {
+                height: 340px;
+            }
+
+            /* Tablet: 2 projects per row */
+            .project-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .capability-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .container,
+            .nav-container {
+                width: calc(100% - 28px);
+            }
+
+            .brand-tagline {
+                display: none;
+            }
+
+            nav a:nth-child(2),
+            nav a:nth-child(3),
+            nav a:nth-child(5) {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 40px;
+                letter-spacing: -2px;
+            }
+
+            /* Mobile: single-column project layout */
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-heading {
+                font-size: 38px;
+                letter-spacing: -2px;
+            }
+
+            .hero-project {
+                width: 90%;
+                height: 260px;
+            }
+
+            .eyebrow {
+                font-size: 17px;
+                letter-spacing: 3px;
+            }
+
+            .project-category {
+                font-size: 17px;
+            }
+
+            .project-number {
+                font-size: 18px;
+            }
+
+            .hero-ring {
+                width: 300px;
+                height: 300px;
+            }
+
+            .hero-buttons,
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .project-card {
+                min-height: 430px;
+            }
+
+            .project-image {
+                height: 250px;
+            }
+
+            .project-visual-title {
+                font-size: 34px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .modal-box {
+                padding: 30px 22px;
+            }
+
+            .modal-title {
+                font-size: 36px;
+            }
+
+            .modal-details {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    
+
+/* =========================================================
+   PORTFOLIO HEADER — MATCH HOMEPAGE LOGO EXACTLY
+   Homepage reference: 87px × 87px
+   ========================================================= */
+
+.site-header .brand-mark {
+    width: 87px !important;
+    height: 87px !important;
+}
+
+.site-header .brand-mark img {
+    width: 87px !important;
+    height: 87px !important;
+    object-fit: contain !important;
+    display: block !important;
+}
+
+/* Keep the wordmark aligned with the larger real logo. */
+.site-header .brand-name {
+    font-size: 34px !important;
+    line-height: .95 !important;
+}
+
+.site-header .brand-tagline {
+    font-size: 13px !important;
+    line-height: 1 !important;
+}
+
+/* Match the homepage's enlarged header height. */
+.site-header {
+    min-height: 100px !important;
+}
+
+@media (max-width: 1000px) {
+    .site-header .brand-mark {
+        width: 72px !important;
+        height: 72px !important;
+    }
+
+    .site-header .brand-mark img {
+        width: 72px !important;
+        height: 72px !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .site-header .brand-mark {
+        width: 69px !important;
+        height: 69px !important;
+    }
+
+    .site-header .brand-mark img {
+        width: 69px !important;
+        height: 69px !important;
+    }
+}
+
+
+
+/* =========================================================
+   PORTFOLIO FOOTER — MATCH HOMEPAGE FOOTER TYPOGRAPHY
+   ========================================================= */
+
+.site-footer .footer-brand h2,
+.site-footer .footer-brand h3,
+footer .footer-brand h2,
+footer .footer-brand h3 {
+    font-size: 34px !important;
+    line-height: 1.1 !important;
+}
+
+.site-footer .footer-brand p,
+footer .footer-brand p {
+    font-size: 18px !important;
+    line-height: 1.75 !important;
+}
+
+.site-footer .footer-column h3,
+.site-footer .footer-column h4,
+footer .footer-column h3,
+footer .footer-column h4 {
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 20px !important;
+}
+
+.site-footer .footer-column a,
+.site-footer .footer-column li,
+.site-footer .footer-column p,
+footer .footer-column a,
+footer .footer-column li,
+footer .footer-column p {
+    font-size: 17px !important;
+    line-height: 1.8 !important;
+    margin-bottom: 8px !important;
+}
+
+.site-footer .footer-bottom,
+footer .footer-bottom,
+.site-footer .footer-bottom p,
+footer .footer-bottom p,
+.site-footer .footer-bottom span,
+footer .footer-bottom span {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .site-footer .footer-brand h2,
+    .site-footer .footer-brand h3,
+    footer .footer-brand h2,
+    footer .footer-brand h3 {
+        font-size: 30px !important;
+    }
+
+    .site-footer .footer-brand p,
+    footer .footer-brand p {
+        font-size: 16px !important;
+    }
+
+    .site-footer .footer-column h3,
+    .site-footer .footer-column h4,
+    footer .footer-column h3,
+    footer .footer-column h4 {
+        font-size: 17px !important;
+    }
+
+    .site-footer .footer-column a,
+    .site-footer .footer-column li,
+    .site-footer .footer-column p,
+    footer .footer-column a,
+    footer .footer-column li,
+    footer .footer-column p {
+        font-size: 16px !important;
+    }
+
+    .site-footer .footer-bottom,
+    footer .footer-bottom,
+    .site-footer .footer-bottom p,
+    footer .footer-bottom p,
+    .site-footer .footer-bottom span,
+    footer .footer-bottom span {
+        font-size: 14px !important;
+    }
+}
+
+
+
+/* =========================================================
+   PORTFOLIO PROJECT CARDS — CLEAN FINAL VERSION
+   ========================================================= */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    align-items: stretch;
+}
+
+.project-card {
+    position: relative;
+    min-width: 0;
+    min-height: 0 !important;
+    border: 1px solid rgba(255,255,255,.15);
+    background: #070707;
+    overflow: hidden;
+    cursor: pointer;
+    transition:
+        transform .45s cubic-bezier(.2,.8,.2,1),
+        border-color .45s ease,
+        box-shadow .45s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-7px) !important;
+    border-color: rgba(245,164,0,.50) !important;
+    box-shadow:
+        0 24px 60px rgba(0,0,0,.60),
+        0 0 30px rgba(245,164,0,.09) !important;
+}
+
+/* ---------------------------------------------------------
+   REAL PORTFOLIO IMAGES
+   portfolio.html is in the project root, so use assets/...
+--------------------------------------------------------- */
+.project-card:nth-child(1) .project-image {
+    background-image:
+        linear-gradient(180deg, rgba(0,0,0,.03), rgba(0,0,0,.30)),
+        url("assets/project1.png") !important;
+}
+
+.project-card:nth-child(2) .project-image {
+    background-image:
+        linear-gradient(180deg, rgba(0,0,0,.03), rgba(0,0,0,.30)),
+        url("assets/project2.png") !important;
+}
+
+.project-card:nth-child(3) .project-image {
+    background-image:
+        linear-gradient(180deg, rgba(0,0,0,.03), rgba(0,0,0,.30)),
+        url("assets/project3.png") !important;
+}
+
+.project-card:nth-child(4) .project-image {
+    background-image:
+        linear-gradient(180deg, rgba(0,0,0,.03), rgba(0,0,0,.30)),
+        url("assets/project4.png") !important;
+}
+
+/* ---------------------------------------------------------
+   IMAGE AREA
+--------------------------------------------------------- */
+.project-card .project-image {
+    position: relative;
+    width: 100%;
+    height: 235px !important;
+    min-height: 235px !important;
+    max-height: 235px !important;
+    aspect-ratio: auto !important;
+    overflow: hidden !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    isolation: isolate;
+    transition: transform .75s cubic-bezier(.2,.8,.2,1), filter .5s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.025);
+    filter: brightness(1.06) contrast(1.03);
+}
+
+/* Cinematic overlay */
+.project-card .project-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,.03) 45%, rgba(0,0,0,.48) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Moving light sweep */
+.project-card .project-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg, transparent 25%, rgba(255,255,255,.10) 50%, transparent 75%);
+    transform: translateX(-120%);
+    transition: transform .8s ease;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.project-card:hover .project-image::after {
+    transform: translateX(120%);
+}
+
+/* Project number */
+.project-card .project-number {
+    position: absolute;
+    top: 14px !important;
+    left: 15px !important;
+    z-index: 5;
+    color: #f5a400;
+    font-size: 17px !important;
+    font-weight: 900 !important;
+    letter-spacing: 2px;
+    text-shadow: 0 0 12px rgba(245,164,0,.22);
+}
+
+/* Remove old BOOKORA / DIGITAL / VIDEO / WEB overlay text */
+.project-card .project-visual-title {
+    display: none !important;
+}
+
+/* ---------------------------------------------------------
+   PROJECT INFORMATION
+--------------------------------------------------------- */
+.project-card .project-info {
+    padding: 22px 22px 25px !important;
+    background: #070707;
+}
+
+.project-card .project-category {
+    margin: 0 0 9px 0 !important;
+    color: #f5a400 !important;
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+    font-weight: 900 !important;
+    letter-spacing: 2.5px !important;
+}
+
+.project-card .project-name {
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: 31px !important;
+    line-height: 1.05 !important;
+    font-weight: 900 !important;
+    letter-spacing: -.8px !important;
+}
+
+.project-card .project-description {
+    margin: 13px 0 0 0 !important;
+    max-width: 650px !important;
+    color: #a0a0a0 !important;
+    font-size: 17px !important;
+    line-height: 1.55 !important;
+}
+
+.project-card .project-link {
+    display: inline-flex !important;
+    margin-top: 18px !important;
+    color: #fff !important;
+    font-size: 15px !important;
+    line-height: 1.3 !important;
+    font-weight: 900 !important;
+    border-bottom: 1px solid rgba(255,255,255,.35) !important;
+    padding-bottom: 7px !important;
+    text-decoration: none;
+    transition: color .3s ease, border-color .3s ease, transform .3s ease;
+}
+
+.project-card:hover .project-link {
+    color: #f5a400 !important;
+    border-color: #f5a400 !important;
+    transform: translateX(5px);
+}
+
+/* Bottom gold accent */
+.project-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(245,164,0,.65), transparent);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .5s ease;
+    pointer-events: none;
+}
+
+.project-card:hover::after {
+    transform: scaleX(1);
+}
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+@media (max-width: 700px) {
+    .project-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .project-card .project-image {
+        height: 220px !important;
+        min-height: 220px !important;
+        max-height: 220px !important;
+    }
+
+    .project-card .project-info {
+        padding: 19px 18px 22px !important;
+    }
+
+    .project-card .project-category {
+        font-size: 14px !important;
+        letter-spacing: 2px !important;
+    }
+
+    .project-card .project-name {
+        font-size: 27px !important;
+    }
+
+    .project-card .project-description {
+        font-size: 15px !important;
+    }
+
+    .project-card .project-link {
+        font-size: 13px !important;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+    <!-- =========================================================
+         AMBIENT BACKGROUND
+    ========================================================= -->
+
+    <div class="ambient-glow ambient-one"></div>
+    <div class="ambient-glow ambient-two"></div>
+
+    <div class="particle p1"></div>
+    <div class="particle p2"></div>
+    <div class="particle p3"></div>
+    <div class="particle p4"></div>
+    <div class="particle p5"></div>
+
+
+    <!-- =========================================================
+         HEADER
+    ========================================================= -->
+
+    <header>
+
+        <div class="nav-container">
+
+            <a href="index.html" class="brand">
+
+                <div class="brand-mark">
+                    <img
+                        src="assets/logo.png"
+                        alt="AjuVerse Logo"
+                    >
+                </div>
+
+                <div class="brand-info">
+
+                    <div class="brand-name">
+                        AjuVerse
+                    </div>
+
+                    <div class="brand-tagline">
+                        Learn • Publish • Grow
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <nav>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="portfolio.html" class="active">
+                    Portfolio
+                </a>
+
+                <a href="academy.html">
+                    Academy
+                </a>
+
+                <a href="bookstore.html">
+                    Bookstore
+                </a>
+
+                <a href="free-resources.html">
+                    Free Resources
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <a href="#" class="login-btn">
+                Login
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================================
+         HERO
+    ========================================================= -->
+
+    <main>
+
+        <section class="portfolio-hero">
+
+            <div class="container">
+
+                <div class="hero-grid">
+
+                    <div class="reveal">
+
+                        <span class="eyebrow">
+                            SELECTED WORK
+                        </span>
+
+                        <h1 class="hero-title">
+
+                            BUILDING
+                            <span class="gold">
+                                IDEAS
+                            </span>
+
+                            INTO
+                            DIGITAL WORK
+
+                        </h1>
+
+                        <p class="hero-description">
+
+                            Explore selected projects across digital publishing,
+                            digital products, visual content, video editing and
+                            AI-powered web experiences created through AjuVerse.
+
+                        </p>
+
+
+                        <div class="hero-buttons">
+
+                            <a
+                                href="#projects"
+                                class="btn primary"
+                            >
+                                View Projects ↓
+                            </a>
+
+                            <a
+                                href="#contact"
+                                class="btn"
+                            >
+                                Work With Me →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="hero-visual reveal">
+
+                        <div class="hero-ring"></div>
+
+                        <div class="hero-project">
+
+                            <div class="hero-project-content">
+
+                                <div class="hero-project-number">
+                                    AJUVERSE / 01
+                                </div>
+
+                                <div class="hero-project-title">
+                                    SELECTED<br>
+                                    PROJECTS
+                                </div>
+
+                                <div class="hero-project-subtitle">
+                                    CREATE • DESIGN • PUBLISH • GROW
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PROJECTS
+        ===================================================== -->
+
+        <section
+            class="portfolio-work"
+            id="projects"
+        >
+
+            <div class="container">
+
+                <div class="reveal">
+
+                    <span class="eyebrow">
+                        EXPLORE WORK
+                    </span>
+
+                    <h2 class="section-heading">
+                        SELECTED
+                        PROJECTS.
+                    </h2>
+
+                    <p class="section-description">
+
+                        A collection of work across publishing,
+                        digital products, video, visual design and
+                        AI-powered website creation.
+
+                    </p>
+
+                </div>
+
+
+                <!-- FILTERS -->
+
+                <div class="filter-row reveal">
+
+                    <button
+                        class="filter-btn active"
+                        data-filter="all"
+                    >
+                        ALL
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-filter="kdp"
+                    >
+                        KDP PUBLISHING
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-filter="digital"
+                    >
+                        DIGITAL PRODUCTS
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-filter="video"
+                    >
+                        VIDEO EDITING
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-filter="website"
+                    >
+                        AI WEBSITE DESIGN
+                    </button>
+
+                </div>
+
+
+                <!-- PROJECT GRID -->
+
+                <div class="project-grid">
+
+
+                    <!-- PROJECT 01 -->
+
+                    <article
+                        class="project-card reveal"
+                        data-category="kdp"
+                        data-project="bookora"
+                    >
+
+                        <div class="project-image">
+
+                            <span class="project-number">
+                                01
+                            </span>
+
+                            <div class="project-visual-title">
+                                BOOKORA
+                            </div>
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <div class="project-category">
+                                KDP PUBLISHING
+                            </div>
+
+                            <h3 class="project-name">
+                                BookOra Coloring Books
+                            </h3>
+
+                            <p class="project-description">
+
+                                Creative coloring book concepts,
+                                covers and publishing-ready products
+                                developed for BookOra.
+
+                            </p>
+
+                <a href="kdp-publishing.html" class="project-link">
+                                View Project →
+                            </a>
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PROJECT 02 -->
+
+                    <article
+                        class="project-card reveal"
+                        data-category="digital"
+                        data-project="digital-products"
+                    >
+
+                        <div class="project-image">
+
+                            <span class="project-number">
+                                02
+                            </span>
+
+                            <div class="project-visual-title">
+                                DIGITAL
+                            </div>
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <div class="project-category">
+                                DIGITAL PRODUCTS
+                            </div>
+
+                            <h3 class="project-name">
+                                Digital Product Collection
+                            </h3>
+
+                            <p class="project-description">
+
+                                Useful PDFs, guides, templates and
+                                practical digital resources designed
+                                for creators and learners.
+
+                            </p>
+
+                            <a href="bookstore.html" class="project-link">
+                                   View Project →
+                                </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PROJECT 03 -->
+
+                    <article
+                        class="project-card reveal"
+                        data-category="video"
+                        data-project="video"
+                    >
+
+                        <div class="project-image">
+
+                            <span class="project-number">
+                                03
+                            </span>
+
+                            <div class="project-visual-title">
+                                VIDEO
+                            </div>
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <div class="project-category">
+                                VIDEO EDITING
+                            </div>
+
+                            <h3 class="project-name">
+                                Short-Form Video
+                            </h3>
+
+                            <p class="project-description">
+
+                                Reels, YouTube Shorts and promotional
+                                video concepts created for modern
+                                digital platforms.
+
+                            </p>
+
+                            <a href="video-editing.html" class="project-link">
+                                     View Project →
+                                </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PROJECT 04 -->
+
+                    <article
+                        class="project-card reveal"
+                        data-category="website"
+                        data-project="ajuverse"
+                    >
+
+                        <div class="project-image">
+
+                            <span class="project-number">
+                                04
+                            </span>
+
+                            <div class="project-visual-title">
+                                WEB
+                            </div>
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <div class="project-category">
+                                AI WEBSITE DESIGN
+                            </div>
+
+                            <h3 class="project-name">
+                                AjuVerse Website
+                            </h3>
+
+                            <p class="project-description">
+
+                                A modern personal-brand platform
+                                combining creative services,
+                                publishing and digital learning.
+
+                            </p>
+
+                            <a href="ai-website-design.html" class="project-link">
+                                        View Project →
+                                </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CTA
+        ===================================================== -->
+
+        <section
+            class="portfolio-cta"
+            id="contact"
+        >
+
+            <div class="container">
+
+                <div class="cta-box reveal">
+
+                    <span class="eyebrow">
+                        READY TO START?
+                    </span>
+
+                    <h2 class="cta-title">
+                        LET'S BUILD
+                        SOMETHING
+                        USEFUL.
+                    </h2>
+
+                    <p class="cta-text">
+
+                        Have an idea, project or digital product
+                        in mind? Let's turn it into something
+                        useful, professional and ready to share.
+
+                    </p>
+
+                    <div class="cta-buttons">
+
+                        <a
+                            href="contact.html"
+                            class="btn primary"
+                        >
+                            Start a Project →
+                        </a>
+
+                        <a
+                            href="index.html"
+                            class="btn"
+                        >
+                            Back to AjuVerse
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <div class="footer-brand">
+
+                    <h3>
+                        AjuVerse
+                    </h3>
+
+                    <p>
+                        Building ideas with creativity,
+                        technology and AI.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Quick Links
+                    </h4>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="portfolio.html">
+                        Portfolio
+                    </a>
+
+                    <a href="academy.html">
+                        Academy
+                    </a>
+
+                    <a href="bookstore.html">
+                        Bookstore
+                    </a>
+
+                    <a href="free-resources.html">
+                        Free Resources
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Services
+                    </h4>
+
+                    <a href="#projects">
+                        KDP Publishing
+                    </a>
+
+                    <a href="#projects">
+                        Digital Products
+                    </a>
+
+                    <a href="#projects">
+                        Video Editing
+                    </a>
+
+                    <a href="#projects">
+                        AI Websites
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Contact
+                    </h4>
+
+                    <a href="contact.html">
+                        Start a Project
+                    </a>
+
+                    <a href="index.html">
+                        AjuVerse Home
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 AjuVerse. All rights reserved.
+                </span>
+
+                <span>
+                    Learn • Publish • Grow
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         PROJECT MODAL
+    ========================================================= -->
+
+    <div
+        class="modal"
+        id="projectModal"
+    >
+
+        <div class="modal-box">
+
+            <button
+                class="modal-close"
+                id="modalClose"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+            <div
+                class="modal-category"
+                id="modalCategory"
+            >
+                PROJECT
+            </div>
+
+            <h2
+                class="modal-title"
+                id="modalTitle"
+            >
+                Project
+            </h2>
+
+            <p
+                class="modal-description"
+                id="modalDescription"
+            >
+                Project description.
+            </p>
+
+
+            <div class="modal-details">
+
+                <div class="modal-detail">
+
+                    <span>
+                        CATEGORY
+                    </span>
+
+                    <strong id="modalType">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="modal-detail">
+
+                    <span>
+                        SERVICES
+                    </span>
+
+                    <strong id="modalServices">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="modal-detail">
+
+                    <span>
+                        STATUS
+                    </span>
+
+                    <strong>
+                        SELECTED WORK
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================= -->
+
+    <script>
+
+        /* =========================================================
+           SCROLL REVEAL
+        ========================================================= */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+        const revealObserver =
+            new IntersectionObserver(
+                (entries) => {
+
+                    entries.forEach((entry) => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("visible");
+
+                            revealObserver.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+
+        revealElements.forEach((element) => {
+
+            revealObserver.observe(element);
+
+        });
+
+
+
+        /* =========================================================
+           FILTER
+        ========================================================= */
+
+        const filterButtons =
+            document.querySelectorAll(".filter-btn");
+
+        const projectCards =
+            document.querySelectorAll(".project-card");
+
+
+        filterButtons.forEach((button) => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    const filter =
+                        button.dataset.filter;
+
+
+                    filterButtons.forEach((btn) => {
+
+                        btn.classList.remove("active");
+
+                    });
+
+
+                    button.classList.add("active");
+
+
+                    projectCards.forEach((card) => {
+
+                        const category =
+                            card.dataset.category;
+
+
+                        if (
+                            filter === "all" ||
+                            category === filter
+                        ) {
+
+                            card.style.display = "block";
+
+                            setTimeout(() => {
+
+                                card.style.opacity = "1";
+                                card.style.transform = "translateY(0)";
+
+                            }, 20);
+
+                        } else {
+
+                            card.style.opacity = "0";
+                            card.style.transform = "translateY(15px)";
+
+                            setTimeout(() => {
+
+                                card.style.display = "none";
+
+                            }, 250);
+
+                        }
+
+                    });
+
+                }
+            );
+
+        });
+
+
+
+        /* =========================================================
+           PROJECT MODAL DATA
+        ========================================================= */
+
+        const projectData = {
+
+            bookora: {
+
+                category: "KDP PUBLISHING",
+
+                title: "BookOra Coloring Books",
+
+                description:
+                    "Creative coloring book concepts, covers and publishing-ready products developed for BookOra. This project combines visual design, publishing workflow and digital product presentation.",
+
+                type: "Publishing",
+
+                services:
+                    "Concept • Design • KDP"
+
+            },
+
+
+            "digital-products": {
+
+                category: "DIGITAL PRODUCTS",
+
+                title: "Digital Product Collection",
+
+                description:
+                    "Useful PDFs, guides, templates and practical digital resources created to help creators, learners and businesses.",
+
+                type: "Digital Product",
+
+                services:
+                    "Design • Layout • Publishing"
+
+            },
+
+
+            video: {
+
+                category: "VIDEO EDITING",
+
+                title: "Short-Form Video",
+
+                description:
+                    "Short-form video concepts designed for Reels, YouTube Shorts and promotional digital content.",
+
+                type: "Video",
+
+                services:
+                    "Editing • Motion • Content"
+
+            },
+
+
+            ajuverse: {
+
+                category: "AI WEBSITE DESIGN",
+
+                title: "AjuVerse Website",
+
+                description:
+                    "A modern personal-brand website combining creative services, publishing, digital learning and AI-assisted website development.",
+
+                type: "Website",
+
+                services:
+                    "UI • Development • AI"
+
+            }
+
+        };
+
+
+
+        /* =========================================================
+           MODAL
+        ========================================================= */
+
+        const modal =
+            document.getElementById("projectModal");
+
+        const modalClose =
+            document.getElementById("modalClose");
+
+        const modalTitle =
+            document.getElementById("modalTitle");
+
+        const modalCategory =
+            document.getElementById("modalCategory");
+
+        const modalDescription =
+            document.getElementById("modalDescription");
+
+        const modalType =
+            document.getElementById("modalType");
+
+        const modalServices =
+            document.getElementById("modalServices");
+
+
+        projectCards.forEach((card) => {
+
+            card.addEventListener(
+                "click",
+                (event) => {
+                    if (event.target.closest("a")) {
+    return;
+}
+
+                    const project =
+                        projectData[
+                            card.dataset.project
+                        ];
+
+                    if (!project) return;
+
+
+                    modalCategory.textContent =
+                        project.category;
+
+                    modalTitle.textContent =
+                        project.title;
+
+                    modalDescription.textContent =
+                        project.description;
+
+                    modalType.textContent =
+                        project.type;
+
+                    modalServices.textContent =
+                        project.services;
+
+
+                    modal.classList.add("active");
+
+                    document.body.style.overflow =
+                        "hidden";
+
+                }
+            );
+
+        });
+
+
+        function closeModal() {
+
+            modal.classList.remove("active");
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+        modalClose.addEventListener(
+            "click",
+            closeModal
+        );
+
+
+        modal.addEventListener(
+            "click",
+            (event) => {
+
+                if (
+                    event.target === modal
+                ) {
+
+                    closeModal();
+
+                }
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            (event) => {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    closeModal();
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,2183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KDP Publishing | AjuVerse Academy</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+/* =========================================================
+   AJUVERSE KDP PUBLISHING PAGE
+========================================================= */
+
+.kdp-page,
+body {
+    background:
+        radial-gradient(
+            circle at 85% 12%,
+            rgba(245,164,0,.075),
+            transparent 28%
+        ),
+        #000;
+    color: #fff;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(0,0,0,.94);
+
+    backdrop-filter: blur(18px);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.10);
+}
+
+.site-header .container {
+    width:
+        min(1120px, calc(100% - 48px));
+
+    margin: 0 auto;
+}
+
+.nav-container {
+    min-height: 86px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.logo-link {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    color: #fff;
+}
+
+.logo-link img {
+    width: 62px;
+    height: 62px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 0 8px
+            rgba(255,255,255,.30)
+        );
+}
+
+.logo-text {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.logo-text strong {
+    font-size: 27px;
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+}
+
+.logo-text span {
+    margin-top: 5px;
+
+    color: #777;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 2.5px;
+}
+
+
+/* NAVIGATION */
+
+.main-nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 26px;
+}
+
+.main-nav a {
+    color: #999;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        color .25s ease;
+}
+
+.main-nav a:hover {
+    color: #f5a400;
+}
+
+.login-btn {
+    min-width: 82px;
+
+    padding:
+        11px 16px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.18);
+
+    color: #fff;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        border-color .25s ease;
+}
+
+.login-btn:hover {
+    background: #f5a400;
+
+    border-color: #f5a400;
+
+    color: #000;
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+main {
+    overflow: hidden;
+}
+
+.course-hero,
+.course-overview,
+.course-curriculum,
+.course-method,
+.academy-cta {
+    position: relative;
+}
+
+.course-hero .container,
+.course-overview .container,
+.course-curriculum .container,
+.course-method .container,
+.academy-cta .container {
+    width:
+        min(1120px, calc(100% - 48px));
+
+    margin: 0 auto;
+}
+
+.eyebrow {
+    display: inline-block;
+
+    color: #f5a400;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+.section-heading {
+    max-width: 850px;
+}
+
+.section-heading h2 {
+    margin-top: 14px;
+
+    color: #fff;
+
+    font-size:
+        clamp(42px, 5vw, 68px);
+
+    line-height: .92;
+
+    font-weight: 900;
+
+    letter-spacing: -3px;
+}
+
+.section-heading p {
+    max-width: 720px;
+
+    margin-top: 20px;
+
+    color: #8f8f8f;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   COURSE HERO
+========================================================= */
+
+.course-hero {
+    min-height: 680px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding:
+        95px 0;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+
+    background:
+        radial-gradient(
+            circle at 80% 45%,
+            rgba(245,164,0,.10),
+            transparent 30%
+        );
+}
+
+.course-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 470px;
+    height: 470px;
+
+    right: 7%;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.12),
+            rgba(0,0,0,.45)
+        ),
+        url("../assets/books/cozy-little-worlds.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    border:
+        1px solid rgba(245,164,0,.25);
+
+    box-shadow:
+        0 35px 90px rgba(0,0,0,.70),
+        0 0 65px rgba(245,164,0,.08);
+
+    transform-origin: center;
+
+    filter:
+        saturate(.82)
+        contrast(1.05);
+
+    opacity: .92;
+
+    z-index: 0;
+}
+
+.course-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    right: 4.5%;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    border:
+        1px solid rgba(245,164,0,.14);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 80px
+        rgba(245,164,0,.05);
+
+    z-index: 0;
+}
+
+.course-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 610px;
+}
+
+.course-hero h1 {
+    margin-top: 18px;
+
+    color: #fff;
+
+    font-size:
+        clamp(60px, 7vw, 96px);
+
+    line-height: .86;
+
+    font-weight: 900;
+
+    letter-spacing: -5px;
+}
+
+.course-subtitle {
+    max-width: 550px;
+
+    margin-top: 27px;
+
+    color: #d2d2d2;
+
+    font-size: 17px;
+
+    line-height: 1.65;
+
+    font-weight: 500;
+}
+
+.course-description {
+    max-width: 570px;
+
+    margin-top: 14px;
+
+    color: #808080;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+.course-actions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 28px;
+}
+
+.course-actions .btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 46px;
+
+    padding:
+        0 19px;
+
+    background: #fff;
+
+    color: #000;
+
+    border:
+        1px solid #fff;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    text-decoration: none;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+.course-actions .btn:hover {
+    background: #f5a400;
+
+    border-color: #f5a400;
+
+    transform:
+        translateY(-2px);
+}
+
+.course-actions .btn-outline {
+    background: transparent;
+
+    color: #fff;
+
+    border-color:
+        rgba(255,255,255,.22);
+}
+
+.course-actions .btn-outline:hover {
+    background: transparent;
+
+    color: #f5a400;
+
+    border-color: #f5a400;
+}
+
+
+/* =========================================================
+   COURSE OVERVIEW
+========================================================= */
+
+.course-overview {
+    padding:
+        100px 0;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+}
+
+.course-overview .section-heading {
+    max-width: 720px;
+}
+
+.course-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    margin-top: 58px;
+
+    border:
+        1px solid rgba(255,255,255,.10);
+}
+
+.course-stat {
+    min-height: 170px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.035),
+            rgba(255,255,255,.008)
+        );
+
+    border-right:
+        1px solid rgba(255,255,255,.08);
+}
+
+.course-stat:last-child {
+    border-right: 0;
+}
+
+.course-stat strong {
+    color: #fff;
+
+    font-size: 38px;
+
+    line-height: 1;
+
+    font-weight: 900;
+}
+
+.course-stat span {
+    margin-top: 10px;
+
+    color: #777;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   CURRICULUM
+========================================================= */
+
+.course-curriculum {
+    padding:
+        105px 0;
+}
+
+.curriculum-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0,1fr));
+
+    gap: 16px;
+
+    margin-top: 48px;
+}
+
+.curriculum-card {
+    position: relative;
+
+    min-height: 285px;
+
+    padding: 28px;
+
+    border:
+        1px solid rgba(255,255,255,.11);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.035),
+            rgba(0,0,0,.35)
+        );
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+.curriculum-card:hover {
+    transform:
+        translateY(-7px);
+
+    border-color:
+        rgba(245,164,0,.42);
+
+    box-shadow:
+        0 25px 60px
+        rgba(0,0,0,.55);
+}
+
+.module-number {
+    color: #f5a400;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+.curriculum-card h3 {
+    margin-top: 20px;
+
+    color: #fff;
+
+    font-size: 22px;
+
+    line-height: 1.1;
+
+    font-weight: 900;
+}
+
+.curriculum-card p {
+    margin-top: 11px;
+
+    color: #878787;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+.curriculum-card ul {
+    margin-top: 18px;
+
+    list-style: none;
+
+    padding: 0;
+}
+
+.curriculum-card li {
+    margin-top: 7px;
+
+    color: #696969;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   LEARNING METHOD
+========================================================= */
+
+.course-method {
+    padding:
+        105px 0;
+
+    border-top:
+        1px solid rgba(255,255,255,.08);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+
+    background:
+        radial-gradient(
+            circle at 85% 50%,
+            rgba(245,164,0,.055),
+            transparent 28%
+        );
+}
+
+.method-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0,1fr));
+
+    gap: 14px;
+
+    margin-top: 48px;
+}
+
+.method-card {
+    min-height: 220px;
+
+    padding: 25px;
+
+    border:
+        1px solid rgba(255,255,255,.10);
+
+    background:
+        rgba(255,255,255,.015);
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease;
+}
+
+.method-card:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(245,164,0,.35);
+}
+
+.method-card > span {
+    color: #f5a400;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+.method-card h3 {
+    margin-top: 20px;
+
+    color: #fff;
+
+    font-size: 23px;
+
+    font-weight: 900;
+}
+
+.method-card p {
+    margin-top: 10px;
+
+    color: #808080;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.academy-cta {
+    padding:
+        120px 0;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(245,164,0,.09),
+            transparent 45%
+        );
+}
+
+.academy-cta .container {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.academy-cta h2 {
+    margin-top: 16px;
+
+    color: #fff;
+
+    font-size:
+        clamp(46px, 6vw, 80px);
+
+    line-height: .88;
+
+    font-weight: 900;
+
+    letter-spacing: -4px;
+}
+
+.academy-cta p {
+    margin-top: 20px;
+
+    color: #858585;
+
+    font-size: 13px;
+}
+
+.academy-cta .btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 48px;
+
+    margin-top: 28px;
+
+    padding:
+        0 22px;
+
+    background: #fff;
+
+    color: #000;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    text-decoration: none;
+
+    transition:
+        background .25s ease,
+        transform .25s ease;
+}
+
+.academy-cta .btn:hover {
+    background: #f5a400;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    padding:
+        45px 0
+        25px;
+
+    border-top:
+        1px solid rgba(255,255,255,.10);
+
+    background: #020202;
+}
+
+.site-footer .container {
+    width:
+        min(1120px, calc(100% - 48px));
+
+    margin: 0 auto;
+}
+
+.site-footer p {
+    color: #666;
+
+    font-size: 11px;
+
+    text-align: center;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .main-nav {
+        display: none;
+    }
+
+    .course-hero {
+        min-height: auto;
+
+        padding:
+            85px 0;
+    }
+
+    .course-hero::after {
+        width: 360px;
+        height: 360px;
+
+        right: 3%;
+    }
+
+    .course-hero::before {
+        width: 400px;
+        height: 400px;
+
+        right: 0;
+    }
+
+    .curriculum-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .method-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .site-header .container,
+    .course-hero .container,
+    .course-overview .container,
+    .course-curriculum .container,
+    .course-method .container,
+    .academy-cta .container,
+    .site-footer .container {
+        width:
+            calc(100% - 30px);
+    }
+
+    .nav-container {
+        min-height: 74px;
+    }
+
+    .logo-link img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .logo-text strong {
+        font-size: 22px;
+    }
+
+    .logo-text span {
+        font-size: 7px;
+        letter-spacing: 2px;
+    }
+
+    .login-btn {
+        min-width: 68px;
+
+        padding:
+            9px 11px;
+    }
+
+
+    .course-hero {
+        padding:
+            65px 0
+            55px;
+    }
+
+    .course-hero::after {
+        position: relative;
+
+        right: auto;
+
+        top: auto;
+
+        transform: none;
+
+        width: 100%;
+
+        max-width: 380px;
+
+        height: 300px;
+
+        margin: 55px auto 0;
+
+        display: block;
+    }
+
+    .course-hero::before {
+        display: none;
+    }
+
+    .course-hero-content {
+        max-width: none;
+    }
+
+    .course-hero h1 {
+        font-size: 58px;
+
+        letter-spacing: -3px;
+    }
+
+    .course-subtitle {
+        font-size: 15px;
+    }
+
+    .course-description {
+        font-size: 12px;
+    }
+
+
+    .course-overview,
+    .course-curriculum,
+    .course-method {
+        padding:
+            75px 0;
+    }
+
+
+    .section-heading h2 {
+        font-size: 43px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .course-stats {
+        grid-template-columns: 1fr;
+
+        margin-top: 38px;
+    }
+
+    .course-stat {
+        min-height: 130px;
+
+        border-right: 0;
+
+        border-bottom:
+            1px solid rgba(255,255,255,.08);
+    }
+
+    .course-stat:last-child {
+        border-bottom: 0;
+    }
+
+
+    .curriculum-grid,
+    .method-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .curriculum-card {
+        min-height: auto;
+    }
+
+
+    .academy-cta {
+        padding:
+            85px 0;
+    }
+
+    .academy-cta h2 {
+        font-size: 49px;
+
+        letter-spacing: -2.5px;
+    }
+
+
+    .site-footer {
+        padding:
+            35px 0
+            20px;
+    }
+
+}
+
+/* =========================================================
+   KDP PAGE — BALANCED TYPOGRAPHY V2
+========================================================= */
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.logo-text strong {
+    font-size: 24px !important;
+}
+
+.logo-text span {
+    font-size: 8px !important;
+}
+
+.main-nav a {
+    font-size: 12px !important;
+}
+
+.login-btn {
+    font-size: 11px !important;
+}
+
+
+/* =========================================================
+   SMALL EYEBROW TEXT
+========================================================= */
+
+.eyebrow {
+    font-size: 12px !important;
+
+    letter-spacing: 3px !important;
+
+    line-height: 1.4 !important;
+}
+
+
+/* =========================================================
+   HERO TITLE
+   REDUCED SIGNIFICANTLY
+========================================================= */
+
+.course-hero h1 {
+    font-size:
+        clamp(
+            46px,
+            4.5vw,
+            64px
+        ) !important;
+
+    line-height: .94 !important;
+
+    letter-spacing: -2.5px !important;
+
+    margin-top: 14px !important;
+}
+
+
+/* =========================================================
+   HERO BODY TEXT
+   INCREASED
+========================================================= */
+
+.course-subtitle {
+    max-width: 590px !important;
+
+    margin-top: 24px !important;
+
+    font-size: 18px !important;
+
+    line-height: 1.7 !important;
+
+    color: #d7d7d7 !important;
+}
+
+
+.course-description {
+    max-width: 650px !important;
+
+    margin-top: 14px !important;
+
+    font-size: 15px !important;
+
+    line-height: 1.8 !important;
+
+    color: #9a9a9a !important;
+}
+
+
+/* =========================================================
+   BUTTON TEXT
+========================================================= */
+
+.course-actions .btn {
+    font-size: 11px !important;
+
+    min-height: 48px !important;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+   REDUCED
+========================================================= */
+
+.section-heading h2 {
+    font-size:
+        clamp(
+            36px,
+            4vw,
+            54px
+        ) !important;
+
+    line-height: .98 !important;
+
+    letter-spacing: -2px !important;
+}
+
+
+.section-heading p {
+    max-width: 760px !important;
+
+    font-size: 15px !important;
+
+    line-height: 1.8 !important;
+
+    color: #999 !important;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.course-stat strong {
+    font-size: 30px !important;
+}
+
+
+.course-stat span {
+    font-size: 11px !important;
+
+    letter-spacing: 1px !important;
+}
+
+
+/* =========================================================
+   CURRICULUM TITLES
+   REDUCED
+========================================================= */
+
+.module-number {
+    font-size: 11px !important;
+
+    letter-spacing: 2.5px !important;
+}
+
+
+.curriculum-card h3 {
+    font-size: 19px !important;
+
+    line-height: 1.2 !important;
+}
+
+
+.curriculum-card p {
+    font-size: 14px !important;
+
+    line-height: 1.75 !important;
+
+    color: #949494 !important;
+}
+
+
+.curriculum-card li {
+    font-size: 12px !important;
+
+    line-height: 1.6 !important;
+
+    color: #818181 !important;
+}
+
+
+/* =========================================================
+   LEARNING METHOD
+========================================================= */
+
+.method-card > span {
+    font-size: 11px !important;
+
+    letter-spacing: 2.5px !important;
+}
+
+
+.method-card h3 {
+    font-size: 20px !important;
+
+    line-height: 1.2 !important;
+}
+
+
+.method-card p {
+    font-size: 14px !important;
+
+    line-height: 1.75 !important;
+
+    color: #929292 !important;
+}
+
+
+/* =========================================================
+   FINAL CTA
+   REDUCED
+========================================================= */
+
+.academy-cta h2 {
+    font-size:
+        clamp(
+            40px,
+            4.8vw,
+            62px
+        ) !important;
+
+    line-height: .94 !important;
+
+    letter-spacing: -2.5px !important;
+}
+
+
+.academy-cta p {
+    font-size: 15px !important;
+
+    line-height: 1.7 !important;
+}
+
+
+.academy-cta .btn {
+    font-size: 11px !important;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer p {
+    font-size: 12px !important;
+
+    line-height: 1.6 !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .logo-text strong {
+        font-size: 21px !important;
+    }
+
+
+    .logo-text span {
+        font-size: 7px !important;
+    }
+
+
+    .eyebrow {
+        font-size: 10px !important;
+
+        letter-spacing: 2.5px !important;
+    }
+
+
+    .course-hero h1 {
+        font-size: 48px !important;
+
+        line-height: .94 !important;
+
+        letter-spacing: -2px !important;
+    }
+
+
+    .course-subtitle {
+        font-size: 16px !important;
+
+        line-height: 1.65 !important;
+    }
+
+
+    .course-description {
+        font-size: 14px !important;
+
+        line-height: 1.75 !important;
+    }
+
+
+    .section-heading h2 {
+        font-size: 38px !important;
+
+        line-height: .98 !important;
+
+        letter-spacing: -1.8px !important;
+    }
+
+
+    .section-heading p {
+        font-size: 14px !important;
+    }
+
+
+    .course-stat strong {
+        font-size: 28px !important;
+    }
+
+
+    .curriculum-card h3 {
+        font-size: 20px !important;
+    }
+
+
+    .curriculum-card p {
+        font-size: 14px !important;
+    }
+
+
+    .curriculum-card li {
+        font-size: 12px !important;
+    }
+
+
+    .method-card h3 {
+        font-size: 20px !important;
+    }
+
+
+    .method-card p {
+        font-size: 14px !important;
+    }
+
+
+    .academy-cta h2 {
+        font-size: 43px !important;
+
+        letter-spacing: -2px !important;
+    }
+
+
+    .academy-cta p {
+        font-size: 14px !important;
+    }
+
+}
+
+/* =========================================================
+   KDP HEADER — FINAL SIZE
+========================================================= */
+
+.logo-link img {
+    width: 68px !important;
+    height: 68px !important;
+}
+
+.logo-text strong {
+    font-size: 29px !important;
+    line-height: 1 !important;
+    font-weight: 900 !important;
+}
+
+.logo-text span {
+    margin-top: 6px !important;
+    font-size: 9px !important;
+    letter-spacing: 2.5px !important;
+}
+
+.main-nav {
+    gap: 30px !important;
+}
+
+.main-nav a {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+}
+
+.login-btn {
+    min-width: 88px !important;
+    padding: 12px 18px !important;
+    font-size: 11px !important;
+}
+
+
+/* =========================================================
+   KDP PAGE — COMPACT SPACING
+========================================================= */
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.course-hero {
+    min-height: 540px !important;
+
+    padding:
+        65px 0 !important;
+}
+
+
+.course-hero-content {
+    max-width: 590px !important;
+}
+
+
+.course-hero h1 {
+    margin-top: 12px !important;
+}
+
+
+.course-subtitle {
+    margin-top: 18px !important;
+}
+
+
+.course-description {
+    margin-top: 10px !important;
+}
+
+
+.course-actions {
+    margin-top: 20px !important;
+}
+
+
+/* =========================================================
+   COMMON SECTION SPACING
+========================================================= */
+
+.course-overview {
+    padding:
+        62px 0 !important;
+}
+
+
+.course-curriculum {
+    padding:
+        68px 0 !important;
+}
+
+
+.course-method {
+    padding:
+        68px 0 !important;
+}
+
+
+.academy-cta {
+    padding:
+        78px 0 !important;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.section-heading h2 {
+    margin-top: 10px !important;
+}
+
+
+.section-heading p {
+    margin-top: 14px !important;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.course-stats {
+    margin-top: 32px !important;
+}
+
+
+.course-stat {
+    min-height: 125px !important;
+
+    padding:
+        22px !important;
+}
+
+
+/* =========================================================
+   CURRICULUM
+========================================================= */
+
+.curriculum-grid {
+    margin-top: 30px !important;
+
+    gap: 12px !important;
+}
+
+
+.curriculum-card {
+    min-height: 245px !important;
+
+    padding:
+        23px !important;
+}
+
+
+.curriculum-card h3 {
+    margin-top: 14px !important;
+}
+
+
+.curriculum-card p {
+    margin-top: 8px !important;
+}
+
+
+.curriculum-card ul {
+    margin-top: 12px !important;
+}
+
+
+.curriculum-card li {
+    margin-top: 5px !important;
+}
+
+
+/* =========================================================
+   LEARNING METHOD
+========================================================= */
+
+.method-grid {
+    margin-top: 30px !important;
+
+    gap: 12px !important;
+}
+
+
+.method-card {
+    min-height: 170px !important;
+
+    padding:
+        21px !important;
+}
+
+
+.method-card h3 {
+    margin-top: 13px !important;
+}
+
+
+.method-card p {
+    margin-top: 8px !important;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.academy-cta h2 {
+    margin-top: 10px !important;
+}
+
+
+.academy-cta p {
+    margin-top: 14px !important;
+}
+
+
+.academy-cta .btn {
+    margin-top: 20px !important;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    padding:
+        30px 0
+        18px !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .course-hero {
+        min-height: auto !important;
+
+        padding:
+            48px 0
+            42px !important;
+    }
+
+
+    .course-overview,
+    .course-curriculum,
+    .course-method {
+        padding:
+            48px 0 !important;
+    }
+
+
+    .academy-cta {
+        padding:
+            58px 0 !important;
+    }
+
+
+    .course-stats {
+        margin-top: 25px !important;
+    }
+
+
+    .curriculum-grid,
+    .method-grid {
+        margin-top: 25px !important;
+    }
+
+
+    .curriculum-card,
+    .method-card {
+        min-height: auto !important;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo.png" alt="AjuVerse Logo">
+                <div class="logo-text">
+                    <strong>AjuVerse</strong>
+                    <span>Learn • Publish • Grow</span>
+                </div>
+            </a>
+
+            <nav class="main-nav">
+
+                <a href="index.html">Home</a>
+
+                <a href="books.html">Books</a>
+
+                <a href="academy.html">Academy</a>
+
+                <a href="index.html#portfolio">Portfolio</a>
+
+                <a href="index.html#store">Store</a>
+
+                <a href="free-ai-starter-kit.html">
+                    Free Resources
+                </a>
+
+                <a href="index.html#contact">Contact</a>
+
+            </nav>
+
+            <a href="#" class="login-btn">
+                Login
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         COURSE HERO
+    ====================================================== -->
+
+    <main>
+
+        <section class="course-hero">
+
+            <div class="container">
+
+                <div class="course-hero-content">
+
+                    <div class="eyebrow">
+                        AJUVERSE ACADEMY
+                    </div>
+
+                    <h1>
+                        KDP<br>
+                        PUBLISHING.
+                    </h1>
+
+                    <p class="course-subtitle">
+                        Learn how to turn your book idea into a
+                        professionally prepared publishing project.
+                    </p>
+
+                    <p class="course-description">
+                        Understand the complete publishing workflow —
+                        from book development and formatting to cover
+                        preparation, publishing and building a
+                        professional book catalog.
+                    </p>
+
+                    <div class="course-actions">
+
+                        <a href="#curriculum" class="btn">
+                            Explore Curriculum →
+                        </a>
+
+                        <a href="academy.html" class="btn btn-outline">
+                            ← Back to Academy
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             COURSE OVERVIEW
+        ================================================== -->
+
+        <section class="course-overview">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="eyebrow">
+                        WHAT YOU WILL LEARN
+                    </div>
+
+                    <h2>
+                        FROM IDEA<br>
+                        TO PUBLISHED BOOK.
+                    </h2>
+
+                    <p>
+                        A practical publishing workflow designed to
+                        help creators understand each stage of
+                        preparing and publishing a book.
+                    </p>
+
+                </div>
+
+
+                <div class="course-stats">
+
+                    <div class="course-stat">
+                        <strong>06</strong>
+                        <span>Core Modules</span>
+                    </div>
+
+                    <div class="course-stat">
+                        <strong>01</strong>
+                        <span>Publishing Workflow</span>
+                    </div>
+
+                    <div class="course-stat">
+                        <strong>KDP</strong>
+                        <span>Publishing Focus</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CURRICULUM
+        ================================================== -->
+
+        <section class="course-curriculum" id="curriculum">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="eyebrow">
+                        COURSE CURRICULUM
+                    </div>
+
+                    <h2>
+                        BUILD YOUR<br>
+                        PUBLISHING SKILL.
+                    </h2>
+
+                </div>
+
+
+                <div class="curriculum-grid">
+
+    <!-- MODULE 01 -->
+    <article class="curriculum-card">
+
+        <span class="module-number">
+            01
+        </span>
+
+        <h3>
+            Book Development
+        </h3>
+
+        <p>
+            Turn a simple book idea into a clear and publishable project.
+        </p>
+
+        <ul>
+            <li>✓ Niche & book research</li>
+            <li>✓ Book concept development</li>
+            <li>✓ Content planning</li>
+            <li>✓ Page structure</li>
+        </ul>
+
+    </article>
+
+
+    <!-- MODULE 02 -->
+    <article class="curriculum-card">
+
+        <span class="module-number">
+            02
+        </span>
+
+        <h3>
+            Interior Formatting
+        </h3>
+
+        <p>
+            Learn how to prepare professional interiors that meet publishing requirements.
+        </p>
+
+        <ul>
+            <li>✓ Page dimensions</li>
+            <li>✓ Interior layout</li>
+            <li>✓ Bleed & margins</li>
+            <li>✓ Print-ready files</li>
+        </ul>
+
+    </article>
+
+
+    <!-- MODULE 03 -->
+    <article class="curriculum-card">
+
+        <span class="module-number">
+            03
+        </span>
+
+        <h3>
+            Cover Creation
+        </h3>
+
+        <p>
+            Create attractive covers designed for professional publishing and strong presentation.
+        </p>
+
+        <ul>
+            <li>✓ Cover dimensions</li>
+            <li>✓ Front & back cover</li>
+            <li>✓ Spine preparation</li>
+            <li>✓ Cover design workflow</li>
+        </ul>
+
+    </article>
+
+
+    <!-- MODULE 04 -->
+    <article class="curriculum-card">
+
+        <span class="module-number">
+            04
+        </span>
+
+        <h3>
+            KDP Setup
+        </h3>
+
+        <p>
+            Prepare your book listing and understand the important publishing settings.
+        </p>
+
+        <ul>
+            <li>✓ Title & subtitle</li>
+            <li>✓ Description</li>
+            <li>✓ Keywords</li>
+            <li>✓ Categories</li>
+        </ul>
+
+    </article>
+
+
+    <!-- MODULE 05 -->
+    <article class="curriculum-card">
+
+        <span class="module-number">
+            05
+        </span>
+
+        <h3>
+            Publishing
+        </h3>
+
+        <p>
+            Learn the final steps required to upload, review and publish your book.
+        </p>
+
+        <ul>
+            <li>✓ Upload workflow</li>
+            <li>✓ Book preview</li>
+            <li>✓ Fixing publishing issues</li>
+            <li>✓ Publishing checklist</li>
+        </ul>
+
+    </article>
+
+
+    <!-- MODULE 06 -->
+    <article class="curriculum-card">
+
+        <span class="module-number">
+            06
+        </span>
+
+        <h3>
+            Build Your Catalog
+        </h3>
+
+        <p>
+            Learn how individual books can become part of a larger publishing catalog.
+        </p>
+
+        <ul>
+            <li>✓ Product planning</li>
+            <li>✓ Book series</li>
+            <li>✓ Catalog strategy</li>
+            <li>✓ Long-term publishing</li>
+        </ul>
+
+    </article>
+
+</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             LEARNING METHOD
+        ================================================== -->
+
+        <section class="course-method">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="eyebrow">
+                        HOW YOU WILL EARN
+                    </div>
+
+                    <h2>
+                        LEARN.<br>
+                        BUILD.<br>
+                        PUBLISH.<br>
+                        Grow.
+                    </h2>
+
+                </div>
+
+
+                <div class="method-grid">
+
+                    <div class="method-card">
+
+                        <span>01</span>
+
+                        <h3>
+                            Learn
+                        </h3>
+
+                        <p>
+                            Understand the publishing concepts and
+                            workflow behind each stage.
+                        </p>
+
+                    </div>
+
+
+                    <div class="method-card">
+
+                        <span>02</span>
+
+                        <h3>
+                            Build
+                        </h3>
+
+                        <p>
+                            Apply what you learn by creating real
+                            publishing assets.
+                        </p>
+
+                    </div>
+
+
+                    <div class="method-card">
+
+                        <span>03</span>
+
+                        <h3>
+                            Publish
+                        </h3>
+
+                        <p>
+                            Turn your completed project into a
+                            professional publishing submission.
+                        </p>
+
+                    </div>
+
+
+                    <div class="method-card">
+
+                        <span>04</span>
+
+                        <h3>
+                            Grow
+                        </h3>
+
+                        <p>
+                            Continue building your skills and
+                            publishing catalog.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FINAL CTA
+        ================================================== -->
+
+        <section class="academy-cta">
+
+            <div class="container">
+
+                <div class="eyebrow">
+                    AJUVERSE ACADEMY
+                </div>
+
+                <h2>
+                    TURN YOUR<br>
+                    IDEA INTO A BOOK.
+                </h2>
+
+                <p>
+                    Learn the workflow. Build the project.
+                    Publish with confidence.
+                </p>
+
+                <a href="academy.html" class="btn">
+                    Explore More Learning Paths →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 AjuVerse. Create • Design • Publish • Grow.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

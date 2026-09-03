@@ -1,198 +1,185 @@
-// ==========================
-// AJUVERSE FINAL SCRIPT
-// ==========================
+/* =========================================================
+   AJUVERSE — MAIN JAVASCRIPT
+========================================================= */
 
-// Navbar Shadow on Scroll
+document.addEventListener("DOMContentLoaded", () => {
 
-window.addEventListener("scroll", () => {
 
-const header = document.querySelector(".header");
+    /* =====================================================
+       PORTFOLIO FILTER
+    ===================================================== */
 
-if(window.scrollY > 50){
+    const filterButtons = document.querySelectorAll(
+        ".portfolio-filter"
+    );
 
-header.style.boxShadow =
-"0px 10px 30px rgba(0,0,0,0.4)";
+    const portfolioCards = document.querySelectorAll(
+        ".portfolio-card"
+    );
 
-}
-else{
 
-header.style.boxShadow = "none";
+    filterButtons.forEach((button) => {
 
-}
+        button.addEventListener("click", () => {
+
+
+            /* Remove active state */
+
+            filterButtons.forEach((btn) => {
+                btn.classList.remove("active");
+            });
+
+
+            /* Add active state to clicked button */
+
+            button.classList.add("active");
+
+
+            /* Get selected category */
+
+            const selectedFilter =
+                button.getAttribute("data-filter");
+
+
+            /* Show / hide cards */
+
+            portfolioCards.forEach((card) => {
+
+                const cardCategory =
+                    card.getAttribute("data-category");
+
+
+                if (
+                    selectedFilter === "all" ||
+                    cardCategory === selectedFilter
+                ) {
+
+                    card.style.display = "block";
+
+                    setTimeout(() => {
+                        card.style.opacity = "1";
+                        card.style.transform = "translateY(0)";
+                    }, 10);
+
+                } else {
+
+                    card.style.opacity = "0";
+                    card.style.transform = "translateY(10px)";
+
+                    setTimeout(() => {
+                        card.style.display = "none";
+                    }, 200);
+
+                }
+
+            });
+
+        });
+
+    });
+
+
+
+    /* =====================================================
+       WHAT I DO → PORTFOLIO
+    ===================================================== */
+
+    const skillLinks = document.querySelectorAll(
+        ".skill-portfolio-link"
+    );
+
+
+    skillLinks.forEach((link) => {
+
+        link.addEventListener("click", (event) => {
+
+            event.preventDefault();
+
+
+            const targetCategory =
+                link.getAttribute("data-target");
+
+
+            /* Find matching portfolio filter */
+
+            const matchingFilter =
+                document.querySelector(
+                    `.portfolio-filter[data-filter="${targetCategory}"]`
+                );
+
+
+            if (matchingFilter) {
+
+                matchingFilter.click();
+
+            }
+
+
+            /* Scroll to Portfolio */
+
+            const portfolioSection =
+                document.querySelector("#portfolio");
+
+
+            if (portfolioSection) {
+
+                portfolioSection.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            }
+
+        });
+
+    });
+
+
+
+    /* =====================================================
+       SMOOTH INTERNAL LINKS
+    ===================================================== */
+
+    const internalLinks =
+        document.querySelectorAll(
+            'a[href^="#"]'
+        );
+
+
+    internalLinks.forEach((link) => {
+
+        link.addEventListener("click", (event) => {
+
+            const targetId =
+                link.getAttribute("href");
+
+
+            if (
+                !targetId ||
+                targetId === "#"
+            ) {
+                return;
+            }
+
+
+            const target =
+                document.querySelector(targetId);
+
+
+            if (target) {
+
+                event.preventDefault();
+
+
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }
+
+        });
+
+    });
+
 
 });
-
-// ==========================
-// Scroll Reveal Animation
-// ==========================
-
-const revealElements = document.querySelectorAll(
-
-'.service-card, .portfolio-card, .stats-grid div'
-
-);
-
-const revealObserver = new IntersectionObserver(
-
-(entries)=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.style.opacity = "1";
-entry.target.style.transform =
-"translateY(0px)";
-
-}
-
-});
-
-},
-
-{
-threshold:0.2
-}
-
-);
-
-revealElements.forEach(element=>{
-
-element.style.opacity = "0";
-
-element.style.transform =
-"translateY(60px)";
-
-element.style.transition =
-"all 0.8s ease";
-
-revealObserver.observe(element);
-
-});
-
-// ==========================
-// Hero Fade In
-// ==========================
-
-window.addEventListener("load",()=>{
-
-const heroContent =
-document.querySelector(".hero-content");
-
-const heroImage =
-document.querySelector(".hero-image");
-
-heroContent.style.opacity="0";
-heroImage.style.opacity="0";
-
-heroContent.style.transform=
-"translateX(-40px)";
-
-heroImage.style.transform=
-"translateX(40px)";
-
-setTimeout(()=>{
-
-heroContent.style.transition=
-"all 1s ease";
-
-heroImage.style.transition=
-"all 1s ease";
-
-heroContent.style.opacity="1";
-heroImage.style.opacity="1";
-
-heroContent.style.transform=
-"translateX(0px)";
-
-heroImage.style.transform=
-"translateX(0px)";
-
-},300);
-
-});
-
-// ==========================
-// Portfolio Hover Glow
-// ==========================
-
-const cards =
-document.querySelectorAll(".portfolio-card");
-
-cards.forEach(card=>{
-
-card.addEventListener("mouseenter",()=>{
-
-card.style.boxShadow =
-"0 20px 40px rgba(255,255,255,0.08)";
-
-});
-
-card.addEventListener("mouseleave",()=>{
-
-card.style.boxShadow =
-"none";
-
-});
-
-});
-
-// ==========================
-// Services Hover Glow
-// ==========================
-
-const serviceCards =
-document.querySelectorAll(".service-card");
-
-serviceCards.forEach(card=>{
-
-card.addEventListener("mouseenter",()=>{
-
-card.style.boxShadow =
-"0 20px 40px rgba(255,255,255,0.08)";
-
-});
-
-card.addEventListener("mouseleave",()=>{
-
-card.style.boxShadow =
-"none";
-
-});
-
-});
-
-// ==========================
-// Smooth Anchor Scroll
-// ==========================
-
-document.querySelectorAll('a[href^="#"]')
-.forEach(anchor => {
-
-anchor.addEventListener("click", function(e) {
-
-e.preventDefault();
-
-document.querySelector(
-this.getAttribute("href")
-).scrollIntoView({
-
-behavior:"smooth"
-
-});
-
-});
-
-});
-
-// ==========================
-// Console Branding
-// ==========================
-
-console.log(
-
-"%cAjuVerse Loaded Successfully 🚀",
-
-"color:white;background:black;padding:10px;font-size:16px;"
-
-);
