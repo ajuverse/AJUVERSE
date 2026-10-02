@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta name="viewport"
+      content="width=device-width,initial-scale=1">
+
+<title>BookOra | Cart</title>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<style>
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  background:#050505;
+  color:#f7f7f7;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+.wrap{
+  width:min(1100px,calc(100% - 36px));
+  margin:0 auto;
+  padding:55px 0 80px;
+}
+
+a{
+  color:inherit;
+}
+
+.top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:35px;
+}
+
+.top a{
+  text-decoration:none;
+  color:#f2b300;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1.4fr .8fr;
+  gap:24px;
+}
+
+.panel{
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:14px;
+  padding:24px;
+  background:#0b0b0b;
+}
+
+.panel h1,
+.panel h2{
+  margin-top:0;
+}
+
+.cart-item{
+  display:grid;
+  grid-template-columns:1fr auto auto auto;
+  gap:14px;
+  align-items:center;
+  padding:17px 0;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.cart-item-price{
+  color:#777;
+  font-size:12px;
+  margin-top:4px;
+}
+
+.qty{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.qty button,
+.remove{
+  background:#111;
+  border:1px solid #333;
+  color:#fff;
+  border-radius:7px;
+  padding:7px 10px;
+  cursor:pointer;
+}
+
+.remove{
+  color:#f2b300;
+}
+
+.summary{
+  margin-top:24px;
+  display:flex;
+  justify-content:space-between;
+  font-size:18px;
+}
+
+.summary strong{
+  font-size:24px;
+}
+
+.empty-cart{
+  color:#999;
+  padding:30px 0;
+}
+
+.empty-cart a{
+  color:#f2b300;
+}
+
+label{
+  display:block;
+  font-size:11px;
+  color:#aaa;
+  margin:13px 0 6px;
+}
+
+input,
+textarea{
+  width:100%;
+  box-sizing:border-box;
+  background:#111;
+  border:1px solid #333;
+  border-radius:8px;
+  color:#fff;
+  padding:12px;
+  font-size:14px;
+}
+
+input:focus,
+textarea:focus{
+  outline:none;
+  border-color:#f2b300;
+}
+
+textarea{
+  min-height:90px;
+  resize:vertical;
+}
+
+.two{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.buy{
+  width:100%;
+  margin-top:20px;
+  padding:14px;
+  border:0;
+  border-radius:9px;
+  background:#f2b300;
+  color:#050505;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.buy:disabled{
+  opacity:.5;
+  cursor:wait;
+}
+
+.note{
+  color:#777;
+  font-size:11px;
+  line-height:1.5;
+  margin-top:12px;
+}
+
+.delivery-fields{
+  display:none;
+}
+
+.soft-copy-note{
+  display:none;
+  color:#999;
+  font-size:11px;
+  line-height:1.5;
+  margin-top:8px;
+  padding:10px 12px;
+  border-left:2px solid #f2b300;
+  background:#0f0f0f;
+}
+
+.cart-format{
+  color:#aaa;
+  font-size:11px;
+  margin-top:5px;
+}
+
+.cart-region{
+  color:#777;
+  font-size:10px;
+  margin-top:3px;
+}
+
+@media(max-width:760px){
+
+  .wrap{
+    width:min(100% - 24px,1100px);
+    padding:30px 0 55px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .cart-item{
+    grid-template-columns:1fr auto;
+    gap:10px;
+  }
+
+  .cart-item>strong{
+    justify-self:start;
+  }
+
+  .remove{
+    justify-self:start;
+  }
+
+  .two{
+    grid-template-columns:1fr;
+  }
+
+  .top{
+    align-items:flex-start;
+    gap:15px;
+  }
+
+  .top h1{
+    font-size:28px;
+  }
+
+}
+
+</style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/ajuverse-master-enhance.css?v=20260920-master">
+    <script src="js/ajuverse-master-enhance.js?v=20260920-master" defer></script>
+
+    <link rel="stylesheet" href="css/ajuverse-nova.css?v=1">
+</head>
+
+
+<body>
+
+
+<div class="wrap">
+
+
+  <!-- TOP -->
+
+  <div class="top">
+
+    <div>
+
+      <div style="
+        color:#f2b300;
+        letter-spacing:3px;
+        font-size:11px;
+        font-weight:800;
+      ">
+        BOOKORA
+      </div>
+
+      <h1>YOUR CART</h1>
+
+    </div>
+
+
+    <a href="bookstore.html">
+      ← Continue Shopping
+    </a>
+
+  </div>
+
+
+
+  <!-- MAIN GRID -->
+
+  <div class="grid">
+
+
+    <!-- CART -->
+
+    <section class="panel">
+
+      <h2>Selected Books</h2>
+
+      <div id="cartItems"></div>
+
+
+      <div class="summary">
+
+        <span>Total</span>
+
+        <strong id="cartTotal">
+          ₹0
+        </strong>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- CUSTOMER DETAILS -->
+
+    <section class="panel">
+
+      <h2>Customer Details</h2>
+
+
+      <form id="checkoutForm">
+
+
+        <!-- NAME -->
+
+        <label for="customerName">
+          Name
+        </label>
+
+        <input
+          id="customerName"
+          name="name"
+          type="text"
+          required
+          autocomplete="name"
+        >
+
+
+
+        <!-- EMAIL -->
+
+        <label for="customerEmail">
+          Email
+        </label>
+
+        <input
+          id="customerEmail"
+          name="email"
+          type="email"
+          required
+          autocomplete="email"
+        >
+
+
+
+        <!-- PHYSICAL DELIVERY -->
+
+        <div
+          id="deliveryFields"
+          class="delivery-fields"
+        >
+
+          <label for="customerAddress">
+            Address
+          </label>
+
+          <textarea
+            id="customerAddress"
+            name="address"
+            autocomplete="street-address"
+          ></textarea>
+
+
+          <div class="two">
+
+
+            <div>
+
+              <label for="customerPincode">
+                Pincode
+              </label>
+
+              <input
+                id="customerPincode"
+                name="pincode"
+                type="text"
+                inputmode="numeric"
+                autocomplete="postal-code"
+              >
+
+            </div>
+
+
+            <div>
+
+              <label for="customerState">
+                State
+              </label>
+
+              <input
+                id="customerState"
+                name="state"
+                type="text"
+                autocomplete="address-level1"
+              >
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- PHONE / WHATSAPP -->
+
+        <label for="customerPhone">
+          WhatsApp / Phone No
+        </label>
+
+        <input
+          id="customerPhone"
+          name="phone"
+          type="tel"
+          required
+          inputmode="tel"
+          autocomplete="tel"
+        >
+
+
+
+        <!-- SOFT COPY MESSAGE -->
+
+        <div
+          id="softCopyNote"
+          class="soft-copy-note"
+        >
+          Soft Copy selected — no physical delivery address is required.
+        </div>
+
+
+
+        <!-- PAYMENT -->
+
+        <button
+          class="buy"
+          type="submit"
+        >
+          CONTINUE TO PAYMENT
+        </button>
+
+
+        <div class="note">
+          Secure payment is handled through Razorpay.
+          UPI is available through Razorpay Checkout.
+        </div>
+
+
+      </form>
+
+    </section>
+
+
+  </div>
+
+
+</div>
+
+
+
+<!-- BOOKORA CART SYSTEM -->
+
+<script src="bookora-cart.js"></script>
+
+
+
+<!-- CHECKOUT LOGIC -->
+
+<script>
+
+(function(){
+
+  /*
+   * Read current BookOra cart
+   */
+
+  function getCurrentCart(){
+
+    try{
+
+      const raw =
+        localStorage.getItem("bookoraCart");
+
+      if(!raw){
+        return [];
+      }
+
+      return JSON.parse(raw);
+
+    }catch(error){
+
+      console.error(
+        "Unable to read BookOra cart:",
+        error
+      );
+
+      return [];
+
+    }
+
+  }
+
+
+
+  /*
+   * Check whether every item
+   * in the cart is digital.
+   */
+
+  function isDigitalCart(cart){
+
+    if(
+      !Array.isArray(cart) ||
+      cart.length === 0
+    ){
+      return false;
+    }
+
+
+    return cart.every(function(item){
+
+      return String(
+        item.delivery || ""
+      ).toLowerCase() === "digital";
+
+    });
+
+  }
+
+
+
+  /*
+   * Update Address / Pincode / State
+   */
+
+  function updateCheckoutFields(){
+
+    const cart =
+      getCurrentCart();
+
+    const digital =
+      isDigitalCart(cart);
+
+
+    const deliveryFields =
+      document.getElementById(
+        "deliveryFields"
+      );
+
+
+    const softCopyNote =
+      document.getElementById(
+        "softCopyNote"
+      );
+
+
+    if(!deliveryFields){
+      return;
+    }
+
+
+    const address =
+      document.querySelector(
+        '[name="address"]'
+      );
+
+
+    const pincode =
+      document.querySelector(
+        '[name="pincode"]'
+      );
+
+
+    const state =
+      document.querySelector(
+        '[name="state"]'
+      );
+
+
+
+    /*
+     * DIGITAL / SOFT COPY
+     */
+
+    if(digital){
+
+      deliveryFields.style.display =
+        "none";
+
+
+      if(softCopyNote){
+
+        softCopyNote.style.display =
+          "block";
+
+      }
+
+
+      address.required = false;
+
+      pincode.required = false;
+
+      state.required = false;
+
+
+      address.value = "";
+
+      pincode.value = "";
+
+      state.value = "";
+
+    }
+
+
+
+    /*
+     * PHYSICAL PRODUCT
+     */
+
+    else{
+
+      deliveryFields.style.display =
+        "block";
+
+
+      if(softCopyNote){
+
+        softCopyNote.style.display =
+          "none";
+
+      }
+
+
+      address.required = true;
+
+      pincode.required = true;
+
+      state.required = true;
+
+    }
+
+  }
+
+
+
+  /*
+   * Page loaded
+   */
+
+  document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+      updateCheckoutFields();
+
+
+      const form =
+        document.getElementById(
+          "checkoutForm"
+        );
+
+
+      if(!form){
+        return;
+      }
+
+
+
+      /*
+       * Checkout submit
+       */
+
+      form.addEventListener(
+        "submit",
+        async function(event){
+
+          event.preventDefault();
+
+
+          const cart =
+            getCurrentCart();
+
+
+          if(!cart.length){
+
+            alert(
+              "Your cart is empty."
+            );
+
+            return;
+
+          }
+
+
+
+          /*
+           * Read customer information
+           */
+
+          const formData =
+            new FormData(form);
+
+
+          const customer = {
+
+            name:
+              String(
+                formData.get("name") || ""
+              ).trim(),
+
+
+            email:
+              String(
+                formData.get("email") || ""
+              ).trim(),
+
+
+            phone:
+              String(
+                formData.get("phone") || ""
+              ).trim(),
+
+
+            address:
+              String(
+                formData.get("address") || ""
+              ).trim(),
+
+
+            pincode:
+              String(
+                formData.get("pincode") || ""
+              ).trim(),
+
+
+            state:
+              String(
+                formData.get("state") || ""
+              ).trim()
+
+          };
+
+
+
+          /*
+           * Disable payment button
+           */
+
+          const button =
+            form.querySelector(
+              ".buy"
+            );
+
+
+          if(button){
+
+            button.disabled = true;
+
+            button.textContent =
+              "PLEASE WAIT...";
+
+          }
+
+
+
+          try{
+
+
+            /*
+             * Use existing BookOra
+             * payment function.
+             */
+
+            await startPayment(
+              customer
+            );
+
+
+          }catch(error){
+
+            console.error(
+              "BookOra checkout error:",
+              error
+            );
+
+
+            alert(
+              error.message ||
+              "Something went wrong. Please try again."
+            );
+
+
+            if(button){
+
+              button.disabled = false;
+
+              button.textContent =
+                "CONTINUE TO PAYMENT";
+
+            }
+
+          }
+
+        }
+      );
+
+    }
+  );
+
+
+
+  /*
+   * Update if cart changes
+   */
+
+  window.addEventListener(
+    "storage",
+    updateCheckoutFields
+  );
+
+
+
+  /*
+   * Detect local cart changes
+   */
+
+  const originalSetItem =
+    localStorage.setItem;
+
+
+  localStorage.setItem =
+    function(key,value){
+
+      originalSetItem.apply(
+        this,
+        arguments
+      );
+
+
+      if(
+        key === "bookoraCart"
+      ){
+
+        setTimeout(
+          updateCheckoutFields,
+          0
+        );
+
+      }
+
+    };
+
+
+})();
+
+</script>
+
+
+<script src="js/ajuverse-nova.js?v=1" defer></script>
+</body>
+
+</html>

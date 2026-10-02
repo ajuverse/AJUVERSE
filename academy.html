@@ -51,7 +51,7 @@
 
         .academy-label {
 
-            color: #ffb000;
+            color: #C9974D;
 
             font-size: 13px;
 
@@ -128,7 +128,7 @@
 
             display: block;
 
-            color: #ffb000;
+            color: #C9974D;
 
             font-size: 12px;
 
@@ -212,7 +212,7 @@
 
         .course-number {
 
-            color: #ffb000;
+            color: #C9974D;
 
             font-size: 13px;
 
@@ -275,7 +275,7 @@
 
             content: "✓";
 
-            color: #ffb000;
+            color: #C9974D;
 
             margin-right: 10px;
 
@@ -306,9 +306,9 @@
 
         .course-link:hover {
 
-            color: #ffb000;
+            color: #C9974D;
 
-            border-color: #ffb000;
+            border-color: #C9974D;
 
         }
 
@@ -361,7 +361,7 @@
 
         .benefit-number {
 
-            color: #ffb000;
+            color: #C9974D;
 
             font-size: 12px;
 
@@ -417,7 +417,7 @@
 
         .academy-cta-box span {
 
-            color: #ffb000;
+            color: #C9974D;
 
             font-size: 12px;
 
@@ -481,7 +481,7 @@
 
         .academy-button:hover {
 
-            background: #ffb000;
+            background: #C9974D;
 
         }
 
@@ -576,10 +576,384 @@
 
     </style>
 
+
+<style>
+:root{--academy-gold:#f2b84b;--academy-line:#292929;--academy-muted:#999}
+.academy-page{background:#050505;color:#fff}
+.academy-hero{max-width:1280px;margin:0 auto;padding:75px 40px 55px;border-bottom:1px solid var(--academy-line)}
+.academy-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;min-height:520px;align-items:center;gap:40px}
+.academy-label,.academy-section-heading>span{display:block;color:var(--academy-gold);font-size:11px;font-weight:900;letter-spacing:4px}
+.academy-hero h1{font-size:clamp(58px,7vw,105px);line-height:.88;letter-spacing:-5px;margin:20px 0 25px;font-weight:900}
+.academy-hero h1 em{font-style:normal;color:var(--academy-gold)}
+.academy-hero-copy>p{font-size:18px;color:#bbb;max-width:680px;line-height:1.6}
+.academy-proof-row{display:flex;gap:28px;margin:28px 0;color:#aaa;font-size:9px;letter-spacing:1px;line-height:1.5}
+.academy-proof-row b{color:#fff}
+.academy-proof-row span:before{content:"✦";color:var(--academy-gold);font-size:17px;display:block;margin-bottom:5px}
+.academy-hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.academy-button{display:inline-flex;align-items:center;justify-content:center;padding:15px 22px;border-radius:9px;font-size:10px;font-weight:900;letter-spacing:.6px}
+.academy-button-primary{background:var(--academy-gold);color:#050505}
+.academy-button-outline{border:1px solid #555;color:#fff;background:#0b0b0b}
+.academy-hero-visual{height:470px}
+.academy-visual-card{height:100%;position:relative;overflow:hidden;border:1px solid #333;border-radius:18px;background:radial-gradient(circle at 70% 25%,#3b2b14 0,#17130d 28%,#0a0a0a 65%);box-shadow:inset 0 0 80px #000}
+.academy-screen-copy{position:absolute;right:15%;top:12%;color:var(--academy-gold);font-size:25px;line-height:1.05;letter-spacing:1px;font-style:italic;z-index:2}
+.academy-laptop{position:absolute;width:74%;height:45%;right:10%;bottom:18%;border:2px solid #777;border-radius:10px 10px 3px 3px;background:linear-gradient(135deg,#222,#050505);transform:skew(-7deg);box-shadow:0 30px 45px #000}
+.academy-laptop:after{content:"";position:absolute;left:-8%;width:116%;height:12px;bottom:-14px;border-radius:50%;background:#444}
+.academy-mug{position:absolute;right:6%;bottom:9%;background:#090909;border:1px solid #555;border-radius:6px 6px 12px 12px;padding:16px 12px;color:var(--academy-gold);font-size:10px;line-height:1.3;text-align:center;z-index:3}
+.learning-paths,.featured-courses,.why-academy,.academy-testimonials{max-width:1280px;margin:0 auto;padding:80px 40px}
+.academy-section-heading.center{text-align:center}.academy-section-heading h2{font-size:clamp(38px,5vw,64px);letter-spacing:-3px;line-height:.95;margin:12px 0}.academy-section-heading p{color:#999}
+.academy-path-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:38px}
+.academy-path-card{position:relative;min-height:175px;border:1px solid #333;border-radius:13px;padding:25px;background:#090909;transition:.25s}
+.academy-path-card:hover,.featured-card:hover{transform:translateY(-4px);border-color:var(--academy-gold)}
+.path-icon{color:var(--academy-gold);font-size:34px}.academy-path-card h3{margin:18px 0 8px;font-size:17px}.academy-path-card p{color:#999;font-size:12px;max-width:200px;line-height:1.5}.academy-path-card>b{position:absolute;right:18px;bottom:18px;width:28px;height:28px;border-radius:50%;background:var(--academy-gold);color:#111;text-align:center;line-height:28px}
+.course-heading-row{display:flex;justify-content:space-between;align-items:end;margin-bottom:32px}.course-heading-row>a{color:var(--academy-gold);font-size:10px;font-weight:900}
+.featured-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.featured-card{border:1px solid #333;border-radius:13px;overflow:hidden;background:#0a0a0a;transition:.25s}
+.course-image{height:190px;position:relative;padding:12px;overflow:hidden;background:#171717}
+.course-image>span{position:absolute;left:12px;top:12px;background:var(--academy-gold);color:#111;padding:5px 8px;border-radius:4px;font-size:8px;font-weight:900}
+.course-image>div{height:100%;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:900;font-size:30px;line-height:.9;letter-spacing:-1px}
+.course-image-kdp{background:linear-gradient(135deg,#3a2a19,#111)}.course-image-ai{background:linear-gradient(135deg,#20272d,#080808)}.course-image-product{background:linear-gradient(135deg,#33291c,#111)}.course-image-mindset{background:linear-gradient(135deg,#5a4526,#111)}
+.course-body{padding:17px}.course-body h3{font-size:18px}.course-body p{color:#999;font-size:12px;line-height:1.5;min-height:55px}.course-body small{color:#777;font-size:9px}.course-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:17px}.course-bottom strong{font-size:21px}.course-bottom button{border:0;border-radius:8px;background:var(--academy-gold);color:#111;padding:11px 12px;font-size:9px;font-weight:900}.course-bottom .dark-btn{background:#111;color:#fff;border:1px solid #555}
+.why-academy{border-top:1px solid var(--academy-line);border-bottom:1px solid var(--academy-line)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center;margin-top:42px}.why-grid i{font-style:normal;color:var(--academy-gold);font-size:32px}.why-grid h3{font-size:15px;margin:13px 0 6px}.why-grid p{color:#999;font-size:12px;line-height:1.5}
+.testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}.testimonial-grid blockquote{margin:0;padding:28px;border:1px solid #ddd;border-radius:12px;background:#f5f2ea;color:#111}.testimonial-grid p{font-size:14px;line-height:1.5;font-style:italic;min-height:85px}.testimonial-grid strong{display:block;font-size:12px}.testimonial-grid small{display:block;margin-top:7px;color:#c58d20}
+.academy-free-banner{background:#0b0b0b;border-top:1px solid #292929;border-bottom:1px solid #292929;padding:25px 40px}.academy-free-banner>div{max-width:1200px;margin:auto;display:flex;align-items:center;gap:18px}.academy-free-icon{color:var(--academy-gold);font-size:32px}.academy-free-banner h3{font-size:16px;margin:0}.academy-free-banner p{color:#888;font-size:11px;margin:5px 0 0}.academy-free-banner a{margin-left:auto;border:1px solid var(--academy-gold);border-radius:20px;padding:12px 17px;color:var(--academy-gold);font-size:9px;font-weight:900}
+.academy-final-cta{text-align:center;background:linear-gradient(180deg,#efbd5b,#c88927);color:#111;padding:75px 40px}.academy-final-cta span{font-size:10px;font-weight:900;letter-spacing:3px}.academy-final-cta h2{font-size:clamp(42px,6vw,72px);line-height:.9;letter-spacing:-4px;margin:13px 0}.academy-final-cta p{font-size:13px}.academy-button-dark{background:#111;color:#fff;margin-top:12px}
+@media(max-width:900px){.academy-hero-grid{grid-template-columns:1fr}.academy-hero-visual{height:360px}.academy-path-grid,.featured-grid{grid-template-columns:repeat(2,1fr)}.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.academy-hero{padding:60px 22px 40px}.academy-hero h1{font-size:56px}.academy-proof-row{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.learning-paths,.featured-courses,.why-academy,.academy-testimonials{padding:60px 22px}.academy-path-grid,.featured-grid,.testimonial-grid{grid-template-columns:1fr}.course-heading-row{display:block}.course-heading-row>a{display:inline-block;margin-top:10px}.why-grid{grid-template-columns:1fr}.academy-free-banner{padding:25px 22px}.academy-free-banner>div{display:grid;grid-template-columns:auto 1fr}.academy-free-banner a{grid-column:2;margin:5px 0 0}.academy-final-cta{padding:60px 22px}}
+</style>
+
+<style>
+/* Academy header compatibility with the shared AjuVerse stylesheet */
+.academy-page .site-header .brand {
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex-shrink:0;
+}
+.academy-page .site-header .brand-logo {
+    width:46px !important;
+    height:46px !important;
+    max-width:46px !important;
+    object-fit:contain;
+    flex:none;
+}
+.academy-page .site-header .brand-text {
+    display:flex;
+    flex-direction:column;
+}
+.academy-page .site-header .brand-name {
+    font-size:28px;
+    line-height:1;
+    font-weight:800;
+}
+.academy-page .site-header .brand-tagline {
+    margin-top:6px;
+    color:#777;
+    font-size:8px;
+    letter-spacing:2px;
+}
+@media(max-width:700px){
+    .academy-page .site-header .brand-logo{
+        width:69px !important;
+        height:69px !important;
+        max-width:69px !important;
+    }
+}
+</style>
+
+<style>
+/* =========================================================
+   ACADEMY HEADER — FINAL HARD ALIGNMENT
+   Keep logo + navigation + login on ONE horizontal row.
+   ========================================================= */
+.academy-page .site-header .header-inner{
+    width:min(1180px, calc(100% - 80px)) !important;
+    min-height:100px !important;
+    margin:0 auto !important;
+    display:flex !important;
+    flex-direction:row !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:24px !important;
+}
+.academy-page .site-header .brand{
+    display:flex !important;
+    flex-direction:row !important;
+    align-items:center !important;
+    flex:0 0 auto !important;
+    width:auto !important;
+}
+.academy-page .site-header .main-nav{
+    display:flex !important;
+    flex-direction:row !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:22px !important;
+    flex:1 1 auto !important;
+    width:auto !important;
+}
+.academy-page .site-header .main-nav a{
+    white-space:nowrap !important;
+}
+.academy-page .site-header .header-login{
+    flex:0 0 90px !important;
+    width:90px !important;
+    min-width:90px !important;
+    height:44px !important;
+}
+@media(max-width:1000px){
+    .academy-page .site-header .header-inner{
+        width:calc(100% - 50px) !important;
+        gap:14px !important;
+    }
+    .academy-page .site-header .main-nav{gap:12px !important}
+    .academy-page .site-header .main-nav a{font-size:11px !important}
+}
+@media(max-width:700px){
+    .academy-page .site-header .header-inner{
+        width:calc(100% - 32px) !important;
+        min-height:78px !important;
+    }
+    .academy-page .site-header .main-nav{display:none !important}
+    .academy-page .site-header .header-login{
+        flex:0 0 70px !important;
+        width:70px !important;
+        min-width:70px !important;
+        height:38px !important;
+    }
+}
+</style>
+
+
+<style>
+/* =========================================================
+   ACADEMY FOOTER — FINAL
+   ========================================================= */
+.academy-footer{
+    background:#050505 !important;
+    border-top:1px solid #252525;
+    color:#fff;
+}
+.academy-footer-inner{
+    padding-top:65px;
+    padding-bottom:60px;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1.35fr;
+    gap:55px;
+}
+.academy-footer-brand p{
+    margin-top:18px;
+    color:#888;
+    font-size:13px;
+    line-height:1.7;
+}
+.academy-footer-logo{
+    display:inline-flex !important;
+    align-items:center;
+    gap:12px;
+}
+.academy-footer-logo img{
+    width:48px !important;
+    height:48px !important;
+    max-width:48px !important;
+    object-fit:contain;
+}
+.academy-footer-logo span{
+    display:flex;
+    flex-direction:column;
+}
+.academy-footer-logo strong{
+    font-size:25px;
+    line-height:1;
+    font-weight:800;
+}
+.academy-footer-logo small{
+    margin-top:6px;
+    color:#777;
+    font-size:8px;
+    letter-spacing:2px;
+}
+.academy-footer-column{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+.academy-footer-column h3{
+    margin:2px 0 18px;
+    color:#C9974D;
+    font-size:10px;
+    letter-spacing:3px;
+    font-weight:800;
+}
+.academy-footer-column a{
+    display:block !important;
+    width:max-content;
+    margin:0 0 11px !important;
+    color:#bbb;
+    font-size:13px;
+    line-height:1.3;
+    transition:color .2s ease,transform .2s ease;
+}
+.academy-footer-column a:hover{
+    color:#C9974D;
+    transform:translateX(3px);
+}
+.academy-footer-contact p{
+    margin:0 0 12px;
+    color:#777;
+    font-size:12px;
+}
+.academy-footer-contact a{
+    color:#bbb;
+}
+.academy-footer-bottom{
+    border-top:1px solid #202020;
+}
+.academy-footer-bottom .container{
+    min-height:65px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    color:#666;
+    font-size:11px;
+}
+@media(max-width:800px){
+    .academy-footer-inner{
+        grid-template-columns:1.5fr 1fr 1fr;
+        gap:35px 25px;
+    }
+    .academy-footer-contact{
+        grid-column:1/-1;
+    }
+}
+@media(max-width:600px){
+    .academy-footer-inner{
+        grid-template-columns:1fr 1fr;
+        padding-top:45px;
+        padding-bottom:40px;
+    }
+    .academy-footer-brand,
+    .academy-footer-contact{
+        grid-column:1/-1;
+    }
+    .academy-footer-bottom .container{
+        min-height:85px;
+        flex-direction:column;
+        align-items:flex-start;
+        justify-content:center;
+    }
+}
+</style>
+
+
+<style>
+/* =========================================================
+   ACADEMY — TEMPORARY FULL-PAGE LOCK OVERLAY
+   ========================================================= */
+.academy-lock-overlay{
+    position:fixed;
+    inset:0;
+    z-index:99999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,255,255,.78);
+    backdrop-filter:blur(4px);
+    -webkit-backdrop-filter:blur(4px);
+    cursor:not-allowed;
+    user-select:none;
+}
+.academy-lock-content{
+    width:min(620px,calc(100% - 40px));
+    padding:55px 35px;
+    text-align:center;
+    color:#080808;
+    border:1px solid rgba(0,0,0,.18);
+    background:rgba(255,255,255,.72);
+    box-shadow:0 25px 80px rgba(0,0,0,.18);
+}
+.academy-lock-content>span{
+    display:block;
+    margin-top:18px;
+    color:#b87900;
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:4px;
+}
+.academy-lock-content h2{
+    margin:16px 0 18px;
+    font-size:clamp(45px,7vw,82px);
+    line-height:.86;
+    letter-spacing:-4px;
+    font-weight:900;
+}
+.academy-lock-content h2 em{
+    color:#d89316;
+    font-style:normal;
+}
+.academy-lock-content p{
+    margin:0;
+    color:#555;
+    font-size:11px;
+    line-height:1.7;
+    letter-spacing:1.5px;
+    font-weight:700;
+}
+.academy-lock-content small{
+    display:inline-block;
+    margin-top:24px;
+    padding:9px 15px;
+    border:1px solid #111;
+    font-size:8px;
+    font-weight:900;
+    letter-spacing:3px;
+}
+.academy-lock-spinner{
+    width:42px;
+    height:42px;
+    margin:0 auto;
+    border:3px solid rgba(0,0,0,.16);
+    border-top-color:#d89316;
+    border-radius:50%;
+    animation:academyLoadingSpin 1s linear infinite;
+}
+@keyframes academyLoadingSpin{
+    to{transform:rotate(360deg)}
+}
+@media(max-width:600px){
+    .academy-lock-content{padding:42px 22px}
+    .academy-lock-content h2{letter-spacing:-2px}
+}
+</style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/ajuverse-master-enhance.css?v=20260920-master">
+    <script src="js/ajuverse-master-enhance.js?v=20260920-master" defer></script>
+
+    <link rel="stylesheet" href="css/ajuverse-nova.css?v=1">
 </head>
 
 
 <body class="academy-page">
+
+<!-- =========================================================
+     ACADEMY TEMPORARY COURSE LOADING / LOCK SCREEN
+     Keeps the current Academy page visible underneath but
+     prevents users from interacting with its unfinished options.
+     ========================================================= -->
+<div class="academy-lock-overlay" aria-label="Academy courses coming soon">
+    <div class="academy-lock-content">
+        <div class="academy-lock-spinner"></div>
+        <span>AJUVERSE ACADEMY</span>
+        <h2>COURSES<br><em>LOADING...</em></h2>
+        <p>BUILDING SOMETHING GREAT.<br>YOUR LEARNING JOURNEY STARTS SOON.</p>
+        <small>COMING SOON</small>
+    </div>
+</div>
+
 
 
     <!-- =====================================================
@@ -588,26 +962,27 @@
 
     <header class="site-header">
 
-        <div class="container">
+        <div class="container header-inner">
 
 
             <a
                 href="index.html"
-                class="logo"
+                class="brand"
             >
 
                 <img
+                    class="brand-logo"
                     src="assets/logo.png"
                     alt="AjuVerse Logo"
                 >
 
-                <div>
+                <div class="brand-text">
 
-                    <strong>
+                    <strong class="brand-name">
                         AjuVerse
                     </strong>
 
-                    <small>
+                    <small class="brand-tagline">
                         Create • Design • Publish • Grow
                     </small>
 
@@ -622,42 +997,31 @@
                     Home
                 </a>
 
-                <a href="portfolio.html">
-                    Portfolio
+                <a href="bookstore.html">
+                    Bookstore
                 </a>
 
-                <a
+                
+
+                <a href="bookstore.html#free-resources">
+                    Free Resources
+                </a>
+<a
                     href="academy.html"
                     class="active"
                 >
                     Academy
                 </a>
 
-                <a href="books.html">
-                    Books
-                </a>
 
-                <a href="store.html">
-                    Store
-                </a>
-
-                <a href="free-ai-starter-kit.html">
-                    Free Resources
-                </a>
-
-                <a href="#contact">
+                <a href="index.html#contact">
                     Contact
                 </a>
 
             </nav>
 
 
-            <a
-                href="#courses"
-                class="header-login"
-            >
-                Login
-            </a>
+    
 
         </div>
 
@@ -670,555 +1034,218 @@
 
     <main>
 
-
-        <!-- =================================================
-             ACADEMY HERO
-             ================================================= -->
-
-        <section class="academy-hero">
-
-            <div class="academy-label">
-                AJUVERSE ACADEMY
-            </div>
-
-
-            <h1>
-
-                BUILD SKILLS
-                FOR THE NEXT
-                DIGITAL ERA
-
-            </h1>
-
-
-            <p>
-
-                Learn practical digital skills through
-                step-by-step courses designed for creators,
-                entrepreneurs and modern digital builders.
-
-            </p>
-
-        </section>
-
-
-        <!-- =================================================
-             COURSES
-             ================================================= -->
-
-        <section
-            class="courses-section"
-            id="courses"
-        >
-
-            <div class="courses-heading">
-
-                <span>
-                    LEARN
-                </span>
-
-                <h2>
-                    CHOOSE YOUR
-                    SKILL PATH
-                </h2>
-
-            </div>
-
-
-            <div class="course-grid">
-
-
-                <!-- COURSE 01 -->
-
-                <article class="course-card">
-
-                    <div>
-
-                        <div class="course-number">
-                            01
-                        </div>
-
-
-                        <h3>
-                            Digital Product
-                            Creation
-                        </h3>
-
-
-                        <p>
-
-                            Learn how to plan, create,
-                            design and publish practical
-                            digital products.
-
-                        </p>
-
-
-                        <ul class="course-topics">
-
-                            <li>
-                                Product research
-                            </li>
-
-                            <li>
-                                PDF creation
-                            </li>
-
-                            <li>
-                                Canva workflows
-                            </li>
-
-                            <li>
-                                Digital product publishing
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-
-                    <a
-                        href="#coming-soon"
-                        class="course-link"
-                    >
-                        Explore Course →
-                    </a>
-
-                </article>
-
-
-                <!-- COURSE 02 -->
-
-                <article class="course-card">
-
-                    <div>
-
-                        <div class="course-number">
-                            02
-                        </div>
-
-
-                        <h3>
-                            Video Editing
-                            & Content
-                        </h3>
-
-
-                        <p>
-
-                            Learn how to create engaging
-                            short-form videos for modern
-                            social platforms.
-
-                        </p>
-
-
-                        <ul class="course-topics">
-
-                            <li>
-                                Reels
-                            </li>
-
-                            <li>
-                                YouTube Shorts
-                            </li>
-
-                            <li>
-                                AI-assisted editing
-                            </li>
-
-                            <li>
-                                Content workflows
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-
-                    <a
-                        href="#coming-soon"
-                        class="course-link"
-                    >
-                        Explore Course →
-                    </a>
-
-                </article>
-
-
-                <!-- COURSE 03 -->
-
-                <article class="course-card">
-
-                    <div>
-
-                        <div class="course-number">
-                            03
-                        </div>
-
-
-                        <h3>
-                            AI Website
-                            Design
-                        </h3>
-
-
-                        <p>
-
-                            Learn how to create modern
-                            websites using AI-assisted
-                            design and development workflows.
-
-                        </p>
-
-
-                        <ul class="course-topics">
-
-                            <li>
-                                Website planning
-                            </li>
-
-                            <li>
-                                AI-assisted design
-                            </li>
-
-                            <li>
-                                HTML & CSS
-                            </li>
-
-                            <li>
-                                Git & GitHub
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-
-                    <a
-                        href="#coming-soon"
-                        class="course-link"
-                    >
-                        Explore Course →
-                    </a>
-
-                </article>
-
-
-                <!-- COURSE 04 -->
-
-                <article class="course-card">
-
-                    <div>
-
-                        <div class="course-number">
-                            04
-                        </div>
-
-
-                        <h3>
-                            AI Content
-                            Workflows
-                        </h3>
-
-
-                        <p>
-
-                            Build practical AI workflows
-                            for content creation, productivity
-                            and digital businesses.
-
-                        </p>
-
-
-                        <ul class="course-topics">
-
-                            <li>
-                                AI prompting
-                            </li>
-
-                            <li>
-                                Content systems
-                            </li>
-
-                            <li>
-                                AI tools
-                            </li>
-
-                            <li>
-                                Creative workflows
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-
-                    <a
-                        href="#coming-soon"
-                        class="course-link"
-                    >
-                        Coming Soon →
-                    </a>
-
-                </article>
-
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             BENEFITS
-             ================================================= -->
-
-        <section class="academy-benefits">
-
-            <div class="courses-heading">
-
-                <span>
-                    WHY AJUVERSE
-                </span>
-
-                <h2>
-                    LEARN BY
-                    BUILDING
-                </h2>
-
-            </div>
-
-
-            <div class="benefits-grid">
-
-
-                <article class="benefit-card">
-
-                    <div class="benefit-number">
-                        01
-                    </div>
-
-                    <h3>
-                        Practical
-                    </h3>
-
-                    <p>
-                        Learn skills through real
-                        projects rather than only
-                        theory.
-                    </p>
-
-                </article>
-
-
-                <article class="benefit-card">
-
-                    <div class="benefit-number">
-                        02
-                    </div>
-
-                    <h3>
-                        Step-by-Step
-                    </h3>
-
-                    <p>
-                        Follow simple workflows that
-                        make complex digital skills easier
-                        to understand.
-                    </p>
-
-                </article>
-
-
-                <article class="benefit-card">
-
-                    <div class="benefit-number">
-                        03
-                    </div>
-
-                    <h3>
-                        Build Real Things
-                    </h3>
-
-                    <p>
-                        Apply what you learn by creating
-                        actual products, websites and
-                        content.
-                    </p>
-
-                </article>
-
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             CTA
-             ================================================= -->
-
-        <section
-            class="academy-cta"
-            id="coming-soon"
-        >
-
-            <div class="academy-cta-box">
-
-                <span>
-                    START YOUR JOURNEY
-                </span>
-
-
-                <h2>
-                    LEARN.
-                    BUILD.
-                    GROW.
-                </h2>
-
-
-                <p>
-
-                    AjuVerse courses are being developed
-                    step-by-step. Join the free resources
-                    first and get notified when new courses
-                    launch.
-
-                </p>
-
-
-                <a
-                    href="free-ai-starter-kit.html"
-                    class="academy-button"
-                >
-                    Get Free Resources →
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
+<section class="academy-hero">
+  <div class="academy-hero-grid">
+    <div class="academy-hero-copy">
+      <span class="academy-label">AJUVERSE ACADEMY</span>
+      <h1>LEARN TODAY.<br><em>BUILD TOMORROW.</em></h1>
+      <p>Practical skills. Real strategies. A creative life on your own terms.</p>
+
+      <div class="academy-proof-row">
+        <span>STEP-BY-STEP<br><b>LEARNING</b></span>
+        <span>REAL-WORLD<br><b>STRATEGIES</b></span>
+        <span>LIFETIME<br><b>ACCESS</b></span>
+        <span>SUPPORTIVE<br><b>COMMUNITY</b></span>
+      </div>
+
+      <div class="academy-hero-actions">
+        <a href="#courses" class="academy-button academy-button-primary">EXPLORE COURSES →</a>
+        <a href="bookstore.html#free-resources" class="academy-button academy-button-outline">START WITH FREE RESOURCES</a>
+      </div>
+    </div>
+
+    <div class="academy-hero-visual">
+      <div class="academy-visual-card">
+        <div class="academy-screen-copy">A BETTER<br><strong>YOU</strong><br>CREATES A<br>BRIGHTER<br>TOMORROW.</div>
+        <div class="academy-laptop"></div>
+        <div class="academy-mug">IDEAS<br>SKILLS<br>INCOME<br>FREEDOM</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="learning-paths" id="paths">
+  <div class="academy-section-heading center">
+    <span>LEARNING PATHS</span>
+    <h2>EXPLORE LEARNING PATHS</h2>
+    <p>Choose a category and start building your skills.</p>
+  </div>
+
+  <div class="path-grid academy-path-grid">
+    <a href="#courses" class="academy-path-card">
+      <span class="path-icon">✎</span><h3>Creative Publishing</h3>
+      <p>KDP, book creation, design and self-publishing</p><b>→</b>
+    </a>
+    <a href="#courses" class="academy-path-card">
+      <span class="path-icon">▣</span><h3>AI &amp; Digital Tools</h3>
+      <p>Learn AI tools for content, design and productivity</p>
+      <b>→</b>
+    </a>
+    <a href="#courses" class="academy-path-card">
+      <span class="path-icon">▥</span><h3>Online Business</h3>
+      <p>Build income streams and digital products</p><b>→</b>
+    </a>
+    <a href="#courses" class="academy-path-card">
+      <span class="path-icon">●</span><h3>Personal Growth</h3>
+      <p>Mindset, habits and a creative lifestyle</p><b>→</b>
+    </a>
+  </div>
+</section>
+
+<section class="featured-courses" id="courses">
+  <div class="academy-section-heading course-heading-row">
+    <div>
+      <span>FEATURED COURSES</span>
+      <h2>CREATE. LEARN. EARN.</h2>
+      <p>Practical courses to help you create, earn and grow.</p>
+    </div>
+    <a href="#courses">VIEW ALL COURSES →</a>
+  </div>
+
+  <div class="featured-grid">
+    <article class="featured-card">
+      <div class="course-image course-image-kdp"><span>BESTSELLER</span><div>CREATE<br>PUBLISH<br>GROW.</div></div>
+      <div class="course-body">
+        <h3>Self-Publish with KDP</h3>
+        <p>A complete step-by-step guide to publishing your first book on Amazon KDP.</p>
+        <small>▣ 12 Lessons &nbsp;&nbsp; ◷ 2 Hours</small>
+        <div class="course-bottom"><strong>$29</strong><button type="button">ENROLL NOW →</button></div>
+      </div>
+    </article>
+
+    <article class="featured-card">
+      <div class="course-image course-image-ai"><span>POPULAR</span><div>AI<br>FOR<br>CREATORS</div></div>
+      <div class="course-body">
+        <h3>AI for Creators</h3>
+        <p>Learn how to use AI tools to create content, design and automate your workflow.</p>
+        <small>▣ 10 Lessons &nbsp;&nbsp; ◷ 1.5 Hours</small>
+        <div class="course-bottom"><strong>$27</strong><button type="button">ENROLL NOW →</button></div>
+      </div>
+    </article>
+
+    <article class="featured-card">
+      <div class="course-image course-image-product"><span>NEW</span><div>IDEAS<br>PLAN<br>CREATE<br>PUBLISH</div></div>
+      <div class="course-body">
+        <h3>Build a Digital Product</h3>
+        <p>Turn your knowledge into digital products and create passive income.</p>
+        <small>▣ 8 Lessons &nbsp;&nbsp; ◷ 1 Hour</small>
+        <div class="course-bottom"><strong>$25</strong><button type="button">ENROLL NOW →</button></div>
+      </div>
+    </article>
+
+    <article class="featured-card">
+      <div class="course-image course-image-mindset"><span>COMING SOON</span><div>YOUR<br>NEXT<br>CHAPTER.</div></div>
+      <div class="course-body">
+        <h3>Creative Mindset Mastery</h3>
+        <p>Build confidence, stay consistent and create a life you love.</p>
+        <small>▣ 6 Lessons &nbsp;&nbsp; ◷ 1 Hour</small>
+        <div class="course-bottom"><strong>SOON</strong><button type="button" class="dark-btn">NOTIFY ME →</button></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="why-academy">
+  <div class="academy-section-heading center">
+    <span>WHY AJUVERSE</span>
+    <h2>WHY LEARN WITH AJUVERSE?</h2>
+  </div>
+  <div class="why-grid">
+    <div><i>▤</i><h3>Practical &amp; Actionable</h3><p>Real strategies you can use immediately.</p></div>
+    <div><i>∞</i><h3>Learn at Your Own Pace</h3><p>Lifetime access to all your courses.</p></div>
+    <div><i>♧</i><h3>Supportive Community</h3><p>Connect with like-minded creators.</p></div>
+    <div><i>◇</i><h3>Designed for Real Results</h3><p>Turn your skills into opportunities.</p></div>
+  </div>
+</section>
+
+<section class="academy-testimonials">
+  <div class="academy-section-heading center">
+    <span>LEARNER FEEDBACK</span>
+    <h2>WHAT OUR LEARNERS SAY</h2>
+    <p>Real people. Real progress.</p>
+  </div>
+  <div class="testimonial-grid">
+    <blockquote><p>“The KDP course made everything so simple. I published my first book in 30 days!”</p><strong>Priya S.</strong><small>Aspiring Author &nbsp; ★★★★★</small></blockquote>
+    <blockquote><p>“The AI tools course is a game changer. I now create content in half the time.”</p><strong>Daniel K.</strong><small>Digital Creator &nbsp; ★★★★★</small></blockquote>
+    <blockquote><p>“AjuVerse Academy gives practical knowledge, not just theory. Highly recommended!”</p><strong>Meera L.</strong><small>Small Business Owner &nbsp; ★★★★★</small></blockquote>
+  </div>
+</section>
+
+<section class="academy-free-banner">
+  <div><span class="academy-free-icon">✦</span><div><h3>START WITH FREE LEARNING RESOURCES</h3><p>Get free guides, templates and tools to kickstart your journey.</p></div><a href="bookstore.html#free-resources">EXPLORE FREE RESOURCES →</a></div>
+</section>
+
+<section class="academy-final-cta">
+  <div>
+    <span>YOUR NEXT CHAPTER STARTS HERE</span>
+    <h2>YOUR FUTURE SELF<br>WILL THANK YOU.</h2>
+    <p>Invest in your skills. Create new opportunities. Be part of something bigger.</p>
+    <a href="#courses" class="academy-button academy-button-dark">JOIN THE ACADEMY TODAY →</a>
+  </div>
+</section>
+
+</main>
 
 
     <!-- =====================================================
          FOOTER
          ===================================================== -->
 
-    <footer class="site-footer">
+    <footer class="site-footer academy-footer">
+    <div class="container academy-footer-inner">
 
+        <div class="academy-footer-brand">
+            <a href="index.html" class="academy-footer-logo">
+                <img src="assets/logo.png" alt="AjuVerse Logo">
+                <span>
+                    <strong>AjuVerse</strong>
+                    <small>Create • Learn • Earn • Grow</small>
+                </span>
+            </a>
+            <p>Building ideas with creativity,<br>technology and AI.</p>
+        </div>
+
+        <div class="academy-footer-column">
+            <h3>EXPLORE</h3>
+            <a href="index.html">Home</a>
+            <a href="academy.html">Academy</a>
+        </div>
+
+        <div class="academy-footer-column">
+            <h3>DISCOVER</h3>
+            <a href="bookstore.html">Bookstore</a>
+            <a href="bookstore.html#free-resources">Free Resources</a>
+            <a href="academy.html#courses">Courses</a>
+        </div>
+
+        <div class="academy-footer-column academy-footer-contact">
+            <h3>CONTACT</h3>
+            <p>Have a question or idea?</p>
+            <a href="mailto:jeniaju112@gmail.com">jeniaju112@gmail.com</a>
+            <a href="https://wa.me/918122606055" target="_blank" rel="noopener">WhatsApp →</a>
+            <a href="index.html#contact">Get in Touch →</a>
+        </div>
+
+    </div>
+
+    <div class="academy-footer-bottom">
         <div class="container">
-
-            <div class="footer-grid">
-
-
-                <div>
-
-                    <h2>
-                        AjuVerse
-                    </h2>
-
-                    <p>
-                        Building ideas with creativity,
-                        technology and AI.
-                    </p>
-
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Quick Links
-                    </h3>
-
-                    <a href="index.html">
-                        Home
-                    </a>
-
-                    <a href="portfolio.html">
-                        Portfolio
-                    </a>
-
-                    <a href="academy.html">
-                        Academy
-                    </a>
-
-                    <a href="books.html">
-                        Books
-                    </a>
-
-                    <a href="store.html">
-                        Store
-                    </a>
-
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Courses
-                    </h3>
-
-                    <a href="#courses">
-                        Digital Products
-                    </a>
-
-                    <a href="#courses">
-                        Video Editing
-                    </a>
-
-                    <a href="#courses">
-                        AI Website Design
-                    </a>
-
-                    <a href="#courses">
-                        AI Content
-                    </a>
-
-                </div>
-
-
-                <div id="contact">
-
-                    <h3>
-                        Contact
-                    </h3>
-
-                    <p>
-                        jeniaju112@gmail.com
-                    </p>
-
-                    <a
-                        href="mailto:jeniaju112@gmail.com"
-                    >
-                        Send Email →
-                    </a>
-
-                </div>
-
-
-            </div>
-
+            <span>© 2026 AjuVerse. All rights reserved.</span>
+            <span>Create • Learn • Earn • Grow</span>
         </div>
+    </div>
+</footer>
 
 
-        <div class="footer-bottom">
 
-            <span>
-                © 2026 AjuVerse. All rights reserved.
-            </span>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+});
+</script>
 
-            <span>
-                Create • Design • Publish • Grow
-            </span>
-
-        </div>
-
-    </footer>
-
-
+<script src="js/ajuverse-nova.js?v=1" defer></script>
 </body>
 
 </html>

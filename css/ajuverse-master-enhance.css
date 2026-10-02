@@ -1,0 +1,735 @@
+
+/* =========================================================
+   AJUVERSE MASTER VISUAL ENHANCEMENT
+   Premium UI / Typography / Motion Layer
+   Built on top of the existing final project.
+   No business or payment logic.
+   ========================================================= */
+
+:root{
+  --aju-bg:#050505;
+  --aju-panel:#0b0b0b;
+  --aju-panel-2:#101010;
+  --aju-white:#f7f7f7;
+  --aju-text:#d0d0d0;
+  --aju-muted:#9b9b9b;
+  --aju-dim:#6f6f6f;
+  --aju-line:rgba(255,255,255,.12);
+  --aju-line-strong:rgba(255,255,255,.22);
+  --aju-accent:#C9974D;
+  --aju-accent-soft:rgba(201, 151, 77,.14);
+  --aju-radius:16px;
+  --aju-ease:cubic-bezier(.22,1,.36,1);
+}
+
+/* ---------- UNIVERSAL TYPE SYSTEM ---------- */
+body.aju-enhanced,
+body.aju-enhanced *{
+  font-family:"Inter",ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif !important;
+}
+
+body.aju-enhanced{
+  color:var(--aju-white);
+  background:var(--aju-bg);
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+}
+
+body.aju-enhanced p,
+body.aju-enhanced li{
+  color:var(--aju-text);
+  font-size:16px;
+  line-height:1.65;
+}
+
+body.aju-enhanced small{
+  font-size:13px;
+  line-height:1.5;
+}
+
+body.aju-enhanced a{
+  -webkit-tap-highlight-color:transparent;
+}
+
+body.aju-enhanced :focus-visible{
+  outline:2px solid var(--aju-accent);
+  outline-offset:4px;
+  border-radius:5px;
+}
+
+/* ---------- GLOBAL SECTION RHYTHM ---------- */
+body.aju-enhanced section{
+  position:relative;
+}
+
+body.aju-enhanced .eyebrow,
+body.aju-enhanced .section-label,
+body.aju-enhanced .academy-label,
+body.aju-enhanced .book-detail-category,
+body.aju-enhanced .type,
+body.aju-enhanced .offer-tag,
+body.aju-enhanced .home-selected-eyebrow,
+body.aju-enhanced .feature-number,
+body.aju-enhanced .section-title > span{
+  font-size:12px !important;
+  line-height:1.25 !important;
+  letter-spacing:2.4px !important;
+  font-weight:800 !important;
+  color:var(--aju-accent) !important;
+}
+
+/* ---------- HEADINGS ---------- */
+body.aju-enhanced h1{
+  font-weight:900 !important;
+  letter-spacing:-2.6px !important;
+  line-height:.98 !important;
+}
+
+body.aju-enhanced h2{
+  font-weight:850 !important;
+  letter-spacing:-1.8px !important;
+  line-height:1.03 !important;
+}
+
+body.aju-enhanced h3{
+  font-weight:800 !important;
+  letter-spacing:-.9px !important;
+  line-height:1.1 !important;
+}
+
+body.aju-enhanced .hero-title,
+body.aju-enhanced .hero h1{
+  font-size:clamp(42px,5vw,70px) !important;
+}
+
+body.aju-enhanced .section-title h2,
+body.aju-enhanced .home-selected-heading h2,
+body.aju-enhanced .cta-box h2{
+  font-size:clamp(32px,3.4vw,50px) !important;
+}
+
+body.aju-enhanced .path-card h3,
+body.aju-enhanced .home-project-info h3,
+body.aju-enhanced .service-card h3,
+body.aju-enhanced .portfolio-content h3{
+  font-size:clamp(23px,2vw,30px) !important;
+}
+
+body.aju-enhanced .hero-description,
+body.aju-enhanced .hero-text,
+body.aju-enhanced .overview-copy,
+body.aju-enhanced .service-card p,
+body.aju-enhanced .path-card p,
+body.aju-enhanced .portfolio-content p,
+body.aju-enhanced .home-project-info p{
+  font-size:17px !important;
+  line-height:1.7 !important;
+  color:#bdbdbd !important;
+}
+
+/* ---------- NAVIGATION ---------- */
+body.aju-enhanced .main-nav{
+  gap:28px;
+}
+
+body.aju-enhanced .main-nav a{
+  position:relative;
+  color:#b8b8b8 !important;
+  font-size:14px !important;
+  font-weight:700 !important;
+  letter-spacing:-.1px !important;
+  padding:8px 0;
+  transition:color .25s ease,transform .25s var(--aju-ease);
+}
+
+body.aju-enhanced .main-nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:1px;
+  width:100%;
+  height:2px;
+  border-radius:99px;
+  background:var(--aju-accent);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .3s var(--aju-ease);
+}
+
+body.aju-enhanced .main-nav a:hover,
+body.aju-enhanced .main-nav a.active{
+  color:#fff !important;
+}
+
+body.aju-enhanced .main-nav a:hover::after,
+body.aju-enhanced .main-nav a.active::after{
+  transform:scaleX(1);
+}
+
+/* ---------- HEADER ---------- */
+body.aju-enhanced .site-header,
+body.aju-enhanced .header{
+  transition:background .35s ease,box-shadow .35s ease,border-color .35s ease;
+}
+
+body.aju-enhanced.aju-scrolled .site-header,
+body.aju-enhanced.aju-scrolled .header{
+  background:rgba(4,4,4,.88) !important;
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  box-shadow:0 12px 40px rgba(0,0,0,.28);
+}
+
+/* ---------- BUTTON SYSTEM ---------- */
+body.aju-enhanced .btn,
+body.aju-enhanced .btn-primary,
+body.aju-enhanced .btn-secondary,
+body.aju-enhanced .academy-button,
+body.aju-enhanced .course-link,
+body.aju-enhanced .store-buy-btn,
+body.aju-enhanced .primary-btn,
+body.aju-enhanced .secondary-btn,
+body.aju-enhanced .result-button,
+body.aju-enhanced .login-button,
+body.aju-enhanced .signup-button,
+body.aju-enhanced .buy{
+  position:relative;
+  overflow:hidden;
+  transition:transform .25s var(--aju-ease),box-shadow .25s ease,background .25s ease,border-color .25s ease;
+}
+
+body.aju-enhanced .btn:hover,
+body.aju-enhanced .btn-primary:hover,
+body.aju-enhanced .btn-secondary:hover,
+body.aju-enhanced .academy-button:hover,
+body.aju-enhanced .course-link:hover,
+body.aju-enhanced .store-buy-btn:hover,
+body.aju-enhanced .primary-btn:hover,
+body.aju-enhanced .secondary-btn:hover,
+body.aju-enhanced .result-button:hover,
+body.aju-enhanced .login-button:hover,
+body.aju-enhanced .signup-button:hover,
+body.aju-enhanced .buy:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 28px rgba(0,0,0,.28);
+}
+
+body.aju-enhanced .btn::after,
+body.aju-enhanced .academy-button::after,
+body.aju-enhanced .store-buy-btn::after,
+body.aju-enhanced .primary-btn::after,
+body.aju-enhanced .secondary-btn::after,
+body.aju-enhanced .result-button::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:70%;
+  height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.16),transparent);
+  transform:skewX(-18deg);
+  transition:left .65s ease;
+  pointer-events:none;
+}
+
+body.aju-enhanced .btn:hover::after,
+body.aju-enhanced .academy-button:hover::after,
+body.aju-enhanced .store-buy-btn:hover::after,
+body.aju-enhanced .primary-btn:hover::after,
+body.aju-enhanced .secondary-btn:hover::after,
+body.aju-enhanced .result-button:hover::after{
+  left:150%;
+}
+
+/* ---------- HOME: HERO ---------- */
+body.home-page.aju-enhanced .hero{
+  isolation:isolate;
+  overflow:hidden;
+}
+
+body.home-page.aju-enhanced .hero::before{
+  content:"";
+  position:absolute;
+  width:620px;
+  height:620px;
+  right:-260px;
+  top:-220px;
+  border-radius:50%;
+  background:radial-gradient(circle,var(--aju-accent-soft),transparent 68%);
+  filter:blur(8px);
+  pointer-events:none;
+  z-index:-1;
+}
+
+body.home-page.aju-enhanced .hero-content{
+  position:relative;
+}
+
+body.home-page.aju-enhanced .hero-content::after{
+  content:"";
+  position:absolute;
+  left:-34px;
+  top:12%;
+  width:1px;
+  height:76%;
+  background:linear-gradient(transparent,rgba(201, 151, 77,.55),transparent);
+  opacity:.55;
+}
+
+body.home-page.aju-enhanced .hero-visual{
+  filter:drop-shadow(0 25px 50px rgba(0,0,0,.42));
+}
+
+body.home-page.aju-enhanced .hero-visual img{
+  transition:transform .8s var(--aju-ease),filter .8s ease;
+}
+
+body.home-page.aju-enhanced .hero-visual:hover img{
+  transform:scale(1.018) translateY(-4px);
+  filter:brightness(1.04);
+}
+
+/* ---------- HOME: PATH / WORK CARDS ---------- */
+body.home-page.aju-enhanced .path-card,
+body.home-page.aju-enhanced .home-project-card,
+body.home-page.aju-enhanced .service-card{
+  border-color:var(--aju-line) !important;
+  transition:transform .4s var(--aju-ease),border-color .35s ease,box-shadow .35s ease,background .35s ease;
+}
+
+body.home-page.aju-enhanced .path-card:hover,
+body.home-page.aju-enhanced .home-project-card:hover,
+body.home-page.aju-enhanced .service-card:hover{
+  transform:translateY(-7px);
+  border-color:rgba(201, 151, 77,.35) !important;
+  box-shadow:0 24px 60px rgba(0,0,0,.34);
+}
+
+body.home-page.aju-enhanced .home-project-image img,
+body.home-page.aju-enhanced .portfolio-image img{
+  transition:transform .7s var(--aju-ease),filter .5s ease;
+}
+
+body.home-page.aju-enhanced .home-project-card:hover .home-project-image img,
+body.home-page.aju-enhanced .portfolio-card:hover .portfolio-image img{
+  transform:scale(1.045);
+  filter:brightness(1.06);
+}
+
+/* ---------- HOME: CTA ---------- */
+body.home-page.aju-enhanced .cta-box{
+  border:1px solid var(--aju-line-strong);
+  box-shadow:0 30px 90px rgba(0,0,0,.28);
+}
+
+/* ---------- BOOKORA ---------- */
+body.bookstore-page.aju-enhanced{
+  --aju-accent:#f2b300;
+}
+
+body.bookstore-page.aju-enhanced .bookora-hero{
+  position:relative;
+  overflow:hidden;
+}
+
+body.bookstore-page.aju-enhanced .bookora-hero::after{
+  content:"";
+  position:absolute;
+  width:520px;
+  height:520px;
+  left:-260px;
+  top:20%;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(242,179,0,.10),transparent 68%);
+  pointer-events:none;
+}
+
+body.bookstore-page.aju-enhanced .category-card,
+body.bookstore-page.aju-enhanced .store-book-card,
+body.bookstore-page.aju-enhanced .resource-row,
+body.bookstore-page.aju-enhanced .news-box,
+body.bookstore-page.aju-enhanced .offer-poster{
+  border-color:var(--aju-line) !important;
+  transition:transform .38s var(--aju-ease),border-color .3s ease,box-shadow .3s ease;
+}
+
+body.bookstore-page.aju-enhanced .category-card:hover,
+body.bookstore-page.aju-enhanced .store-book-card:hover,
+body.bookstore-page.aju-enhanced .resource-row:hover{
+  transform:translateY(-5px);
+  border-color:rgba(242,179,0,.38) !important;
+  box-shadow:0 22px 50px rgba(0,0,0,.32);
+}
+
+body.bookstore-page.aju-enhanced .hero-copy h1{
+  font-size:clamp(44px,5.4vw,72px) !important;
+  letter-spacing:-3.2px !important;
+}
+
+body.bookstore-page.aju-enhanced .hero-copy p,
+body.bookstore-page.aju-enhanced .about-box p,
+body.bookstore-page.aju-enhanced .resource-main p,
+body.bookstore-page.aju-enhanced .store-book-content p{
+  font-size:16px !important;
+  line-height:1.65 !important;
+}
+
+body.bookstore-page.aju-enhanced .category-card h3,
+body.bookstore-page.aju-enhanced .store-book-content h3{
+  font-size:clamp(20px,2vw,28px) !important;
+}
+
+body.bookstore-page.aju-enhanced .resource-main h3{
+  font-size:20px !important;
+  line-height:1.2 !important;
+}
+
+/* ---------- ACADEMY ---------- */
+body.academy-page.aju-enhanced .academy-hero{
+  overflow:hidden;
+}
+
+body.academy-page.aju-enhanced .academy-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(201, 151, 77,.035) 1px,transparent 1px),
+    linear-gradient(rgba(201, 151, 77,.025) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:linear-gradient(to bottom,black,transparent 72%);
+  opacity:.35;
+  pointer-events:none;
+}
+
+body.academy-page.aju-enhanced .academy-path-card,
+body.academy-page.aju-enhanced .featured-card,
+body.academy-page.aju-enhanced .benefit-card,
+body.academy-page.aju-enhanced .method-card,
+body.academy-page.aju-enhanced .testimonial-card{
+  transition:transform .38s var(--aju-ease),border-color .3s ease,box-shadow .3s ease;
+}
+
+body.academy-page.aju-enhanced .academy-path-card:hover,
+body.academy-page.aju-enhanced .featured-card:hover,
+body.academy-page.aju-enhanced .benefit-card:hover,
+body.academy-page.aju-enhanced .method-card:hover,
+body.academy-page.aju-enhanced .testimonial-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(201, 151, 77,.30) !important;
+  box-shadow:0 24px 60px rgba(0,0,0,.3);
+}
+
+body.academy-page.aju-enhanced .academy-hero h1{
+  font-size:clamp(44px,5vw,68px) !important;
+}
+
+/* ---------- KDP / COURSE ---------- */
+body.aju-kdp-page.aju-enhanced .course-hero{
+  overflow:hidden;
+}
+
+body.aju-kdp-page.aju-enhanced .course-hero::after{
+  content:"";
+  position:absolute;
+  width:620px;
+  height:620px;
+  right:-320px;
+  top:-260px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(201, 151, 77,.10),transparent 68%);
+  pointer-events:none;
+}
+
+body.aju-kdp-page.aju-enhanced .curriculum-card,
+body.aju-kdp-page.aju-enhanced .method-card,
+body.aju-kdp-page.aju-enhanced .course-stat{
+  transition:transform .35s var(--aju-ease),border-color .3s ease,box-shadow .3s ease;
+}
+
+body.aju-kdp-page.aju-enhanced .curriculum-card:hover,
+body.aju-kdp-page.aju-enhanced .method-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(201, 151, 77,.32) !important;
+  box-shadow:0 22px 55px rgba(0,0,0,.3);
+}
+
+body.aju-kdp-page.aju-enhanced .course-hero h1{
+  font-size:clamp(44px,5vw,68px) !important;
+}
+
+/* ---------- VIDEO PROJECT ---------- */
+body.aju-video-page.aju-enhanced{
+  --aju-accent:#C9974D;
+}
+
+body.aju-video-page.aju-enhanced .project-hero{
+  overflow:hidden;
+}
+
+body.aju-video-page.aju-enhanced .project-hero::after{
+  content:"";
+  position:absolute;
+  width:700px;
+  height:700px;
+  right:-300px;
+  top:-300px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(201, 151, 77,.11),transparent 68%);
+  pointer-events:none;
+}
+
+body.aju-video-page.aju-enhanced .feature-card,
+body.aju-video-page.aju-enhanced .process-card,
+body.aju-video-page.aju-enhanced .info-panel{
+  transition:transform .38s var(--aju-ease),border-color .3s ease,box-shadow .3s ease;
+}
+
+body.aju-video-page.aju-enhanced .feature-card:hover,
+body.aju-video-page.aju-enhanced .process-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(201, 151, 77,.32) !important;
+  box-shadow:0 24px 60px rgba(0,0,0,.35);
+}
+
+body.aju-video-page.aju-enhanced .hero-title{
+  font-size:clamp(46px,5.5vw,76px) !important;
+}
+
+/* ---------- BOOK DETAIL PAGES ---------- */
+body.aju-book-page.aju-enhanced .book-detail-hero{
+  overflow:hidden;
+}
+
+body.aju-book-page.aju-enhanced .book-detail-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 15% 30%,rgba(201, 151, 77,.075),transparent 28%),
+    radial-gradient(circle at 85% 70%,rgba(255,255,255,.035),transparent 26%);
+  pointer-events:none;
+}
+
+body.aju-book-page.aju-enhanced .book-detail-cover{
+  transition:transform .6s var(--aju-ease),filter .5s ease;
+}
+
+body.aju-book-page.aju-enhanced .book-detail-cover:hover{
+  transform:translateY(-6px) rotate(-.4deg);
+  filter:drop-shadow(0 28px 45px rgba(0,0,0,.4));
+}
+
+body.aju-book-page.aju-enhanced .book-detail-content h1{
+  font-size:clamp(42px,5vw,64px) !important;
+}
+
+body.aju-book-page.aju-enhanced .book-detail-description{
+  font-size:17px !important;
+  line-height:1.7 !important;
+  color:#bdbdbd !important;
+}
+
+body.aju-book-page.aju-enhanced .book-about,
+body.aju-book-page.aju-enhanced .book-purchase-cta{
+  border-top-color:var(--aju-line) !important;
+}
+
+body.aju-book-page.aju-enhanced .book-features > div{
+  transition:transform .3s ease,border-color .3s ease;
+}
+
+body.aju-book-page.aju-enhanced .book-features > div:hover{
+  transform:translateY(-3px);
+  border-color:rgba(201, 151, 77,.32) !important;
+}
+
+/* ---------- CART / CHECKOUT ---------- */
+body.aju-cart-page.aju-enhanced{
+  background:
+    radial-gradient(circle at 85% 10%,rgba(201, 151, 77,.055),transparent 28%),
+    #050505;
+}
+
+body.aju-cart-page.aju-enhanced .wrap{
+  max-width:1180px;
+}
+
+body.aju-cart-page.aju-enhanced .panel{
+  border-color:var(--aju-line);
+  border-radius:18px;
+  box-shadow:0 24px 70px rgba(0,0,0,.22);
+}
+
+body.aju-cart-page.aju-enhanced .panel h1,
+body.aju-cart-page.aju-enhanced .panel h2{
+  font-size:clamp(24px,3vw,36px);
+  letter-spacing:-1.4px;
+}
+
+body.aju-cart-page.aju-enhanced label{
+  color:#bcbcbc !important;
+  font-size:13px !important;
+}
+
+body.aju-cart-page.aju-enhanced input,
+body.aju-cart-page.aju-enhanced textarea{
+  font-size:15px !important;
+  min-height:46px;
+  border-color:rgba(255,255,255,.16);
+  transition:border-color .25s ease,box-shadow .25s ease;
+}
+
+body.aju-cart-page.aju-enhanced input:focus,
+body.aju-cart-page.aju-enhanced textarea:focus{
+  border-color:rgba(201, 151, 77,.65) !important;
+  box-shadow:0 0 0 3px rgba(201, 151, 77,.08);
+}
+
+/* ---------- AUTH ---------- */
+body.login-page.aju-enhanced .login-box,
+body.signup-page.aju-enhanced .signup-box{
+  border-color:var(--aju-line);
+  border-radius:18px;
+  box-shadow:0 30px 100px rgba(0,0,0,.35);
+}
+
+body.login-page.aju-enhanced .login-box h1,
+body.signup-page.aju-enhanced .signup-box h1{
+  font-size:clamp(38px,5vw,52px) !important;
+  letter-spacing:-2.2px !important;
+}
+
+body.login-page.aju-enhanced .login-box > p,
+body.signup-page.aju-enhanced .signup-box > p{
+  font-size:15px !important;
+  line-height:1.65 !important;
+}
+
+body.login-page.aju-enhanced .login-form input,
+body.signup-page.aju-enhanced .signup-form input{
+  min-height:48px;
+  font-size:15px !important;
+}
+
+/* ---------- ORDER SUCCESS ---------- */
+body.aju-order-page.aju-enhanced{
+  background:
+    radial-gradient(circle at 50% 18%,rgba(201, 151, 77,.07),transparent 30%),
+    #050505;
+}
+
+body.aju-order-page.aju-enhanced .box{
+  border-color:var(--aju-line);
+  border-radius:20px;
+  box-shadow:0 35px 100px rgba(0,0,0,.35);
+}
+
+body.aju-order-page.aju-enhanced .box h1{
+  font-size:clamp(36px,5vw,54px) !important;
+  letter-spacing:-2px;
+}
+
+body.aju-order-page.aju-enhanced .box p{
+  font-size:16px !important;
+  line-height:1.65 !important;
+}
+
+/* ---------- UNIVERSAL REVEAL ---------- */
+body.aju-enhanced .aju-reveal{
+  opacity:0;
+  transform:translateY(22px);
+  transition:opacity .75s ease,transform .75s var(--aju-ease);
+  will-change:opacity,transform;
+}
+
+body.aju-enhanced .aju-reveal.aju-visible{
+  opacity:1;
+  transform:none;
+}
+
+body.aju-enhanced .aju-delay-1{transition-delay:.06s}
+body.aju-enhanced .aju-delay-2{transition-delay:.12s}
+body.aju-enhanced .aju-delay-3{transition-delay:.18s}
+body.aju-enhanced .aju-delay-4{transition-delay:.24s}
+
+/* ---------- RESPONSIVE MASTER TYPE SCALE ---------- */
+@media (max-width:900px){
+  body.aju-enhanced .main-nav{gap:18px}
+  body.aju-enhanced .main-nav a{font-size:13px !important}
+  body.aju-enhanced p,
+  body.aju-enhanced li{font-size:15px}
+}
+
+@media (max-width:700px){
+  body.aju-enhanced h1{letter-spacing:-1.8px !important}
+  body.aju-enhanced h2{letter-spacing:-1.2px !important}
+  body.aju-enhanced p,
+  body.aju-enhanced li{font-size:15px;line-height:1.62}
+
+  body.aju-enhanced .hero-title,
+  body.aju-enhanced .hero h1,
+  body.home-page.aju-enhanced .hero h1{
+    font-size:clamp(34px,9vw,46px) !important;
+  }
+
+  body.aju-enhanced .hero-description,
+  body.aju-enhanced .hero-text,
+  body.aju-enhanced .overview-copy,
+  body.aju-enhanced .service-card p,
+  body.aju-enhanced .path-card p,
+  body.aju-enhanced .portfolio-content p,
+  body.aju-enhanced .home-project-info p{
+    font-size:15px !important;
+    line-height:1.62 !important;
+  }
+
+  body.bookstore-page.aju-enhanced .hero-copy h1{
+    font-size:clamp(38px,11vw,52px) !important;
+  }
+
+  body.aju-book-page.aju-enhanced .book-detail-content h1,
+  body.aju-kdp-page.aju-enhanced .course-hero h1,
+  body.aju-video-page.aju-enhanced .hero-title,
+  body.academy-page.aju-enhanced .academy-hero h1{
+    font-size:clamp(36px,10vw,50px) !important;
+  }
+
+  body.aju-enhanced .main-nav a{
+    font-size:12px !important;
+  }
+
+  body.aju-enhanced .eyebrow,
+  body.aju-enhanced .section-label,
+  body.aju-enhanced .academy-label,
+  body.aju-enhanced .book-detail-category,
+  body.aju-enhanced .type,
+  body.aju-enhanced .offer-tag,
+  body.aju-enhanced .home-selected-eyebrow,
+  body.aju-enhanced .feature-number{
+    font-size:10px !important;
+    letter-spacing:2px !important;
+  }
+}
+
+@media (max-width:390px){
+  body.aju-enhanced p,
+  body.aju-enhanced li{font-size:14px}
+  body.aju-enhanced .main-nav a{font-size:11px !important}
+}
+
+/* ---------- REDUCED MOTION ---------- */
+@media (prefers-reduced-motion:reduce){
+  body.aju-enhanced *,
+  body.aju-enhanced *::before,
+  body.aju-enhanced *::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
+  body.aju-enhanced .aju-reveal{
+    opacity:1 !important;
+    transform:none !important;
+  }
+}

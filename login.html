@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AjuVerse | Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+
+    <style>
+        .login-page {
+            min-height: 100vh;
+            background: #050505;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 70px 20px;
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 430px;
+            border: 1px solid rgba(255,255,255,.15);
+            padding: 45px;
+            background: #090909;
+        }
+
+        .login-label {
+            color: #C9974D;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 14px;
+        }
+
+        .login-box h1 {
+            font-size: 42px;
+            line-height: 1;
+            margin: 0 0 12px;
+        }
+
+        .login-box > p {
+            color: #999;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .login-form label {
+            font-size: 13px;
+            color: #bbb;
+        }
+
+        .login-form input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 14px;
+            margin-top: 7px;
+            background: #050505;
+            border: 1px solid #333;
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .login-form input:focus {
+            border-color: #C9974D;
+        }
+
+        .login-button {
+            margin-top: 8px;
+            padding: 15px;
+            border: 0;
+            background: #fff;
+            color: #000;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background: #C9974D;
+        }
+
+        .login-signup {
+            text-align: center;
+            margin-top: 24px;
+            color: #777;
+            font-size: 13px;
+        }
+
+        .login-signup a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .login-signup a:hover {
+            color: #C9974D;
+        }
+
+        @media (max-width: 600px) {
+            .login-main {
+                padding: 40px 16px;
+            }
+
+            .login-box {
+                padding: 30px 22px;
+            }
+
+            .login-box h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/ajuverse-master-enhance.css?v=20260920-master">
+    <script src="js/ajuverse-master-enhance.js?v=20260920-master" defer></script>
+
+    <link rel="stylesheet" href="css/ajuverse-nova.css?v=1">
+</head>
+
+<body class="login-page">
+
+    <main class="login-main">
+
+        <div class="login-box">
+
+            <div class="login-label">
+                AJUVERSE
+            </div>
+
+            <h1>WELCOME BACK.</h1>
+
+            <p>
+                Login to your AjuVerse account and continue
+                learning, creating and growing.
+            </p>
+
+            <form class="login-form">
+
+                <label>
+                    Email
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Password
+
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+                </label>
+
+                <button
+                    type="submit"
+                    class="login-button"
+                >
+                    LOGIN →
+                </button>
+
+            </form>
+
+            <div class="login-signup">
+                Don't have an account?
+                <a href="signup.html">Create Account</a>
+            </div>
+
+        </div>
+
+    </main>
+
+<script src="js/ajuverse-nova.js?v=1" defer></script>
+</body>
+</html>

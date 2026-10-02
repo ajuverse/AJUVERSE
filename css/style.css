@@ -9,7 +9,7 @@
     --gray: #a5a5a5;
     --dark-gray: #666;
     --line: #252525;
-    --gold: #f5a400;
+    --gold: #C9974D;
 }
 
 * {
@@ -270,7 +270,7 @@ button {
     background:
         radial-gradient(
             circle,
-            rgba(245,164,0,.12),
+            rgba(201, 151, 77,.12),
             transparent 60%
         );
 }
@@ -647,7 +647,7 @@ button {
     background:
         radial-gradient(
             circle at center,
-            rgba(245,164,0,.08),
+            rgba(201, 151, 77,.08),
             transparent 60%
         );
 }
@@ -781,8 +781,13 @@ button {
 
 
 /* =========================================================
-   RESPONSIVE — TABLET
-   ========================================================= */
+   AJUVERSE — FINAL RESPONSIVE SYSTEM
+========================================================= */
+
+
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media (max-width: 1000px) {
 
@@ -790,220 +795,77 @@ button {
         width: calc(100% - 50px);
     }
 
+    /* HEADER */
+
     .main-nav {
-        gap: 15px;
+        gap: 16px;
     }
 
     .main-nav a {
         font-size: 11px;
     }
 
-    .hero-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-visual {
-        height: 550px;
-    }
-
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-
-/* =========================================================
-   RESPONSIVE — MOBILE
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-    .container {
-        width: calc(100% - 32px);
-    }
-
-    /* HEADER */
-
     .header-inner {
-        min-height: 72px;
-    }
-
-    .brand-logo {
-        width: 38px;
-        height: 38px;
-    }
-
-    .brand-name {
-        font-size: 23px;
-    }
-
-    .brand-tagline {
-        display: none;
-    }
-
-    .main-nav {
-        display: none;
-    }
-
-    .header-login {
-        min-width: 70px;
-        height: 38px;
+        gap: 18px;
     }
 
 
     /* HERO */
 
-    .hero {
-        min-height: auto;
-    }
-
-    .hero-content {
-        padding: 70px 0 50px;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-        letter-spacing: -1.5px;
-    }
-
-    .hero-description {
-        font-size: 14px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .btn {
-        width: 100%;
-    }
-
-    .hero-visual {
-        height: 430px;
-    }
-
-
-    /* SECTIONS */
-
-    .start-section,
-    .services-section,
-    .portfolio-section,
-    .cta-section {
-        padding: 80px 0;
-    }
-
-    .section-title h2 {
-        font-size: 30px;
-        letter-spacing: -1.5px;
-    }
-
-
-    /* PRODUCTS */
-
-    .path-grid {
+    .hero-grid {
         grid-template-columns: 1fr;
     }
 
-    .path-card {
-        min-height: 300px;
-        padding: 30px;
+    .hero-content {
+        padding:
+            70px 0 45px;
     }
 
-    .path-card h3 {
-        font-size: 30px;
+    .hero-visual {
+        height: 560px;
+    }
+
+
+    /* START */
+
+    .path-card {
+        min-height: 300px;
     }
 
 
     /* SERVICES */
 
-    .service-grid {
-        grid-template-columns: 1fr;
-    }
-
     .service-card {
         min-height: 300px;
-        padding: 30px;
     }
 
 
     /* PORTFOLIO */
 
-    .portfolio-filters {
-        overflow-x: auto;
-        flex-wrap: nowrap;
-        padding-bottom: 8px;
-    }
-
-    .portfolio-filter {
-        flex-shrink: 0;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-
     .portfolio-image {
-        height: 230px;
-    }
-
-
-    /* CTA */
-
-    .cta-box {
-        padding: 60px 25px;
-    }
-
-    .cta-box h2 {
-        font-size: 46px;
-        letter-spacing: -3px;
-    }
-
-    .cta-buttons {
-        flex-direction: column;
-    }
-
-    .cta-buttons .btn {
-        width: 100%;
+        height: 250px;
     }
 
 
     /* FOOTER */
 
     .footer-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            repeat(2, 1fr);
 
-        padding: 60px 0;
+        min-height: auto;
+
+        padding:
+            60px 0;
     }
 
-    .footer-bottom {
-        flex-direction: column;
-
-        gap: 8px;
-
-        text-align: center;
-    }
 }
 
 
 /* =========================================================
-   VERY SMALL MOBILE
-   ========================================================= */
+   MOBILE — MAIN SYSTEM
+========================================================= */
 
-@media (max-width: 400px) {
-
-    .hero h1 {
-        font-size: 42px;
-    }
-
-    .section-title h2 {
-        font-size: 42px;
-    }
-
-    .cta-box h2 {
-        font-size: 40px;
-    }
-}
 
 /* =========================================================
    AJUVERSE — FINAL LAYOUT FIX
@@ -1229,7 +1091,7 @@ button {
 }
 
 .academy-label {
-    color: var(--orange, #ffb000);
+    color: var(--orange, #C9974D);
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 5px;
@@ -1269,7 +1131,7 @@ button {
 
 .courses-heading span {
     display: block;
-    color: var(--orange, #ffb000);
+    color: var(--orange, #C9974D);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 4px;
@@ -1314,7 +1176,7 @@ button {
 }
 
 .course-number {
-    color: var(--orange, #ffb000);
+    color: var(--orange, #C9974D);
     font-size: 13px;
     letter-spacing: 3px;
     font-weight: 700;
@@ -1350,7 +1212,7 @@ button {
 
 .course-topics li::before {
     content: "✓";
-    color: var(--orange, #ffb000);
+    color: var(--orange, #C9974D);
     margin-right: 10px;
 }
 
@@ -1373,8 +1235,8 @@ button {
 }
 
 .course-link:hover {
-    color: var(--orange, #ffb000);
-    border-color: var(--orange, #ffb000);
+    color: var(--orange, #C9974D);
+    border-color: var(--orange, #C9974D);
 }
 
 
@@ -1403,7 +1265,7 @@ button {
 }
 
 .benefit-number {
-    color: var(--orange, #ffb000);
+    color: var(--orange, #C9974D);
     font-size: 12px;
     letter-spacing: 3px;
 }
@@ -1434,7 +1296,7 @@ button {
 }
 
 .academy-cta-box span {
-    color: var(--orange, #ffb000);
+    color: var(--orange, #C9974D);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 4px;
@@ -1474,7 +1336,7 @@ button {
 }
 
 .academy-button:hover {
-    background: var(--orange, #ffb000);
+    background: var(--orange, #C9974D);
 }
 
 
@@ -1617,13 +1479,13 @@ button {
     bottom: 22px;
     width: 0;
     height: 1px;
-    background: #f5a400;
+    background: #C9974D;
     transition: width .25s ease;
 }
 
 .bookstore-page .main-nav a:hover,
 .bookstore-page .main-nav a.active {
-    color: #f5a400;
+    color: #C9974D;
 }
 
 .bookstore-page .main-nav a:hover::after,
@@ -1909,8 +1771,8 @@ button {
 }
 
 .bookstore-page .store-buy-btn:hover {
-    background: #f5a400;
-    border-color: #f5a400;
+    background: #C9974D;
+    border-color: #C9974D;
     color: #000;
 }
 
@@ -2027,7 +1889,7 @@ button {
 }
 
 .bookstore-page .footer-grid a:hover {
-    color: #f5a400;
+    color: #C9974D;
 }
 
 .bookstore-page .footer-grid p {
@@ -2096,7 +1958,7 @@ button {
 .bookstore-page .buy-modal-label {
     display: block;
     margin-bottom: 18px;
-    color: #f5a400;
+    color: #C9974D;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 4px;
@@ -2148,7 +2010,7 @@ button {
 .bookstore-page .buy-option-number {
     display: block;
     margin-bottom: 45px;
-    color: #f5a400;
+    color: #C9974D;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 3px;
@@ -2448,7 +2310,7 @@ button {
     letter-spacing: 5px;
     text-transform: uppercase;
 
-    color: var(--orange, #ffb000);
+    color: var(--orange, #C9974D);
 }
 
 .bookora-logo {
@@ -2529,8 +2391,8 @@ button {
 }
 
 .bookora-welcome-content .text-link:hover {
-    color: var(--orange, #ffb000);
-    border-color: var(--orange, #ffb000);
+    color: var(--orange, #C9974D);
+    border-color: var(--orange, #C9974D);
 }
 
 
@@ -2563,7 +2425,7 @@ button {
     letter-spacing: 5px;
     text-transform: uppercase;
 
-    color: var(--orange, #ffb000);
+    color: var(--orange, #C9974D);
 }
 
 .bookora-welcome-grid > :nth-child(2) h2 {
@@ -2703,7 +2565,7 @@ button {
     letter-spacing: 4px;
     font-weight: 700;
 
-    color: #ffb000;
+    color: #C9974D;
 }
 
 .bookora-logo {
@@ -2780,7 +2642,7 @@ button {
     letter-spacing: 4px;
     font-weight: 700;
 
-    color: #ffb000;
+    color: #C9974D;
 }
 
 .bookora-welcome-grid > :nth-child(2) h2 {
@@ -3044,7 +2906,7 @@ body.home-page #home.hero h1 br {
 
 .site-header .brand:hover {
     transform: translateY(-1px);
-    filter: drop-shadow(0 0 10px rgba(245,164,0,.18));
+    filter: drop-shadow(0 0 10px rgba(201, 151, 77,.18));
 }
 
 .site-header .brand-logo {
@@ -3080,7 +2942,7 @@ body.home-page #home.hero h1 br {
 
 .main-nav a:hover {
     transform: translateY(-2px);
-    text-shadow: 0 0 12px rgba(245,164,0,.45);
+    text-shadow: 0 0 12px rgba(201, 151, 77,.45);
 }
 
 .header-login {
@@ -3114,7 +2976,7 @@ body.home-page #home.hero h1 br {
 .hero-visual img {
     animation: ajuHeroFloat 7s ease-in-out infinite;
     transform-origin: center bottom;
-    filter: drop-shadow(0 0 16px rgba(245,164,0,.10));
+    filter: drop-shadow(0 0 16px rgba(201, 151, 77,.10));
 }
 
 .eyebrow,
@@ -3239,7 +3101,7 @@ body.home-page #home.hero h1 br {
 
 .path-card .text-link:hover {
     transform: translateX(5px);
-    text-shadow: 0 0 12px rgba(245,164,0,.45);
+    text-shadow: 0 0 12px rgba(201, 151, 77,.45);
 }
 
 /* ---------- WHAT I DO ----------
@@ -3318,7 +3180,7 @@ body.home-page #home.hero h1 br {
 
 .service-links a:hover {
     transform: translateX(5px);
-    text-shadow: 0 0 12px rgba(245,164,0,.45);
+    text-shadow: 0 0 12px rgba(201, 151, 77,.45);
 }
 
 /* ---------- SELECTED WORK ----------
@@ -3466,10 +3328,10 @@ body.home-page #home.hero h1 br {
 
 @keyframes ajuGoldPulse {
     0%, 100% {
-        text-shadow: 0 0 0 rgba(245,164,0,0);
+        text-shadow: 0 0 0 rgba(201, 151, 77,0);
     }
     50% {
-        text-shadow: 0 0 12px rgba(245,164,0,.28);
+        text-shadow: 0 0 12px rgba(201, 151, 77,.28);
     }
 }
 
@@ -3579,7 +3441,7 @@ body.home-page #home.hero h1 br {
 
 body:has(.hero) {
     background:
-        radial-gradient(circle at 78% 18%, rgba(245,164,0,.055), transparent 25%),
+        radial-gradient(circle at 78% 18%, rgba(201, 151, 77,.055), transparent 25%),
         radial-gradient(circle at 18% 55%, rgba(255,255,255,.025), transparent 28%),
         #000;
 }
@@ -3590,7 +3452,7 @@ body:has(.hero) {
     isolation: isolate;
     overflow: hidden;
     background:
-        radial-gradient(circle at 78% 45%, rgba(245,164,0,.075), transparent 28%),
+        radial-gradient(circle at 78% 45%, rgba(201, 151, 77,.075), transparent 28%),
         radial-gradient(circle at 28% 70%, rgba(255,255,255,.025), transparent 30%);
 }
 
@@ -3603,7 +3465,7 @@ body:has(.hero) {
     right: 8%;
     top: 8%;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(245,164,0,.13) 0%, rgba(245,164,0,.045) 32%, transparent 70%);
+    background: radial-gradient(circle, rgba(201, 151, 77,.13) 0%, rgba(201, 151, 77,.045) 32%, transparent 70%);
     filter: blur(18px);
     animation: ajuMagicOrb 8s ease-in-out infinite;
     pointer-events: none;
@@ -3647,7 +3509,7 @@ body:has(.hero) {
 /* Hero heading gets a subtle premium shimmer */
 .hero h1 {
     position: relative;
-    background: linear-gradient(110deg, #fff 0%, #fff 38%, #f5a400 50%, #fff 62%, #fff 100%);
+    background: linear-gradient(110deg, #fff 0%, #fff 38%, #C9974D 50%, #fff 62%, #fff 100%);
     background-size: 250% 100%;
     background-position: 100% 0;
     -webkit-background-clip: text;
@@ -3660,7 +3522,7 @@ body:has(.hero) {
 .eyebrow,
 .section-title > span {
     position: relative;
-    text-shadow: 0 0 8px rgba(245,164,0,.18);
+    text-shadow: 0 0 8px rgba(201, 151, 77,.18);
     animation: ajuGoldPulse 2.8s ease-in-out infinite, ajuMarkerFloat 4s ease-in-out infinite;
 }
 
@@ -3680,7 +3542,7 @@ body:has(.hero) {
     top: 48%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(245,164,0,.18), rgba(245,164,0,.055) 38%, transparent 72%);
+    background: radial-gradient(circle, rgba(201, 151, 77,.18), rgba(201, 151, 77,.055) 38%, transparent 72%);
     filter: blur(20px);
     animation: ajuAvatarHalo 5s ease-in-out infinite;
     pointer-events: none;
@@ -3695,9 +3557,9 @@ body:has(.hero) {
     left: 50%;
     top: 48%;
     transform: translate(-50%, -50%);
-    border: 1px solid rgba(245,164,0,.16);
+    border: 1px solid rgba(201, 151, 77,.16);
     border-radius: 50%;
-    box-shadow: 0 0 35px rgba(245,164,0,.08), inset 0 0 35px rgba(245,164,0,.04);
+    box-shadow: 0 0 35px rgba(201, 151, 77,.08), inset 0 0 35px rgba(201, 151, 77,.04);
     animation: ajuRingSpin 18s linear infinite;
     pointer-events: none;
 }
@@ -3712,13 +3574,13 @@ body:has(.hero) {
     display: block;
     animation: ajuAvatarCinematic 6s ease-in-out infinite;
     filter:
-        drop-shadow(0 0 14px rgba(245,164,0,.14))
+        drop-shadow(0 0 14px rgba(201, 151, 77,.14))
         drop-shadow(0 18px 35px rgba(0,0,0,.35));
 }
 
 /* Navigation: active item receives a living glow */
 .main-nav a.active {
-    text-shadow: 0 0 10px rgba(245,164,0,.28);
+    text-shadow: 0 0 10px rgba(201, 151, 77,.28);
     animation: ajuNavPulse 3s ease-in-out infinite;
 }
 
@@ -3728,7 +3590,7 @@ body:has(.hero) {
 
 .main-nav a:hover::after,
 .main-nav a.active::after {
-    box-shadow: 0 0 10px rgba(245,164,0,.45);
+    box-shadow: 0 0 10px rgba(201, 151, 77,.45);
 }
 
 /* Login gets a premium energy border */
@@ -3741,7 +3603,7 @@ body:has(.hero) {
     content: "";
     position: absolute;
     inset: -2px;
-    background: linear-gradient(90deg, transparent, rgba(245,164,0,.7), transparent);
+    background: linear-gradient(90deg, transparent, rgba(201, 151, 77,.7), transparent);
     transform: translateX(-120%);
     animation: ajuBorderSweep 4.5s ease-in-out infinite;
     pointer-events: none;
@@ -3766,7 +3628,7 @@ body:has(.hero) {
     right: -100px;
     bottom: -100px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(245,164,0,.10), transparent 68%);
+    background: radial-gradient(circle, rgba(201, 151, 77,.10), transparent 68%);
     filter: blur(10px);
     opacity: 0;
     transition: opacity .45s ease, transform .45s ease;
@@ -3776,10 +3638,10 @@ body:has(.hero) {
 .path-card:hover,
 .service-card:hover {
     transform: translateY(-8px) !important;
-    border-color: rgba(245,164,0,.32) !important;
+    border-color: rgba(201, 151, 77,.32) !important;
     box-shadow:
         0 18px 45px rgba(0,0,0,.45),
-        0 0 28px rgba(245,164,0,.055);
+        0 0 28px rgba(201, 151, 77,.055);
 }
 
 .path-card:hover::after,
@@ -3799,18 +3661,18 @@ body:has(.hero) {
 .path-card .text-link:hover,
 .service-links a:hover {
     transform: translateX(7px) !important;
-    text-shadow: 0 0 16px rgba(245,164,0,.58);
+    text-shadow: 0 0 16px rgba(201, 151, 77,.58);
 }
 
 /* CTA buttons get moving highlight */
 .cta-buttons .btn,
 .cta-buttons a {
-    box-shadow: 0 0 0 rgba(245,164,0,0);
+    box-shadow: 0 0 0 rgba(201, 151, 77,0);
 }
 
 .cta-buttons .btn:hover,
 .cta-buttons a:hover {
-    box-shadow: 0 8px 30px rgba(245,164,0,.14), 0 0 20px rgba(245,164,0,.08);
+    box-shadow: 0 8px 30px rgba(201, 151, 77,.14), 0 0 20px rgba(201, 151, 77,.08);
 }
 
 /* ---------- 2. LOGO +50% ---------- */
@@ -3931,10 +3793,10 @@ body:has(.hero) {
 
 @keyframes ajuNavPulse {
     0%, 100% {
-        filter: drop-shadow(0 0 0 rgba(245,164,0,0));
+        filter: drop-shadow(0 0 0 rgba(201, 151, 77,0));
     }
     50% {
-        filter: drop-shadow(0 0 7px rgba(245,164,0,.28));
+        filter: drop-shadow(0 0 7px rgba(201, 151, 77,.28));
     }
 }
 
@@ -4029,10 +3891,10 @@ body:has(.hero) {
     line-height: 1.15 !important;
     font-weight: 800 !important;
     letter-spacing: 4.5px !important;
-    color: #f5a400 !important;
+    color: #C9974D !important;
     text-shadow:
-        0 0 8px rgba(245,164,0,.28),
-        0 0 20px rgba(245,164,0,.10) !important;
+        0 0 8px rgba(201, 151, 77,.28),
+        0 0 20px rgba(201, 151, 77,.10) !important;
 }
 
 /* Keep the larger eyebrow visually balanced with the hero title. */
@@ -4042,8 +3904,8 @@ body:has(.hero) {
     width: 52px;
     height: 2px;
     margin-top: 12px;
-    background: linear-gradient(90deg, #f5a400, transparent);
-    box-shadow: 0 0 10px rgba(245,164,0,.35);
+    background: linear-gradient(90deg, #C9974D, transparent);
+    box-shadow: 0 0 10px rgba(201, 151, 77,.35);
     transform-origin: left center;
     animation: ajuEyebrowLine 2.8s ease-in-out infinite;
 }
@@ -4532,7 +4394,7 @@ body.home-page #home.hero {
         background:
             radial-gradient(
                 circle at 50% 48%,
-                rgba(245,164,0,.12),
+                rgba(201, 151, 77,.12),
                 transparent 64%
             ) !important;
 
@@ -4564,6 +4426,8 @@ body.home-page #home.hero {
         left: 50% !important;
         top: 50% !important;
     }
+
+} /* close desktop/laptop hero correction media query */
 
 /* =========================================================
    AJUVERSE — UPDATED PREMIUM SOCIAL MEDIA LINKS
@@ -4801,7 +4665,7 @@ body.home-page #home.hero .hero-social-link:hover {
     background:
         radial-gradient(
             circle at 50% 30%,
-            rgba(245,164,0,.14),
+            rgba(201, 151, 77,.14),
             rgba(255,255,255,.06) 46%,
             rgba(0,0,0,.58) 100%
         ) !important;
@@ -4809,7 +4673,7 @@ body.home-page #home.hero .hero-social-link:hover {
     box-shadow:
         0 0 16px rgba(255,255,255,.28),
         0 0 32px rgba(255,255,255,.12),
-        0 0 35px rgba(245,164,0,.14),
+        0 0 35px rgba(201, 151, 77,.14),
         0 11px 26px rgba(0,0,0,.40) !important;
 }
 
@@ -4840,7 +4704,7 @@ body.home-page #home.hero .hero-social-link:hover img {
         brightness(1.35)
         contrast(1.15)
         drop-shadow(0 0 8px rgba(255,255,255,.72))
-        drop-shadow(0 0 14px rgba(245,164,0,.38)) !important;
+        drop-shadow(0 0 14px rgba(201, 151, 77,.38)) !important;
 }
 
 
@@ -5382,10 +5246,10 @@ body.home-page #home.hero .hero-social-link:hover .social-tooltip {
             scale(1.08) !important;
 
         border-color:
-            rgba(245,164,0,.72) !important;
+            rgba(201, 151, 77,.72) !important;
 
         box-shadow:
-            0 0 18px rgba(245,164,0,.18),
+            0 0 18px rgba(201, 151, 77,.18),
             0 7px 18px rgba(0,0,0,.30) !important;
     }
 
@@ -5397,7 +5261,7 @@ body.home-page #home.hero .hero-social-link:hover .social-tooltip {
 
         box-shadow:
             0 0 14px rgba(255,255,255,.17),
-            0 0 20px rgba(245,164,0,.08) !important;
+            0 0 20px rgba(201, 151, 77,.08) !important;
     }
 
 
@@ -5419,7 +5283,7 @@ body.home-page #home.hero .hero-social-link:hover .social-tooltip {
             brightness(1.25)
             contrast(1.05)
             drop-shadow(0 0 7px rgba(255,255,255,.45))
-            drop-shadow(0 0 10px rgba(245,164,0,.32)) !important;
+            drop-shadow(0 0 10px rgba(201, 151, 77,.32)) !important;
     }
 
 
@@ -5626,7 +5490,7 @@ body.home-page #home.hero .hero-social-link:hover .social-tooltip {
         box-shadow:
             0 0 0 1px rgba(255,255,255,.025),
             0 0 28px rgba(255,255,255,.06),
-            0 0 55px rgba(245,164,0,.10) !important;
+            0 0 55px rgba(201, 151, 77,.10) !important;
 
         transition:
             transform .45s cubic-bezier(.2,.8,.2,1),
@@ -5645,7 +5509,7 @@ body.home-page #home.hero .hero-social-link:hover .social-tooltip {
         box-shadow:
             0 0 0 1px rgba(255,255,255,.08),
             0 0 35px rgba(255,255,255,.08),
-            0 0 70px rgba(245,164,0,.16) !important;
+            0 0 70px rgba(201, 151, 77,.16) !important;
     }
 }
 
@@ -5683,7 +5547,7 @@ body.home-page #home.hero .hero-social-link:hover .social-tooltip {
 
         box-shadow:
             0 0 25px rgba(255,255,255,.05),
-            0 0 45px rgba(245,164,0,.08) !important;
+            0 0 45px rgba(201, 151, 77,.08) !important;
     }
 }
 
@@ -5836,7 +5700,7 @@ body.home-page #home .hero-content .hero-social .hero-social-link:hover {
     box-shadow:
         0 0 20px rgba(255,255,255,.35),
         0 0 35px rgba(255,255,255,.14),
-        0 0 30px rgba(245,164,0,.18) !important;
+        0 0 30px rgba(201, 151, 77,.18) !important;
 }
 
 
@@ -5850,7 +5714,7 @@ body.home-page #home .hero-content .hero-social .hero-social-link:hover img {
         brightness(1.35)
         contrast(1.15)
         drop-shadow(0 0 9px rgba(255,255,255,.75))
-        drop-shadow(0 0 14px rgba(245,164,0,.40)) !important;
+        drop-shadow(0 0 14px rgba(201, 151, 77,.40)) !important;
 }
 
 
@@ -5919,7 +5783,7 @@ body.home-page #home .hero-content .hero-social .hero-social-link:hover img {
     background:
         radial-gradient(
             circle,
-            rgba(245,164,0,.10),
+            rgba(201, 151, 77,.10),
             transparent 70%
         );
 
@@ -5947,7 +5811,7 @@ body.home-page #home .hero-content .hero-social .hero-social-link:hover img {
 
     margin-bottom: 14px;
 
-    color: #f5a400;
+    color: #C9974D;
 
     font-size: 12px;
 
@@ -6036,11 +5900,11 @@ body.home-page #home .hero-content .hero-social .hero-social-link:hover img {
         translateY(-8px);
 
     border-color:
-        rgba(245,164,0,.48);
+        rgba(201, 151, 77,.48);
 
     box-shadow:
         0 24px 60px rgba(0,0,0,.55),
-        0 0 30px rgba(245,164,0,.08);
+        0 0 30px rgba(201, 151, 77,.08);
 }
 
 
@@ -6122,7 +5986,7 @@ body.home-page #home .hero-content .hero-social .hero-social-link:hover img {
     top: 15px;
     left: 16px;
 
-    color: #f5a400;
+    color: #C9974D;
 
     font-size: 13px;
 
@@ -6195,7 +6059,7 @@ body.home-page #home .hero-content .hero-social .hero-social-link:hover img {
 
     margin-bottom: 8px;
 
-    color: #f5a400;
+    color: #C9974D;
 
     font-size: 11px;
 
@@ -6258,9 +6122,9 @@ body.home-page #home .hero-content .hero-social .hero-social-link:hover img {
 
 
 .home-project-info a:hover {
-    color: #f5a400;
+    color: #C9974D;
 
-    border-color: #f5a400;
+    border-color: #C9974D;
 
     transform:
         translateX(5px);
@@ -6328,13 +6192,13 @@ body.home-page #home .hero-content .hero-social .hero-social-link:hover img {
         translateY(-3px);
 
     border-color:
-        #f5a400;
+        #C9974D;
 
     background:
-        rgba(245,164,0,.05);
+        rgba(201, 151, 77,.05);
 
     box-shadow:
-        0 0 25px rgba(245,164,0,.10);
+        0 0 25px rgba(201, 151, 77,.10);
 }
 
 
@@ -7005,4 +6869,5209 @@ body.home-page .home-project-number {
 
 }
 
+/* =========================================================
+   AJUVERSE — FINAL MOBILE DESIGN
+   HOMEPAGE MOBILE OVERRIDE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* =====================================================
+       PAGE SAFETY
+    ===================================================== */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: calc(100% - 28px) !important;
+        max-width: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .site-header {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 9999 !important;
+        width: 100% !important;
+    }
+
+    .header-inner {
+        min-height: auto !important;
+
+        display: grid !important;
+
+        grid-template-columns: 1fr auto !important;
+
+        align-items: center !important;
+
+        column-gap: 12px !important;
+
+        row-gap: 9px !important;
+
+        padding:
+            9px 0 !important;
+    }
+
+
+    /* BRAND */
+
+    .brand {
+        min-width: 0 !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        gap: 9px !important;
+    }
+
+    .brand-logo {
+        width: 43px !important;
+        height: 43px !important;
+
+        min-width: 43px !important;
+        max-width: 43px !important;
+
+        object-fit: contain !important;
+    }
+
+    .brand-text {
+        min-width: 0 !important;
+    }
+
+    .brand-name {
+        font-size: 22px !important;
+
+        line-height: 1 !important;
+
+        white-space: nowrap !important;
+
+        letter-spacing: -0.5px !important;
+    }
+
+    .brand-tagline {
+        display: block !important;
+
+        margin-top: 4px !important;
+
+        font-size: 6.5px !important;
+
+        line-height: 1 !important;
+
+        letter-spacing: 1.7px !important;
+
+        white-space: nowrap !important;
+
+        color: #777 !important;
+    }
+
+
+    /* LOGIN */
+
+    .header-login {
+        min-width: 70px !important;
+        width: 70px !important;
+
+        height: 38px !important;
+
+        padding: 0 !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        font-size: 10px !important;
+    }
+
+
+    /* =====================================================
+       MOBILE NAVIGATION
+    ===================================================== */
+
+    .main-nav {
+        grid-column: 1 / -1 !important;
+
+        width: 100% !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: flex-start !important;
+
+        gap: 20px !important;
+
+        margin: 0 !important;
+
+        padding:
+            3px 1px
+            4px !important;
+
+        overflow-x: auto !important;
+
+        overflow-y: hidden !important;
+
+        white-space: nowrap !important;
+
+        scrollbar-width: none !important;
+
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    .main-nav::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .main-nav a {
+        flex:
+            0 0 auto !important;
+
+        display: inline-block !important;
+
+        padding:
+            3px 0 !important;
+
+        font-size:
+            11px !important;
+
+        line-height:
+            1.2 !important;
+
+        color:
+            #d8d8d8 !important;
+
+        white-space:
+            nowrap !important;
+    }
+
+    .main-nav a::after {
+        bottom:
+            -2px !important;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+        min-height:
+            auto !important;
+
+        display:
+            block !important;
+    }
+
+    .hero-grid {
+        display:
+            flex !important;
+
+        flex-direction:
+            column !important;
+
+        min-height:
+            auto !important;
+    }
+
+    .hero-content {
+        width:
+            100% !important;
+
+        padding:
+            44px 0 28px !important;
+    }
+
+    .eyebrow {
+        margin-bottom:
+            15px !important;
+
+        font-size:
+            10px !important;
+
+        line-height:
+            1.2 !important;
+
+        letter-spacing:
+            3px !important;
+    }
+
+    .hero h1 {
+        width:
+            100% !important;
+
+        max-width:
+            100% !important;
+
+        font-size:
+            43px !important;
+
+        line-height:
+            .96 !important;
+
+        letter-spacing:
+            -2px !important;
+    }
+
+    .hero-description {
+        width:
+            100% !important;
+
+        max-width:
+            100% !important;
+
+        margin-top:
+            19px !important;
+
+        font-size:
+            14px !important;
+
+        line-height:
+            1.68 !important;
+
+        color:
+            #a5a5a5 !important;
+    }
+
+
+    /* =====================================================
+       SOCIAL MEDIA
+    ===================================================== */
+
+    .hero-social {
+        width:
+            100% !important;
+
+        margin-top:
+            24px !important;
+    }
+
+    .hero-social-title {
+        display:
+            block !important;
+
+        font-size:
+            10px !important;
+
+        line-height:
+            1.2 !important;
+
+        letter-spacing:
+            2px !important;
+    }
+
+    .hero-social-links {
+        width:
+            100% !important;
+
+        display:
+            flex !important;
+
+        flex-wrap:
+            nowrap !important;
+
+        align-items:
+            center !important;
+
+        gap:
+            10px !important;
+
+        margin-top:
+            11px !important;
+
+        overflow:
+            hidden !important;
+    }
+
+    .hero-social-link {
+        width:
+            42px !important;
+
+        height:
+            42px !important;
+
+        min-width:
+            42px !important;
+
+        min-height:
+            42px !important;
+
+        max-width:
+            42px !important;
+
+        max-height:
+            42px !important;
+
+        display:
+            flex !important;
+
+        align-items:
+            center !important;
+
+        justify-content:
+            center !important;
+
+        flex:
+            0 0 42px !important;
+
+        overflow:
+            hidden !important;
+
+        border-radius:
+            50% !important;
+    }
+
+    .hero-social-link img {
+        width:
+            23px !important;
+
+        height:
+            23px !important;
+
+        min-width:
+            23px !important;
+
+        min-height:
+            23px !important;
+
+        max-width:
+            23px !important;
+
+        max-height:
+            23px !important;
+
+        object-fit:
+            contain !important;
+    }
+
+    .social-tooltip {
+        display:
+            none !important;
+    }
+
+
+    /* =====================================================
+       HERO IMAGE
+    ===================================================== */
+
+    .hero-visual {
+        width:
+            100% !important;
+
+        height:
+            350px !important;
+
+        min-height:
+            350px !important;
+
+        max-height:
+            350px !important;
+
+        margin:
+            0 !important;
+
+        overflow:
+            hidden !important;
+    }
+
+    .hero-visual img {
+        width:
+            100% !important;
+
+        height:
+            100% !important;
+
+        object-fit:
+            cover !important;
+
+        object-position:
+            center !important;
+    }
+
+
+    /* =====================================================
+       START HERE
+    ===================================================== */
+
+    .start-section {
+        padding:
+            55px 0 !important;
+    }
+
+    .section-title {
+        margin-bottom:
+            28px !important;
+    }
+
+    .section-title > span {
+        margin-bottom:
+            10px !important;
+
+        font-size:
+            9px !important;
+
+        letter-spacing:
+            2.8px !important;
+    }
+
+    .section-title h2 {
+        max-width:
+            100% !important;
+
+        font-size:
+            34px !important;
+
+        line-height:
+            .98 !important;
+
+        letter-spacing:
+            -1.6px !important;
+    }
+
+    .section-title p {
+        max-width:
+            100% !important;
+
+        margin-top:
+            14px !important;
+
+        font-size:
+            14px !important;
+
+        line-height:
+            1.7 !important;
+    }
+
+
+    /* =====================================================
+       PRODUCT / COURSE CARDS
+    ===================================================== */
+
+    .path-grid {
+        grid-template-columns:
+            1fr !important;
+    }
+
+    .path-card {
+        min-height:
+            auto !important;
+
+        padding:
+            26px !important;
+    }
+
+    .path-card h3 {
+        margin:
+            0 0 10px !important;
+
+        font-size:
+            28px !important;
+
+        line-height:
+            1.05 !important;
+    }
+
+    .path-card p {
+        margin:
+            0 !important;
+
+        font-size:
+            14px !important;
+
+        line-height:
+            1.7 !important;
+    }
+
+    .text-link {
+        margin-top:
+            18px !important;
+
+        font-size:
+            11px !important;
+    }
+
+
+    /* =====================================================
+       SELECTED WORK
+    ===================================================== */
+
+    .home-selected-work {
+        padding:
+            55px 0 !important;
+    }
+
+    .home-selected-heading {
+        margin-bottom:
+            28px !important;
+    }
+
+    .home-selected-eyebrow {
+        font-size:
+            9px !important;
+
+        letter-spacing:
+            2.8px !important;
+    }
+
+    .home-selected-heading h2 {
+        max-width:
+            100% !important;
+
+        font-size:
+            34px !important;
+
+        line-height:
+            .98 !important;
+
+        letter-spacing:
+            -1.7px !important;
+    }
+
+    .home-selected-heading p {
+        margin-top:
+            14px !important;
+
+        font-size:
+            14px !important;
+
+        line-height:
+            1.7 !important;
+    }
+
+
+    /* PROJECT GRID */
+
+    .home-project-grid {
+        display:
+            grid !important;
+
+        grid-template-columns:
+            1fr !important;
+
+        gap:
+            16px !important;
+    }
+
+    .home-project-card {
+        width:
+            100% !important;
+
+        min-width:
+            0 !important;
+    }
+
+
+    /* PROJECT IMAGE */
+
+    .home-project-image {
+        width:
+            100% !important;
+
+        height:
+            auto !important;
+
+        aspect-ratio:
+            16 / 10 !important;
+
+        overflow:
+            hidden !important;
+    }
+
+    .home-project-image img {
+        width:
+            100% !important;
+
+        height:
+            100% !important;
+
+        object-fit:
+            cover !important;
+    }
+
+
+    /* PROJECT TEXT */
+
+    .home-project-info {
+        padding:
+            19px !important;
+    }
+
+    .home-project-info > span {
+        font-size:
+            9px !important;
+
+        letter-spacing:
+            2px !important;
+    }
+
+    .home-project-info h3 {
+        margin-top:
+            8px !important;
+
+        font-size:
+            23px !important;
+
+        line-height:
+            1.1 !important;
+    }
+
+    .home-project-info p {
+        margin-top:
+            9px !important;
+
+        font-size:
+            13px !important;
+
+        line-height:
+            1.7 !important;
+    }
+
+    .home-project-info a {
+        display:
+            inline-block !important;
+
+        margin-top:
+            15px !important;
+
+        font-size:
+            11px !important;
+    }
+
+
+    /* =====================================================
+       GENERAL BUTTONS
+    ===================================================== */
+
+    .hero-buttons {
+        width:
+            100% !important;
+
+        display:
+            flex !important;
+
+        flex-direction:
+            column !important;
+
+        gap:
+            9px !important;
+
+        margin-top:
+            20px !important;
+    }
+
+    .hero-buttons .btn,
+    .btn {
+        width:
+            100% !important;
+
+        min-height:
+            44px !important;
+    }
+
+
+    /* =====================================================
+       SERVICES
+    ===================================================== */
+
+    .services-section {
+        padding:
+            55px 0 !important;
+    }
+
+    .service-grid {
+        grid-template-columns:
+            1fr !important;
+    }
+
+    .service-card {
+        min-height:
+            auto !important;
+
+        padding:
+            26px !important;
+    }
+
+    .service-card h3 {
+        margin:
+            0 0 10px !important;
+
+        font-size:
+            25px !important;
+    }
+
+    .service-card p {
+        font-size:
+            14px !important;
+
+        line-height:
+            1.7 !important;
+    }
+
+
+    /* =====================================================
+       CTA
+    ===================================================== */
+
+    .cta-section {
+        padding:
+            55px 0 !important;
+    }
+
+    .cta-box {
+        padding:
+            42px 20px !important;
+    }
+
+    .cta-box h2 {
+        font-size:
+            42px !important;
+
+        line-height:
+            .95 !important;
+
+        letter-spacing:
+            -2px !important;
+    }
+
+    .cta-box p {
+        margin-top:
+            15px !important;
+
+        font-size:
+            14px !important;
+
+        line-height:
+            1.7 !important;
+    }
+
+    .cta-buttons {
+        margin-top:
+            20px !important;
+
+        display:
+            flex !important;
+
+        flex-direction:
+            column !important;
+
+        gap:
+            9px !important;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .footer-grid {
+        min-height:
+            auto !important;
+
+        padding:
+            42px 0 25px !important;
+
+        display:
+            grid !important;
+
+        grid-template-columns:
+            1fr !important;
+
+        gap:
+            28px !important;
+    }
+
+    .footer-brand h2 {
+        font-size:
+            26px !important;
+    }
+
+    .footer-brand p {
+        max-width:
+            280px !important;
+
+        margin-top:
+            9px !important;
+
+        font-size:
+            13px !important;
+
+        line-height:
+            1.7 !important;
+    }
+
+    .footer-column h3 {
+        margin-bottom:
+            10px !important;
+
+        font-size:
+            15px !important;
+    }
+
+    .footer-column ul {
+        gap:
+            6px !important;
+    }
+
+    .footer-column li,
+    .footer-column a,
+    .footer-column p {
+        font-size:
+            13px !important;
+
+        line-height:
+            1.5 !important;
+    }
+
+    .footer-email {
+        margin-top:
+            7px !important;
+    }
+
+    .footer-bottom {
+        min-height:
+            auto !important;
+
+        padding:
+            17px 0 !important;
+
+        display:
+            flex !important;
+
+        flex-direction:
+            column !important;
+
+        align-items:
+            flex-start !important;
+
+        gap:
+            6px !important;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .container {
+        width:
+            calc(100% - 22px) !important;
+    }
+
+    .brand-logo {
+        width:
+            40px !important;
+
+        height:
+            40px !important;
+    }
+
+    .brand-name {
+        font-size:
+            19px !important;
+    }
+
+    .brand-tagline {
+        font-size:
+            5.7px !important;
+
+        letter-spacing:
+            1.4px !important;
+    }
+
+    .header-login {
+        width:
+            62px !important;
+
+        min-width:
+            62px !important;
+    }
+
+    .main-nav {
+        gap:
+            16px !important;
+    }
+
+    .main-nav a {
+        font-size:
+            10px !important;
+    }
+
+    .hero h1 {
+        font-size:
+            38px !important;
+    }
+
+    .hero-description {
+        font-size:
+            13px !important;
+    }
+
+    .hero-visual {
+        height:
+            320px !important;
+
+        min-height:
+            320px !important;
+
+        max-height:
+            320px !important;
+    }
+
+    .hero-social-link {
+        width:
+            38px !important;
+
+        height:
+            38px !important;
+
+        min-width:
+            38px !important;
+
+        min-height:
+            38px !important;
+
+        flex-basis:
+            38px !important;
+    }
+
+    .hero-social-link img {
+        width:
+            21px !important;
+
+        height:
+            21px !important;
+    }
+
+}
+
+/* =========================================================
+   AJUVERSE — FINAL MOBILE SYSTEM
+   LAST OVERRIDE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* ===============================
+       GLOBAL
+    =============================== */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+    }
+
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .container {
+        width: calc(100% - 28px) !important;
+        max-width: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+
+    /* ===============================
+       HEADER
+    =============================== */
+
+    .site-header {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 9999 !important;
+        width: 100% !important;
+        background: rgba(0, 0, 0, 0.97) !important;
+    }
+
+    .header-inner {
+        min-height: auto !important;
+
+        display: grid !important;
+
+        grid-template-columns: 1fr auto !important;
+
+        align-items: center !important;
+
+        gap: 8px 12px !important;
+
+        padding: 9px 0 8px !important;
+    }
+
+
+    /* BRAND */
+
+    .brand {
+        min-width: 0 !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        gap: 9px !important;
+    }
+
+    .brand-logo {
+        width: 44px !important;
+        height: 44px !important;
+
+        min-width: 44px !important;
+        max-width: 44px !important;
+
+        object-fit: contain !important;
+
+        flex-shrink: 0 !important;
+    }
+
+    .brand-text {
+        min-width: 0 !important;
+    }
+
+    .brand-name {
+        font-size: 21px !important;
+
+        line-height: 1 !important;
+
+        letter-spacing: -0.5px !important;
+
+        white-space: nowrap !important;
+    }
+
+    .brand-tagline {
+        display: block !important;
+
+        margin-top: 4px !important;
+
+        color: #777 !important;
+
+        font-size: 6.5px !important;
+
+        line-height: 1 !important;
+
+        letter-spacing: 1.7px !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* LOGIN */
+
+    .header-login {
+        width: 70px !important;
+        min-width: 70px !important;
+        height: 36px !important;
+
+        padding: 0 !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        font-size: 10px !important;
+
+        flex-shrink: 0 !important;
+    }
+
+
+    /* ===============================
+       MOBILE NAV
+       3 + 3
+    =============================== */
+
+    .main-nav {
+        grid-column: 1 / -1 !important;
+
+        width: 100% !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            repeat(3, 1fr) !important;
+
+        align-items: center !important;
+        justify-items: center !important;
+
+        gap: 0 !important;
+
+        margin: 0 !important;
+
+        padding: 4px 0 2px !important;
+
+        overflow: visible !important;
+
+        white-space: normal !important;
+    }
+
+    .main-nav a {
+        width: 100% !important;
+
+        min-height: 27px !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        padding: 4px 2px !important;
+
+        color: #d8d8d8 !important;
+
+        font-size: 9.8px !important;
+
+        font-weight: 600 !important;
+
+        line-height: 1.2 !important;
+
+        text-align: center !important;
+
+        white-space: nowrap !important;
+    }
+
+    .main-nav a::after {
+        bottom: 0 !important;
+    }
+
+
+    /* ===============================
+       HOMEPAGE HERO
+    =============================== */
+
+    .hero {
+        min-height: auto !important;
+
+        display: block !important;
+    }
+
+    .hero-grid {
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        min-height: auto !important;
+    }
+
+    .hero-content {
+        width: 100% !important;
+
+        padding: 43px 0 26px !important;
+    }
+
+    .eyebrow {
+        margin-bottom: 14px !important;
+
+        font-size: 10px !important;
+
+        letter-spacing: 2.8px !important;
+
+        line-height: 1.2 !important;
+    }
+
+    .hero h1 {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        font-size: 42px !important;
+
+        line-height: .97 !important;
+
+        letter-spacing: -2px !important;
+    }
+
+    .hero-description {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        margin-top: 18px !important;
+
+        color: #a5a5a5 !important;
+
+        font-size: 14px !important;
+
+        line-height: 1.7 !important;
+    }
+
+
+    /* ===============================
+       SOCIAL MEDIA
+    =============================== */
+
+    .hero-social {
+        width: 100% !important;
+
+        margin-top: 24px !important;
+    }
+
+    .hero-social-title {
+        display: block !important;
+
+        color: #d8d8d8 !important;
+
+        font-size: 10px !important;
+
+        font-weight: 700 !important;
+
+        letter-spacing: 2px !important;
+
+        line-height: 1.2 !important;
+    }
+
+    .hero-social-links {
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: flex-start !important;
+
+        gap: 10px !important;
+
+        width: 100% !important;
+
+        margin-top: 11px !important;
+
+        overflow: visible !important;
+    }
+
+    .hero-social-link {
+        width: 42px !important;
+        height: 42px !important;
+
+        min-width: 42px !important;
+        min-height: 42px !important;
+
+        max-width: 42px !important;
+        max-height: 42px !important;
+
+        flex: 0 0 42px !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        border: 1px solid rgba(255,255,255,.20) !important;
+
+        border-radius: 50% !important;
+
+        background: rgba(255,255,255,.06) !important;
+
+        overflow: hidden !important;
+    }
+
+    .hero-social-link img {
+        width: 23px !important;
+        height: 23px !important;
+
+        min-width: 23px !important;
+        min-height: 23px !important;
+
+        max-width: 23px !important;
+        max-height: 23px !important;
+
+        object-fit: contain !important;
+
+        display: block !important;
+
+        opacity: 1 !important;
+    }
+
+    .social-tooltip {
+        display: none !important;
+    }
+
+
+    /* ===============================
+       HERO IMAGE
+    =============================== */
+
+    .hero-visual {
+        width: 100% !important;
+
+        height: 345px !important;
+
+        min-height: 345px !important;
+        max-height: 345px !important;
+
+        margin: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+    .hero-visual img {
+        width: 100% !important;
+
+        height: 100% !important;
+
+        object-fit: cover !important;
+
+        object-position: center !important;
+    }
+
+
+    /* ===============================
+       SECTIONS
+    =============================== */
+
+    .start-section,
+    .services-section,
+    .portfolio-section,
+    .cta-section {
+        padding: 52px 0 !important;
+    }
+
+    .section-title {
+        margin-bottom: 28px !important;
+    }
+
+    .section-title > span {
+        margin-bottom: 10px !important;
+
+        font-size: 9px !important;
+
+        letter-spacing: 2.8px !important;
+    }
+
+    .section-title h2 {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        font-size: 33px !important;
+
+        line-height: .98 !important;
+
+        letter-spacing: -1.5px !important;
+    }
+
+    .section-title p {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        margin-top: 14px !important;
+
+        font-size: 14px !important;
+
+        line-height: 1.7 !important;
+    }
+
+
+    /* ===============================
+       START HERE
+    =============================== */
+
+    .path-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .path-card {
+        min-height: auto !important;
+
+        padding: 25px !important;
+    }
+
+    .path-card h3 {
+        margin: 0 0 10px !important;
+
+        font-size: 27px !important;
+
+        line-height: 1.05 !important;
+    }
+
+    .path-card p {
+        margin: 0 !important;
+
+        font-size: 14px !important;
+
+        line-height: 1.7 !important;
+    }
+
+    .text-link {
+        margin-top: 17px !important;
+
+        font-size: 11px !important;
+    }
+
+
+    /* ===============================
+       SELECTED WORK
+    =============================== */
+
+    .home-selected-work {
+        padding: 52px 0 !important;
+    }
+
+    .home-selected-heading {
+        margin-bottom: 28px !important;
+    }
+
+    .home-selected-eyebrow {
+        font-size: 9px !important;
+
+        letter-spacing: 2.8px !important;
+    }
+
+    .home-selected-heading h2 {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        font-size: 33px !important;
+
+        line-height: .98 !important;
+
+        letter-spacing: -1.6px !important;
+    }
+
+    .home-selected-heading p {
+        margin-top: 14px !important;
+
+        font-size: 14px !important;
+
+        line-height: 1.7 !important;
+    }
+
+    .home-project-grid {
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 15px !important;
+    }
+
+    .home-project-card {
+        width: 100% !important;
+
+        min-width: 0 !important;
+    }
+
+    .home-project-image {
+        width: 100% !important;
+
+        height: auto !important;
+
+        aspect-ratio: 16 / 10 !important;
+
+        overflow: hidden !important;
+    }
+
+    .home-project-image img {
+        width: 100% !important;
+
+        height: 100% !important;
+
+        object-fit: cover !important;
+    }
+
+    .home-project-info {
+        padding: 18px !important;
+    }
+
+    .home-project-info > span {
+        font-size: 9px !important;
+
+        letter-spacing: 2px !important;
+    }
+
+    .home-project-info h3 {
+        margin-top: 8px !important;
+
+        font-size: 22px !important;
+
+        line-height: 1.1 !important;
+    }
+
+    .home-project-info p {
+        margin-top: 9px !important;
+
+        font-size: 13px !important;
+
+        line-height: 1.7 !important;
+    }
+
+
+    /* ===============================
+       SERVICES
+    =============================== */
+
+    .service-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .service-card {
+        min-height: auto !important;
+
+        padding: 25px !important;
+    }
+
+    .service-card h3 {
+        margin: 0 0 10px !important;
+
+        font-size: 25px !important;
+
+        line-height: 1.1 !important;
+    }
+
+    .service-card p {
+        font-size: 14px !important;
+
+        line-height: 1.7 !important;
+    }
+
+
+    /* ===============================
+       FOOTER
+    =============================== */
+
+    .footer-grid {
+        min-height: auto !important;
+
+        padding: 40px 0 24px !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 25px !important;
+    }
+
+    .footer-brand h2 {
+        font-size: 25px !important;
+    }
+
+    .footer-brand p {
+        max-width: 280px !important;
+
+        margin-top: 8px !important;
+
+        font-size: 13px !important;
+
+        line-height: 1.65 !important;
+    }
+
+    .footer-column h3 {
+        margin-bottom: 9px !important;
+
+        font-size: 15px !important;
+    }
+
+    .footer-column ul {
+        gap: 5px !important;
+    }
+
+    .footer-column li,
+    .footer-column a,
+    .footer-column p {
+        font-size: 13px !important;
+
+        line-height: 1.5 !important;
+    }
+
+    .footer-bottom {
+        min-height: auto !important;
+
+        padding: 16px 0 !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: flex-start !important;
+
+        gap: 6px !important;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .container {
+        width: calc(100% - 22px) !important;
+    }
+
+    .brand-logo {
+        width: 40px !important;
+        height: 40px !important;
+
+        min-width: 40px !important;
+    }
+
+    .brand-name {
+        font-size: 19px !important;
+    }
+
+    .brand-tagline {
+        font-size: 5.5px !important;
+
+        letter-spacing: 1.3px !important;
+    }
+
+    .header-login {
+        width: 62px !important;
+        min-width: 62px !important;
+    }
+
+    .main-nav a {
+        font-size: 9px !important;
+    }
+
+    .hero h1 {
+        font-size: 37px !important;
+    }
+
+    .hero-description {
+        font-size: 13px !important;
+    }
+
+    .hero-visual {
+        height: 315px !important;
+
+        min-height: 315px !important;
+
+        max-height: 315px !important;
+    }
+
+    .hero-social-links {
+        gap: 8px !important;
+    }
+
+    .hero-social-link {
+        width: 38px !important;
+        height: 38px !important;
+
+        min-width: 38px !important;
+        min-height: 38px !important;
+
+        flex-basis: 38px !important;
+    }
+
+    .hero-social-link img {
+        width: 21px !important;
+        height: 21px !important;
+    }
+
+}
+/* =========================================================
+   AJUVERSE — MOBILE SOCIAL + NAV FINAL FIX
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* ---------- HEADER NAV ---------- */
+
+    body.home-page .main-nav {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        width: 100% !important;
+        gap: 0 !important;
+        overflow: hidden !important;
+        white-space: normal !important;
+    }
+
+    body.home-page .main-nav a {
+        display: flex !important;
+        width: 100% !important;
+        min-height: 28px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 4px 1px !important;
+        font-size: 9.5px !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important;
+    }
+
+
+    /* ---------- SOCIAL AREA ---------- */
+
+    body.home-page .hero-social {
+        width: 100% !important;
+        margin-top: 22px !important;
+    }
+
+    body.home-page .hero-social-links {
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        gap: 10px !important;
+        margin-top: 12px !important;
+        overflow: hidden !important;
+    }
+
+    body.home-page .hero-social-link {
+        display: flex !important;
+        width: 40px !important;
+        height: 40px !important;
+        min-width: 40px !important;
+        max-width: 40px !important;
+        min-height: 40px !important;
+        max-height: 40px !important;
+        flex: 0 0 40px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: 1px solid rgba(255,255,255,.25) !important;
+        border-radius: 50% !important;
+        background: rgba(255,255,255,.06) !important;
+        overflow: hidden !important;
+    }
+
+    body.home-page .hero-social-link img {
+        display: block !important;
+        width: 22px !important;
+        height: 22px !important;
+        min-width: 22px !important;
+        max-width: 22px !important;
+        min-height: 22px !important;
+        max-height: 22px !important;
+        object-fit: contain !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        transform: none !important;
+        filter: brightness(0) invert(1) !important;
+        opacity: 1 !important;
+    }
+
+    body.home-page .social-tooltip {
+        display: none !important;
+        visibility: hidden !important;
+    }
+
+}
+
+/* =========================================================
+   AJUVERSE MOBILE — SOCIAL RESET
+   THIS OVERRIDES ALL PREVIOUS MOBILE SOCIAL CSS
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* =====================================================
+       HEADER NAV — FORCE 2 ROWS
+    ===================================================== */
+
+    body.home-page .header-inner {
+        display: grid !important;
+        grid-template-columns: 1fr auto !important;
+        grid-template-rows: auto auto !important;
+        width: 100% !important;
+    }
+
+    body.home-page .main-nav {
+        grid-column: 1 / -1 !important;
+        grid-row: 2 !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr)) !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+
+        margin: 0 !important;
+        padding: 4px 0 !important;
+
+        gap: 0 !important;
+
+        overflow: visible !important;
+
+        white-space: normal !important;
+    }
+
+    body.home-page .main-nav a {
+        width: 100% !important;
+        min-width: 0 !important;
+
+        height: 28px !important;
+        min-height: 28px !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        padding: 3px 2px !important;
+
+        font-size: 9.5px !important;
+
+        line-height: 1 !important;
+
+        white-space: nowrap !important;
+
+        text-align: center !important;
+    }
+
+
+    /* =====================================================
+       SOCIAL SECTION — COMPLETE RESET
+    ===================================================== */
+
+    body.home-page .hero-social {
+        display: block !important;
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        max-height: none !important;
+
+        margin:
+            20px 0 0 !important;
+
+        padding: 0 !important;
+
+        overflow: visible !important;
+    }
+
+
+    body.home-page .hero-social-title {
+        display: block !important;
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: 10px !important;
+
+        line-height: 1.3 !important;
+
+        color: #ddd !important;
+    }
+
+
+    /* =====================================================
+       SOCIAL ROW
+    ===================================================== */
+
+    body.home-page .hero-social-links {
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        flex-wrap: nowrap !important;
+
+        align-items: center !important;
+
+        justify-content: flex-start !important;
+
+        width: 100% !important;
+
+        height: 44px !important;
+
+        min-height: 44px !important;
+
+        margin:
+            10px 0 0 !important;
+
+        padding: 0 !important;
+
+        gap: 10px !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =====================================================
+       EACH SOCIAL BUTTON
+    ===================================================== */
+
+    body.home-page .hero-social-link {
+        position: relative !important;
+
+        display: flex !important;
+
+        flex: 0 0 40px !important;
+
+        width: 40px !important;
+
+        height: 40px !important;
+
+        min-width: 40px !important;
+        max-width: 40px !important;
+
+        min-height: 40px !important;
+        max-height: 40px !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        background: #090909 !important;
+
+        background-image: none !important;
+
+        border:
+            1px solid
+            rgba(255,255,255,.35) !important;
+
+        border-radius: 50% !important;
+
+        overflow: hidden !important;
+
+        box-shadow:
+            0 0 0 1px
+            rgba(201, 151, 77,.05) !important;
+    }
+
+
+    /* =====================================================
+       SOCIAL IMAGE
+    ===================================================== */
+
+    body.home-page .hero-social-link img {
+        position: relative !important;
+
+        display: block !important;
+
+        width: 22px !important;
+        height: 22px !important;
+
+        min-width: 22px !important;
+        max-width: 22px !important;
+
+        min-height: 22px !important;
+        max-height: 22px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        object-fit: contain !important;
+
+        object-position: center !important;
+
+        background: transparent !important;
+
+        background-image: none !important;
+
+        transform: none !important;
+
+        filter:
+            brightness(0)
+            invert(1) !important;
+
+        opacity: 1 !important;
+    }
+
+
+    /* =====================================================
+       REMOVE TOOLTIP / LABELS
+    ===================================================== */
+
+    body.home-page .social-tooltip {
+        display: none !important;
+
+        visibility: hidden !important;
+
+        position: absolute !important;
+
+        width: 0 !important;
+        height: 0 !important;
+
+        opacity: 0 !important;
+    }
+
+
+    /* =====================================================
+       REMOVE ANY EXTRA SOCIAL CHILD CONTENT
+    ===================================================== */
+
+    body.home-page .hero-social-link::before,
+    body.home-page .hero-social-link::after {
+        display: none !important;
+
+        content: none !important;
+    }
+
+}
+
+/* =========================================================
+   AJUVERSE — MOBILE SOCIAL CLEAN FIX
+========================================================= */
+
+@media (max-width: 700px) {
+
+    body.home-page .hero-social {
+        width: 100% !important;
+        height: auto !important;
+        margin-top: 22px !important;
+    }
+
+    body.home-page .hero-social-title {
+        display: block !important;
+        color: #ffffff !important;
+        font-size: 10px !important;
+        font-weight: 700 !important;
+        letter-spacing: 2px !important;
+        margin-bottom: 12px !important;
+    }
+
+    body.home-page .hero-social-links {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        gap: 10px !important;
+        width: 100% !important;
+        height: 44px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: visible !important;
+    }
+
+    body.home-page .hero-social-link {
+        display: flex !important;
+        position: relative !important;
+
+        width: 40px !important;
+        height: 40px !important;
+
+        min-width: 40px !important;
+        max-width: 40px !important;
+
+        min-height: 40px !important;
+        max-height: 40px !important;
+
+        flex: 0 0 40px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        border: 1px solid rgba(255,255,255,.3) !important;
+        border-radius: 50% !important;
+
+        background: #0b0b0b !important;
+
+        overflow: hidden !important;
+    }
+
+    /* COMPLETELY DISABLE THE GIANT PNGs */
+    body.home-page .hero-social-link > img {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        max-width: 0 !important;
+        max-height: 0 !important;
+    }
+
+    /* Create clean visible labels instead */
+    body.home-page .hero-social-link:nth-child(1)::before {
+        content: "IG";
+    }
+
+    body.home-page .hero-social-link:nth-child(2)::before {
+        content: "F";
+    }
+
+    body.home-page .hero-social-link:nth-child(3)::before {
+        content: "P";
+    }
+
+    body.home-page .hero-social-link:nth-child(4)::before {
+        content: "in";
+    }
+
+    body.home-page .hero-social-link:nth-child(5)::before {
+        content: "WA";
+    }
+
+    body.home-page .hero-social-link::before {
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        color: #ffffff !important;
+
+        font-size: 11px !important;
+        font-weight: 800 !important;
+
+        line-height: 1 !important;
+    }
+
+    body.home-page .social-tooltip {
+        display: none !important;
+    }
+}
+
+/* =========================================================
+   AJUVERSE — MOBILE FINAL VISUAL POLISH
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* =====================================================
+       HERO IMAGE — SHOW FULL IMAGE
+    ===================================================== */
+
+    body.home-page .hero-visual {
+        width: 100% !important;
+        height: 350px !important;
+        min-height: 350px !important;
+        max-height: 350px !important;
+        background: #000 !important;
+        overflow: hidden !important;
+    }
+
+    body.home-page .hero-visual img {
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: contain !important;
+        object-position: center top !important;
+
+        background: #000 !important;
+    }
+
+
+    /* =====================================================
+       SELECTED WORK — CLEAR HIERARCHY
+    ===================================================== */
+
+    body.home-page .home-selected-work {
+        padding-top: 52px !important;
+        padding-bottom: 52px !important;
+    }
+
+
+    /* SECTION EYEBROW */
+
+    body.home-page .home-selected-eyebrow {
+        display: block !important;
+
+        margin-bottom: 10px !important;
+
+        color: #C9974D !important;
+
+        font-size: 10px !important;
+
+        font-weight: 800 !important;
+
+        letter-spacing: 2.8px !important;
+
+        line-height: 1.2 !important;
+    }
+
+
+    /* SECTION HEADING */
+
+    body.home-page .home-selected-heading h2 {
+        color: #ffffff !important;
+
+        font-size: 34px !important;
+
+        font-weight: 900 !important;
+
+        line-height: .98 !important;
+
+        letter-spacing: -1.6px !important;
+
+        margin: 0 !important;
+    }
+
+
+    /* SECTION DESCRIPTION */
+
+    body.home-page .home-selected-heading p {
+        color: #9a9a9a !important;
+
+        font-size: 14px !important;
+
+        font-weight: 400 !important;
+
+        line-height: 1.7 !important;
+
+        margin-top: 14px !important;
+
+        max-width: 100% !important;
+    }
+
+
+    /* =====================================================
+       PROJECT CARD
+    ===================================================== */
+
+    body.home-page .home-project-info {
+        padding:
+            18px 18px 20px !important;
+    }
+
+
+    /* PROJECT CATEGORY */
+
+    body.home-page .home-project-info > span {
+        display: block !important;
+
+        color: #C9974D !important;
+
+        font-size: 9px !important;
+
+        font-weight: 800 !important;
+
+        line-height: 1.2 !important;
+
+        letter-spacing: 2.5px !important;
+
+        margin-bottom: 8px !important;
+    }
+
+
+    /* PROJECT TITLE */
+
+    body.home-page .home-project-info h3 {
+        color: #ffffff !important;
+
+        font-size: 25px !important;
+
+        font-weight: 800 !important;
+
+        line-height: 1.05 !important;
+
+        letter-spacing: -.6px !important;
+
+        margin: 0 !important;
+    }
+
+
+    /* PROJECT DESCRIPTION */
+
+    body.home-page .home-project-info p {
+        color: #a2a2a2 !important;
+
+        font-size: 13px !important;
+
+        font-weight: 400 !important;
+
+        line-height: 1.65 !important;
+
+        margin-top: 9px !important;
+
+        max-width: 100% !important;
+    }
+
+
+    /* =====================================================
+       CLICKABLE LINK
+    ===================================================== */
+
+    body.home-page .home-project-info a {
+        display: inline-block !important;
+
+        margin-top: 14px !important;
+
+        color: #C9974D !important;
+
+        font-size: 12px !important;
+
+        font-weight: 800 !important;
+
+        line-height: 1.3 !important;
+
+        text-decoration: none !important;
+
+        border-bottom:
+            1px solid
+            rgba(201, 151, 77,.55) !important;
+
+        padding-bottom: 4px !important;
+    }
+
+
+    body.home-page .home-project-info a:hover {
+        color: #ffffff !important;
+
+        border-bottom-color:
+            #ffffff !important;
+    }
+
+
+    /* =====================================================
+       PROJECT NUMBER
+    ===================================================== */
+
+    body.home-page .home-project-number {
+        color: #ffffff !important;
+
+        font-size: 14px !important;
+
+        font-weight: 800 !important;
+
+        letter-spacing: 1.5px !important;
+    }
+
+}
+
+
+
+
+
+/* =========================================================
+   AJUVERSE — FINAL AUTHORITATIVE HOMEPAGE FIX
+   This block is intentionally LAST so older duplicate rules
+   above cannot override the final hero/Selected Work behavior.
+   ========================================================= */
+
+/* ---------- HERO: NEVER CROP THE AVATAR ---------- */
+body.home-page #home.hero .hero-visual {
+    position: relative !important;
+    width: 100% !important;
+    height: 700px !important;
+    min-height: 700px !important;
+    max-height: 700px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+}
+
+body.home-page #home.hero .hero-visual img {
+    position: relative !important;
+    z-index: 2 !important;
+    display: block !important;
+    width: auto !important;
+    max-width: 72% !important;
+    height: auto !important;
+    max-height: 84% !important;
+    margin: 0 auto !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    transform-origin: center center !important;
+}
+
+/* Keep the visual effects centered around the avatar. */
+body.home-page #home.hero .hero-visual::before,
+body.home-page #home.hero .hero-visual::after {
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+/* ---------- SELECTED WORK: CLEAR TYPE HIERARCHY ---------- */
+body.home-page .home-selected-work {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+}
+
+body.home-page .home-selected-heading {
+    margin-bottom: 30px !important;
+}
+
+body.home-page .home-selected-eyebrow {
+    display: block !important;
+    margin: 0 0 10px !important;
+    color: #C9974D !important;
+    font-size: 10px !important;
+    font-weight: 800 !important;
+    letter-spacing: 2.8px !important;
+    line-height: 1.2 !important;
+    text-transform: uppercase !important;
+}
+
+body.home-page .home-selected-heading h2 {
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: clamp(34px, 4vw, 52px) !important;
+    font-weight: 900 !important;
+    line-height: .98 !important;
+    letter-spacing: -2px !important;
+}
+
+body.home-page .home-selected-heading p {
+    margin: 16px 0 0 !important;
+    max-width: 680px !important;
+    color: #9a9a9a !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1.7 !important;
+}
+
+/* ---------- PROJECT CARDS: OBVIOUSLY CLICKABLE ---------- */
+body.home-page .home-project-card {
+    position: relative !important;
+    overflow: hidden !important;
+    cursor: pointer !important;
+    transition:
+        transform .35s cubic-bezier(.2,.8,.2,1),
+        border-color .35s ease,
+        box-shadow .35s ease !important;
+}
+
+body.home-page .home-project-card:hover {
+    transform: translateY(-7px) !important;
+    border-color: #C9974D !important;
+    box-shadow: 0 18px 45px rgba(0,0,0,.28) !important;
+}
+
+body.home-page .home-project-card img {
+    transition: transform .55s cubic-bezier(.2,.8,.2,1) !important;
+}
+
+body.home-page .home-project-card:hover img {
+    transform: scale(1.045) !important;
+}
+
+body.home-page .home-project-info a {
+    position: relative !important;
+    z-index: 5 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 7px !important;
+    margin-top: 14px !important;
+    color: #C9974D !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(201, 151, 77,.55) !important;
+    padding-bottom: 4px !important;
+    transition: color .25s ease, border-color .25s ease !important;
+}
+
+body.home-page .home-project-info a::after {
+    content: "→" !important;
+    transition: transform .25s ease !important;
+}
+
+body.home-page .home-project-info a:hover {
+    color: #fff !important;
+    border-bottom-color: #fff !important;
+}
+
+body.home-page .home-project-info a:hover::after {
+    transform: translateX(4px) !important;
+}
+
+/* ---------- TABLET ---------- */
+@media (max-width: 1000px) and (min-width: 701px) {
+    body.home-page #home.hero .hero-visual {
+        height: 620px !important;
+        min-height: 620px !important;
+        max-height: 620px !important;
+    }
+
+    body.home-page #home.hero .hero-visual img {
+        max-width: 72% !important;
+        max-height: 84% !important;
+    }
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 700px) {
+    body.home-page #home.hero .hero-visual {
+        width: 100% !important;
+        height: 350px !important;
+        min-height: 350px !important;
+        max-height: 350px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        overflow: hidden !important;
+        background: #000 !important;
+    }
+
+    body.home-page #home.hero .hero-visual img {
+        width: auto !important;
+        max-width: 94% !important;
+        height: auto !important;
+        max-height: 94% !important;
+        object-fit: contain !important;
+        object-position: center center !important;
+        margin: 0 auto !important;
+    }
+
+    body.home-page .home-selected-work {
+        padding-top: 48px !important;
+        padding-bottom: 48px !important;
+    }
+
+    body.home-page .home-selected-heading {
+        margin-bottom: 24px !important;
+    }
+
+    body.home-page .home-selected-heading h2 {
+        font-size: 34px !important;
+        line-height: 1 !important;
+        letter-spacing: -1.4px !important;
+    }
+
+    body.home-page .home-selected-heading p {
+        margin-top: 12px !important;
+        font-size: 13px !important;
+        line-height: 1.65 !important;
+    }
+
+    body.home-page .home-project-card {
+        transform: none !important;
+    }
+
+    body.home-page .home-project-card:hover {
+        transform: none !important;
+    }
+}
+
+/* ---------- SMALL PHONES ---------- */
+@media (max-width: 380px) {
+    body.home-page #home.hero .hero-visual {
+        height: 315px !important;
+        min-height: 315px !important;
+        max-height: 315px !important;
+    }
+
+    body.home-page #home.hero .hero-visual img {
+        max-width: 92% !important;
+        max-height: 92% !important;
+    }
+
+    body.home-page .home-selected-heading h2 {
+        font-size: 31px !important;
+    }
+}
+
+/* ================================================================
+   AJUVERSE V4 — VERIFIED LAYOUT CORRECTIONS
+   1) Desktop Start Here topics = 6 x 1
+   2) Login = standalone outlined box
+   3) Hero social links separated from avatar/visual
+   ================================================================ */
+
+/* --- START HERE / 6 TOPICS --- */
+@media (min-width: 1101px) {
+  body.home-page .path-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    border: 0 !important;
+  }
+
+  body.home-page .path-card {
+    min-height: 300px !important;
+    padding: 28px 22px !important;
+    border: 1px solid rgba(255,255,255,.22) !important;
+    border-radius: 18px !important;
+    background: rgba(255,255,255,.045) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    transition: transform .35s ease, border-color .35s ease, background .35s ease, box-shadow .35s ease !important;
+  }
+
+  body.home-page .path-card:hover {
+    transform: translateY(-8px) !important;
+    border-color: rgba(255,255,255,.55) !important;
+    background: rgba(255,255,255,.09) !important;
+    box-shadow: 0 18px 45px rgba(0,0,0,.28) !important;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1100px) {
+  body.home-page .path-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    border: 0 !important;
+  }
+  body.home-page .path-card {
+    border: 1px solid rgba(255,255,255,.22) !important;
+    border-radius: 18px !important;
+    background: rgba(255,255,255,.045) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+  }
+}
+
+/* --- STANDALONE LOGIN BOX --- */
+body.home-page .header-login {
+  position: relative !important;
+  inset: auto !important;
+  float: none !important;
+  display: inline-flex !important;
+  flex: 0 0 78px !important;
+  width: 78px !important;
+  min-width: 78px !important;
+  height: 44px !important;
+  margin: 0 0 0 8px !important;
+  padding: 0 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1px solid rgba(255,255,255,.42) !important;
+  border-radius: 10px !important;
+  background: rgba(255,255,255,.035) !important;
+  box-shadow: none !important;
+}
+
+/* --- HERO SOCIAL / AVATAR SEPARATION ---
+   .hero-social is a child of .hero-content, not .hero-visual.
+*/
+body.home-page #home.hero > .container.hero-grid > .hero-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+body.home-page #home.hero .hero-content > .hero-social,
+body.home-page #home.hero .hero-content .hero-social {
+  position: relative !important;
+  inset: auto !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  float: none !important;
+  clear: both !important;
+  order: 20 !important;
+  width: auto !important;
+  margin: 32px 0 0 !important;
+  z-index: 5 !important;
+}
+
+body.home-page #home.hero > .container.hero-grid > .hero-visual {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+@media (max-width: 700px) {
+  body.home-page .header-login {
+    flex-basis: 72px !important;
+    width: 72px !important;
+    min-width: 72px !important;
+    height: 36px !important;
+    margin: 0 0 0 6px !important;
+    border-radius: 9px !important;
+  }
+
+  body.home-page .path-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    border: 0 !important;
+  }
+
+  body.home-page .path-card {
+    min-height: 250px !important;
+    padding: 22px 16px !important;
+    border: 1px solid rgba(255,255,255,.22) !important;
+    border-radius: 16px !important;
+    background: rgba(255,255,255,.045) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+  }
+
+  body.home-page #home.hero .hero-content .hero-social {
+    margin-top: 30px !important;
+  }
+
+  body.home-page #home.hero > .container.hero-grid > .hero-visual {
+    margin-top: 34px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  body.home-page .path-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ================================================================
+   AJUVERSE V5 — VISUAL CORRECTION PASS
+   Fixes verified from mobile screenshot:
+   1) Avatar must never crop — hard contain rule + breathing room
+   2) Social row/buttons must never crop or clip
+   3) Start Here topics must look like individual button cards
+   4) Desktop = 6 buttons in one row; mobile = 2 x 3
+   ================================================================ */
+
+/* ---------- AVATAR: ABSOLUTE NO-CROP RULE ---------- */
+body.home-page #home.hero > .container.hero-grid > .hero-visual {
+    overflow: hidden !important;
+}
+
+body.home-page #home.hero > .container.hero-grid > .hero-visual > img,
+body.home-page #home.hero .hero-visual img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    transform: scale(.92) !important;
+    transform-origin: center center !important;
+    margin: 0 !important;
+}
+
+/* ---------- SOCIAL: NEVER CLIP THE ICON ROW ---------- */
+body.home-page #home.hero .hero-content .hero-social,
+body.home-page #home.hero .hero-content > .hero-social {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    margin-top: 30px !important;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+}
+
+body.home-page #home.hero .hero-content .hero-social-links {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: max-content !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 46px !important;
+    overflow: visible !important;
+    gap: 12px !important;
+    margin: 0 !important;
+    padding: 2px !important;
+}
+
+body.home-page #home.hero .hero-content .hero-social-link {
+    flex: 0 0 44px !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    max-width: 44px !important;
+    min-height: 44px !important;
+    max-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: visible !important;
+    box-sizing: border-box !important;
+    border-radius: 50% !important;
+}
+
+body.home-page #home.hero .hero-content .hero-social-link > img {
+    display: block !important;
+    width: 22px !important;
+    height: 22px !important;
+    max-width: 22px !important;
+    max-height: 22px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    transform: none !important;
+    margin: 0 !important;
+}
+
+/* ---------- START HERE: BUTTON STYLE ---------- */
+@media (min-width: 1101px) {
+    body.home-page .path-grid {
+        display: grid !important;
+        grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+        gap: 14px !important;
+        border: 0 !important;
+        overflow: visible !important;
+    }
+
+    body.home-page .path-card {
+        min-height: 150px !important;
+        height: 150px !important;
+        padding: 22px 18px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+        box-sizing: border-box !important;
+        border: 1px solid rgba(255,255,255,.35) !important;
+        border-radius: 16px !important;
+        background: rgba(255,255,255,.045) !important;
+        backdrop-filter: blur(16px) !important;
+        -webkit-backdrop-filter: blur(16px) !important;
+        overflow: hidden !important;
+        cursor: pointer !important;
+        transition: transform .3s ease, border-color .3s ease, background .3s ease, box-shadow .3s ease !important;
+    }
+
+    body.home-page .path-card:hover {
+        transform: translateY(-6px) !important;
+        border-color: rgba(255,255,255,.8) !important;
+        background: rgba(255,255,255,.09) !important;
+        box-shadow: 0 14px 35px rgba(0,0,0,.3) !important;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1100px) {
+    body.home-page .path-grid {
+        grid-template-columns: repeat(3, minmax(0,1fr)) !important;
+        gap: 14px !important;
+        border: 0 !important;
+    }
+    body.home-page .path-card {
+        min-height: 150px !important;
+        height: 150px !important;
+        padding: 20px !important;
+        border: 1px solid rgba(255,255,255,.35) !important;
+        border-radius: 16px !important;
+        background: rgba(255,255,255,.045) !important;
+    }
+}
+
+@media (max-width: 700px) {
+    body.home-page #home.hero > .container.hero-grid > .hero-visual {
+        margin-top: 34px !important;
+        height: 350px !important;
+        min-height: 350px !important;
+        max-height: 350px !important;
+    }
+
+    body.home-page #home.hero > .container.hero-grid > .hero-visual > img,
+    body.home-page #home.hero .hero-visual img {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        object-fit: contain !important;
+        object-position: center center !important;
+        transform: scale(.90) !important;
+    }
+
+    body.home-page #home.hero .hero-content .hero-social-links {
+        width: max-content !important;
+        max-width: none !important;
+        overflow: visible !important;
+        gap: 10px !important;
+    }
+
+    body.home-page #home.hero .hero-content .hero-social-link {
+        flex: 0 0 42px !important;
+        width: 42px !important;
+        height: 42px !important;
+        min-width: 42px !important;
+        max-width: 42px !important;
+        min-height: 42px !important;
+        max-height: 42px !important;
+        overflow: visible !important;
+    }
+
+    body.home-page #home.hero .hero-content .hero-social-link > img {
+        width: 21px !important;
+        height: 21px !important;
+        max-width: 21px !important;
+        max-height: 21px !important;
+    }
+
+    body.home-page .path-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+        gap: 10px !important;
+        border: 0 !important;
+        overflow: visible !important;
+    }
+
+    body.home-page .path-card {
+        min-height: 120px !important;
+        height: 120px !important;
+        padding: 18px 14px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+        box-sizing: border-box !important;
+        border: 1px solid rgba(255,255,255,.35) !important;
+        border-radius: 14px !important;
+        background: rgba(255,255,255,.045) !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+        overflow: hidden !important;
+        cursor: pointer !important;
+        transition: transform .25s ease, border-color .25s ease, background .25s ease !important;
+    }
+
+    body.home-page .path-card:active,
+    body.home-page .path-card:hover {
+        transform: translateY(-3px) !important;
+        border-color: rgba(255,255,255,.7) !important;
+        background: rgba(255,255,255,.08) !important;
+    }
+}
+
+@media (max-width: 420px) {
+    body.home-page .path-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+    }
+}
+
+/* ================================================================
+   AJUVERSE V6 — ACTUAL DOM FINAL FIX
+   IMPORTANT: these selectors intentionally DO NOT require
+   body.home-page because the current index.html body does not
+   carry that class.
+
+   FIXES:
+   1) Start Here cards are real separate glass buttons/cards.
+   2) Desktop = 6 x 1; tablet = 3 x 2; mobile = 2 x 3.
+   3) Cards are never fixed/collapsed; content determines height.
+   4) Social row cannot be clipped by its old overflow:hidden rule.
+   5) Avatar uses contain and cannot crop the head.
+   ================================================================ */
+
+/* ---------- START HERE — REAL INDIVIDUAL CARDS ---------- */
+.start-section .path-grid {
+    display: grid !important;
+    border: 0 !important;
+    overflow: visible !important;
+    width: 100% !important;
+    max-width: none !important;
+    align-items: stretch !important;
+}
+
+.start-section .path-card {
+    position: relative !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 260px !important;
+    padding: 26px 20px !important;
+    margin: 0 !important;
+    border: 1px solid rgba(255,255,255,.32) !important;
+    border-radius: 18px !important;
+    background: rgba(255,255,255,.045) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    overflow: visible !important;
+    transform: none;
+    cursor: pointer !important;
+    transition: transform .3s ease, border-color .3s ease,
+                background .3s ease, box-shadow .3s ease !important;
+}
+
+.start-section .path-card:hover {
+    transform: translateY(-7px) !important;
+    border-color: rgba(255,255,255,.75) !important;
+    background: rgba(255,255,255,.085) !important;
+    box-shadow: 0 16px 38px rgba(0,0,0,.35),
+                0 0 24px rgba(201, 151, 77,.07) !important;
+}
+
+.start-section .path-card h3 {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    margin: 0 0 14px !important;
+    padding: 0 !important;
+    font-size: 24px !important;
+    line-height: 1.08 !important;
+    color: #fff !important;
+    overflow: visible !important;
+}
+
+.start-section .path-card p {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    color: #aaa !important;
+    overflow: visible !important;
+}
+
+.start-section .path-card .text-link {
+    display: inline-flex !important;
+    margin-top: auto !important;
+    padding-top: 18px !important;
+    color: #fff !important;
+}
+
+@media (min-width: 1101px) {
+    .start-section .path-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+        gap: 14px !important;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1100px) {
+    .start-section .path-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 14px !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .start-section .path-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+    }
+
+    .start-section .path-card {
+        min-height: 270px !important;
+        height: auto !important;
+        padding: 20px 15px !important;
+        border-radius: 15px !important;
+    }
+
+    .start-section .path-card h3 {
+        font-size: 20px !important;
+        line-height: 1.08 !important;
+        margin-bottom: 12px !important;
+    }
+
+    .start-section .path-card p {
+        font-size: 13px !important;
+        line-height: 1.58 !important;
+    }
+}
+
+/* ---------- SOCIAL — REMOVE THE OLD CLIPPING RULE ---------- */
+.hero-social,
+.hero-social-links,
+.hero-social-link {
+    overflow: visible !important;
+}
+
+.hero-social {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin-top: 30px !important;
+    padding: 0 !important;
+}
+
+.hero-social-links {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: max-content !important;
+    max-width: none !important;
+    min-height: 50px !important;
+    gap: 11px !important;
+    margin: 10px 0 0 !important;
+    padding: 4px !important;
+}
+
+.hero-social-link {
+    flex: 0 0 44px !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    max-width: 44px !important;
+    min-height: 44px !important;
+    max-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    border-radius: 50% !important;
+}
+
+.hero-social-link > img,
+.hero-social-link img {
+    display: block !important;
+    width: 22px !important;
+    height: 22px !important;
+    min-width: 22px !important;
+    max-width: 22px !important;
+    min-height: 22px !important;
+    max-height: 22px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    transform: none !important;
+}
+
+/* ---------- AVATAR — FULL IMAGE, NO CROP ---------- */
+.hero-visual {
+    position: relative !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.hero-visual > img,
+.hero-visual img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    transform: none !important;
+    margin: 0 !important;
+}
+
+@media (max-width: 700px) {
+    .hero-social {
+        margin-top: 30px !important;
+    }
+
+    .hero-social-links {
+        gap: 9px !important;
+        min-height: 48px !important;
+        padding: 3px !important;
+    }
+
+    .hero-social-link {
+        flex-basis: 42px !important;
+        width: 42px !important;
+        height: 42px !important;
+        min-width: 42px !important;
+        max-width: 42px !important;
+        min-height: 42px !important;
+        max-height: 42px !important;
+    }
+
+    .hero-social-link > img,
+    .hero-social-link img {
+        width: 21px !important;
+        height: 21px !important;
+        min-width: 21px !important;
+        max-width: 21px !important;
+        min-height: 21px !important;
+        max-height: 21px !important;
+    }
+
+    .hero-visual {
+        margin-top: 30px !important;
+    }
+}
+
+/* ================================================================
+   AJUVERSE V7 — START HERE / TOPIC CARDS REAL FINAL FIX
+   IMPORTANT: This block is intentionally LAST in the file so it
+   wins over every older path-grid/path-card declaration above.
+   ================================================================ */
+
+.start-section {
+    overflow: visible !important;
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+.start-section .path-grid {
+    display: grid !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    grid-auto-flow: row !important;
+    grid-auto-rows: auto !important;
+    align-items: stretch !important;
+    border: 0 !important;
+    overflow: visible !important;
+}
+
+.start-section .path-card,
+.start-section .path-grid > .path-card,
+.start-section .path-grid > * {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 24px 20px !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    overflow: visible !important;
+    border: 1px solid rgba(255,255,255,.42) !important;
+    border-radius: 16px !important;
+    background: rgba(255,255,255,.055) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    transform: none;
+    transition: transform .3s ease, border-color .3s ease,
+                background .3s ease, box-shadow .3s ease !important;
+}
+
+.start-section .path-card:hover {
+    transform: translateY(-6px) !important;
+    border-color: rgba(255,255,255,.82) !important;
+    background: rgba(255,255,255,.09) !important;
+    box-shadow: 0 16px 35px rgba(0,0,0,.35),
+                0 0 20px rgba(201, 151, 77,.08) !important;
+}
+
+.start-section .path-card h3,
+.start-section .path-card > h3 {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    margin: 0 0 12px !important;
+    padding: 0 !important;
+    transform: none !important;
+    overflow: visible !important;
+    font-size: 22px !important;
+    line-height: 1.15 !important;
+    color: #fff !important;
+}
+
+.start-section .path-card p,
+.start-section .path-card > p {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    overflow: visible !important;
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+    color: #b5b5b5 !important;
+}
+
+.start-section .path-card .text-link,
+.start-section .path-card > .text-link {
+    display: inline-flex !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 18px 0 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+}
+
+@media (min-width: 1101px) {
+    .start-section .path-grid {
+        grid-template-columns: repeat(6, minmax(0,1fr)) !important;
+        gap: 14px !important;
+    }
+    .start-section .path-card {
+        min-height: 190px !important;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1100px) {
+    .start-section .path-grid {
+        grid-template-columns: repeat(3, minmax(0,1fr)) !important;
+        gap: 14px !important;
+    }
+    .start-section .path-card {
+        min-height: 190px !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .start-section .path-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+        gap: 10px !important;
+    }
+    .start-section .path-card {
+        min-height: 190px !important;
+        padding: 18px 14px !important;
+        border-radius: 14px !important;
+    }
+    .start-section .path-card h3 {
+        font-size: 19px !important;
+        margin-bottom: 10px !important;
+    }
+    .start-section .path-card p {
+        font-size: 12.5px !important;
+        line-height: 1.55 !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .start-section .path-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+    }
+}
+
+/* Keep the already-correct avatar/social fix untouched. */
+.hero-visual img {
+    object-fit: contain !important;
+    object-position: center center !important;
+}
+
+.hero-social-links {
+    overflow: visible !important;
+}
+
+/* =========================================================
+   GLOBAL CONTACT ACTIONS
+   ========================================================= */
+.footer-whatsapp {
+    display: block;
+    margin-top: 10px;
+}
+
+/* =========================================================
+   GLOBAL MOBILE HEADER — MATCH HOMEPAGE 3 x 2 NAV
+   Applies to AjuVerse / BookOra pages on phones.
+========================================================= */
+@media (max-width: 700px) {
+    html, body {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Main header containers used across the site */
+    .site-header .header-inner,
+    .site-header .nav-container,
+    header.site-header .nav-container,
+    header:not(.site-header) .nav-container {
+        width: calc(100% - 28px) !important;
+        max-width: none !important;
+        min-height: 0 !important;
+        margin: 0 auto !important;
+        padding: 9px 0 7px !important;
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) auto !important;
+        grid-template-rows: auto auto !important;
+        align-items: center !important;
+        column-gap: 10px !important;
+        row-gap: 7px !important;
+        overflow: visible !important;
+    }
+
+    /* Brand — top-left */
+    .site-header .brand,
+    header .nav-container > .brand,
+    header .nav-container > .logo,
+    header .nav-container > .logo-link {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+        min-width: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 9px !important;
+        overflow: hidden !important;
+    }
+
+    .site-header .brand img,
+    .site-header .brand-logo,
+    header .nav-container > .brand .brand-mark,
+    header .nav-container > .brand .brand-mark img,
+    header .nav-container > .logo img,
+    header .nav-container > .logo-link img {
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+        max-width: 44px !important;
+        min-height: 44px !important;
+        max-height: 44px !important;
+        object-fit: contain !important;
+        flex-shrink: 0 !important;
+    }
+
+    .site-header .brand strong,
+    .site-header .brand-name,
+    header .brand-name,
+    header .logo-text strong,
+    header .logo h2 {
+        font-size: 21px !important;
+        line-height: 1 !important;
+        letter-spacing: -.5px !important;
+        white-space: nowrap !important;
+    }
+
+    .site-header .brand span,
+    .site-header .brand-tagline,
+    header .brand-tagline,
+    header .logo-text span,
+    header .logo p {
+        display: block !important;
+        margin-top: 4px !important;
+        color: #777 !important;
+        font-size: 6px !important;
+        line-height: 1 !important;
+        letter-spacing: 1.5px !important;
+        white-space: nowrap !important;
+    }
+
+    /* Login — top-right */
+    .site-header .header-login,
+    header .nav-container > .login-btn,
+    header .nav-container > .nav-btn,
+    header .nav-container > .login-link {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+        width: 68px !important;
+        min-width: 68px !important;
+        height: 36px !important;
+        min-height: 36px !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-shrink: 0 !important;
+        font-size: 10px !important;
+        white-space: nowrap !important;
+    }
+
+    /* Navigation — 3 columns x 2 rows, exactly like Home */
+    .site-header .main-nav,
+    .site-header > .nav-container > nav,
+    header .nav-container > nav {
+        grid-column: 1 / -1 !important;
+        grid-row: 2 !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        grid-auto-rows: minmax(27px, auto) !important;
+        align-items: center !important;
+        justify-items: center !important;
+        gap: 0 !important;
+        margin: 0 !important;
+        padding: 4px 0 3px !important;
+        overflow: visible !important;
+        white-space: normal !important;
+    }
+
+    .site-header .main-nav a,
+    .site-header > .nav-container > nav a,
+    header .nav-container > nav a {
+        width: 100% !important;
+        min-width: 0 !important;
+        min-height: 27px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 3px 1px !important;
+        color: #d8d8d8 !important;
+        font-size: 9.5px !important;
+        line-height: 1.1 !important;
+        white-space: nowrap !important;
+        text-align: center !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    /* Book-detail pages use <nav><ul><li> instead of direct links */
+    header .nav-container > nav > ul {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        grid-auto-rows: minmax(27px, auto) !important;
+        gap: 0 !important;
+        list-style: none !important;
+    }
+
+    header .nav-container > nav > ul > li {
+        min-width: 0 !important;
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    header .nav-container > nav > ul > li > a {
+        width: 100% !important;
+        min-height: 27px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 3px 1px !important;
+        font-size: 9.5px !important;
+        line-height: 1.1 !important;
+        white-space: nowrap !important;
+        text-align: center !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    /* BookOra mobile hero: no internal/horizontal scrolling */
+    .bookstore-page .bookora-hero,
+    .bookstore-page .hero-grid {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .bookstore-page .hero-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    .bookstore-page .hero-copy h1 {
+        font-size: 48px !important;
+        line-height: .9 !important;
+        letter-spacing: -3px !important;
+        max-width: 100% !important;
+    }
+
+    .bookstore-page .hero-copy p {
+        max-width: 100% !important;
+        font-size: 14px !important;
+    }
+}
+
+/* =========================================================
+   AJUVERSE — MASTER DESKTOP WIDTH SYSTEM
+   STEP 1 — SCREEN-RESPONSIVE PAGE WIDTH
+   ========================================================= */
+
+/* ---------- MASTER DESKTOP WIDTH ---------- */
+
+@media (min-width: 1001px) {
+
+    /* Main AjuVerse container */
+    .container {
+        width: calc(100% - 80px) !important;
+        max-width: 1600px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* BookOra containers */
+    .bookstore-page .container,
+    .bookstore-page .bookstore-welcome .container,
+    .bookora-welcome .container {
+        width: calc(100% - 80px) !important;
+        max-width: 1600px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Academy page sections */
+    .academy-hero,
+    .courses-section,
+    .academy-benefits,
+    .academy-cta {
+        width: calc(100% - 80px) !important;
+        max-width: 1600px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1600px+ screens
+   ========================================================= */
+
+@media (min-width: 1600px) {
+
+    .container,
+    .bookstore-page .container,
+    .bookstore-page .bookstore-welcome .container,
+    .bookora-welcome .container {
+        width: min(1600px, calc(100% - 100px)) !important;
+        max-width: 1600px !important;
+    }
+
+    .academy-hero,
+    .courses-section,
+    .academy-benefits,
+    .academy-cta {
+        width: min(1600px, calc(100% - 100px)) !important;
+        max-width: 1600px !important;
+    }
+
+}
+
+
+/* =========================================================
+   VERY LARGE SCREENS
+   Prevent content from becoming excessively stretched
+   ========================================================= */
+
+@media (min-width: 2000px) {
+
+    .container,
+    .bookstore-page .container,
+    .bookstore-page .bookstore-welcome .container,
+    .bookora-welcome .container {
+        max-width: 1680px !important;
+    }
+
+    .academy-hero,
+    .courses-section,
+    .academy-benefits,
+    .academy-cta {
+        max-width: 1680px !important;
+    }
+
+}
+
+/* =========================================================
+   AJUVERSE — MASTER TYPOGRAPHY SYSTEM
+   STEP 2
+   ONE FONT FAMILY + CONSISTENT TYPE SCALE
+   ========================================================= */
+
+/* =========================================================
+   01 — MASTER FONT FAMILY
+   ========================================================= */
+
+html,
+body,
+button,
+input,
+textarea,
+select {
+    font-family: "Inter", Arial, sans-serif !important;
+}
+
+
+/* =========================================================
+   02 — MAIN DISPLAY HEADINGS
+   Hero / Main page headings
+   ========================================================= */
+
+.hero h1,
+.academy-hero h1,
+.bookora-welcome-content h1,
+.bookstore-welcome h1 {
+    font-weight: 900 !important;
+    line-height: .95 !important;
+    letter-spacing: -2.5px !important;
+}
+
+
+/* =========================================================
+   03 — SECTION HEADINGS
+   ========================================================= */
+
+.section-title h2,
+.courses-heading h2,
+.bookora-about-content h2,
+.bookora-welcome-grid h2 {
+    font-weight: 900 !important;
+    line-height: 1 !important;
+    letter-spacing: -2px !important;
+}
+
+
+/* =========================================================
+   04 — CARD HEADINGS
+   ========================================================= */
+
+.path-card h3,
+.service-card h3,
+.portfolio-content h3,
+.course-card h3,
+.benefit-card h3,
+.store-book-content h3 {
+    font-weight: 800 !important;
+    line-height: 1.08 !important;
+    letter-spacing: -1px !important;
+}
+
+
+/* =========================================================
+   05 — BODY TEXT
+   ========================================================= */
+
+.hero-description,
+.hero p,
+.academy-hero p,
+.course-card p,
+.benefit-card p,
+.portfolio-content p,
+.service-card p,
+.path-card p,
+.bookora-about-content p,
+.bookora-welcome-content p {
+    font-weight: 400 !important;
+    line-height: 1.65 !important;
+}
+
+
+/* =========================================================
+   06 — NAVIGATION
+   ========================================================= */
+
+.main-nav a {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+    letter-spacing: .1px !important;
+}
+
+
+/* =========================================================
+   07 — BUTTONS
+   ========================================================= */
+
+button,
+.btn,
+.primary-btn,
+.secondary-btn,
+.cta-buttons a,
+.cta-buttons .btn,
+.store-buy-btn,
+.course-link,
+.academy-button {
+    font-family: "Inter", Arial, sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: .2px !important;
+}
+
+
+/* =========================================================
+   08 — LABELS / CATEGORY TEXT
+   ========================================================= */
+
+.academy-label,
+.courses-heading span,
+.bookora-label,
+.bookora-about-content .bookora-label,
+.portfolio-category,
+.store-book-content .type,
+.offer-tag {
+    font-weight: 700 !important;
+    letter-spacing: 2.5px !important;
+}
+
+
+/* =========================================================
+   09 — HEADER BRAND
+   ========================================================= */
+
+.site-header .brand-name,
+.bookstore-page .brand-name,
+.bookstore-page .brand strong {
+    font-family: "Inter", Arial, sans-serif !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+    letter-spacing: -1px !important;
+}
+
+.site-header .brand-tagline,
+.bookstore-page .brand-tagline,
+.bookstore-page .brand span {
+    font-family: "Inter", Arial, sans-serif !important;
+    font-weight: 500 !important;
+    letter-spacing: 2px !important;
+}
+
+
+/* =========================================================
+   10 — FOOTER
+   ========================================================= */
+
+.footer-brand h2,
+.footer-brand h3 {
+    font-family: "Inter", Arial, sans-serif !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -1.5px !important;
+}
+
+.footer-brand p,
+.footer-column p,
+.footer-column a,
+.footer-column li,
+.footer-bottom,
+.footer-bottom a,
+.footer-bottom span {
+    font-family: "Inter", Arial, sans-serif !important;
+    font-weight: 400 !important;
+}
+
+
+/* =========================================================
+   11 — DESKTOP TYPE SCALE
+   ========================================================= */
+
+@media (min-width: 1001px) {
+
+    /* Main Hero */
+    .hero h1,
+    .academy-hero h1,
+    .bookora-welcome-content h1,
+    .bookstore-welcome h1 {
+        font-size: clamp(40px, 3.2vw, 52px) !important;
+    }
+
+    /* Section headings */
+    .section-title h2,
+    .courses-heading h2,
+    .bookora-about-content h2,
+    .bookora-welcome-grid h2 {
+        font-size: clamp(32px, 3vw, 44px) !important;
+    }
+
+    /* Card headings */
+    .path-card h3,
+    .service-card h3,
+    .portfolio-content h3,
+    .course-card h3,
+    .benefit-card h3,
+    .store-book-content h3 {
+        font-size: 26px !important;
+    }
+
+    /* Body */
+    .hero-description,
+    .hero p,
+    .academy-hero p,
+    .course-card p,
+    .benefit-card p,
+    .portfolio-content p,
+    .service-card p,
+    .path-card p,
+    .bookora-about-content p,
+    .bookora-welcome-content p {
+        font-size: 16px !important;
+    }
+
+    /* Footer */
+    .footer-brand p {
+        font-size: 14px !important;
+    }
+
+    .footer-column a,
+    .footer-column li,
+    .footer-column p {
+        font-size: 13px !important;
+        line-height: 1.7 !important;
+    }
+
+    .footer-bottom,
+    .footer-bottom a,
+    .footer-bottom span {
+        font-size: 12px !important;
+    }
+}
+
+
+/* =========================================================
+   12 — MOBILE TYPE SCALE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* Main Hero */
+    .hero h1,
+    .academy-hero h1,
+    .bookora-welcome-content h1,
+    .bookstore-welcome h1 {
+        font-size: 34px !important;
+        line-height: .98 !important;
+        letter-spacing: -1.5px !important;
+    }
+
+    /* Section headings */
+    .section-title h2,
+    .courses-heading h2,
+    .bookora-about-content h2,
+    .bookora-welcome-grid h2 {
+        font-size: 30px !important;
+        line-height: 1 !important;
+        letter-spacing: -1.5px !important;
+    }
+
+    /* Card headings */
+    .path-card h3,
+    .service-card h3,
+    .portfolio-content h3,
+    .course-card h3,
+    .benefit-card h3,
+    .store-book-content h3 {
+        font-size: 22px !important;
+        line-height: 1.1 !important;
+    }
+
+    /* Body */
+    .hero-description,
+    .hero p,
+    .academy-hero p,
+    .course-card p,
+    .benefit-card p,
+    .portfolio-content p,
+    .service-card p,
+    .path-card p,
+    .bookora-about-content p,
+    .bookora-welcome-content p {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Navigation */
+    .main-nav a {
+        font-size: 11px !important;
+    }
+
+    /* Footer */
+    .footer-brand p {
+        font-size: 13px !important;
+    }
+
+    .footer-column a,
+    .footer-column li,
+    .footer-column p {
+        font-size: 13px !important;
+        line-height: 1.65 !important;
+    }
+
+    .footer-bottom,
+    .footer-bottom a,
+    .footer-bottom span {
+        font-size: 11px !important;
+    }
+}
+
+/* =========================================================
+   AJUVERSE — PREMIUM HERO HEADING TEST
+   UPDATE 1
+   ========================================================= */
+
+.hero h1,
+.hero-title {
+    font-size: clamp(48px, 5vw, 72px) !important;
+    line-height: 0.98 !important;
+    font-weight: 900 !important;
+    letter-spacing: -2.8px !important;
+    color: #ffffff !important;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,0.08),
+        0 0 22px rgba(255,255,255,0.05);
+
+    animation: ajuHeroTitleReveal 0.9s cubic-bezier(.22,1,.36,1) both;
+}
+
+@keyframes ajuHeroTitleReveal {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+        filter: blur(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+/* =========================================================
+   AJUVERSE — PREMIUM WORK CARD INTERACTION
+   UPDATE 2
+   ========================================================= */
+
+.work-card,
+.project-card,
+.portfolio-card,
+.service-card {
+    transition:
+        transform 0.35s cubic-bezier(.22,1,.36,1),
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.work-card:hover,
+.project-card:hover,
+.portfolio-card:hover,
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(201, 151, 77,0.55);
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,0.35),
+        0 0 18px rgba(201, 151, 77,0.06);
+}
+
+.work-card img,
+.project-card img,
+.portfolio-card img,
+.service-card img {
+    transition:
+        transform 0.5s cubic-bezier(.22,1,.36,1),
+        filter 0.5s ease;
+}
+
+.work-card:hover img,
+.project-card:hover img,
+.portfolio-card:hover img,
+.service-card:hover img {
+    transform: scale(1.035);
+}
+
+.work-card a,
+.project-card a,
+.portfolio-card a,
+.service-card a {
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.work-card a:hover,
+.project-card a:hover,
+.portfolio-card a:hover,
+.service-card a:hover {
+    color: #C9974D !important;
+}
+
+/* =========================================================
+   BOOKORA — FINAL TYPOGRAPHY SCALE
+   Desktop
+   ========================================================= */
+
+@media (min-width: 761px) {
+
+    /* -----------------------------
+       HEADER
+       ----------------------------- */
+
+    .cart-nav {
+        min-width: 82px !important;
+        height: 44px !important;
+        padding: 0 14px !important;
+        gap: 8px !important;
+        font-size: 15px !important;
+        font-weight: 800 !important;
+    }
+
+    .cart-nav #cartCount {
+        min-width: 22px !important;
+        height: 22px !important;
+        font-size: 12px !important;
+        line-height: 22px !important;
+    }
+
+
+    /* -----------------------------
+       CATEGORY HEADING
+       ----------------------------- */
+
+    .store-category-heading {
+        margin-bottom: 24px !important;
+    }
+
+    .store-category-heading > div {
+        gap: 18px !important;
+    }
+
+    .store-category-heading .number {
+        font-size: 15px !important;
+        font-weight: 800 !important;
+        letter-spacing: 1px !important;
+    }
+
+    .store-category-heading h2 {
+        font-size: 46px !important;
+        line-height: 0.95 !important;
+        letter-spacing: -2.5px !important;
+        font-weight: 900 !important;
+    }
+
+    .store-category-heading > p {
+        font-size: 16px !important;
+        line-height: 1.55 !important;
+    }
+
+
+    /* -----------------------------
+       PRODUCT CARD
+       ----------------------------- */
+
+    .store-book-content {
+        padding: 18px !important;
+    }
+
+    .store-book-content .type {
+        font-size: 11px !important;
+        letter-spacing: 2px !important;
+        font-weight: 800 !important;
+    }
+
+    .store-book-content h3 {
+        font-size: 22px !important;
+        line-height: 1.15 !important;
+        letter-spacing: -0.8px !important;
+        margin: 8px 0 !important;
+    }
+
+    .store-book-content p {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+        min-height: 66px !important;
+    }
+
+
+    /* -----------------------------
+       PRICE
+       ----------------------------- */
+
+    .price-row {
+        gap: 8px !important;
+        margin-top: 12px !important;
+        align-items: center !important;
+    }
+
+    .old-price {
+        font-size: 11px !important;
+    }
+
+    .offer-price {
+        font-size: 18px !important;
+        font-weight: 900 !important;
+    }
+
+    .offer-tag {
+        font-size: 9px !important;
+        padding: 5px 8px !important;
+        font-weight: 800 !important;
+    }
+
+
+    /* -----------------------------
+       ADD TO CART
+       ----------------------------- */
+
+    .store-buy-btn {
+        margin-top: 12px !important;
+        min-height: 44px !important;
+        padding: 10px 14px !important;
+        font-size: 13px !important;
+        font-weight: 800 !important;
+        letter-spacing: 0.2px !important;
+        border-radius: 7px !important;
+    }
+
+
+    /* -----------------------------
+       ADDED STATE
+       ----------------------------- */
+
+    .store-buy-btn.bookora-added {
+        font-size: 13px !important;
+        font-weight: 900 !important;
+        letter-spacing: 0.2px !important;
+    }
+
+
+    /* -----------------------------
+       DIGITAL PRODUCT PLACEHOLDER
+       ----------------------------- */
+
+    .store-placeholder {
+        font-size: 11px !important;
+        letter-spacing: 2px !important;
+    }
+
+
+    /* -----------------------------
+       FREE RESOURCE TYPOGRAPHY
+       ----------------------------- */
+
+    .free-resources-head > p {
+        font-size: 16px !important;
+        line-height: 1.55 !important;
+    }
+
+}
+
+/* =========================================================
+   AJUVERSE HOME — FINAL TEXT SIZE FIX
+   Desktop + Mobile
+   Only affects the AjuVerse Home page
+========================================================= */
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 701px) {
+
+    /* -----------------------------------------------------
+       01 — HI, I'M AJU
+    ----------------------------------------------------- */
+
+    .home-page .hero .eyebrow {
+        font-size: 15px !important;
+        line-height: 1.2 !important;
+        font-weight: 800 !important;
+        letter-spacing: 2.5px !important;
+    }
+
+
+    /* -----------------------------------------------------
+       02 — START HERE
+    ----------------------------------------------------- */
+
+    .home-page .start-section .section-title > span {
+        display: block !important;
+
+        font-size: 14px !important;
+        line-height: 1.2 !important;
+
+        font-weight: 800 !important;
+        letter-spacing: 3px !important;
+    }
+
+
+    .home-page .start-section .section-title h2 {
+        font-size: 42px !important;
+        line-height: 1 !important;
+
+        font-weight: 900 !important;
+        letter-spacing: -2px !important;
+    }
+
+
+    .home-page .start-section .section-title p {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       03 — SELECTED WORK
+    ----------------------------------------------------- */
+
+    .home-page .home-selected-eyebrow {
+        font-size: 14px !important;
+        line-height: 1.2 !important;
+
+        font-weight: 800 !important;
+        letter-spacing: 3px !important;
+    }
+
+
+    .home-page .home-selected-heading h2 {
+        font-size: clamp(
+            38px,
+            3.5vw,
+            52px
+        ) !important;
+
+        line-height: 0.98 !important;
+        letter-spacing: -2.5px !important;
+    }
+
+
+    .home-page .home-selected-heading p {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       PROJECT NUMBERS
+       01 / 02 / 03 / 04
+    ----------------------------------------------------- */
+
+    .home-page .home-project-number {
+        font-size: 14px !important;
+        line-height: 1 !important;
+
+        font-weight: 800 !important;
+        letter-spacing: 1px !important;
+    }
+
+
+    /* -----------------------------------------------------
+       VIEW PROJECT
+    ----------------------------------------------------- */
+
+    .home-page .home-project-overlay {
+        font-size: 14px !important;
+        line-height: 1.2 !important;
+
+        font-weight: 800 !important;
+        letter-spacing: 1px !important;
+    }
+
+
+    .home-page .home-project-info a {
+        display: inline-block !important;
+
+        font-size: 14px !important;
+        line-height: 1.2 !important;
+
+        font-weight: 800 !important;
+        letter-spacing: 0.5px !important;
+    }
+
+
+    /* -----------------------------------------------------
+       PROJECT CATEGORY
+       KDP PUBLISHING / DIGITAL PRODUCTS / VIDEO EDITING
+    ----------------------------------------------------- */
+
+    .home-page .home-project-info > span {
+        font-size: 11px !important;
+        line-height: 1.2 !important;
+
+        font-weight: 800 !important;
+        letter-spacing: 2px !important;
+    }
+
+
+    /* -----------------------------------------------------
+       PROJECT TITLE
+    ----------------------------------------------------- */
+
+    .home-page .home-project-info h3 {
+        font-size: clamp(
+            22px,
+            1.8vw,
+            28px
+        ) !important;
+
+        line-height: 1.1 !important;
+        letter-spacing: -0.8px !important;
+    }
+
+
+    /* -----------------------------------------------------
+       PROJECT DESCRIPTION
+    ----------------------------------------------------- */
+
+    .home-page .home-project-info p {
+        font-size: 15px !important;
+        line-height: 1.55 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       04 — READY TO START?
+    ----------------------------------------------------- */
+
+    .home-page .portfolio-cta .eyebrow {
+        font-size: 14px !important;
+        line-height: 1.2 !important;
+
+        font-weight: 800 !important;
+        letter-spacing: 3px !important;
+    }
+
+
+    .home-page .portfolio-cta .cta-title {
+        font-size: clamp(
+            40px,
+            4vw,
+            58px
+        ) !important;
+
+        line-height: 0.95 !important;
+        letter-spacing: -2.5px !important;
+    }
+
+
+    .home-page .portfolio-cta .cta-text {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+    }
+
+
+    .home-page .portfolio-cta .btn {
+        font-size: 14px !important;
+        font-weight: 800 !important;
+    }
+
+
+    /* =====================================================
+       05 — FOOTER
+    ===================================================== */
+
+    .home-page footer .footer-brand h3,
+    .home-page footer .footer-brand h2 {
+        font-size: 24px !important;
+        line-height: 1.1 !important;
+    }
+
+
+    .home-page footer .footer-brand p {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+    }
+
+
+    .home-page footer .footer-column h4,
+    .home-page footer .footer-column h3 {
+        font-size: 15px !important;
+        line-height: 1.2 !important;
+
+        font-weight: 800 !important;
+    }
+
+
+    .home-page footer .footer-column a,
+    .home-page footer .footer-column li,
+    .home-page footer .footer-column p {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+    }
+
+
+    .home-page footer .footer-bottom {
+        font-size: 13px !important;
+        line-height: 1.5 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       FOOTER CONTACT
+    ----------------------------------------------------- */
+
+    .home-page footer a[href^="mailto:"] {
+        font-size: 15px !important;
+    }
+
+
+    .home-page footer a[href*="wa.me"] {
+        font-size: 15px !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* HI, I'M AJU */
+
+    .home-page .hero .eyebrow {
+        font-size: 13px !important;
+        line-height: 1.2 !important;
+
+        font-weight: 800 !important;
+        letter-spacing: 2px !important;
+    }
+
+
+    /* START HERE */
+
+    .home-page .start-section .section-title > span {
+        font-size: 13px !important;
+        line-height: 1.2 !important;
+
+        font-weight: 800 !important;
+        letter-spacing: 2.5px !important;
+    }
+
+
+    .home-page .start-section .section-title h2 {
+        font-size: 32px !important;
+        line-height: 1 !important;
+    }
+
+
+    .home-page .start-section .section-title p {
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+    }
+
+
+    /* SELECTED WORK */
+
+    .home-page .home-selected-eyebrow {
+        font-size: 13px !important;
+        line-height: 1.2 !important;
+
+        font-weight: 800 !important;
+        letter-spacing: 2.5px !important;
+    }
+
+
+    .home-page .home-selected-heading h2 {
+        font-size: 35px !important;
+        line-height: 0.98 !important;
+        letter-spacing: -1.8px !important;
+    }
+
+
+    .home-page .home-selected-heading p {
+        font-size: 15px !important;
+        line-height: 1.65 !important;
+    }
+
+
+    /* PROJECT NUMBERS */
+
+    .home-page .home-project-number {
+        font-size: 13px !important;
+        font-weight: 800 !important;
+    }
+
+
+    /* VIEW PROJECT */
+
+    .home-page .home-project-overlay {
+        font-size: 13px !important;
+        font-weight: 800 !important;
+    }
+
+
+    .home-page .home-project-info a {
+        font-size: 13px !important;
+        font-weight: 800 !important;
+    }
+
+
+    /* PROJECT CATEGORY */
+
+    .home-page .home-project-info > span {
+        font-size: 10px !important;
+        letter-spacing: 1.8px !important;
+    }
+
+
+    /* PROJECT TITLE */
+
+    .home-page .home-project-info h3 {
+        font-size: 24px !important;
+        line-height: 1.08 !important;
+    }
+
+
+    /* PROJECT DESCRIPTION */
+
+    .home-page .home-project-info p {
+        font-size: 14px !important;
+        line-height: 1.65 !important;
+    }
+
+
+    /* READY TO START */
+
+    .home-page .portfolio-cta .eyebrow {
+        font-size: 13px !important;
+        font-weight: 800 !important;
+        letter-spacing: 2.5px !important;
+    }
+
+
+    .home-page .portfolio-cta .cta-title {
+        font-size: 38px !important;
+        line-height: 0.95 !important;
+    }
+
+
+    .home-page .portfolio-cta .cta-text {
+        font-size: 15px !important;
+        line-height: 1.65 !important;
+    }
+
+
+    /* FOOTER */
+
+    .home-page footer .footer-brand h3,
+    .home-page footer .footer-brand h2 {
+        font-size: 24px !important;
+    }
+
+
+    .home-page footer .footer-brand p {
+        font-size: 15px !important;
+        line-height: 1.65 !important;
+    }
+
+
+    .home-page footer .footer-column h4,
+    .home-page footer .footer-column h3 {
+        font-size: 15px !important;
+    }
+
+
+    .home-page footer .footer-column a,
+    .home-page footer .footer-column li,
+    .home-page footer .footer-column p {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+
+
+    .home-page footer .footer-bottom {
+        font-size: 12px !important;
+    }
+
+
+    .home-page footer a[href^="mailto:"] {
+        font-size: 14px !important;
+    }
+
+
+    .home-page footer a[href*="wa.me"] {
+        font-size: 14px !important;
+    }
+
+}
+
+/* =========================================================
+   AJUVERSE HOME — FINAL 6 TEXT SIZE FIX
+   IMPORTANT:
+   These selectors intentionally use high specificity because
+   mobile.css is loaded after style.css.
+   This block must remain at the VERY END of style.css.
+========================================================= */
+
+
+/* =========================================================
+   01 — HI, I'M AJU
+========================================================= */
+
+html body.home-page #home .hero-content > .eyebrow {
+    display: block !important;
+    font-size: 16px !important;
+    line-height: 1.2 !important;
+    font-weight: 900 !important;
+    letter-spacing: 3px !important;
+}
+
+
+/* =========================================================
+   02 — START HERE
+========================================================= */
+
+html body.home-page #start .section-title > span {
+    display: block !important;
+    font-size: 16px !important;
+    line-height: 1.2 !important;
+    font-weight: 900 !important;
+    letter-spacing: 3px !important;
+}
+
+
+/* =========================================================
+   03 — SELECTED WORK
+========================================================= */
+
+html body.home-page #selected-work .home-selected-heading > .home-selected-eyebrow {
+    display: block !important;
+    font-size: 16px !important;
+    line-height: 1.2 !important;
+    font-weight: 900 !important;
+    letter-spacing: 3px !important;
+}
+
+
+/* =========================================================
+   04 — VIEW PROJECT
+   Applies to both the image overlay and the text link.
+========================================================= */
+
+html body.home-page #selected-work .home-project-overlay {
+    font-size: 15px !important;
+    line-height: 1.2 !important;
+    font-weight: 900 !important;
+    letter-spacing: 1px !important;
+}
+
+html body.home-page #selected-work .home-project-info > a {
+    display: inline-block !important;
+    font-size: 15px !important;
+    line-height: 1.2 !important;
+    font-weight: 900 !important;
+    letter-spacing: .5px !important;
+}
+
+
+/* =========================================================
+   05 — READY TO START?
+   NOTE: Home uses .cta-section, NOT .portfolio-cta.
+========================================================= */
+
+html body.home-page .cta-section .cta-box > .eyebrow {
+    display: block !important;
+    font-size: 16px !important;
+    line-height: 1.2 !important;
+    font-weight: 900 !important;
+    letter-spacing: 3px !important;
+}
+
+
+/* =========================================================
+   06 — FOOTER
+   NOTE: Home uses footer-column h3, not h4.
+========================================================= */
+
+html body.home-page footer#contact .footer-brand h2 {
+    font-size: 26px !important;
+    line-height: 1.1 !important;
+    font-weight: 900 !important;
+}
+
+html body.home-page footer#contact .footer-brand p {
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+}
+
+html body.home-page footer#contact .footer-column h3 {
+    font-size: 16px !important;
+    line-height: 1.2 !important;
+    font-weight: 900 !important;
+}
+
+html body.home-page footer#contact .footer-column a,
+html body.home-page footer#contact .footer-column li,
+html body.home-page footer#contact .footer-column p,
+html body.home-page footer#contact .footer-email,
+html body.home-page footer#contact .footer-whatsapp {
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+}
+
+html body.home-page footer#contact .footer-bottom p {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+}
+
+
+/* =========================================================
+   MOBILE — KEEP ALL 6 WORDINGS CLEAR
+========================================================= */
+
+@media (max-width: 700px) {
+
+    html body.home-page #home .hero-content > .eyebrow {
+        font-size: 14px !important;
+        letter-spacing: 2.2px !important;
+    }
+
+    html body.home-page #start .section-title > span {
+        font-size: 14px !important;
+        letter-spacing: 2.4px !important;
+    }
+
+    html body.home-page #selected-work .home-selected-heading > .home-selected-eyebrow {
+        font-size: 14px !important;
+        letter-spacing: 2.4px !important;
+    }
+
+    html body.home-page #selected-work .home-project-overlay {
+        font-size: 14px !important;
+    }
+
+    html body.home-page #selected-work .home-project-info > a {
+        font-size: 14px !important;
+    }
+
+    html body.home-page .cta-section .cta-box > .eyebrow {
+        font-size: 14px !important;
+        letter-spacing: 2.4px !important;
+    }
+
+    html body.home-page footer#contact .footer-brand h2 {
+        font-size: 24px !important;
+    }
+
+    html body.home-page footer#contact .footer-brand p {
+        font-size: 15px !important;
+    }
+
+    html body.home-page footer#contact .footer-column h3 {
+        font-size: 15px !important;
+    }
+
+    html body.home-page footer#contact .footer-column a,
+    html body.home-page footer#contact .footer-column li,
+    html body.home-page footer#contact .footer-column p,
+    html body.home-page footer#contact .footer-email,
+    html body.home-page footer#contact .footer-whatsapp {
+        font-size: 14px !important;
+    }
+
+    html body.home-page footer#contact .footer-bottom p {
+        font-size: 12px !important;
+    }
+}
+
+
+/* =========================================================
+   AJUVERSE HOME — REMOVE 01 / 02 / 03 / 04
+========================================================= */
+
+html body.home-page #selected-work .home-project-number {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* =========================================================
+   AJUVERSE HERO — NATURAL AVATAR
+   No box / no frame / white glow
+========================================================= */
+
+.hero-visual {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 520px;
+
+    /* REMOVE CARD LOOK */
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+}
+
+/* Natural atmospheric white glow behind avatar */
+.hero-visual::before {
+    content: "";
+    position: absolute;
+    width: 430px;
+    height: 430px;
+    right: 8%;
+    bottom: 5%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.12) 0%,
+            rgba(255,255,255,.055) 32%,
+            rgba(255,255,255,.018) 52%,
+            transparent 72%
+        );
+
+    filter: blur(25px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Avatar itself */
+.hero-visual img {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    width: min(100%, 560px);
+    height: auto;
+
+    object-fit: contain;
+
+    /* REMOVE BOX EFFECT */
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    /* White cinematic rim glow */
+    filter:
+        drop-shadow(0 0 3px rgba(255,255,255,.95))
+        drop-shadow(0 0 10px rgba(255,255,255,.65))
+        drop-shadow(0 0 24px rgba(255,255,255,.30));
+
+    transform: translateY(12px);
+}
+
+/* Keep avatar naturally blended into the hero */
+.hero-visual {
+    isolation: isolate;
+}
+
+/* =========================================================
+   REMOVE POSSIBLE OLD HERO FRAME ELEMENTS
+========================================================= */
+
+.hero-visual .hero-ring,
+.hero-visual .hero-card,
+.hero-visual .hero-frame {
+    display: none !important;
+}
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 1101px) {
+
+    .hero-visual {
+        min-height: 560px;
+    }
+
+    .hero-visual img {
+        width: 560px;
+        max-width: 100%;
+    }
+}
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (min-width: 701px) and (max-width: 1100px) {
+
+    .hero-visual {
+        min-height: 500px;
+    }
+
+    .hero-visual img {
+        width: 500px;
+        max-width: 100%;
+    }
+}
+
+/* =========================================================
+   AJUVERSE — FINAL NATURAL AVATAR
+   NO FRAME • NO BOX • NO GOLD RING • WHITE GLOW ONLY
+========================================================= */
+
+/* Remove every artificial frame/background around hero avatar */
+body.home-page #home.hero .hero-visual {
+    position: relative !important;
+
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    overflow: visible !important;
+    isolation: isolate !important;
+}
+
+/* REMOVE OLD GOLD HALO / RING */
+body.home-page #home.hero .hero-visual::before,
+body.home-page #home.hero .hero-visual::after {
+    content: none !important;
+    display: none !important;
+
+    background: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Natural avatar */
+body.home-page #home.hero .hero-visual > img {
+    position: relative !important;
+    z-index: 5 !important;
+
+    display: block !important;
+
+    width: min(100%, 560px) !important;
+    max-width: 560px !important;
+
+    height: auto !important;
+    max-height: none !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    object-fit: contain !important;
+    object-position: center center !important;
+
+    /* REMOVE ALL IMAGE FRAME STYLING */
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    /* WHITE GLOW ONLY */
+    filter:
+        drop-shadow(0 0 3px rgba(255,255,255,.95))
+        drop-shadow(0 0 10px rgba(255,255,255,.65))
+        drop-shadow(0 0 24px rgba(255,255,255,.32))
+        drop-shadow(0 0 42px rgba(255,255,255,.12)) !important;
+
+    transform: none !important;
+}
+
+/* Remove any old frame elements if present */
+body.home-page #home.hero .hero-ring,
+body.home-page #home.hero .hero-card,
+body.home-page #home.hero .hero-frame {
+    display: none !important;
+}
+
+/* Desktop */
+@media (min-width: 1101px) {
+
+    body.home-page #home.hero .hero-visual {
+        min-height: 560px !important;
+    }
+
+    body.home-page #home.hero .hero-visual > img {
+        width: min(100%, 560px) !important;
+        max-width: 560px !important;
+    }
+}
+
+/* Laptop */
+@media (min-width: 701px) and (max-width: 1100px) {
+
+    body.home-page #home.hero .hero-visual {
+        min-height: 500px !important;
+    }
+
+    body.home-page #home.hero .hero-visual > img {
+        width: min(100%, 500px) !important;
+        max-width: 500px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    body.home-page #home.hero .hero-visual {
+        min-height: 0 !important;
+        height: auto !important;
+        padding: 0 0 25px !important;
+    }
+
+    body.home-page #home.hero .hero-visual > img {
+        width: min(100%, 340px) !important;
+        max-width: 340px !important;
+        height: auto !important;
+    }
+}
+
+/* =========================================================
+   AJUVERSE HERO — FINAL NO-BOX OVERRIDE
+   MASTER DESIGN: NATURAL AVATAR / WHITE GLOW
+========================================================= */
+
+html body.home-page #home.hero > .container.hero-grid > .hero-visual {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    isolation: isolate !important;
+}
+
+/* Remove ALL old halo / ring / gold frame effects */
+html body.home-page #home.hero > .container.hero-grid > .hero-visual::before,
+html body.home-page #home.hero > .container.hero-grid > .hero-visual::after {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* FINAL AVATAR */
+html body.home-page #home.hero > .container.hero-grid > .hero-visual > img {
+    width: 66% !important;
+    max-width: 475px !important;
+    height: auto !important;
+    max-height: none !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    object-fit: contain !important;
+    object-position: center center !important;
+
+    /* REMOVE THE BOX */
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+
+    /* WHITE GLOW ONLY */
+    filter:
+        drop-shadow(0 0 3px rgba(255,255,255,.95))
+        drop-shadow(0 0 10px rgba(255,255,255,.65))
+        drop-shadow(0 0 22px rgba(255,255,255,.32)) !important;
+
+
+        
+    transform: none !important;
+    animation: none !important;
+
+    transition: none !important;
+}
+
+/* Disable old hover frame */
+html body.home-page #home.hero > .container.hero-grid > .hero-visual > img:hover {
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    transform: none !important;
+
+    filter:
+        drop-shadow(0 0 3px rgba(255,255,255,.95))
+        drop-shadow(0 0 10px rgba(255,255,255,.65))
+        drop-shadow(0 0 22px rgba(255,255,255,.32)) !important;
+}
+
+/* DESKTOP */
+@media (min-width: 1101px) {
+    html body.home-page #home.hero > .container.hero-grid > .hero-visual > img {
+        width: 66% !important;
+        max-width: 475px !important;
+    }
+}
+
+/* LAPTOP */
+@media (min-width: 701px) and (max-width: 1100px) {
+    html body.home-page #home.hero > .container.hero-grid > .hero-visual > img {
+        width: 72% !important;
+        max-width: 475px !important;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+    html body.home-page #home.hero > .container.hero-grid > .hero-visual > img {
+        width: min(100%, 390px) !important;
+        max-width: 390px !important;
+
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+
+        object-fit: contain !important;
+    }
+}
 

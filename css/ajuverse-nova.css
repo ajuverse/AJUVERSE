@@ -1,0 +1,346 @@
+/* =========================================================
+   AJUVERSE — NOVA DESIGN SYSTEM
+   Loaded last on every page. Restyles the existing markup
+   in place — no structural changes required.
+
+   Direction: "Editorial Studio" — a publisher's ink-and-paper
+   discipline meeting an AI studio's cool circuitry. Warm brass
+   for craft/publishing, a quiet violet current for the AI/tech
+   thread, one serif voice for headlines, deep ink canvas
+   throughout. No commerce/payment logic touched.
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+  --nova-ink:        #08090D;
+  --nova-ink-2:       #101220;
+  --nova-panel:       rgba(255,255,255,0.035);
+  --nova-panel-hi:    rgba(255,255,255,0.07);
+  --nova-border:      rgba(255,255,255,0.09);
+  --nova-border-hi:   rgba(201,151,77,0.45);
+  --nova-brass:       #C9974D;
+  --nova-brass-hi:    #E7C48C;
+  --nova-brass-rgb:   201,151,77;
+  --nova-violet:      #7A72E8;
+  --nova-violet-hi:   #A79CFF;
+  --nova-violet-rgb:  122,114,232;
+  --nova-paper:       #F1ECDF;
+  --nova-text:        #E9E6DC;
+  --nova-muted:       #948E80;
+  --nova-serif:       'Fraunces', Georgia, serif;
+  --nova-sans:        'Inter', ui-sans-serif, Arial, sans-serif;
+  --nova-ease:        cubic-bezier(.16,1,.3,1);
+  --nova-radius:       14px;
+  --nova-tilt:         0deg;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ scroll-behavior:auto !important; }
+}
+
+/* ---------------------------------------------------------
+   AMBIENT FIELD — the one bold, orchestrated moment.
+   A fixed low-opacity mesh of brass + violet light behind
+   every page. Injected by ajuverse-nova.js; styled here.
+--------------------------------------------------------- */
+#nova-field{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  overflow:hidden;
+  background:
+    radial-gradient(46vw 46vw at 14% -6%, rgba(var(--nova-brass-rgb),.14), transparent 60%),
+    radial-gradient(50vw 50vw at 108% 18%, rgba(var(--nova-violet-rgb),.13), transparent 62%),
+    radial-gradient(38vw 38vw at 92% 96%, rgba(var(--nova-brass-rgb),.08), transparent 60%);
+  transform:translateY(var(--nova-scroll-shift, 0px));
+  transition:transform .1s linear;
+  will-change:transform;
+}
+#nova-field::after{
+  content:"";
+  position:absolute; inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.015) 1px, transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(80% 60% at 50% 0%, #000 30%, transparent 78%);
+}
+
+body{ position:relative; }
+body > *:not(#nova-field){ position:relative; z-index:1; }
+
+/* ---------------------------------------------------------
+   TYPE — Fraunces carries the personality; Inter stays
+   quiet and functional for UI and body copy.
+--------------------------------------------------------- */
+body.aju-enhanced h1,
+body.aju-enhanced h2,
+h1, h2,
+.hero-title, .hero h1, .kdp-hero h1, .academy-hero h1,
+.project-hero h1, .hero-project-title, .book-detail-hero h1,
+.bookora-hero h1, .login-box h1, .signup-box h1,
+.section-title h2, .home-selected-heading h2, .cta-box h2,
+.kdp-section-head h2, .academy-section-heading h2,
+.section-heading h2, .result-title, .modal-title,
+.portfolio-hero h1{
+  font-family:var(--nova-serif) !important;
+  font-weight:560 !important;
+  font-variation-settings:"opsz" 90, "wght" 560;
+  text-transform:none !important;
+  letter-spacing:-0.01em !important;
+  color:var(--nova-paper) !important;
+}
+
+body.aju-enhanced h3, h3,
+.path-card h3, .home-project-info h3, .service-card h3,
+.category-card h3, .feature-card h3, .academy-path-card h3,
+.process-card h3, .kdp-book-info h3{
+  font-family:var(--nova-serif) !important;
+  font-weight:500 !important;
+  font-variation-settings:"opsz" 30, "wght" 500;
+  letter-spacing:-0.005em !important;
+  text-transform:none !important;
+}
+
+/* Kickers / eyebrows — trade the tracked-out caps block for a
+   quiet brass tick + normal spacing. */
+.eyebrow, .section-title > span, .section-label, .academy-label,
+.book-detail-category, .home-selected-eyebrow, .kdp-hero .eyebrow,
+.project-category, .category-no, .kdp-number{
+  font-family:var(--nova-sans) !important;
+  font-size:12.5px !important;
+  font-weight:700 !important;
+  letter-spacing:.04em !important;
+  color:var(--nova-brass-hi) !important;
+  display:inline-flex !important;
+  align-items:center;
+  gap:8px;
+}
+.eyebrow::before, .section-title > span::before, .academy-label::before,
+.book-detail-category::before, .home-selected-eyebrow::before{
+  content:"";
+  width:16px; height:1.5px;
+  background:linear-gradient(90deg, var(--nova-brass), transparent);
+  display:inline-block;
+  border-radius:2px;
+}
+
+body, p, li, .hero-description, .path-card p, .home-project-info p{
+  font-family:var(--nova-sans);
+}
+p, li{ color:var(--nova-text); }
+
+/* ---------------------------------------------------------
+   HEADER — glass, with a brass hairline instead of a flat
+   grey border.
+--------------------------------------------------------- */
+.site-header{
+  background:rgba(8,9,13,.72) !important;
+  backdrop-filter:blur(18px) saturate(140%);
+  -webkit-backdrop-filter:blur(18px) saturate(140%);
+  border-bottom:1px solid transparent !important;
+  background-image:
+    linear-gradient(rgba(8,9,13,.72), rgba(8,9,13,.72)),
+    linear-gradient(90deg, transparent, rgba(var(--nova-brass-rgb),.55) 50%, transparent);
+  background-origin:border-box;
+  background-clip:padding-box, border-box;
+  border-bottom-width:1px;
+  border-bottom-style:solid;
+  border-bottom-color:transparent;
+}
+.brand-logo{
+  filter:drop-shadow(0 0 0 rgba(0,0,0,0));
+  transition:filter .35s var(--nova-ease), transform .35s var(--nova-ease);
+}
+.brand:hover .brand-logo{
+  filter:drop-shadow(0 0 14px rgba(var(--nova-brass-rgb),.55));
+  transform:translateY(-1px) rotate(-2deg);
+}
+.main-nav a,
+body.aju-enhanced .main-nav a{ position:relative; transition:color .3s ease; }
+.main-nav a::after,
+body.aju-enhanced .main-nav a::after{
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important; right:auto !important; bottom:-6px !important;
+  width:100% !important;
+  height:1.5px !important;
+  background:linear-gradient(90deg, var(--nova-brass), var(--nova-violet)) !important;
+  transform:scaleX(0) !important;
+  transform-origin:left !important;
+  transition:transform .4s var(--nova-ease) !important;
+}
+.main-nav a:hover::after, .main-nav a.active::after,
+body.aju-enhanced .main-nav a:hover::after,
+body.aju-enhanced .main-nav a.active::after{ transform:scaleX(1) !important; }
+.main-nav a:hover, .main-nav a.active,
+body.aju-enhanced .main-nav a:hover,
+body.aju-enhanced .main-nav a.active{ color:var(--nova-brass-hi) !important; }
+
+/* ---------------------------------------------------------
+   BUTTONS — brass gradient with an inner bevel highlight
+   instead of a flat fill; glass outline for secondary.
+--------------------------------------------------------- */
+.btn, .btn-primary, .academy-button-primary, .login-button,
+.signup-button, .dark-btn, a.buy, .result-button{
+  border-radius:999px !important;
+  font-family:var(--nova-sans) !important;
+  font-weight:650 !important;
+  letter-spacing:.01em !important;
+  position:relative;
+  isolation:isolate;
+  transition:transform .35s var(--nova-ease), box-shadow .35s var(--nova-ease), filter .3s ease;
+}
+.btn-primary, .academy-button-primary, .login-button, .signup-button, a.buy{
+  background:linear-gradient(155deg, var(--nova-brass-hi), var(--nova-brass) 55%, #A6773A) !important;
+  color:#1B1204 !important;
+  border:none !important;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.35) inset,
+    0 -12px 20px -12px rgba(0,0,0,.35) inset,
+    0 14px 30px -12px rgba(var(--nova-brass-rgb),.55);
+}
+.btn-primary:hover, .academy-button-primary:hover, .login-button:hover,
+.signup-button:hover, a.buy:hover{
+  transform:translateY(-2px);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.4) inset,
+    0 -12px 20px -12px rgba(0,0,0,.3) inset,
+    0 20px 38px -14px rgba(var(--nova-brass-rgb),.65);
+}
+.btn-secondary, .academy-button-outline{
+  background:rgba(255,255,255,.03) !important;
+  border:1px solid var(--nova-border) !important;
+  color:var(--nova-paper) !important;
+  backdrop-filter:blur(6px);
+}
+.btn-secondary:hover, .academy-button-outline:hover{
+  border-color:var(--nova-border-hi) !important;
+  transform:translateY(-2px);
+  background:rgba(var(--nova-brass-rgb),.08) !important;
+}
+
+/* ---------------------------------------------------------
+   CARDS — a glass ledger, not a SaaS card kit. Gradient
+   hairline border, layered directional shadow, brass glow
+   only on hover/tilt (see .nova-tilt in JS).
+--------------------------------------------------------- */
+.path-card, .home-project-card, .category-card, .feature-card,
+.academy-path-card, .process-card, .store-book-card, .project-card,
+.testimonial-card, .curriculum-card, .method-card, .result-box,
+.kdp-book, .book-about-grid > *, .resource-row, .academy-visual-card{
+  background:linear-gradient(165deg, rgba(255,255,255,.045), rgba(255,255,255,.012)) !important;
+  border:1px solid var(--nova-border) !important;
+  border-radius:var(--nova-radius) !important;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.05) inset,
+    0 28px 60px -34px rgba(0,0,0,.75) !important;
+  transition:transform .5s var(--nova-ease), box-shadow .5s var(--nova-ease), border-color .5s ease !important;
+  transform-style:preserve-3d;
+  will-change:transform;
+}
+.path-card:hover, .home-project-card:hover, .category-card:hover,
+.feature-card:hover, .academy-path-card:hover, .process-card:hover,
+.store-book-card:hover, .project-card:hover, .kdp-book:hover{
+  border-color:var(--nova-border-hi) !important;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.08) inset,
+    0 32px 70px -30px rgba(0,0,0,.8),
+    0 0 0 1px rgba(var(--nova-brass-rgb),.12),
+    0 18px 55px -20px rgba(var(--nova-violet-rgb),.28) !important;
+}
+
+/* Numbered markers on the selected-work grid: this content is
+   genuinely a sequence, so the numeral stays — restyled as a
+   quiet watermark rather than a boxed badge. */
+.home-project-number, .kdp-number, .project-number, .category-no{
+  font-family:var(--nova-serif) !important;
+  font-weight:400 !important;
+  color:rgba(var(--nova-brass-rgb),.5) !important;
+  -webkit-text-stroke:1px rgba(var(--nova-brass-rgb),.5);
+}
+
+/* ---------------------------------------------------------
+   HERO VISUAL / COVERS — the pointer-tilt target. Rim-light
+   border + deep layered shadow to read as an object floating
+   above the page rather than a flat image.
+--------------------------------------------------------- */
+.hero-visual, .hero-visual img, .academy-hero-visual, .book-detail-cover,
+.kdp-cover, .hero-image, .hero-image-wrap, .course-image{
+  border-radius:18px;
+}
+.hero-visual img, .book-detail-cover img, .kdp-cover img{
+  box-shadow:
+    0 40px 90px -30px rgba(0,0,0,.85),
+    0 0 0 1px rgba(255,255,255,.06),
+    0 0 60px -12px rgba(var(--nova-brass-rgb),.25);
+  transition:box-shadow .5s var(--nova-ease);
+}
+
+/* Fix a pre-existing duplicate-arrow bug: the project links'
+   text already ends in "→", but a legacy rule also injects a
+   generated arrow via ::after. Suppress the generated one. */
+body.home-page .home-project-info a::after{
+  content:"" !important;
+}
+
+/* ---------------------------------------------------------
+   FOOTER — quiet gradient hairline, brass link underline.
+--------------------------------------------------------- */
+.site-footer{
+  border-top:1px solid transparent !important;
+  background-image:
+    linear-gradient(var(--nova-ink), var(--nova-ink)),
+    linear-gradient(90deg, transparent, rgba(var(--nova-brass-rgb),.4) 50%, transparent) !important;
+  background-origin:border-box;
+  background-clip:padding-box, border-box;
+}
+.footer-column a, .footer-email, .footer-whatsapp{
+  transition:color .3s ease, padding-left .3s var(--nova-ease);
+}
+.footer-column a:hover, .footer-email:hover, .footer-whatsapp:hover{
+  color:var(--nova-brass-hi) !important;
+  padding-left:4px;
+}
+
+/* ---------------------------------------------------------
+   FORMS — login / signup / cart get the same glass-ledger
+   treatment plus a brass focus ring.
+--------------------------------------------------------- */
+.login-box, .signup-box, .box, .modal-box, .buy-modal-box{
+  background:linear-gradient(165deg, rgba(255,255,255,.05), rgba(255,255,255,.015)) !important;
+  border:1px solid var(--nova-border) !important;
+  border-radius:18px !important;
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.8) !important;
+}
+input, select, textarea{
+  transition:border-color .3s ease, box-shadow .3s ease;
+}
+input:focus, select:focus, textarea:focus{
+  border-color:rgba(var(--nova-brass-rgb),.7) !important;
+  box-shadow:0 0 0 3px rgba(var(--nova-brass-rgb),.18) !important;
+  outline:none !important;
+}
+
+/* ---------------------------------------------------------
+   FOCUS / MOTION
+--------------------------------------------------------- */
+:focus-visible{
+  outline:2px solid var(--nova-brass) !important;
+  outline-offset:3px;
+}
+
+/* Tilt targets: transform origin + smoothing. The actual
+   rotateX/rotateY is set inline by ajuverse-nova.js. */
+.nova-tilt{
+  transform:perspective(900px) rotateX(var(--nova-rx,0deg)) rotateY(var(--nova-ry,0deg)) translateZ(0);
+}
+@media (hover:none){
+  .nova-tilt{ transform:none !important; }
+}
+@media (prefers-reduced-motion: reduce){
+  .nova-tilt{ transform:none !important; }
+  #nova-field{ transform:none !important; }
+}
