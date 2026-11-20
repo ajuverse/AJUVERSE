@@ -1,0 +1,3198 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="BookOra Digital — downloadable planners, coloring pages, activity resources, e-books and creative digital products." name="description"/>
+<title>BookOra Digital | Downloadable Creativity</title>
+<style>
+:root{--bg:#050505;--panel:#0d0d0d;--line:rgba(255,255,255,.25);--muted:#a8a8a8;--text:#f7f7f7;--accent:#f2b300;--max:1220px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(var(--max),calc(100% - 56px));margin:auto}
+.site-header{border-bottom:1px solid rgba(255,255,255,.12);background:#050505;position:sticky;top:0;z-index:50}
+.header-inner{min-height:82px;display:flex;align-items:center;gap:34px}
+.brand{display:flex;align-items:center;gap:11px;min-width:max-content}
+.brand img{width:64px;height:64px;object-fit:contain}
+.brand strong{display:block;font-size:24px}
+.brand span{display:block;font-size:18px;letter-spacing:1.2px;color:#fff;margin-top:3px}
+.main-nav{display:flex;align-items:center;justify-content:center;gap:28px;flex:1}
+.main-nav a{font-size:14px;font-weight:600;color:#aaa;white-space:nowrap}
+.main-nav a:hover,.main-nav a.active{color:#fff}
+.header-login{border:1px solid rgba(255,255,255,.4);padding:10px 17px;border-radius:9px;font-size:12px;font-weight:700;white-space:nowrap}.cart-nav{border:1px solid rgba(242,179,0,.65)!important;color:#f2b300!important;padding:9px 12px;border-radius:9px}.cart-nav span{display:inline-flex;min-width:18px;height:18px;align-items:center;justify-content:center;margin-left:4px;border-radius:50%;background:#f2b300;color:#050505;font-size:10px;font-weight:900}
+/* sketch-inspired top layout */
+.bookora-hero{padding:76px 0 52px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(300px,.7fr);gap:64px;align-items:center}
+.section-label{font-size:11px;letter-spacing:3px;color:var(--accent);font-weight:800;display:inline-block;margin-bottom:18px}
+.hero-copy h1{font-size:clamp(48px,5vw,68px);line-height:.92;letter-spacing:-3px;max-width:760px}
+.hero-copy p{color:#aaa;max-width:680px;margin-top:24px;font-size:16px}
+.hero-actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.primary-btn,.secondary-btn{padding:13px 20px;border-radius:9px;font-size:13px;font-weight:700;border:1px solid var(--line)}
+.primary-btn{background:#fff;color:#050505;border-color:#fff}.secondary-btn{background:transparent;color:#fff}
+.about-box{border-left:1px solid rgba(255,255,255,.25);padding-left:34px}
+.about-box h2{font-size:30px;line-height:1.02;letter-spacing:-1px;margin-bottom:18px}
+.about-box p{color:#999;font-size:14px;margin-top:13px}
+.bookora-hero-actions{border-left:1px solid rgba(255,255,255,.25);padding-left:70px;display:flex;flex-direction:column;justify-content:center}
+.hero-brand-label{font-size:14px;letter-spacing:6px;color:var(--accent);font-weight:900;margin-bottom:28px}
+.hero-action-stack{display:flex;flex-direction:column;gap:18px}
+.hero-action{min-height:88px;padding:0 28px;border-radius:14px;display:flex;align-items:center;gap:24px;font-size:18px;transition:.25s ease}
+.hero-action-icon{width:40px;font-size:32px;line-height:1;text-align:center;font-weight:700}
+.hero-action strong{flex:1;display:flex;justify-content:space-between;align-items:center}
+.hero-action strong span{font-size:20px}
+.hero-action-primary{background:#fff;color:#050505;border:1px solid #fff}
+.hero-action-secondary{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.45)}
+.hero-action-free{background:transparent;color:#fff;border:1px solid var(--accent)}
+.hero-action-free .hero-action-icon,.hero-action-free strong span{color:var(--accent)}
+.hero-action:hover{transform:translateY(-3px)}
+.hero-action-primary:hover{background:#f2f2f2}
+.hero-action-secondary:hover{border-color:#fff;background:rgba(255,255,255,.04)}
+.hero-action-free:hover{background:rgba(242,179,0,.07)}
+.hero-action-note{color:#777;font-size:12px;margin-top:26px;letter-spacing:.2px}
+/* large offer/poster area */
+.feature-wrap{padding:18px 0 46px}
+.feature-grid{display:grid;grid-template-columns:minmax(0,2.15fr) minmax(250px,.75fr);gap:28px;align-items:stretch}
+.offer-poster{min-height:420px;border:1px solid rgba(255,255,255,.35);border-radius:14px;background:linear-gradient(135deg,#111,#080808);display:flex;align-items:center;justify-content:center;text-align:center;padding:42px;position:relative;overflow:hidden}
+.offer-poster:before{content:"";position:absolute;width:330px;height:330px;border:1px solid rgba(242,179,0,.28);border-radius:50%;left:-80px;bottom:-150px}
+.offer-poster:after{content:"";position:absolute;width:250px;height:250px;border:1px solid rgba(255,255,255,.1);border-radius:50%;right:-90px;top:-100px}
+.poster-inner{position:relative;z-index:1}
+.poster-small{font-size:11px;letter-spacing:4px;color:var(--accent);font-weight:800}
+.poster-title{font-size:clamp(42px,5.5vw,68px);font-weight:900;line-height:.84;letter-spacing:-5px;margin:18px 0}
+.poster-sale{font-size:22px;font-weight:800}.poster-sale strong{color:var(--accent)}
+.poster-note{color:#999;font-size:13px;margin-top:16px}
+.news-box{border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:28px;background:#0a0a0a;display:flex;flex-direction:column;justify-content:space-between}
+.news-box h2{font-size:28px;line-height:.95;letter-spacing:-1.5px;margin:10px 0 20px}
+.news-item{border-top:1px solid rgba(255,255,255,.15);padding:17px 0}.news-item strong{font-size:14px}.news-item p{font-size:12px;color:#888;margin-top:5px}
+/* category row exactly like sketch: individual boxes */
+.categories{padding:22px 0 78px}
+.categories-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:22px}.categories-head h2{font-size:30px;letter-spacing:-1.5px}.categories-head p{color:#888;font-size:13px}
+.category-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:12px}
+.category-card{min-height:112px;border:1px solid rgba(255,255,255,.28);border-radius:10px;padding:18px 15px;display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.025);transition:.25s ease}
+.category-card:hover{border-color:var(--accent);transform:translateY(-3px);background:rgba(242,179,0,.04)}
+.category-no{font-size:10px;color:#777}.category-card strong{font-size:14px;line-height:1.1}.category-card span:last-child{font-size:11px;color:#888}
+/* product sections */
+.store-category-section{padding:70px 0;border-top:1px solid rgba(255,255,255,.1)}
+.store-category-heading{display:grid;grid-template-columns:1fr .8fr;gap:40px;align-items:end;margin-bottom:28px}.store-category-heading h2{font-size:48px;line-height:.9;letter-spacing:-3px}.store-category-heading .number{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:2px}.store-category-heading>p{color:#999;font-size:14px}
+.store-book-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.store-book-card{border:1px solid rgba(255,255,255,.22);border-radius:12px;overflow:hidden;background:#0b0b0b}.store-book-image{height:310px;background:#111;display:flex;align-items:center;justify-content:center}.store-book-image img{width:100%;height:100%;object-fit:cover}.store-placeholder{font-size:13px;letter-spacing:2px;color:#777}.store-book-content{padding:21px}.store-book-content .type{font-size:10px;letter-spacing:2px;color:var(--accent);font-weight:800}.store-book-content h3{font-size:18px;margin:9px 0}.store-book-content p{color:#888;font-size:13px;min-height:58px}.store-buy-btn{margin-top:18px;background:#fff;color:#050505;border:0;border-radius:8px;padding:11px 15px;font-weight:800;cursor:pointer}
+.free-resources-section{padding:95px 0;border-top:1px solid rgba(255,255,255,.1)}
+.free-resources-head{display:grid;grid-template-columns:1fr .8fr;gap:70px;align-items:end;margin-bottom:26px}
+.free-resources-head h2{font-size:clamp(48px,5.5vw,68px);line-height:.86;letter-spacing:-5px}
+.free-resources-head>p{color:#888;font-size:14px;max-width:520px;padding-bottom:5px}
+.resource-list{border-top:1px solid rgba(255,255,255,.18)}
+.resource-row{display:grid;grid-template-columns:82px minmax(0,1fr) 160px;gap:28px;align-items:center;padding:25px 7px 25px 0;border-bottom:1px solid rgba(255,255,255,.14);min-height:190px}
+.resource-number{color:var(--accent);font-size:14px;font-weight:900;letter-spacing:1px}
+.resource-main{min-width:0}
+.resource-kicker{display:block;color:#888;font-size:10px;letter-spacing:3px;font-weight:800;margin-bottom:6px}
+.resource-main h3{font-size:24px;line-height:1.05;letter-spacing:-1.5px}
+.resource-main p{color:#999;font-size:14px;max-width:820px;margin-top:7px}
+.resource-tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:13px}
+.resource-tags span{border:1px solid rgba(255,255,255,.18);padding:5px 9px;color:#888;font-size:9px;letter-spacing:1px;font-weight:800}
+.resource-download{justify-self:end;width:150px;border:1px solid rgba(255,255,255,.28);padding:14px 12px;text-align:center;color:#fff;font-size:10px;font-weight:900;letter-spacing:.7px}
+.resource-download:hover{border-color:var(--accent);color:var(--accent)}
+.resource-download.disabled{color:#555;border-color:rgba(255,255,255,.1);cursor:default}
+.resource-row-coming .resource-main{opacity:.58}
+.about-bookora-bottom{padding:95px 0;border-top:1px solid rgba(255,255,255,.1)}
+.about-bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:start}
+.about-bottom-grid h2{font-size:clamp(44px,5vw,64px);line-height:.88;letter-spacing:-4px}
+.about-bottom-copy{border-left:1px solid rgba(255,255,255,.22);padding-left:45px;padding-top:10px}
+.about-bottom-copy p{color:#999;font-size:15px;max-width:620px;margin-bottom:20px}
+.bookora-message{padding:100px 0;border-top:1px solid rgba(255,255,255,.1)}.bookora-message h2{font-size:clamp(48px,6vw,72px);line-height:.84;letter-spacing:-5px}.bookora-message p{color:#888;max-width:500px;margin-top:24px}
+.site-footer{border-top:1px solid rgba(255,255,255,.12);padding:48px 0}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}.footer-grid h3{font-size:18px}.footer-grid h4{font-size:14px;margin-bottom:13px}.footer-grid p,.footer-grid a{display:block;color:#888;font-size:14px;margin:7px 0}.footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:35px;padding-top:18px;display:flex;justify-content:space-between;color:#666;font-size:12px}
+.buy-modal{position:fixed;inset:0;background:rgba(0,0,0,.78);display:none;align-items:center;justify-content:center;padding:20px;z-index:100}.buy-modal.show{display:flex}.buy-modal-box{width:min(520px,100%);background:#0b0b0b;border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:32px;position:relative}.buy-modal-close{position:absolute;right:15px;top:12px;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}.buy-modal-label{font-size:10px;letter-spacing:3px;color:var(--accent)}.buy-modal-box h2{font-size:32px;line-height:.9;margin:16px 0}.buy-modal-box>p{color:#888;font-size:13px}.buy-options{margin-top:22px;display:grid;gap:10px}.buy-option{width:100%;border:1px solid rgba(255,255,255,.2);background:#111;color:#fff;border-radius:9px;padding:17px;text-align:left;display:grid;grid-template-columns:42px 1fr 30px;align-items:center;cursor:pointer}.buy-option-number{color:var(--accent);font-size:10px}.buy-option strong{display:block}.buy-option small{grid-column:2;color:#777}.buy-option-arrow{grid-column:3;grid-row:1/3}
+.price-row{display:flex;align-items:center;gap:9px;margin-top:15px}.old-price{text-decoration:line-through;color:#666;font-size:12px}.offer-price{font-size:18px;color:#fff}.offer-tag{font-size:9px;letter-spacing:1.5px;color:#050505;background:#f2b300;padding:4px 6px;border-radius:5px;font-weight:900}.store-buy-btn{width:100%}
+
+/* BRIGHT TEXT + SELECTIVE GLOW */
+.section-label,
+.category-no,
+.store-category-heading .number,
+.resource-number,
+.resource-main h3,
+.store-book-content h3,
+.bookora-message h2,
+.about-bottom-grid h2,
+.free-resources-head h2{
+    color:#fff;
+}
+.resource-kicker{
+    color:#bdbdbd;
+}
+.resource-main p,
+.free-resources-head>p,
+.about-bottom-copy p,
+.bookora-message p,
+.store-category-heading>p,
+.store-book-content p{
+    color:#c2c2c2;
+}
+.resource-tags span{
+    color:#b5b5b5;
+}
+.glow-accent{
+    color:#fff;
+    text-shadow:0 0 7px rgba(255,255,255,.32),0 0 16px rgba(242,179,0,.16);
+}
+.glow-gold{
+    color:var(--accent);
+    text-shadow:0 0 8px rgba(242,179,0,.42),0 0 18px rgba(242,179,0,.18);
+}
+
+/* FREE RESOURCE COVER */
+.resource-row{
+    grid-template-columns:82px 92px minmax(0,1fr) 160px;
+}
+.resource-cover{
+    width:78px;
+    height:104px;
+    border:1px solid rgba(255,255,255,.22);
+    border-radius:8px;
+    overflow:hidden;
+    background:#111;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.resource-cover img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.resource-cover-placeholder{
+    padding:8px;
+    text-align:center;
+    color:#777;
+    font-size:8px;
+    letter-spacing:1.5px;
+    font-weight:800;
+}
+
+@media(max-width:1050px){.main-nav{gap:16px}.hero-grid,.feature-grid{grid-template-columns:1fr}.about-box{border-left:0;border-top:1px solid rgba(255,255,255,.2);padding:28px 0 0}.bookora-hero-actions{border-left:0;border-top:1px solid rgba(255,255,255,.2);padding:35px 0 0}.about-bottom-grid{grid-template-columns:1fr;gap:35px}.free-resources-head{grid-template-columns:1fr;gap:20px}.resource-row{grid-template-columns:38px minmax(0,1fr);gap:12px;padding:25px 0}.resource-download{grid-column:2;justify-self:start;margin-top:8px}.resource-main h3{font-size:25px}.about-bottom-copy{border-left:0;border-top:1px solid rgba(255,255,255,.2);padding:30px 0 0}.category-grid{grid-template-columns:repeat(4,1fr)}.news-box{min-height:230px}.store-book-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){
+.container{width:calc(100% - 28px);max-width:100%}
+
+/* HEADER */
+.site-header{position:relative;overflow:hidden}
+.header-inner{min-height:auto;padding:11px 0 12px;display:flex;flex-wrap:wrap;gap:8px}
+.brand{width:100%;flex:0 0 100%;min-width:0;gap:8px}
+.brand img{width:43px;height:43px}
+.brand strong{font-size:20px}
+.brand span{font-size:13.5px;letter-spacing:.9px;color:#fff}
+.main-nav{order:3;width:100%;flex:0 0 100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,auto);gap:6px;padding:2px 0 0;overflow:visible}
+.main-nav a{width:100%;min-width:0;min-height:34px;display:flex;align-items:center;justify-content:center;text-align:center;white-space:normal;line-height:1.1;font-size:9px;padding:6px 2px;border:1px solid rgba(255,255,255,.10);border-radius:6px}
+.cart-nav{padding:6px 2px!important}
+
+/* HERO */
+.bookora-hero{padding:34px 0 20px;overflow:hidden}
+.hero-grid{grid-template-columns:1fr;gap:22px}
+.hero-copy h1{font-size:clamp(38px,10.5vw,50px);letter-spacing:-2.5px;line-height:.9}
+.hero-copy p{font-size:13px;line-height:1.55;margin-top:18px}
+.bookora-hero-actions{border-left:0;border-top:1px solid rgba(255,255,255,.2);padding:20px 0 0}
+.hero-brand-label{font-size:11px;letter-spacing:4px;margin-bottom:14px}
+.hero-action-stack{gap:9px}
+.hero-action{min-height:52px;padding:0 13px;gap:10px;font-size:13px}
+.hero-action-icon{width:25px;font-size:20px}
+.hero-action strong span{font-size:15px}
+.hero-action-note{font-size:10px;margin-top:15px}
+
+/* FEATURE */
+.feature-wrap{padding:7px 0 24px}
+.feature-grid{grid-template-columns:1fr;gap:12px}
+.offer-poster{min-height:auto;padding:7px}
+.offer-poster img{min-height:0;height:auto;object-fit:contain;border-radius:7px}
+.news-box{padding:17px}
+.news-box h2{font-size:24px;margin:8px 0 14px}
+.news-item{padding:12px 0}
+.news-item strong{font-size:13px}
+.news-item p{font-size:11px}
+
+/* CATEGORIES */
+.categories{padding:20px 0 35px}
+.categories-head{display:block;margin-bottom:17px}
+.categories-head h2{font-size:30px;letter-spacing:-1.8px}
+.categories-head p{margin-top:8px;font-size:12px;line-height:1.5}
+.category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.category-card{min-height:108px;padding:14px 11px;border-radius:9px}
+.category-no{font-size:10px}
+.category-card strong{font-size:14px}
+.category-card span:last-child{font-size:10px}
+
+/* PRODUCTS — COMPACT MOBILE LIST */
+.store-category-section{padding:30px 0;border-top:1px solid rgba(255,255,255,.1)}
+.store-category-heading{grid-template-columns:1fr;gap:8px;margin-bottom:14px}
+.store-category-heading h2{font-size:34px;letter-spacing:-2px}
+.store-category-heading>p{font-size:12px;line-height:1.5}
+.store-book-grid{grid-template-columns:1fr;gap:8px}
+.store-book-card{display:grid;grid-template-columns:105px minmax(0,1fr);border-radius:9px;min-height:0;align-items:stretch}
+.store-book-image{height:auto;min-height:0;width:105px;align-self:stretch;background:#111;overflow:hidden}
+.store-book-image img{width:100%;height:100%;object-fit:cover}
+.store-placeholder{font-size:8px;letter-spacing:1px;text-align:center;padding:5px}
+.store-book-content{padding:10px 11px}
+.store-book-content .type{font-size:8px;letter-spacing:1.5px}
+.store-book-content h3{font-size:14px;line-height:1.15;margin:4px 0}
+.store-book-content p{font-size:10px;line-height:1.35;min-height:0;margin:0}
+.price-row{gap:6px;margin-top:6px}
+.old-price{font-size:9px}
+.offer-price{font-size:14px}
+.offer-tag{font-size:7px;padding:3px 4px}
+.store-buy-btn{margin-top:7px;padding:7px 9px;font-size:10px;border-radius:6px}
+
+/* FREE RESOURCES */
+.free-resources-section{padding:34px 0}
+.free-resources-head{display:block;margin-bottom:15px}
+.free-resources-head h2{font-size:clamp(42px,12.5vw,55px);letter-spacing:-3px}
+.free-resources-head>p{font-size:12px;line-height:1.5;margin-top:12px}
+.resource-row{grid-template-columns:28px 92px minmax(0,1fr);gap:8px;min-height:0;padding:15px 0}
+.resource-number{font-size:12px}
+.resource-cover{width:92px;height:115px;border-radius:6px}
+.resource-main h3{font-size:17px;letter-spacing:-.6px}
+.resource-kicker{font-size:8px;letter-spacing:2px;margin-bottom:4px}
+.resource-main p{font-size:11px;line-height:1.45;margin-top:5px}
+.resource-tags{gap:4px;margin-top:7px}
+.resource-tags span{font-size:7px;padding:4px 5px}
+.resource-download{grid-column:3;width:112px;padding:8px 7px;font-size:8px;margin-top:7px;justify-self:start}
+
+/* ABOUT + MESSAGE + FOOTER — REDUCE EMPTY SPACE */
+.about-bookora-bottom{padding:34px 0}
+.about-bottom-grid{grid-template-columns:1fr;gap:20px}
+.about-bottom-grid h2{font-size:clamp(40px,11.5vw,54px);letter-spacing:-3px}
+.about-bottom-copy{border-left:0;border-top:1px solid rgba(255,255,255,.2);padding:18px 0 0}
+.about-bottom-copy p{font-size:12px;line-height:1.55;margin-bottom:13px}
+.bookora-message{padding:36px 0}
+.bookora-message h2{font-size:clamp(43px,13vw,58px);letter-spacing:-3px}
+.bookora-message p{font-size:12px;line-height:1.55;margin-top:15px}
+.site-footer{padding:28px 0}
+.footer-grid{grid-template-columns:1fr;gap:20px}
+.footer-grid h3{font-size:19px}
+.footer-grid h4{font-size:13px;margin-bottom:8px}
+.footer-grid p,.footer-grid a{font-size:12px;margin:5px 0}
+.footer-bottom{display:block;line-height:1.4;margin-top:22px;padding-top:12px}
+.footer-bottom span{display:block;margin-top:5px}
+.buy-modal-box{padding:22px 17px}
+.buy-modal-box h2{font-size:26px}
+}
+
+/* SMALL PHONES */
+@media(max-width:390px){
+.container{width:calc(100% - 20px)}
+.brand img{width:40px;height:40px}
+.brand strong{font-size:18px}
+.main-nav{gap:5px}
+.main-nav a{font-size:8px;padding:6px 1px}
+.category-grid{grid-template-columns:1fr 1fr}
+.category-card{min-height:100px}
+.store-book-card{grid-template-columns:92px minmax(0,1fr)}
+.store-book-image{width:92px;height:auto;min-height:0;align-self:stretch}
+.store-book-content{padding:9px}
+.store-book-content h3{font-size:13px}
+.store-book-content p{font-size:9px}
+.store-buy-btn{font-size:9px;padding:6px 7px}
+.resource-row{grid-template-columns:24px 92px minmax(0,1fr);gap:6px}
+.resource-cover{width:92px;height:115px}
+.resource-main h3{font-size:15px}
+.resource-main p{font-size:10px}
+.resource-download{width:100px;font-size:7px}
+}
+
+.offer-poster img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+@media(max-width:390px){
+.container{width:calc(100% - 20px)}
+.brand img{width:40px;height:40px}
+.brand strong{font-size:18px}
+.main-nav{gap:5px}
+.main-nav a{font-size:9px;padding:7px 1px}
+.category-grid{grid-template-columns:1fr 1fr}
+.category-card{min-height:100px}
+.store-book-card{grid-template-columns:92px minmax(0,1fr)}
+.store-book-image{width:92px;height:auto;min-height:0;align-self:stretch}
+.store-book-content{padding:9px}
+.store-book-content h3{font-size:13px}
+.store-book-content p{font-size:9px}
+.store-buy-btn{font-size:9px;padding:6px 7px}
+.resource-row{grid-template-columns:24px 92px minmax(0,1fr);gap:6px}
+.resource-cover{width:52px;height:70px}
+.resource-main h3{font-size:15px}
+.resource-main p{font-size:10px}
+.resource-download{width:100px;font-size:7px}
+}
+
+/* =========================================================
+   BOOKORA PRODUCT GRID — NEW DESKTOP SYSTEM
+   Reference: 3 columns × 2 rows, compact book cards.
+   Existing mobile layout is intentionally preserved.
+   ========================================================= */
+
+@media(min-width:761px){
+
+    /* Category heading: number + title on one clean line */
+    .store-category-heading > div{
+        display:flex;
+        align-items:baseline;
+        gap:14px;
+        min-width:0;
+    }
+
+    .store-category-heading h2{
+        white-space:nowrap;
+        font-size:38px;
+        line-height:1;
+        letter-spacing:-2px;
+    }
+
+    .store-category-heading h2 br{
+        display:none;
+    }
+
+    /* Compact 3-column book grid */
+    .store-book-grid{
+        grid-template-columns:repeat(3,minmax(0,1fr));
+        gap:16px;
+        align-items:stretch;
+    }
+
+    /* Compact card: roughly half the visual height of the old card */
+    .store-book-card{
+        display:grid;
+        grid-template-rows:180px auto;
+        min-width:0;
+        border-radius:10px;
+    }
+
+    .store-book-image{
+        height:180px;
+        min-height:0;
+        overflow:hidden;
+    }
+
+    .store-book-image img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+
+    .store-book-content{
+        padding:14px;
+    }
+
+    .store-book-content .type{
+        font-size:8px;
+        letter-spacing:1.5px;
+    }
+
+    .store-book-content h3{
+        font-size:16px;
+        line-height:1.15;
+        margin:6px 0;
+    }
+
+    .store-book-content p{
+        font-size:11px;
+        line-height:1.4;
+        min-height:46px;
+    }
+
+    .price-row{
+        margin-top:8px;
+        gap:6px;
+    }
+
+    .old-price{
+        font-size:9px;
+    }
+
+    .offer-price{
+        font-size:15px;
+    }
+
+    .offer-tag{
+        font-size:7px;
+        padding:3px 5px;
+    }
+
+    .store-buy-btn{
+        margin-top:9px;
+        padding:8px 10px;
+        font-size:10px;
+        border-radius:6px;
+    }
+}
+
+/* =========================================================
+   PRODUCT CATEGORY — 5 CARDS ACROSS THE FULL WIDTH
+   The five category cards now extend across the full
+   available content width, reaching the right-side text area.
+   ========================================================= */
+
+@media(min-width:1061px){
+    .category-grid{
+        grid-template-columns:repeat(5,minmax(0,1fr));
+        gap:12px;
+        width:100%;
+    }
+
+    .category-card{
+        min-height:126px;
+        padding:20px 18px;
+    }
+
+    .category-card strong{
+        font-size:16px;
+    }
+}
+
+/* Tablet: keep five categories usable without affecting mobile */
+@media(min-width:761px) and (max-width:1060px){
+    .category-grid{
+        grid-template-columns:repeat(5,minmax(0,1fr));
+        gap:8px;
+    }
+
+    .category-card{
+        min-height:112px;
+        padding:15px 11px;
+    }
+
+    .category-card strong{
+        font-size:12px;
+    }
+}
+
+
+/* =========================================================
+   BOOKORA MASTER LAYOUT — 15 SEP 2026
+   Final cleanup based on today's reference corrections.
+   ========================================================= */
+
+/* --- Header / brand --- */
+.brand span{
+    color:#9a9a9a;
+}
+
+/* --- Product category: five cards, 25% larger, full content width --- */
+@media(min-width:1061px){
+    .categories{
+        padding:18px 0 52px;
+    }
+    .categories-head{
+        margin-bottom:20px;
+    }
+    .category-grid{
+        grid-template-columns:repeat(5,minmax(0,1fr));
+        width:100%;
+        gap:14px;
+    }
+    .category-card{
+        min-height:140px;
+        padding:22px 20px;
+    }
+    .category-card strong{
+        font-size:16px;
+    }
+}
+@media(min-width:761px) and (max-width:1060px){
+    .categories{
+        padding:18px 0 45px;
+    }
+    .category-grid{
+        grid-template-columns:repeat(5,minmax(0,1fr));
+        gap:9px;
+        width:100%;
+    }
+    .category-card{
+        min-height:125px;
+        padding:18px 13px;
+    }
+}
+
+/* --- Product sections: compact, clean, portrait book covers --- */
+@media(min-width:761px){
+    .store-category-section{
+        padding:42px 0;
+    }
+    .store-category-heading{
+        grid-template-columns:minmax(0,1fr) minmax(300px,.85fr);
+        gap:38px;
+        margin-bottom:20px;
+    }
+    .store-category-heading > div{
+        display:flex;
+        align-items:baseline;
+        gap:14px;
+    }
+    .store-category-heading h2{
+        white-space:nowrap;
+        font-size:38px;
+        line-height:1;
+        letter-spacing:-2px;
+    }
+    .store-category-heading h2 br{
+        display:none;
+    }
+
+    .store-book-grid{
+        grid-template-columns:repeat(3,minmax(0,1fr));
+        gap:16px;
+        align-items:stretch;
+    }
+
+    .store-book-card{
+        display:grid;
+        grid-template-rows:auto auto;
+        min-width:0;
+        border-radius:10px;
+    }
+
+    /* Portrait cover area — not the old wide/square-looking strip */
+    .store-book-image{
+        height:auto;
+        aspect-ratio:4 / 5;
+        min-height:0;
+        overflow:hidden;
+        background:#111;
+    }
+    .store-book-image img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+
+    .store-book-content{
+        padding:14px;
+    }
+    .store-book-content .type{
+        font-size:8px;
+        letter-spacing:1.5px;
+    }
+    .store-book-content h3{
+        font-size:16px;
+        line-height:1.15;
+        margin:6px 0;
+    }
+    .store-book-content p{
+        font-size:11px;
+        line-height:1.4;
+        min-height:42px;
+    }
+    .price-row{
+        margin-top:7px;
+        gap:6px;
+    }
+    .store-buy-btn{
+        margin-top:8px;
+        padding:8px 10px;
+        font-size:10px;
+    }
+}
+
+/* --- Keep the product system ready for 3 × 2 automatically --- */
+.store-book-grid{
+    grid-auto-flow:row;
+}
+
+/* --- Free resources: remove excessive vertical air --- */
+@media(min-width:761px){
+    .free-resources-section{
+        padding:52px 0;
+    }
+    .free-resources-head{
+        margin-bottom:20px;
+        gap:50px;
+    }
+    .resource-row{
+        min-height:0;
+        padding:18px 7px 18px 0;
+    }
+    .resource-cover{
+        width:105px;
+        height:131px;
+    }
+}
+
+/* --- About: compact without changing the design language --- */
+@media(min-width:761px){
+    .about-bookora-bottom{
+        padding:52px 0;
+    }
+    .about-bottom-grid{
+        gap:60px;
+    }
+    .about-bottom-copy{
+        padding-top:4px;
+    }
+    .about-bottom-copy p{
+        margin-bottom:14px;
+    }
+}
+
+/* --- Closing message: remove large empty block --- */
+@media(min-width:761px){
+    .bookora-message{
+        padding:58px 0;
+    }
+    .bookora-message p{
+        margin-top:18px;
+    }
+}
+
+/* --- Footer: tighter, complete contact actions --- */
+.site-footer{
+    padding:36px 0;
+}
+.footer-grid{
+    gap:34px;
+}
+.contact-action{
+    color:#fff !important;
+    font-weight:700;
+}
+.contact-value{
+    color:#888 !important;
+}
+.whatsapp-action{
+    color:#f2b300 !important;
+}
+
+/* --- Mobile: preserve compact list, portrait cover, and remove empty space --- */
+@media(max-width:760px){
+    .categories{
+        padding:16px 0 28px;
+    }
+    .categories-head{
+        margin-bottom:14px;
+    }
+    .category-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:8px;
+        width:100%;
+    }
+    .category-card{
+        min-height:100px;
+    }
+
+    .store-category-section{
+        padding:24px 0;
+    }
+    .store-category-heading{
+        margin-bottom:11px;
+    }
+
+    .free-resources-section{
+        padding:28px 0;
+    }
+    .free-resources-head{
+        margin-bottom:12px;
+    }
+    .resource-row{
+        padding:12px 0;
+    }
+
+    .about-bookora-bottom{
+        padding:28px 0;
+    }
+    .bookora-message{
+        padding:30px 0;
+    }
+
+    .site-footer{
+        padding:25px 0;
+    }
+}
+
+/* Very small screens */
+@media(max-width:390px){
+    .store-category-section{
+        padding:22px 0;
+    }
+    .free-resources-section{
+        padding:24px 0;
+    }
+    .about-bookora-bottom{
+        padding:25px 0;
+    }
+    .bookora-message{
+        padding:27px 0;
+    }
+}
+
+/* --- Message section: same two-column style as About BookOra --- */
+@media(min-width:761px){
+    .bookora-message .container{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:60px;
+        align-items:start;
+    }
+    .bookora-message h2{
+        margin:0;
+    }
+    .bookora-message p{
+        border-left:1px solid rgba(255,255,255,.22);
+        padding-left:45px;
+        padding-top:4px;
+        margin:0;
+        max-width:620px;
+        font-size:15px;
+        line-height:1.6;
+    }
+}
+
+@media(max-width:760px){
+    .bookora-message .container{
+        display:block;
+    }
+    .bookora-message p{
+        border-left:0;
+        border-top:1px solid rgba(255,255,255,.2);
+        padding:18px 0 0;
+        margin-top:18px;
+        max-width:none;
+    }
+}
+
+/* =========================================
+   FREE RESOURCES — MOBILE
+   COVER FULL HEIGHT TO DOWNLOAD BUTTON
+   ========================================= */
+
+@media (max-width:760px){
+
+    .resource-row{
+        display:grid;
+        grid-template-columns:28px 92px minmax(0,1fr);
+        grid-template-rows:auto auto;
+        column-gap:8px;
+        row-gap:7px;
+        align-items:stretch;
+        min-height:0;
+        padding:15px 0;
+    }
+
+    /* Number */
+    .resource-number{
+        grid-column:1;
+        grid-row:1 / 3;
+        align-self:center;
+        font-size:12px;
+    }
+
+    /* COVER — spans all content + DOWNLOAD */
+    .resource-cover{
+        grid-column:2;
+        grid-row:1 / 3;
+
+        width:92px;
+        height:auto;
+        min-height:100%;
+        align-self:stretch;
+
+        border:1px solid rgba(255,255,255,.22);
+        border-radius:6px;
+        overflow:hidden;
+        background:#111;
+
+        display:flex;
+        align-items:stretch;
+        justify-content:center;
+    }
+
+    .resource-cover img{
+        display:block;
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+
+    /* TEXT */
+    .resource-main{
+        grid-column:3;
+        grid-row:1;
+        min-width:0;
+    }
+
+    .resource-main h3{
+        font-size:17px;
+        line-height:1.15;
+        letter-spacing:-.6px;
+    }
+
+    .resource-main p{
+        font-size:11px;
+        line-height:1.45;
+        margin-top:5px;
+    }
+
+    .resource-kicker{
+        font-size:8px;
+        letter-spacing:2px;
+        margin-bottom:4px;
+    }
+
+    .resource-tags{
+        display:flex;
+        flex-wrap:wrap;
+        gap:4px;
+        margin-top:7px;
+    }
+
+    .resource-tags span{
+        font-size:7px;
+        padding:4px 5px;
+    }
+
+    /* DOWNLOAD — directly below the text */
+    .resource-download{
+        grid-column:3;
+        grid-row:2;
+
+        width:112px;
+        padding:8px 7px;
+        margin-top:0;
+        justify-self:start;
+
+        font-size:8px;
+    }
+}
+
+
+/* =========================================
+   BOOKORA FREE RESOURCE LEAD FORM
+   ========================================= */
+.free-lead-modal{position:fixed;inset:0;background:rgba(0,0,0,.82);display:none;align-items:center;justify-content:center;padding:18px;z-index:200}
+.free-lead-modal.show{display:flex}
+.free-lead-box{width:min(460px,100%);background:#0b0b0b;border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:28px;position:relative;box-shadow:0 18px 60px rgba(0,0,0,.55)}
+.free-lead-close{position:absolute;right:13px;top:9px;background:none;border:0;color:#fff;font-size:28px;line-height:1;cursor:pointer}
+.free-lead-label{display:block;color:var(--accent);font-size:10px;letter-spacing:3px;font-weight:900;margin-bottom:12px}
+.free-lead-box h2{font-size:30px;line-height:.95;letter-spacing:-1.5px;margin-bottom:10px}
+.free-lead-box p{color:#aaa;font-size:13px;line-height:1.5;margin-bottom:20px}
+.free-lead-resource{color:#fff;font-weight:800}
+.free-lead-form{display:grid;gap:11px}
+.free-lead-form label{font-size:9px;letter-spacing:1.5px;color:#aaa;font-weight:800}
+.free-lead-form input{width:100%;background:#111;color:#fff;border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:12px 12px;font:inherit;font-size:13px;outline:none}
+.free-lead-form input:focus{border-color:var(--accent)}
+.free-lead-submit{margin-top:4px;width:100%;background:#fff;color:#050505;border:0;border-radius:8px;padding:12px 14px;font-size:12px;font-weight:900;letter-spacing:.5px;cursor:pointer}
+.free-lead-submit:disabled{opacity:.55;cursor:wait}
+.resource-download{background:transparent;cursor:pointer;font-family:inherit;appearance:none}
+.free-lead-status{min-height:18px;color:#aaa;font-size:11px;text-align:center;margin-top:4px}
+@media(max-width:760px){
+  .free-lead-box{padding:23px 17px;border-radius:12px}
+  .free-lead-box h2{font-size:25px}
+  .free-lead-box p{font-size:12px;margin-bottom:16px}
+  .free-lead-form input{padding:11px;font-size:12px}
+}
+
+/* BOOKORA CATEGORY 06 — FREE RESOURCES */
+@media(min-width:1061px){
+  .category-grid{grid-template-columns:repeat(6,minmax(0,1fr)) !important;gap:14px;width:100%;}
+}
+@media(min-width:761px) and (max-width:1060px){
+  .category-grid{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:10px;}
+}
+@media(max-width:760px){
+  .category-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:8px;}
+}
+
+/* BookOra Digital Products — targeted 5-cover section update */
+.digital-products-grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
+.digital-product-card .store-book-image{overflow:hidden;background:#101010;aspect-ratio:3/4}
+.digital-product-card .store-book-image img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .35s ease}
+.digital-product-card:hover .store-book-image img{transform:scale(1.025)}
+.digital-product-card .store-book-content{display:flex;flex-direction:column;height:calc(100% - 0px)}
+.digital-product-card .store-book-content p{flex:1}
+.digital-product-card .store-buy-btn{margin-top:16px}
+@media(max-width:900px){.digital-products-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.digital-products-grid{grid-template-columns:1fr}.digital-product-card .store-book-image{aspect-ratio:4/5}}
+
+
+
+/* BookOra desktop-only compact grid update: 4 columns with clear gaps. Mobile CSS is unchanged. */
+@media (min-width: 1061px) {
+  .store-book-grid,
+  .digital-products-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    column-gap: 18px !important;
+    row-gap: 24px !important;
+    align-items: stretch;
+  }
+  .store-book-card,
+  .digital-product-card {
+    min-width: 0;
+  }
+  .store-book-card .store-book-image,
+  .digital-product-card .store-book-image {
+    aspect-ratio: 4 / 5 !important;
+    overflow: hidden;
+  }
+  .store-book-card .store-book-image img,
+  .digital-product-card .store-book-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .store-book-content,
+  .digital-product-card .store-book-content {
+    padding: 16px !important;
+  }
+  .store-book-content h3,
+  .digital-product-card .store-book-content h3 {
+    font-size: clamp(17px, 1.15vw, 21px) !important;
+    line-height: 1.18 !important;
+    margin-bottom: 9px !important;
+  }
+  .store-book-content p,
+  .digital-product-card .store-book-content p {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+  .store-book-content .price-row,
+  .digital-product-card .price-row {
+    gap: 7px !important;
+    flex-wrap: wrap;
+  }
+  .store-book-content .store-buy-btn,
+  .digital-product-card .store-buy-btn {
+    margin-top: 12px !important;
+  }
+}
+
+</style>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="css/ajuverse-master-enhance.css?v=20260920-master" rel="stylesheet"/>
+<script defer="" src="js/ajuverse-master-enhance.js?v=20260920-master"></script>
+<style>
+/* =========================================================
+   BOOKORA — FINAL DESKTOP TYPOGRAPHY OVERRIDE
+   This must stay inside bookstore.html AFTER all other
+   BookOra page styles.
+   ========================================================= */
+
+@media (min-width: 761px) {
+
+    /* =========================================
+       HEADER
+       ========================================= */
+
+    .main-nav a {
+        font-size: 15px !important;
+        font-weight: 700 !important;
+    }
+
+    .cart-nav {
+        min-width: 86px !important;
+        height: 44px !important;
+        padding: 0 14px !important;
+
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 8px !important;
+
+        font-size: 15px !important;
+        font-weight: 800 !important;
+    }
+
+    .cart-nav span {
+        min-width: 22px !important;
+        height: 22px !important;
+
+        margin-left: 0 !important;
+
+        font-size: 12px !important;
+        font-weight: 900 !important;
+    }
+
+
+    /* =========================================
+       CATEGORY SECTION
+       02 COLORING BOOKS
+       03 ACTIVITY BOOKS
+       04 E-BOOKS
+       ========================================= */
+
+    .store-category-heading {
+        margin-bottom: 30px !important;
+    }
+
+
+    /* NUMBER — 02 / 03 / 04 / 05 */
+
+    .store-category-heading .number {
+        font-size: 18px !important;
+        line-height: 1 !important;
+
+        font-weight: 900 !important;
+        letter-spacing: 2px !important;
+
+        color: #f2b300 !important;
+    }
+
+
+    /* MAIN CATEGORY TITLE */
+
+    .store-category-heading h2 {
+        font-size: 54px !important;
+        line-height: 0.95 !important;
+
+        letter-spacing: -3px !important;
+
+        font-weight: 900 !important;
+    }
+
+
+    /* CATEGORY DESCRIPTION */
+
+    .store-category-heading > p {
+        font-size: 17px !important;
+        line-height: 1.55 !important;
+
+        color: #bdbdbd !important;
+    }
+
+
+    /* =========================================
+       PRODUCT CARD
+       ========================================= */
+
+    .store-book-content {
+        padding: 20px !important;
+    }
+
+
+    /* COLORING BOOK / ACTIVITY BOOK / E-BOOK */
+
+    .store-book-content .type {
+        display: block !important;
+
+        font-size: 13px !important;
+
+        line-height: 1.2 !important;
+
+        letter-spacing: 2.5px !important;
+
+        font-weight: 900 !important;
+
+        color: #f2b300 !important;
+
+        margin-bottom: 10px !important;
+    }
+
+
+    /* PRODUCT TITLE */
+
+    .store-book-content h3 {
+        font-size: 25px !important;
+
+        line-height: 1.12 !important;
+
+        letter-spacing: -0.8px !important;
+
+        font-weight: 900 !important;
+
+        margin: 8px 0 12px !important;
+
+        color: #ffffff !important;
+    }
+
+
+    /* PRODUCT DESCRIPTION */
+
+    .store-book-content p {
+        font-size: 16px !important;
+
+        line-height: 1.55 !important;
+
+        color: #d0d0d0 !important;
+
+        min-height: 72px !important;
+    }
+
+
+    /* =========================================
+       PRICE
+       ========================================= */
+
+    .price-row {
+        display: flex !important;
+
+        align-items: center !important;
+
+        gap: 9px !important;
+
+        margin-top: 14px !important;
+    }
+
+
+    .old-price {
+        font-size: 12px !important;
+
+        color: #777 !important;
+    }
+
+
+    .offer-price {
+        font-size: 20px !important;
+
+        font-weight: 900 !important;
+
+        color: #ffffff !important;
+    }
+
+
+    .offer-tag {
+        font-size: 10px !important;
+
+        line-height: 1 !important;
+
+        padding: 6px 9px !important;
+
+        font-weight: 900 !important;
+
+        letter-spacing: 0.5px !important;
+    }
+
+
+    /* =========================================
+       ADD TO CART BUTTON
+       ========================================= */
+
+    .store-buy-btn {
+        width: 100% !important;
+
+        min-height: 46px !important;
+
+        margin-top: 14px !important;
+
+        padding: 11px 16px !important;
+
+        font-size: 14px !important;
+
+        line-height: 1 !important;
+
+        font-weight: 900 !important;
+
+        letter-spacing: 0.3px !important;
+
+        border-radius: 8px !important;
+    }
+
+
+    /* ADDED BUTTON */
+
+    .store-buy-btn.bookora-added {
+        font-size: 14px !important;
+
+        font-weight: 900 !important;
+
+        letter-spacing: 0.3px !important;
+    }
+
+
+    /* =========================================
+       IMAGE PLACEHOLDER
+       ========================================= */
+
+    .store-placeholder {
+        font-size: 14px !important;
+
+        line-height: 1.5 !important;
+
+        letter-spacing: 2.5px !important;
+    }
+
+}
+</style>
+<style>
+/* =========================================================
+   BOOKORA — CATEGORY NUMBER = HEADING SCALE
+   ========================================================= */
+
+@media (min-width: 761px) {
+
+    .store-category-heading > div {
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 18px !important;
+    }
+
+    .store-category-heading .number {
+        display: block !important;
+
+        flex: 0 0 auto !important;
+
+        margin: 0 !important;
+        padding: 5px 0 0 0 !important;
+
+        font-size: 54px !important;
+        line-height: 0.92 !important;
+
+        font-weight: 900 !important;
+        letter-spacing: -2px !important;
+
+        color: #f2b300 !important;
+    }
+
+    .store-category-heading h2 {
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: 54px !important;
+        line-height: 0.92 !important;
+
+        font-weight: 900 !important;
+        letter-spacing: -3px !important;
+
+        color: #ffffff !important;
+    }
+
+    .store-category-heading > p {
+        margin-top: 3px !important;
+    }
+}
+</style>
+<link href="css/ajuverse-nova.css?v=1" rel="stylesheet"/>
+<style id="bookora-category-number-height-fix">
+/* Match each category number to its own heading scale (01–06). */
+@media (min-width: 761px) {
+  .store-category-heading > div {
+    display: flex !important;
+    align-items: stretch !important;
+    gap: 18px !important;
+  }
+  .store-category-heading .number {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    align-self: stretch !important;
+    flex: 0 0 auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 54px !important;
+    line-height: 0.92 !important;
+    font-weight: 900 !important;
+    letter-spacing: -2px !important;
+    color: #f2b300 !important;
+    transform: scaleY(1.65);
+    transform-origin: center;
+  }
+  .store-category-heading h2 {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 54px !important;
+    line-height: 0.92 !important;
+    font-weight: 900 !important;
+    letter-spacing: -3px !important;
+    color: #fff !important;
+  }
+}
+@media (max-width: 760px) {
+  .store-category-heading > div {
+    display: flex !important;
+    align-items: baseline !important;
+    gap: 10px !important;
+  }
+  .store-category-heading .number {
+    flex: 0 0 auto !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+}
+
+/* 1. Center the Start Here cards */
+.path-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.path-card {
+    width: min(100%, 320px);
+}
+
+/* 2. Make category numbers proportionate to titles */
+.store-category-heading > div {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+}
+
+.store-category-heading .number {
+    display: inline-block;
+    font-size: clamp(2.8rem, 4.2vw, 3.8rem);
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.store-category-heading h2 {
+    margin: 0;
+    line-height: 1.05;
+}
+
+/* 3. Make free-resource numbers larger and centered */
+.resource-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border: 1px solid rgba(242, 179, 0, 0.45);
+    border-radius: 50%;
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1;
+    color: #f2b300;
+    text-align: center;
+}
+
+/* 4. Preserve alignment on smaller screens */
+@media (max-width: 640px) {
+    .store-category-heading .number {
+        font-size: clamp(2.3rem, 10vw, 3rem);
+    }
+
+    .store-category-heading > div {
+        gap: 10px;
+    }
+
+    .path-grid {
+        align-items: stretch;
+    }
+
+    .path-card {
+        width: 100%;
+        max-width: 360px;
+    }
+}
+
+
+
+/* FIX: Center the complete Start Here card group */
+.start-section .container .path-grid {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center !important;
+    align-items: stretch;
+    gap: 14px;
+    width: 100%;
+    max-width: 100%;
+    margin: 32px auto 0 !important;
+    padding: 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    float: none;
+}
+
+/* Keep both cards equal in width */
+.start-section .container .path-grid .path-card {
+    flex: 0 1 255px;
+    width: 255px;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 580px) {
+    .start-section .container .path-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .start-section .container .path-grid .path-card {
+        width: 100%;
+        max-width: 360px;
+        flex-basis: auto;
+    }
+}
+
+
+</style>
+<style id="bookora-desktop-3-column-cover-fix">
+/* Final desktop grid: 3 columns with taller, fully visible covers. Mobile/tablet rules remain unchanged. */
+@media (min-width: 1061px) {
+  .store-book-grid,
+  .digital-products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px 20px !important;
+    align-items: start !important;
+  }
+  .store-book-grid .store-book-image,
+  .digital-products-grid .store-book-image {
+    height: 230px !important;
+    aspect-ratio: auto !important;
+    overflow: hidden;
+    background: #090909;
+  }
+  .store-book-grid .store-book-image img,
+  .digital-products-grid .store-book-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+}
+</style>
+<style id="bookora-floating-cart-style">
+/* BOOKORA FLOATING CART — fixed desktop/mobile indicator */
+.bookora-floating-cart{
+    position:fixed;
+    right:22px;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:180;
+    width:76px;
+    height:76px;
+    border-radius:50%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:3px;
+    background:linear-gradient(145deg,#171717,#050505);
+    border:1px solid rgba(242,179,0,.9);
+    color:#f2b300;
+    box-shadow:0 8px 28px rgba(0,0,0,.42),0 0 16px rgba(242,179,0,.12);
+    text-decoration:none;
+    transition:transform .22s ease,box-shadow .22s ease,background .22s ease;
+}
+.bookora-floating-cart:hover,
+.bookora-floating-cart:focus-visible{
+    transform:translateY(-50%) scale(1.07);
+    background:#111;
+    box-shadow:0 10px 32px rgba(0,0,0,.55),0 0 22px rgba(242,179,0,.24);
+    outline:2px solid rgba(242,179,0,.45);
+    outline-offset:3px;
+}
+.bookora-floating-cart .floating-cart-icon{
+    font-size:22px;
+    line-height:1;
+}
+.bookora-floating-cart .floating-cart-label{
+    font-size:10px;
+    line-height:1;
+    font-weight:900;
+    letter-spacing:1.1px;
+}
+.bookora-floating-cart .floating-cart-count{
+    position:absolute;
+    top:-5px;
+    right:-3px;
+    min-width:23px;
+    height:23px;
+    padding:0 5px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#f2b300;
+    border:2px solid #050505;
+    color:#050505;
+    font-size:11px;
+    line-height:1;
+    font-weight:900;
+    font-variant-numeric:tabular-nums;
+}
+@media(max-width:760px){
+    .bookora-floating-cart{
+        right:12px;
+        width:60px;
+        height:60px;
+    }
+    .bookora-floating-cart .floating-cart-icon{font-size:18px}
+    .bookora-floating-cart .floating-cart-label{font-size:9px;letter-spacing:.7px}
+    .bookora-floating-cart .floating-cart-count{min-width:20px;height:20px;font-size:10px}
+}
+
+/* BookOra wordmark — increase the golden brand title by 150% */
+.brand strong{font-size:36px !important;line-height:1.02;color:#fff !important;letter-spacing:.2px;text-shadow:0 2px 0 #000,0 0 1px #000}
+@media(max-width:760px){.brand strong{font-size:30px !important;line-height:1.02}}
+@media(max-width:390px){.brand strong{font-size:27px !important}}
+/* Digital category lineup and highlighted free-resource destination */
+.digital-category-grid{grid-template-columns:repeat(4,minmax(0,1fr)) !important;gap:12px}
+.digital-category-grid .category-card{min-width:0}
+.digital-category-grid .category-card strong{line-height:1.2}
+.digital-category-grid .category-card-free{border-color:rgba(242,179,0,.75);background:linear-gradient(135deg,rgba(242,179,0,.12),rgba(255,255,255,.025));position:relative;overflow:hidden}
+.digital-category-grid .category-card-free .category-free-mark{font-size:17px;line-height:1;color:var(--accent);font-weight:900}
+.digital-category-grid .category-card-free strong{color:var(--accent)}
+.digital-category-grid .category-card-free span:last-child{color:#d5b65b}
+@media(min-width:1061px){.digital-category-grid{grid-template-columns:repeat(4,minmax(0,1fr)) !important}}
+@media(min-width:761px) and (max-width:1060px){.digital-category-grid{grid-template-columns:repeat(3,minmax(0,1fr)) !important}}
+@media(max-width:760px){.digital-category-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:8px}}
+
+
+/* Readability pass: enlarge all small gold subtitle/eyebrow labels by ~150%. */
+.section-label{font-size:16.5px !important;letter-spacing:3px !important;line-height:1.25}
+.hero-brand-label{font-size:21px !important;letter-spacing:6px !important}
+.store-book-content .type{font-size:14px !important;letter-spacing:2px !important}
+.resource-kicker{font-size:13px !important;letter-spacing:2px !important}
+@media(max-width:760px){
+ .section-label{font-size:13px !important;letter-spacing:2px !important}
+ .hero-brand-label{font-size:16px !important;letter-spacing:3px !important}
+ .brand span{font-size:12px !important;letter-spacing:.5px !important}
+ .store-book-content .type{font-size:10px !important;letter-spacing:1.3px !important}
+ .resource-kicker{font-size:9px !important;letter-spacing:1.5px !important}
+}
+
+</style>
+<style id="bookora-coloring-collection-update">
+/* BookOra coloring collection — grouped, responsive catalogue */
+.book-collection-divider {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 2px 10px;
+  margin-top: 14px;
+  border-bottom: 1px solid rgba(242,179,0,.28);
+}
+.book-collection-divider span {
+  color: #f2b300;
+  font-size: clamp(19px, 2vw, 26px);
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: .4px;
+}
+.book-collection-divider p {
+  max-width: 520px;
+  margin: 0;
+  color: #bdbdbd;
+  font-size: 14px;
+  line-height: 1.45;
+  text-align: right;
+}
+.kdp-added-book .store-book-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #111;
+}
+.kdp-book-status {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 8px;
+  padding: 9px 11px;
+  border: 1px solid rgba(242,179,0,.65);
+  border-radius: 6px;
+  color: #f2b300;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+@media (max-width: 760px) {
+  .book-collection-divider {
+    display: block;
+    padding-top: 16px;
+  }
+  .book-collection-divider p {
+    margin-top: 6px;
+    text-align: left;
+    font-size: 13px;
+  }
+}
+</style>
+</head>
+<body class="bookstore-page">
+<header class="site-header"><div class="container header-inner">
+<a class="brand" href="index.html"><img alt="BookOra" src="assets/BookOraLogo.png"/><div><strong>BookOra</strong><span>Downloadable Creativity</span></div></a>
+<nav class="main-nav">
+<a href="index.html">Home</a><a href="#categories">Product Category</a><a href="BookOra-Printable.html">BookOra Printable</a><a href="#free-resources">Free Resources</a><a href="#about-bookora">About Us</a><a href="#contact">Contact Us</a><a class="cart-nav" href="cart.html">CART <span id="cartCount">0</span></a>
+</nav>
+</div></header>
+<main>
+<section class="bookora-hero" id="about"><div class="container hero-grid">
+<div class="hero-copy"><span class="section-label">BOOKORA</span><h1>DOWNLOADABLE<br/>CREATIVITY.<br/>IDEAS THAT<br/>GROW.</h1><p>BookOra Digital brings together downloadable planners, printable activities, e-books, coloring resources and creative digital products designed to help you learn, plan and create.</p></div>
+<div class="bookora-hero-actions"><span class="hero-brand-label">BOOKORA DIGITAL</span><div class="hero-action-stack"><a class="hero-action hero-action-primary" href="#coloring-books"><span class="hero-action-icon">▢</span><strong>Explore Books <span>→</span></strong></a><a class="hero-action hero-action-secondary" href="#categories"><span class="hero-action-icon">▦</span><strong>Browse Categories <span>→</span></strong></a><a class="hero-action hero-action-free" href="#free-resources"><span class="hero-action-icon">♢</span><strong>Free Resources <span>→</span></strong></a></div><p class="hero-action-note">PDFs • Planners • E-books • Activities • Digital Downloads</p></div>
+</div></section>
+<section class="feature-wrap"><div class="container feature-grid">
+<div class="offer-poster">
+<img alt="BookOra Limited Time Offer" src="assets/bookora-offer.png"/>
+</div>
+<div class="news-box"><div><span class="section-label">WHAT'S NEW</span><h2>NEW<br/>AT<br/>BOOKORA<br/>DIGITAL.</h2></div><div><div class="news-item"><strong>New Coloring Books</strong><p>Fresh creative collections for relaxing and fun.</p></div><div class="news-item"><strong>Activity Resources</strong><p>Practical activities for curious young minds.</p></div><div class="news-item"><strong>Digital Products</strong><p>Useful PDFs, guides and creator resources.</p></div></div></div>
+</div></section>
+<section class="categories" id="categories"><div class="container"><div class="categories-head"><div><span class="section-label">PRODUCT CATEGORY</span><h2>FIND YOUR CATEGORY.</h2></div><p>Choose a category and explore the BookOra collection.</p></div>
+<div class="category-grid digital-category-grid">
+<a class="category-card" href="#coloring-books"><span class="category-no">01</span><strong>Coloring Books</strong><span>Explore →</span></a>
+<a class="category-card" href="#activity-books"><span class="category-no">02</span><strong>Activity Books</strong><span>Explore →</span></a>
+<a class="category-card" href="#ebooks"><span class="category-no">03</span><strong>Story Books</strong><span>Explore →</span></a>
+<a class="category-card" href="#planners-journals"><span class="category-no">04</span><strong>Planners &amp; Journals</strong><span>Explore →</span></a>
+<a class="category-card" href="#ai-prompts"><span class="category-no">05</span><strong>AI Prompts</strong><span>Explore →</span></a>
+<a class="category-card" href="#canva-templates"><span class="category-no">06</span><strong>Canva Templates</strong><span>Explore →</span></a>
+<a class="category-card" href="#digital-art-backgrounds"><span class="category-no">07</span><strong>Digital Art &amp; Backgrounds</strong><span>Explore →</span></a>
+<a class="category-card category-card-free" href="#free-resources"><span aria-hidden="true" class="category-free-mark">✦</span><strong>Free Resources</strong><span>Explore free downloads →</span></a>
+</div></div></section>
+<section class="store-category-section" id="coloring-books"><div class="container"><div class="store-category-heading"><div><span class="number">01</span><h2>COLORING<br/>BOOKS</h2></div><p>Faith-filled coloring books for children and families, featuring Bible stories, meaningful scenes and creative moments.</p></div><div class="store-book-grid"><div class="book-collection-divider"><span>Christmas &amp; Cozy / Dino</span><p>Christmas, cozy scenes, seasonal adventures and dinosaur fun.</p></div><article class="store-book-card kdp-added-book"><div class="store-book-image"><img alt="Santa’s Cake Shop Coloring Book: A Cozy Christmas Baking Adventure cover" loading="lazy" src="assets/books/santas-cake-shop-coloring-book.png"/></div><div class="store-book-content"><span class="type">COLORING BOOK</span><h3>Santa’s Cake Shop Coloring Book: A Cozy Christmas Baking Adventure</h3><p>A cozy Christmas baking adventure filled with sweet treats and festive fun.</p><span class="kdp-book-status">DIGITAL EDITION COMING SOON</span></div></article><article class="store-book-card kdp-added-book"><div class="store-book-image"><img alt="Santa’s Gift Factory Coloring Book: Inside the North Pole Workshop cover" loading="lazy" src="assets/books/santas-gift-factory-coloring-book.png"/></div><div class="store-book-content"><span class="type">COLORING BOOK</span><h3>Santa’s Gift Factory Coloring Book: Inside the North Pole Workshop</h3><p>A Christmas adventure inside Santa’s North Pole gift workshop.</p><span class="kdp-book-status">DIGITAL EDITION COMING SOON</span></div></article><article class="store-book-card kdp-added-book"><div class="store-book-image"><img alt="Cute &amp; Cozy Girls Coloring Book cover" loading="lazy" src="assets/books/cute-girls-coloring-book.png"/></div><div class="store-book-content"><span class="type">COZY &amp; SEASONAL</span><h3>Cute &amp; Cozy Girls Coloring Book: Cozy &amp; Cute Coloring Pages for Girls and Teens with Fashion, Friends, Pets, Flowers, Hobbies &amp; Everyday Moments</h3><p>Cozy and cute coloring pages featuring fashion, friends, pets, flowers, hobbies and everyday moments for girls and teens.</p><div class="price-row"><span class="old-price">₹299</span><strong class="offer-price">₹229</strong><span class="offer-tag">LAUNCH OFFER</span></div><span class="kdp-book-status">DIGITAL EDITION COMING SOON</span></div></article><article class="store-book-card kdp-added-book">
+<div class="store-book-image"><img alt="The Dino Pizza Shop Coloring Book cover" loading="lazy" src="assets/books/dino-pizza-shop-coloring-book.png"/></div>
+<div class="store-book-content">
+<span class="type">KIDS &amp; CUTE</span>
+<h3>The Dino Pizza Shop Coloring Book</h3>
+<p>Cute and cozy dinosaur chefs, pizza-making adventures and funny restaurant moments.</p>
+<span class="kdp-book-status">DIGITAL EDITION COMING SOON</span>
+</div></article><article class="store-book-card kdp-added-book">
+<div class="store-book-image"><img alt="Cute Girl Zombies Cozy Moments Coloring Book cover" loading="lazy" src="assets/books/cute-girl-zombies-cozy-moments-coloring-book.png"/></div>
+<div class="store-book-content">
+<span class="type">COZY &amp; SEASONAL</span>
+<h3>Cute Girl Zombies Cozy Moments Coloring Book</h3>
+<p>Spooky-cute scenes of reading, baking, journaling, tea time and self-care.</p>
+<span class="kdp-book-status">DIGITAL EDITION COMING SOON</span>
+</div></article><article class="store-book-card kdp-added-book">
+<div class="store-book-image"><img alt="Cozy Zombies Coloring Book cover" loading="lazy" src="assets/books/cozy-zombies-coloring-book.png"/></div>
+<div class="store-book-content">
+<span class="type">COZY &amp; SEASONAL</span>
+<h3>Cozy Zombies Coloring Book</h3>
+<p>50 fun cozy zombie moments for relaxation and creative coloring.</p>
+<span class="kdp-book-status">DIGITAL EDITION COMING SOON</span>
+</div></article><article class="store-book-card kdp-added-book"><div class="store-book-image"><img alt="Cozy Girl Moments Coloring Book: Cute Relaxing Scenes of Daily Life, Self-Care, Reading, Baking, and Cozy Rooms for Stress Relief cover" loading="lazy" src="assets/books/cozy-girl-moments-coloring-book.png"/></div><div class="store-book-content"><span class="type">COLORING BOOK</span><h3>Cozy Girl Moments Coloring Book: Cute Relaxing Scenes of Daily Life, Self-Care, Reading, Baking, and Cozy Rooms for Stress Relief</h3><p>Cute relaxing scenes of daily life, self-care, reading, baking and cozy rooms.</p><span class="kdp-book-status">DIGITAL EDITION COMING SOON</span></div></article><article class="store-book-card kdp-added-book">
+<div class="store-book-image"><img alt="Monochrome Cozy Night Coloring Book cover" loading="lazy" src="assets/books/monochrome-cozy-night-coloring-book.png"/></div>
+<div class="store-book-content">
+<span class="type">COZY &amp; SEASONAL</span>
+<h3>Monochrome Cozy Night Coloring Book</h3>
+<p>Cozy night routines, reading, journaling, tea time and peaceful rooms.</p>
+<span class="kdp-book-status">DIGITAL EDITION COMING SOON</span>
+</div></article><article class="store-book-card kdp-added-book">
+<div class="store-book-image"><img alt="Cute &amp; Cozy Hygge Animals Coloring Book cover" loading="lazy" src="assets/books/cozy-hygge-animals-coloring-book.png"/></div>
+<div class="store-book-content">
+<span class="type">KIDS &amp; CUTE</span>
+<h3>Cute &amp; Cozy Hygge Animals Coloring Book</h3>
+<p>Relaxing cozy scenes with adorable animals and simple bold designs.</p>
+<span class="kdp-book-status">DIGITAL EDITION COMING SOON</span>
+</div></article><article class="store-book-card kdp-added-book">
+<div class="store-book-image"><img alt="Spooky &amp; Panda Forest Adventures cover" loading="lazy" src="assets/books/spooky-panda-forest-coloring-book.png"/></div>
+<div class="store-book-content">
+<span class="type">KIDS &amp; CUTE</span>
+<h3>Spooky &amp; Panda Forest Adventures</h3>
+<p>Cute ghost, panda and animal friends in a magical forest for kids.</p>
+<span class="kdp-book-status">DIGITAL EDITION COMING SOON</span>
+</div></article><div class="book-collection-divider"><span>Relaxation for Adults &amp; Kids</span><p>Mindful patterns, faith-inspired designs and relaxing creative pages.</p></div><article class="store-book-card kdp-added-book"><div class="store-book-image"><img alt="Zentangle for Anxiety Relief: A Meditative Zentangle Drawing and Doodle Workbook for Adults cover" loading="lazy" src="assets/books/zentangle-anxiety-relief-coloring-workbook-pastel.png"/></div><div class="store-book-content"><span class="type">ADULT &amp; KIDS RELAXATION</span><h3>Zentangle for Anxiety Relief: A Meditative Zentangle Drawing and Doodle Workbook for Adults</h3><p>A meditative zentangle drawing and doodle workbook for adults.</p><span class="kdp-book-status">DIGITAL EDITION COMING SOON</span></div></article><article class="store-book-card kdp-added-book"><div class="store-book-image"><img alt="Christian Zentangle Coloring Book: Inspirational Bible Verses &amp; Patterns for Adults for Stress Relief cover" loading="lazy" src="assets/books/christian-zentangle-coloring-book.png"/></div><div class="store-book-content"><span class="type">ADULT &amp; KIDS RELAXATION</span><h3>Christian Zentangle Coloring Book: Inspirational Bible Verses &amp; Patterns for Adults for Stress Relief</h3><p>Inspirational Bible verses and patterns for calm, mindful coloring.</p><span class="kdp-book-status">DIGITAL EDITION COMING SOON</span></div></article><article class="store-book-card kdp-added-book"><div class="store-book-image"><img alt="Zentangle for Anxiety Relief: A Meditative Zentangle Drawing and Doodle Workbook for Adults to Reduce Stress, Relax the Mind, and Practice Mindfulness cover" loading="lazy" src="assets/books/zentangle-anxiety-relief-workbook-classic-cover.png"/></div><div class="store-book-content"><span class="type">ADULT &amp; KIDS RELAXATION</span><h3>Zentangle for Anxiety Relief: A Meditative Zentangle Drawing and Doodle Workbook for Adults to Reduce Stress, Relax the Mind, and Practice Mindfulness</h3><p>A meditative workbook to reduce stress, relax the mind and practice mindfulness.</p><span class="kdp-book-status">DIGITAL EDITION COMING SOON</span></div></article><article class="store-book-card kdp-added-book"><div class="store-book-image"><img alt="Faith &amp; Peace Coloring Book: Beautiful Christian Zentangle Designs Featuring Jesus, Crosses, Prayer, Angels, and Sacred Patterns for Stress Relief cover" loading="lazy" src="assets/books/faith-peace-coloring-book.png"/></div><div class="store-book-content"><span class="type">ADULT &amp; KIDS RELAXATION</span><h3>Faith &amp; Peace Coloring Book: Beautiful Christian Zentangle Designs Featuring Jesus, Crosses, Prayer, Angels, and Sacred Patterns for Stress Relief</h3><p>Beautiful Christian zentangle designs featuring Jesus, crosses, prayer, angels and sacred patterns.</p><span class="kdp-book-status">DIGITAL EDITION COMING SOON</span></div></article><article class="store-book-card kdp-added-book"><div class="store-book-image"><img alt="Jesus &amp; Zentangle for Kids: Christian Bible Coloring Book for Ages 6–12: Fun and Easy Zentangle Bible Verses, Activities, and Coloring Pages cover" loading="lazy" src="assets/books/jesus-zentangle-coloring-kids.png"/></div><div class="store-book-content"><span class="type">ADULT &amp; KIDS RELAXATION</span><h3>Jesus &amp; Zentangle for Kids: Christian Bible Coloring Book for Ages 6–12: Fun and Easy Zentangle Bible Verses, Activities, and Coloring Pages</h3><p>Fun and easy zentangle Bible verses, activities and coloring pages for kids.</p><span class="kdp-book-status">DIGITAL EDITION COMING SOON</span></div></article><article class="store-book-card kdp-added-book"><div class="store-book-image"><img alt="Zentangle Animals Coloring Book for Adults: 50 Stunning Animal Coloring Pages Featuring Intricate Zentangle Patterns cover" loading="lazy" src="assets/books/zentangle-animals-coloring-book-adults.png"/></div><div class="store-book-content"><span class="type">ADULT &amp; KIDS RELAXATION</span><h3>Zentangle Animals Coloring Book for Adults: 50 Stunning Animal Coloring Pages Featuring Intricate Zentangle Patterns</h3><p>Beautiful wildlife, cute animals, birds and nature designs with intricate zentangle patterns.</p><span class="kdp-book-status">DIGITAL EDITION COMING SOON</span></div></article><article class="store-book-card kdp-added-book"><div class="store-book-image"><img alt="Jesus Zentangle Coloring Book for Adults: Relaxation and Stress Relief cover" loading="lazy" src="assets/books/jesus-zentangle-faith-peace-coloring-book.png"/></div><div class="store-book-content"><span class="type">ADULT &amp; KIDS RELAXATION</span><h3>Jesus Zentangle Coloring Book for Adults: Relaxation and Stress Relief</h3><p>50 beautiful Christian zentangle art pages featuring Jesus and churches.</p><span class="kdp-book-status">DIGITAL EDITION COMING SOON</span></div></article><article class="store-book-card kdp-added-book"><div class="store-book-image"><img alt="Mandalas Coloring Book for Adults: Intricate Floral &amp; Geometric Patterns for Relaxation, Mindfulness, Stress Relief cover" loading="lazy" src="assets/books/mandalas-coloring-book-adults.png"/></div><div class="store-book-content"><span class="type">ADULT &amp; KIDS RELAXATION</span><h3>Mandalas Coloring Book for Adults: Intricate Floral &amp; Geometric Patterns for Relaxation, Mindfulness, Stress Relief</h3><p>Intricate floral and geometric patterns for mindful coloring, stress relief and creative expression.</p><span class="kdp-book-status">DIGITAL EDITION COMING SOON</span></div></article><div class="book-collection-divider"><span>Faith &amp; Bible</span><p>Bible stories, Christian themes and faith-inspired creativity.</p></div><article class="store-book-card"><div class="store-book-image"><img alt="The Nativity Coloring Book for Kids — BookOra cover" loading="lazy" src="assets/books/nativity-coloring-kids.png"/></div><div class="store-book-content"><span class="type">CHRISTIAN COLORING BOOK</span><h3>The Nativity Coloring Book for Kids</h3><p>Celebrate the story of Jesus’ birth with child-friendly Nativity illustrations and a warm, festive coloring experience.</p><div class="price-row"><span class="old-price">₹299</span><strong class="offer-price">₹229</strong><span class="offer-tag">TEST LAUNCH</span></div><button class="store-buy-btn" data-product-id="nativity-coloring-book-kids" onclick="addToCart('nativity-coloring-book-kids')">ADD TO CART</button></div></article><article class="store-book-card"><div class="store-book-image"><img alt="Bible Stories Coloring Book for Kids — BookOra cover" loading="lazy" src="assets/books/bible-stories-coloring-kids.png"/></div><div class="store-book-content"><span class="type">CHRISTIAN COLORING BOOK</span><h3>Jesus and Bible Stories Coloring Book for Kids</h3><p>Explore familiar Bible moments through engaging line-art scenes designed for children to color and enjoy.</p><div class="price-row"><span class="old-price">₹299</span><strong class="offer-price">₹229</strong><span class="offer-tag">TEST LAUNCH</span></div><button class="store-buy-btn" data-product-id="bible-stories-coloring-book-kids" onclick="addToCart('bible-stories-coloring-book-kids')">ADD TO CART</button></div></article><article class="store-book-card kdp-added-book">
+<div class="store-book-image"><img alt="Aadham and Yavaal Coloring Book with Jesus cover" loading="lazy" src="assets/books/aadham-yavaal-coloring-book.png"/></div>
+<div class="store-book-content">
+<span class="type">FAITH &amp; BIBLE</span>
+<h3>Aadham and Yavaal Coloring Book with Jesus</h3>
+<p>30 Bible story coloring pages for kids with fun and faithful learning.</p>
+<span class="kdp-book-status">DIGITAL EDITION COMING SOON</span>
+</div></article><div class="book-collection-divider"><span>Kids &amp; Cute</span><p>Friendly characters, animals, dinosaurs and imaginative adventures.</p></div><article class="store-book-card kdp-added-book">
+<div class="store-book-image"><img alt="Cute Girls Coloring Book for Kids cover" loading="lazy" src="assets/books/cute-girls-coloring-book.png"/></div>
+<div class="store-book-content">
+<span class="type">KIDS &amp; CUTE</span>
+<h3>Cute Girls Coloring Book for Kids</h3>
+<p>50 adorable kawaii girls, princesses, flowers, butterflies and fashion scenes.</p>
+<span class="kdp-book-status">DIGITAL EDITION COMING SOON</span>
+</div></article><article class="store-book-card kdp-added-book">
+<div class="store-book-image"><img alt="My First Cute Baby Animals Coloring Book cover" loading="lazy" src="assets/books/cute-baby-animals-coloring-book.png"/></div>
+<div class="store-book-content">
+<span class="type">KIDS &amp; CUTE</span>
+<h3>My First Cute Baby Animals Coloring Book</h3>
+<p>Easy, fun big coloring pages featuring puppies, kittens, bunnies and more.</p>
+<span class="kdp-book-status">DIGITAL EDITION COMING SOON</span>
+</div></article><article class="store-book-card kdp-added-book">
+<div class="store-book-image"><img alt="Cute Girls Coloring Book for Kids Ages 4–12 cover" loading="lazy" src="assets/books/cute-girls-coloring-book-ages-4-12.png"/></div>
+<div class="store-book-content">
+<span class="type">KIDS &amp; CUTE</span>
+<h3>Cute Girls Coloring Book for Kids Ages 4–12</h3>
+<p>Adorable chibi girls, fun outfits, easy coloring pages and activities.</p>
+<span class="kdp-book-status">DIGITAL EDITION COMING SOON</span>
+</div></article><article class="store-book-card kdp-added-book">
+<div class="store-book-image"><img alt="My First Cute Animals Coloring Book cover" loading="lazy" src="assets/books/my-first-cute-animals-coloring-book.png"/></div>
+<div class="store-book-content">
+<span class="type">KIDS &amp; CUTE</span>
+<h3>My First Cute Animals Coloring Book</h3>
+<p>Big, simple animal coloring pages for toddlers and preschool learners.</p>
+<span class="kdp-book-status">DIGITAL EDITION COMING SOON</span>
+</div></article></div></div></section>
+<section class="store-category-section" id="activity-books"><div class="container"><div class="store-category-heading"><div><span class="number">02</span><h2>ACTIVITY<br/>BOOKS</h2></div><p>Fun puzzles, activities and creative challenges designed to keep young minds engaged.</p></div><div class="store-book-grid">
+<article class="store-book-card"><div class="store-book-image"><img alt="Building a Strong Spirit: 7 Spiritual Workouts for a Stronger Faith, Peaceful Mind, and Christ-Centered Life cover" loading="lazy" src="assets/books/building-a-strong-spirit-coloring-workbook.png"/></div><div class="store-book-content"><span class="type">CHRISTIAN ACTIVITY WORKBOOK</span><h3>Building a Strong Spirit: 7 Spiritual Workouts for a Stronger Faith, Peaceful Mind, and Christ-Centered Life</h3><p>A faith-building workbook with seven spiritual workouts designed to encourage prayer, strengthen faith, nurture a peaceful mind and support a Christ-centered life.</p><div class="price-row"><span class="old-price">₹299</span><strong class="offer-price">₹229</strong><span class="offer-tag">TODAY</span></div><button class="store-buy-btn" data-product-id="building-a-strong-spirit" onclick="addToCart('building-a-strong-spirit')">ADD TO CART</button></div></article>
+<article class="store-book-card"><div class="store-book-image"><img alt="Preschool Alphabet Workbook cover" loading="lazy" src="assets/books/preschool-alphabet-workbook.png"/></div><div class="store-book-content"><span class="type">ACTIVITY BOOK</span><h3>Preschool Alphabet Workbook</h3><p>A playful early-learning workbook introducing preschoolers to letters and alphabet activities.</p><div class="price-row"><span class="old-price">₹299</span><strong class="offer-price">₹229</strong><span class="offer-tag">23% OFF</span></div><button class="store-buy-btn" data-product-id="preschool-alphabet-workbook" onclick="addToCart('preschool-alphabet-workbook')">ADD TO CART</button></div></article>
+<article class="store-book-card"><div class="store-book-image"><img alt="My First Maze Activity Book cover" loading="lazy" src="assets/books/my-first-maze-activity-book.jpg"/></div><div class="store-book-content"><span class="type">ACTIVITY BOOK</span><h3>My First Maze Activity Book</h3><p>Fun, kid-friendly maze puzzles that encourage problem-solving, focus and creative exploration.</p><div class="price-row"><span class="old-price">₹299</span><strong class="offer-price">₹229</strong><span class="offer-tag">23% OFF</span></div><button class="store-buy-btn" data-product-id="my-first-maze-activity-book" onclick="addToCart('my-first-maze-activity-book')">ADD TO CART</button></div></article>
+<article class="store-book-card"><div class="store-book-image"><img alt="My First Modern Alphabet Activity Book cover" loading="lazy" src="assets/books/modern-alphabet-activity-book.jpg"/></div><div class="store-book-content"><span class="type">ACTIVITY BOOK</span><h3>My First Modern Alphabet Activity Book</h3><p>Color, trace and learn A–Z with cheerful illustrations and simple alphabet practice for young learners.</p><div class="price-row"><span class="old-price">₹299</span><strong class="offer-price">₹229</strong><span class="offer-tag">23% OFF</span></div><button class="store-buy-btn" data-product-id="modern-alphabet-activity-book" onclick="addToCart('modern-alphabet-activity-book')">ADD TO CART</button></div></article>
+</div></div></section>
+<section class="store-category-section" id="ebooks"><div class="container"><div class="store-category-heading"><div><span class="number">03</span><h2>STORY BOOKS</h2></div><p>Digital books created to help readers learn, explore ideas and enjoy useful content.</p></div><div class="store-book-grid">
+<article class="store-book-card"><div class="store-book-image"><img alt="BookOra E-book" src="assets/books/book1.jpg"/></div><div class="store-book-content"><span class="type">E-BOOK</span><h3>BookOra Digital Reading Collection</h3><p>Practical and creative digital books designed for modern readers.</p><div class="price-row"><span class="old-price">₹299</span><strong class="offer-price">₹229</strong><span class="offer-tag">TODAY</span></div><button class="store-buy-btn" data-product-id="bookora-digital-reading" onclick="addToCart('bookora-digital-reading')">ADD TO CART</button></div></article>
+<article class="store-book-card"><div class="store-book-image"><div class="store-placeholder">BIBLE STORY<br/>COLORING BOOK</div></div><div class="store-book-content"><span class="type">E-BOOK • COLORING</span><h3>Adham and Yavaal Coloring Book with Jesus</h3><p>30 Bible Story Coloring Pages for Kids – Fun and Faithful Learning through the Story of Creation.</p><p style="margin-top:6px;min-height:0;color:#aaa;font-size:11px;">By MR Jenibar M • Kindle eBook + Soft Copy</p><div class="price-row"><span class="old-price">₹149</span><strong class="offer-price">₹120</strong><span class="offer-tag">SOFT COPY</span></div><button class="store-buy-btn" onclick="openAdhamRegion()">ADD TO CART</button></div></article>
+</div></div></section>
+<section class="store-category-section" id="planners-journals"><div class="container"><div class="store-category-heading"><div><span class="number">04</span><h2>PLANNERS<br/>&amp; JOURNALS</h2></div><p>Digital planners and practical planning resources to organize your time, build habits and make steady progress.</p></div><div class="store-book-grid digital-products-grid"><article class="store-book-card digital-product-card"><div class="store-book-image"><img alt="Premium Monthly Planner — premium BookOra digital product cover" loading="lazy" src="assets/digital-products/premium-monthly-planner.png"/></div><div class="store-book-content"><span class="type">PREMIUM DIGITAL PRODUCT</span><h3>Premium Monthly Planner</h3><p>A calmer, clearer month starts with one simple system. Plan priorities, organize tasks, track habits and make steady progress with a premium printable planner.</p><div class="price-row"><span class="old-price">₹299</span><strong class="offer-price">₹229</strong><span class="offer-tag">LAUNCH OFFER</span></div><button class="store-buy-btn" data-product-id="premium-monthly-planner" onclick="addToCart('premium-monthly-planner')">ADD TO CART</button></div></article></div></div></section>
+<section class="store-category-section" id="ai-prompts"><div class="container"><div class="store-category-heading"><div><span class="number">05</span><h2>AI PROMPTS</h2></div><p>Prompt collections and creator playbooks to help plan, research, create and publish digital content.</p></div><div class="store-book-grid digital-products-grid"><article class="store-book-card digital-product-card"><div class="store-book-image"><img alt="Jesus Saves Animals — Channel Master Playbook — premium BookOra digital product cover" loading="lazy" src="assets/digital-products/jesus-saves-animals-channel-master-playbook.png"/></div><div class="store-book-content"><span class="type">PREMIUM DIGITAL PRODUCT</span><h3>Jesus Saves Animals — Channel Master Playbook</h3><p>Plan a faceless animal-story channel with a structured content playbook, reusable prompts and a practical publishing workflow.</p><div class="price-row"><span class="old-price">₹299</span><strong class="offer-price">₹229</strong><span class="offer-tag">LAUNCH OFFER</span></div><button class="store-buy-btn" data-product-id="jesus-saves-animals-playbook" onclick="addToCart('jesus-saves-animals-playbook')">ADD TO CART</button></div></article><article class="store-book-card digital-product-card"><div class="store-book-image"><img alt="Prompt Profit Vault — 500 AI Prompts — premium BookOra digital product cover" loading="lazy" src="assets/digital-products/prompt-profit-vault-500-ai-prompts.png"/></div><div class="store-book-content"><span class="type">PREMIUM DIGITAL PRODUCT</span><h3>Prompt Profit Vault — 500 AI Prompts</h3><p>Stop staring at a blank page. Use 500 ready-to-adapt prompts across 10 categories to research, create, brand and market digital products.</p><div class="price-row"><span class="old-price">₹299</span><strong class="offer-price">₹229</strong><span class="offer-tag">LAUNCH OFFER</span></div><button class="store-buy-btn" data-product-id="prompt-profit-vault" onclick="addToCart('prompt-profit-vault')">ADD TO CART</button></div></article></div></div></section>
+<section class="store-category-section" id="canva-templates"><div class="container"><div class="store-category-heading"><div><span class="number">06</span><h2>CANVA TEMPLATES</h2></div><p>Coming soon — editable design templates and creative assets for content, publishing and business.</p></div></div></section>
+<section class="store-category-section" id="digital-art-backgrounds"><div class="container"><div class="store-category-heading"><div><span class="number">07</span><h2>DIGITAL ART<br/>&amp; BACKGROUNDS</h2></div><p>Creative backgrounds and visual assets for digital art, presentations, social content and design projects.</p></div><div class="store-book-grid digital-products-grid"><article class="store-book-card digital-product-card"><div class="store-book-image"><img alt="1500+ Digital Painting Backgrounds — premium BookOra digital product cover" loading="lazy" src="assets/digital-products/1500-digital-painting-backgrounds.png"/></div><div class="store-book-content"><span class="type">PREMIUM DIGITAL PRODUCT</span><h3>1500+ Digital Painting Backgrounds</h3><p>Find a versatile background for creative projects faster with a collection of colorful digital painting backgrounds for designs, social posts, presentations and more.</p><div class="price-row"><span class="old-price">₹299</span><strong class="offer-price">₹229</strong><span class="offer-tag">LAUNCH OFFER</span></div><button class="store-buy-btn" data-product-id="digital-painting-backgrounds-1500" onclick="addToCart('digital-painting-backgrounds-1500')">ADD TO CART</button></div></article></div></div></section>
+<section class="free-resources-section" id="free-resources">
+<div class="container">
+<div class="free-resources-head">
+<div>
+<span class="section-label">RESOURCE LIBRARY</span>
+<h2><span class="glow-accent">FREE</span> TO <span class="glow-accent">LEARN.</span></h2>
+</div>
+<p>Practical guides and resources designed for creators, learners and people building their digital skills.</p>
+</div>
+<div class="resource-list">
+<article class="resource-row">
+<div class="resource-number">01</div>
+<div class="resource-cover"><img alt="AI Creator Starter Kit cover" src="assets/free-resources-visual.png"/></div>
+<div class="resource-main">
+<span class="resource-kicker">AI • CREATOR • GUIDE</span>
+<h3>AI Creator Starter Kit</h3>
+<p>A practical beginner-friendly guide covering AI prompts, AI tools, prompt engineering, creator workflows and productivity resources.</p>
+<div class="resource-tags">
+<span>47 PAGES</span>
+<span>25 AI PROMPTS</span>
+<span>25 AI WEBSITES</span>
+</div>
+</div>
+<button class="resource-download" data-free-file="assets/starter-kit/starter_kit.pdf" data-free-resource="AI Creator Starter Kit" onclick="openFreeResourceForm(this)" type="button">DOWNLOAD →</button>
+</article>
+<article class="resource-row">
+<div class="resource-number">02</div>
+<div class="resource-cover"><img alt="15-Day AI KDP Roadmap cover" src="assets/free-resources-visual.png"/></div>
+<div class="resource-main">
+<span class="resource-kicker">AI • KDP • PUBLISHING</span>
+<h3>15-Day AI × KDP Roadmap</h3>
+<p>A practical step-by-step roadmap covering book research, AI-assisted content creation, interior design, cover creation, KDP preparation, publishing and promotion.</p>
+<div class="resource-tags">
+<span>9 PAGES</span>
+<span>15 DAYS</span>
+<span>MOBILE + AI + KDP</span>
+</div>
+</div>
+<button class="resource-download" data-free-file="assets/roadmap/15-day-ai-kdp-roadmap.pdf" data-free-resource="15-Day AI × KDP Roadmap" onclick="openFreeResourceForm(this)" type="button">DOWNLOAD →</button>
+</article>
+<article class="resource-row resource-row-coming">
+<div class="resource-number">03</div>
+<div class="resource-cover"><div class="resource-cover-placeholder">COVER<br/>COMING SOON</div></div>
+<div class="resource-main">
+<span class="resource-kicker">NEW RESOURCE</span>
+<h3>More Resources</h3>
+<p>New free resources for creators, learners and digital entrepreneurs are being prepared.</p>
+<div class="resource-tags">
+<span>COMING SOON</span>
+</div>
+</div>
+<span class="resource-download disabled">COMING SOON</span>
+</article>
+</div>
+</div>
+</section>
+<section class="about-bookora-bottom" id="about-bookora"><div class="container about-bottom-grid"><div><span class="section-label">ABOUT BOOKORA</span><h2><span class="glow-accent">A PLACE FOR</span><br/><span class="glow-accent">CREATIVITY &amp;</span><br/><span class="glow-accent">LEARNING.</span></h2></div><div class="about-bottom-copy"><p>We create high-quality coloring books, activity books, educational resources, e-books, digital products and practical learning materials.</p><p>Explore the collection and find something created to help you relax, learn, create and grow.</p></div></div></section>
+<section class="bookora-message"><div class="container"><div><span class="section-label">BOOKORA</span><h2><span class="glow-accent">DISCOVER.</span><br/><span class="glow-accent">READ.</span><br/>ENJOY.<br/><span class="glow-accent">GROW.</span></h2></div><div><p>Discover thoughtfully created books, coloring collections, activity books and digital resources made for curious minds and creative moments. Explore something new, enjoy meaningful reading and find resources designed to inspire learning, creativity and everyday growth.</p></div></div></section>
+</main>
+<footer class="site-footer" id="contact"><div class="container"><div class="footer-grid"><div><h3>BookOra Digital</h3><p>Downloadable creativity — digital resources designed to inspire learning, planning and creative growth.</p></div><div><h4>Explore</h4><a href="#coloring-books">Coloring Books</a><a href="#activity-books">Activity Books</a><a href="#ebooks">Story Books</a><a href="#categories">Digital Products</a></div><div><h4>AjuVerse</h4><a href="index.html">Home</a><a href="academy.html">Academy</a><a href="index.html#portfolio">Portfolio</a><a href="#free-resources">Free Resources</a></div><div><h4>Contact</h4><a href="mailto:jeniaju112@gmail.com">jeniaju112@gmail.com</a><a class="contact-action" href="mailto:jeniaju112@gmail.com">Send Email →</a><a class="contact-value whatsapp-value" href="https://wa.me/918122606055" rel="noopener noreferrer" target="_blank">+91 8122606055</a><a class="contact-action whatsapp-action" href="https://wa.me/918122606055" rel="noopener noreferrer" target="_blank">WhatsApp →</a></div></div><div class="footer-bottom"><span>© 2026 BookOra Digital. All rights reserved.</span><span>AjuVerse • Discover • Choose • Enjoy • Grow</span></div></div></footer>
+<div class="free-lead-modal" id="freeLeadModal">
+<div class="free-lead-box">
+<button aria-label="Close" class="free-lead-close" onclick="closeFreeResourceForm()" type="button">×</button>
+<span class="free-lead-label">FREE RESOURCE</span>
+<h2>GET YOUR FREE RESOURCE.</h2>
+<p>Enter your details to receive <span class="free-lead-resource" id="freeLeadResource">the resource</span>. Your information will be saved to our BookOra resource list.</p>
+<form action="https://script.google.com/macros/s/AKfycbyrXBdILUSGd01m2e2cxnqFKrEtQRee14KLUdr7sSOCi7VSVR6yxe-WxFvyNRez9hC2-w/exec" class="free-lead-form" id="freeLeadForm" method="POST" onsubmit="submitFreeResource(event)" target="freeLeadFrame">
+<input name="action" type="hidden" value="free_resource_lead"/>
+<input id="freeLeadResourceInput" name="resource" type="hidden" value=""/>
+<input id="freeLeadFileInput" name="file" type="hidden" value=""/>
+<label for="freeLeadName">NAME</label>
+<input autocomplete="name" id="freeLeadName" name="name" placeholder="Your name" required="" type="text"/>
+<label for="freeLeadEmail">EMAIL</label>
+<input autocomplete="email" id="freeLeadEmail" name="email" placeholder="you@example.com" required="" type="email"/>
+<label for="freeLeadWhatsapp">WHATSAPP NUMBER</label>
+<input autocomplete="tel" id="freeLeadWhatsapp" inputmode="tel" name="whatsapp" placeholder="+91 98765 43210" required="" type="tel"/>
+<button class="free-lead-submit" id="freeLeadSubmit" type="submit">GET FREE DOWNLOAD →</button>
+<div aria-live="polite" class="free-lead-status" id="freeLeadStatus"></div>
+</form>
+<iframe id="freeLeadFrame" name="freeLeadFrame" style="display:none" title="Free resource submission"></iframe>
+</div>
+</div>
+<div class="buy-modal" id="adhamRegionModal"><div class="buy-modal-box"><button class="buy-modal-close" onclick="closeAdhamRegion()">×</button><span class="buy-modal-label">ADHAM &amp; YAVAAL</span><h2>WHERE ARE YOU<br/>BUYING FROM?</h2><p>Choose your region to continue with the correct purchase option.</p><div class="buy-options"><button class="buy-option" onclick="openAdhamIndia()"><span class="buy-option-number">01</span><span><strong>🇮🇳 India</strong><small>Choose Soft Copy or Hard Copy</small></span><span class="buy-option-arrow">→</span></button><button class="buy-option" onclick="buyAdhamKdp()"><span class="buy-option-number">02</span><span><strong>🌎 Other Countries</strong><small>Purchase through Amazon KDP</small></span><span class="buy-option-arrow">→</span></button></div></div></div>
+<div class="buy-modal" id="adhamIndiaModal"><div class="buy-modal-box"><button class="buy-modal-close" onclick="closeAdhamIndia()">×</button><span class="buy-modal-label">🇮🇳 INDIA</span><h2>CHOOSE YOUR<br/>FORMAT.</h2><p>Choose how you want to purchase the Aadham &amp; Yavaal Coloring Book.</p><div class="buy-options"><button class="buy-option" onclick="buyAdhamSoftCopy()"><span class="buy-option-number">01</span><span><strong>Soft Copy — ₹120</strong><small>Digital PDF • Add to Cart</small></span><span class="buy-option-arrow">→</span></button><button class="buy-option" onclick="showAdhamOutOfStock()"><span class="buy-option-number">02</span><span><strong>Hard Copy — ₹299</strong><small>Currently OUT OF STOCK</small></span><span class="buy-option-arrow">→</span></button></div></div></div>
+<div class="buy-modal" id="adhamOutStockModal"><div class="buy-modal-box"><button class="buy-modal-close" onclick="closeAdhamOutOfStock()">×</button><span class="buy-modal-label">HARD COPY</span><h2>OUT OF<br/>STOCK.</h2><p>The hard copy is currently unavailable. Please choose the Soft Copy option instead.</p><button class="store-buy-btn" onclick="closeAdhamOutOfStock();openAdhamIndia();" style="width:100%;margin-top:20px;">BACK TO OPTIONS →</button></div></div>
+<script>
+const FREE_RESOURCE_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyrXBdILUSGd01m2e2cxnqFKrEtQRee14KLUdr7sSOCi7VSVR6yxe-WxFvyNRez9hC2-w/exec';
+let freeResourceFile = '';
+
+function openFreeResourceForm(button){
+  freeResourceFile = button.dataset.freeFile || '';
+  document.getElementById('freeLeadResource').textContent = button.dataset.freeResource || 'the resource';
+  document.getElementById('freeLeadResourceInput').value = button.dataset.freeResource || '';
+  document.getElementById('freeLeadFileInput').value = freeResourceFile;
+  document.getElementById('freeLeadStatus').textContent = '';
+  document.getElementById('freeLeadSubmit').disabled = false;
+  document.getElementById('freeLeadSubmit').textContent = 'GET FREE DOWNLOAD →';
+  document.getElementById('freeLeadModal').classList.add('show');
+  setTimeout(function(){ document.getElementById('freeLeadName').focus(); }, 50);
+}
+
+function closeFreeResourceForm(){
+  document.getElementById('freeLeadModal').classList.remove('show');
+}
+
+function submitFreeResource(event){
+  event.preventDefault();
+
+  const form = document.getElementById('freeLeadForm');
+  const name = document.getElementById('freeLeadName').value.trim();
+  const email = document.getElementById('freeLeadEmail').value.trim();
+  const whatsapp = document.getElementById('freeLeadWhatsapp').value.trim();
+  const digits = whatsapp.replace(/\D/g,'');
+
+  if(!name || !email || !whatsapp){
+    document.getElementById('freeLeadStatus').textContent = 'Please complete all fields.';
+    return;
+  }
+
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+    document.getElementById('freeLeadStatus').textContent = 'Please enter a valid email address.';
+    return;
+  }
+
+  if(digits.length < 10 || digits.length > 15){
+    document.getElementById('freeLeadStatus').textContent = 'Please enter a valid WhatsApp number.';
+    return;
+  }
+
+  const submitButton = document.getElementById('freeLeadSubmit');
+  submitButton.disabled = true;
+  submitButton.textContent = 'PREPARING DOWNLOAD...';
+  document.getElementById('freeLeadStatus').textContent = 'Saving your details...';
+
+  form.action = FREE_RESOURCE_ENDPOINT;
+  form.submit();
+
+  // Allow the Apps Script POST to reach the sheet, then start the PDF download.
+  setTimeout(function(){
+    const link = document.createElement('a');
+    link.href = freeResourceFile;
+    link.download = '';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+
+    document.getElementById('freeLeadStatus').textContent = 'Download started. Thank you!';
+    submitButton.textContent = 'DOWNLOAD STARTED ✓';
+
+    setTimeout(function(){
+      closeFreeResourceForm();
+      form.reset();
+      document.getElementById('freeLeadResourceInput').value = '';
+      document.getElementById('freeLeadFileInput').value = '';
+    }, 900);
+  }, 900);
+}
+
+document.getElementById('freeLeadModal').addEventListener('click',function(e){
+  if(e.target === this) closeFreeResourceForm();
+});
+
+window.addEventListener('keydown',function(e){
+  if(e.key === 'Escape') closeFreeResourceForm();
+});
+</script>
+<script>
+function openAdhamRegion(){document.getElementById('adhamRegionModal').classList.add('show')}
+function closeAdhamRegion(){document.getElementById('adhamRegionModal').classList.remove('show')}
+function openAdhamIndia(){closeAdhamRegion();document.getElementById('adhamIndiaModal').classList.add('show')}
+function closeAdhamIndia(){document.getElementById('adhamIndiaModal').classList.remove('show')}
+function buyAdhamSoftCopy(){closeAdhamIndia();addToCart('adham-yavaal-soft-copy')}
+function showAdhamOutOfStock(){closeAdhamIndia();document.getElementById('adhamOutStockModal').classList.add('show')}
+function closeAdhamOutOfStock(){document.getElementById('adhamOutStockModal').classList.remove('show')}
+function buyAdhamKdp(){window.open('https://www.amazon.com/dp/B0FMYNQKP2','_blank','noopener,noreferrer')}
+['adhamRegionModal','adhamIndiaModal','adhamOutStockModal'].forEach(function(id){var el=document.getElementById(id);if(el)el.addEventListener('click',function(e){if(e.target===this)this.classList.remove('show')})});
+</script>
+<script src="bookora-cart.js"></script>
+<script defer="" src="js/ajuverse-nova.js?v=1"></script>
+<style id="bookora-mobile-books-list-fix">
+/* BOOKORA — MOBILE BOOK LIST ONLY */
+@media (max-width:760px){
+    .store-book-grid{
+        display:grid !important;
+        grid-template-columns:1fr !important;
+        gap:9px !important;
+    }
+
+    .store-book-card{
+        display:grid !important;
+        grid-template-columns:105px minmax(0,1fr) !important;
+        width:100% !important;
+        min-height:0 !important;
+        height:auto !important;
+        border-radius:10px !important;
+        overflow:hidden !important;
+        align-items:start !important;
+    }
+
+    /* Wider, shorter portrait cover — show the complete cover without cropping */
+    .store-book-image{
+        width:105px !important;
+        height:145px !important;
+        min-height:145px !important;
+        aspect-ratio:auto !important;
+        align-self:start !important;
+        margin:0 !important;
+        overflow:hidden !important;
+        background:#111 !important;
+        display:flex !important;
+        align-items:flex-start !important;
+        justify-content:center !important;
+    }
+
+    .store-book-image img{
+        display:block !important;
+        width:100% !important;
+        height:100% !important;
+        object-fit:contain !important;
+        object-position:top center !important;
+    }
+
+    .store-book-content{
+        min-width:0 !important;
+        height:145px !important;
+        box-sizing:border-box !important;
+        padding:4px 8px !important;
+        display:flex !important;
+        flex-direction:column !important;
+        justify-content:flex-start !important;
+        gap:0 !important;
+        overflow:hidden !important;
+    }
+
+    .store-book-content .type{
+        display:block !important;
+        font-size:6px !important;
+        line-height:1 !important;
+        letter-spacing:1.2px !important;
+        margin-bottom:1px !important;
+    }
+
+    .store-book-content h3{
+        font-size:8.8px !important;
+        line-height:1.05 !important;
+        letter-spacing:-.2px !important;
+        margin:0 !important;
+    }
+
+    .store-book-content p{
+        font-size:5.9px !important;
+        line-height:1.13 !important;
+        min-height:0 !important;
+        margin:0 !important;
+        color:#999 !important;
+    }
+
+    .store-book-content p + p{margin-top:1px !important}
+
+    .price-row{
+        gap:4px !important;
+        margin-top:1px !important;
+        padding-top:0 !important;
+        align-items:center !important;
+    }
+
+    .old-price{font-size:5px !important}
+    .offer-price{font-size:8.5px !important}
+    .offer-tag{font-size:4.5px !important;padding:2px 5px !important}
+
+    .store-buy-btn{
+        width:100% !important;
+        margin-top:auto !important;
+        padding:4px 6px !important;
+        min-height:17px !important;
+        font-size:7.5px !important;
+        line-height:1 !important;
+        border-radius:5px !important;
+        display:flex !important;
+        align-items:center !important;
+        justify-content:center !important;
+        gap:0 !important;
+        white-space:nowrap !important;
+    }
+
+    .store-buy-btn .qty-minus,
+    .store-buy-btn .qty-plus{
+        font-size:11px !important;
+        line-height:10px !important;
+        font-weight:900 !important;
+        width:22px !important;
+        height:15px !important;
+        display:inline-flex !important;
+        align-items:center !important;
+        justify-content:center !important;
+        cursor:pointer !important;
+        user-select:none !important;
+    }
+
+    .store-buy-btn .qty-value{
+        min-width:22px !important;
+        font-size:7px !important;
+        font-weight:900 !important;
+        text-align:center !important;
+    }
+
+    .store-buy-btn .qty-label{
+        font-size:7px !important;
+        font-weight:900 !important;
+        letter-spacing:.2px !important;
+    }
+}
+
+@media (max-width:390px){
+    .store-book-grid{gap:7px !important}
+
+    .store-book-card{
+        grid-template-columns:100px minmax(0,1fr) !important;
+    }
+
+    .store-book-image{
+        width:100px !important;
+        height:138px !important;
+        min-height:138px !important;
+    }
+
+    .store-book-content{height:138px !important;padding:4px 7px !important}
+    .store-book-content .type{font-size:5.5px !important}
+    .store-book-content h3{font-size:8.3px !important}
+    .store-book-content p{font-size:5.6px !important;line-height:1.12 !important}
+    .offer-price{font-size:8px !important}
+    .store-buy-btn{font-size:7px !important;padding:4px 6px !important;min-height:16px !important}
+    .store-buy-btn .qty-minus,.store-buy-btn .qty-plus{font-size:10px !important;width:20px !important}
+    .store-buy-btn .qty-value,.store-buy-btn .qty-label{font-size:6.5px !important}
+}
+</style>
+<style id="bookora-mobile-books-text-final-fix">
+/* FINAL MOBILE BOOK TEXT FIX — keep approved layout, prevent overlap */
+@media (max-width:760px){
+  .store-book-content{
+    height:145px !important;
+    min-height:145px !important;
+    padding:5px 8px !important;
+    display:grid !important;
+    grid-template-rows:auto auto minmax(0,1fr) auto auto !important;
+    align-content:stretch !important;
+    overflow:hidden !important;
+    gap:0 !important;
+  }
+  .store-book-content .type{
+    font-size:6px !important;
+    line-height:1 !important;
+    letter-spacing:1.1px !important;
+    margin:0 0 2px !important;
+  }
+  .store-book-content h3{
+    font-size:12px !important;
+    line-height:1.04 !important;
+    letter-spacing:-.15px !important;
+    margin:0 0 2px !important;
+    display:-webkit-box !important;
+    -webkit-box-orient:vertical !important;
+    -webkit-line-clamp: 2 !important;
+line-clamp: 2 !important;
+    overflow:hidden !important;
+  }
+  .store-book-content p{
+    font-size:8px !important;
+    line-height:1.15 !important;
+    min-height:0 !important;
+    margin:0 !important;
+    display:-webkit-box !important;
+    -webkit-box-orient:vertical !important;
+    -webkit-line-clamp: 4 !important;
+line-clamp: 4 !important;
+    overflow:hidden !important;
+  }
+  .store-book-content p + p{
+    margin-top:1px !important;
+    -webkit-line-clamp: 1 !important;
+line-clamp: 1 !important;
+  }
+  .price-row{
+    margin-top:2px !important;
+    padding:0 !important;
+    gap:4px !important;
+    min-height:12px !important;
+  }
+  .old-price{font-size:5px !important}
+  .offer-price{font-size:9px !important;line-height:1 !important}
+  .offer-tag{font-size:4.5px !important;padding:2px 5px !important}
+  .store-buy-btn{
+    margin-top:2px !important;
+    min-height:18px !important;
+    height:18px !important;
+    padding:3px 6px !important;
+    font-size:8px !important;
+    line-height:1 !important;
+    border-radius:5px !important;
+  }
+  .store-buy-btn .qty-minus,.store-buy-btn .qty-plus{
+    font-size:11px !important;
+    width:21px !important;
+    height:16px !important;
+  }
+  .store-buy-btn .qty-value,.store-buy-btn .qty-label{
+    font-size:7.5px !important;
+    line-height:1 !important;
+  }
+}
+@media (max-width:390px){
+  .store-book-content{
+    height:138px !important;
+    min-height:138px !important;
+    padding:4px 7px !important;
+  }
+  .store-book-content h3{font-size:11px !important}
+  .store-book-content p{font-size:7.5px !important;line-height:1.13 !important}
+  .store-buy-btn{min-height:17px !important;height:17px !important;font-size:7.5px !important}
+  .store-buy-btn .qty-minus,.store-buy-btn .qty-plus{font-size:10px !important;width:20px !important}
+  .store-buy-btn .qty-value,.store-buy-btn .qty-label{font-size:7px !important}
+}
+</style>
+<script id="bookora-mobile-qty-fix">
+(function(){
+  function renderQtyButton(button, item){
+    var qty = Number(item && item.qty || 1);
+    var id = button.getAttribute('data-product-id');
+    button.classList.add('bookora-added');
+    button.innerHTML = '<span class="qty-minus" role="button" tabindex="0" aria-label="Decrease quantity" onclick="event.stopPropagation();decreaseBookQty(\'' + id + '\')">−</span>' +
+      '<span class="qty-value" aria-label="Quantity ' + qty + '">' + qty + '</span>' +
+      '<span class="qty-plus" role="button" tabindex="0" aria-label="Increase quantity" onclick="event.stopPropagation();addToCart(\'' + id + '\')">+</span>';
+  }
+  window.decreaseBookQty = function(id){
+    var cart = typeof getCart === 'function' ? getCart() : [];
+    var item = cart.find(function(x){ return x.id === id; });
+    if(!item) return;
+    item.qty = Number(item.qty || 1) - 1;
+    if(item.qty <= 0){ cart = cart.filter(function(x){ return x.id !== id; }); }
+    if(typeof saveCart === 'function') saveCart(cart);
+    if(typeof updateCartCount === 'function') updateCartCount();
+    if(typeof updateProductButtonStates === 'function') updateProductButtonStates();
+  };
+  window.updateProductButtonStates = (function(original){
+    return function(){
+      var cart = typeof getCart === 'function' ? getCart() : [];
+      document.querySelectorAll('.store-buy-btn[data-product-id]').forEach(function(button){
+        var id = button.getAttribute('data-product-id');
+        var item = cart.find(function(x){ return x.id === id; });
+        if(item){ renderQtyButton(button,item); }
+        else { button.classList.remove('bookora-added'); button.innerHTML='ADD TO CART'; }
+      });
+    };
+  })(window.updateProductButtonStates);
+})();
+</script>
+<style id="bookora-mobile-free-resources-final-fix">
+/* FREE RESOURCES — MOBILE ONLY
+   Keep this section independent from the mobile book-card layout. */
+@media (max-width:760px){
+  .free-resources-section{
+    display:block !important;
+    padding:30px 0 34px !important;
+    overflow:visible !important;
+  }
+  .free-resources-head{
+    display:block !important;
+    margin-bottom:14px !important;
+  }
+  .free-resources-head h2{
+    font-size:42px !important;
+    line-height:.9 !important;
+    letter-spacing:-3px !important;
+  }
+  .free-resources-head>p{
+    font-size:10px !important;
+    line-height:1.4 !important;
+    margin-top:9px !important;
+    padding:0 !important;
+  }
+  .resource-list{
+    display:block !important;
+    width:100% !important;
+  }
+  .resource-row{
+    display:grid !important;
+    grid-template-columns:24px 92px minmax(0,1fr) !important;
+    grid-template-rows:auto auto !important;
+    column-gap:7px !important;
+    row-gap:6px !important;
+    align-items:stretch !important;
+    min-height:0 !important;
+    height:auto !important;
+    padding:12px 0 !important;
+    box-sizing:border-box !important;
+    overflow:visible !important;
+  }
+  .resource-number{
+    grid-column:1 !important;
+    grid-row:1 / 3 !important;
+    align-self:center !important;
+    font-size:10px !important;
+    line-height:1 !important;
+  }
+  .resource-cover{
+    grid-column:2 !important;
+    grid-row:1 / 3 !important;
+    width:92px !important;
+    height:auto !important;
+    min-height:100% !important;
+    align-self:stretch !important;
+    margin:0 !important;
+    border-radius:6px !important;
+    overflow:hidden !important;
+  }
+  .resource-cover img{
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+  }
+  .resource-main{
+    grid-column:3 !important;
+    grid-row:1 !important;
+    min-width:0 !important;
+    overflow:visible !important;
+  }
+  .resource-kicker{
+    display:block !important;
+    font-size:7px !important;
+    line-height:1 !important;
+    letter-spacing:1.5px !important;
+    margin:0 0 4px !important;
+  }
+  .resource-main h3{
+    font-size:15px !important;
+    line-height:1.05 !important;
+    letter-spacing:-.4px !important;
+    margin:0 !important;
+    display:-webkit-box !important;
+    -webkit-box-orient:vertical !important;
+    -webkit-line-clamp: 2 !important;
+line-clamp: 2 !important;
+    overflow:hidden !important;
+  }
+  .resource-main p{
+    font-size:9px !important;
+    line-height:1.35 !important;
+    margin:5px 0 0 !important;
+    max-width:none !important;
+    display:-webkit-box !important;
+    -webkit-box-orient:vertical !important;
+    -webkit-line-clamp: 2 !important;
+line-clamp: 2 !important;
+    overflow:hidden !important;
+  }
+  .resource-tags{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    gap:3px !important;
+    margin-top:6px !important;
+  }
+  .resource-tags span{
+    font-size:6px !important;
+    line-height:1 !important;
+    padding:4px 5px !important;
+  }
+  .resource-download{
+    grid-column:3 !important;
+    grid-row:2 !important;
+    width:100px !important;
+    min-height:24px !important;
+    box-sizing:border-box !important;
+    padding:6px 7px !important;
+    margin:0 !important;
+    justify-self:start !important;
+    align-self:start !important;
+    font-size:7px !important;
+    line-height:1 !important;
+    white-space:nowrap !important;
+  }
+  .resource-cover-placeholder{
+    font-size:7px !important;
+    line-height:1.2 !important;
+    padding:6px !important;
+  }
+}
+@media (max-width:390px){
+  .resource-row{
+    grid-template-columns:22px 88px minmax(0,1fr) !important;
+    column-gap:6px !important;
+    padding:11px 0 !important;
+  }
+  .resource-cover{width:88px !important}
+  .resource-main h3{font-size:14px !important}
+  .resource-main p{font-size:8.5px !important}
+  .resource-download{width:96px !important}
+}
+</style>
+<style id="bookora-mobile-free-resource-cover-final">
+/* FINAL: FREE RESOURCE MOBILE LIST — independent from BOOK product cards */
+@media (max-width:760px){
+  .free-resources-section .resource-row{
+    display:grid !important;
+    grid-template-columns:24px 92px minmax(0,1fr) !important;
+    grid-template-rows:auto auto !important;
+    column-gap:7px !important;
+    row-gap:5px !important;
+    align-items:start !important;
+    min-height:0 !important;
+    height:auto !important;
+    padding:12px 0 !important;
+    overflow:hidden !important;
+  }
+  .free-resources-section .resource-number{
+    grid-column:1 !important; grid-row:1 / 3 !important;
+    align-self:center !important;
+    font-size:10px !important; line-height:1 !important;
+  }
+  .free-resources-section .resource-cover{
+    grid-column:2 !important; grid-row:1 !important;
+    width:92px !important; height:138px !important; min-height:138px !important;
+    align-self:start !important; margin:0 !important;
+    border-radius:6px !important; overflow:hidden !important;
+    background:#111 !important;
+    display:flex !important; align-items:center !important; justify-content:center !important;
+  }
+  .free-resources-section .resource-cover img{
+    display:block !important; width:100% !important; height:100% !important;
+    object-fit:contain !important; object-position:center !important;
+  }
+  .free-resources-section .resource-cover-placeholder{
+    width:100% !important; height:100% !important;
+    display:flex !important; align-items:center !important; justify-content:center !important;
+    text-align:center !important; box-sizing:border-box !important;
+  }
+  .free-resources-section .resource-main{
+    grid-column:3 !important; grid-row:1 !important;
+    min-width:0 !important; overflow:hidden !important;
+  }
+  .free-resources-section .resource-kicker{
+    font-size:6px !important; letter-spacing:1.4px !important; margin:0 0 3px !important;
+  }
+  .free-resources-section .resource-main h3{
+    font-size:13px !important; line-height:1.05 !important; letter-spacing:-.25px !important;
+    margin:0 !important;
+    display:-webkit-box !important; -webkit-box-orient:vertical !important;
+    -webkit-line-clamp: 2 !important;
+line-clamp: 2 !important; overflow:hidden !important;
+  }
+  .free-resources-section .resource-main p{
+    font-size:8px !important; line-height:1.25 !important; margin:4px 0 0 !important;
+    display:-webkit-box !important; -webkit-box-orient:vertical !important;
+    -webkit-line-clamp: 4 !important;
+line-clamp: 4 !important; overflow:hidden !important;
+  }
+  .free-resources-section .resource-tags{
+    display:flex !important; flex-wrap:wrap !important; gap:3px !important; margin-top:5px !important;
+  }
+  .free-resources-section .resource-tags span{
+    font-size:5.5px !important; line-height:1 !important; padding:3px 4px !important;
+  }
+  .free-resources-section .resource-download{
+    grid-column:3 !important; grid-row:2 !important;
+    width:96px !important; min-height:22px !important;
+    margin:0 !important; padding:5px 6px !important;
+    justify-self:start !important; align-self:start !important;
+    font-size:6.5px !important; line-height:1 !important;
+    white-space:nowrap !important;
+  }
+}
+@media (max-width:390px){
+  .free-resources-section .resource-row{grid-template-columns:22px 88px minmax(0,1fr) !important;column-gap:6px !important;}
+  .free-resources-section .resource-cover{width:88px !important;height:132px !important;min-height:132px !important;}
+  .free-resources-section .resource-main h3{font-size:12.5px !important;}
+  .free-resources-section .resource-main p{font-size:7.7px !important;}
+  .free-resources-section .resource-download{width:92px !important;font-size:6.2px !important;}
+}
+</style>
+<style id="bookora-mobile-free-resource-compact-final">
+/* FINAL COMPACT MOBILE FREE RESOURCE — text reduced, no crop, no excess height */
+@media (max-width:760px){
+  .free-resources-section .resource-row{
+    grid-template-columns:22px 88px minmax(0,1fr) !important;
+    grid-template-rows:auto auto !important;
+    column-gap:6px !important;
+    row-gap:3px !important;
+    padding:9px 0 !important;
+    min-height:0 !important;
+    height:auto !important;
+    overflow:hidden !important;
+    align-items:start !important;
+  }
+  .free-resources-section .resource-number{
+    font-size:9px !important;
+    align-self:center !important;
+  }
+  .free-resources-section .resource-cover{
+    width:88px !important;
+    height:112px !important;
+    min-height:112px !important;
+    grid-row:1 !important;
+    align-self:start !important;
+    overflow:hidden !important;
+  }
+  .free-resources-section .resource-cover img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:contain !important;
+    object-position:center !important;
+  }
+  .free-resources-section .resource-main{
+    grid-row:1 !important;
+    overflow:hidden !important;
+  }
+  .free-resources-section .resource-kicker{
+    font-size:5.5px !important;
+    letter-spacing:1.2px !important;
+    line-height:1 !important;
+    margin:0 0 2px !important;
+  }
+  .free-resources-section .resource-main h3{
+    font-size:11px !important;
+    line-height:1.05 !important;
+    letter-spacing:-.15px !important;
+    margin:0 !important;
+    -webkit-line-clamp: 2 !important;
+line-clamp: 2 !important;
+  }
+  .free-resources-section .resource-main p{
+    font-size:7px !important;
+    line-height:1.2 !important;
+    margin:3px 0 0 !important;
+    -webkit-line-clamp: 3 !important;
+line-clamp: 3 !important;
+  }
+  .free-resources-section .resource-tags{
+    gap:2px !important;
+    margin-top:4px !important;
+  }
+  .free-resources-section .resource-tags span{
+    font-size:5px !important;
+    line-height:1 !important;
+    padding:3px 4px !important;
+  }
+  .free-resources-section .resource-download{
+    grid-column:3 !important;
+    grid-row:2 !important;
+    width:90px !important;
+    min-height:20px !important;
+    padding:5px 6px !important;
+    margin:0 !important;
+    font-size:6px !important;
+    line-height:1 !important;
+  }
+  .free-resources-section .resource-cover-placeholder{
+    font-size:6px !important;
+    line-height:1.15 !important;
+    padding:5px !important;
+  }
+}
+@media (max-width:390px){
+  .free-resources-section .resource-row{
+    grid-template-columns:20px 84px minmax(0,1fr) !important;
+    column-gap:5px !important;
+    padding:8px 0 !important;
+  }
+  .free-resources-section .resource-cover{
+    width:84px !important;
+    height:108px !important;
+    min-height:108px !important;
+  }
+  .free-resources-section .resource-main h3{font-size:10.5px !important;}
+  .free-resources-section .resource-main p{font-size:6.7px !important;}
+  .free-resources-section .resource-download{width:86px !important;font-size:5.8px !important;}
+}
+</style>
+<style id="bookora-mobile-free-resource-cover-height-final">
+/* FINAL: extend resource cover panel to the full card content height without cropping */
+@media (max-width:760px){
+  .free-resources-section .resource-row{
+    align-items:stretch !important;
+  }
+  .free-resources-section .resource-cover{
+    grid-row:1 / 3 !important;
+    align-self:stretch !important;
+    height:auto !important;
+    min-height:100% !important;
+    overflow:hidden !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+  }
+  .free-resources-section .resource-cover img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:contain !important;
+    object-position:center !important;
+  }
+  .free-resources-section .resource-cover-placeholder{
+    width:100% !important;
+    height:100% !important;
+  }
+}
+@media (max-width:390px){
+  .free-resources-section .resource-cover{
+    grid-row:1 / 3 !important;
+    height:auto !important;
+    min-height:100% !important;
+  }
+}
+</style>
+<style id="bookora-mobile-free-resource-remove-numbers-final">
+/* FINAL: remove resource numbers and let the cover occupy their former column */
+@media (max-width:760px){
+  .free-resources-section .resource-row{
+    grid-template-columns:88px minmax(0,1fr) !important;
+    column-gap:7px !important;
+  }
+  .free-resources-section .resource-number{
+    display:none !important;
+  }
+  .free-resources-section .resource-cover{
+    grid-column:1 !important;
+    grid-row:1 / 3 !important;
+    width:88px !important;
+    align-self:stretch !important;
+    height:auto !important;
+    min-height:108px !important;
+  }
+  .free-resources-section .resource-main{
+    grid-column:2 !important;
+    grid-row:1 !important;
+  }
+  .free-resources-section .resource-download{
+    grid-column:2 !important;
+    grid-row:2 !important;
+  }
+}
+@media (max-width:390px){
+  .free-resources-section .resource-row{
+    grid-template-columns:84px minmax(0,1fr) !important;
+    column-gap:6px !important;
+  }
+  .free-resources-section .resource-cover{
+    width:84px !important;
+    min-height:104px !important;
+  }
+}
+</style>
+<style id="bookora-final-three-changes-only">
+/* FINAL 3 CHANGES ONLY — mobile: smaller product titles, fix free-resource overlap, enlarge download button */
+@media (max-width:760px){
+  /* 1) Smaller product titles only */
+  .store-book-content h3{
+    font-size:10px !important;
+    line-height:1.05 !important;
+  }
+  /* Free-resource overlap fix — keep the existing visual sizes otherwise */
+  .free-resources-section .resource-row{
+    display:grid !important;
+    grid-template-columns:88px minmax(0,1fr) !important;
+    grid-template-rows:auto auto !important;
+    column-gap:7px !important;
+    row-gap:7px !important;
+    align-items:stretch !important;
+    height:auto !important;
+    min-height:0 !important;
+    overflow:visible !important;
+  }
+  .free-resources-section .resource-number{display:none !important;}
+  .free-resources-section .resource-cover{
+    grid-column:1 !important;
+    grid-row:1 / 3 !important;
+    width:88px !important;
+    height:auto !important;
+    min-height:100% !important;
+    align-self:stretch !important;
+    overflow:hidden !important;
+  }
+  .free-resources-section .resource-cover img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:contain !important;
+    object-position:center !important;
+  }
+  .free-resources-section .resource-main{
+    grid-column:2 !important;
+    grid-row:1 !important;
+    min-width:0 !important;
+    min-height:0 !important;
+    height:auto !important;
+    overflow:hidden !important;
+  }
+  .free-resources-section .resource-download{
+    grid-column:2 !important;
+    grid-row:2 !important;
+    justify-self:start !important;
+    align-self:start !important;
+    width:110px !important;
+    min-height:28px !important;
+    height:28px !important;
+    padding:7px 8px !important;
+    margin:0 !important;
+    font-size:7.5px !important;
+    line-height:1 !important;
+    white-space:nowrap !important;
+  }
+}
+@media (max-width:390px){
+  .store-book-content h3{font-size:9.5px !important;}
+  .free-resources-section .resource-row{grid-template-columns:84px minmax(0,1fr) !important;column-gap:6px !important;}
+  .free-resources-section .resource-cover{width:84px !important;}
+  .free-resources-section .resource-download{width:106px !important;min-height:27px !important;height:27px !important;font-size:7.2px !important;}
+}
+
+/* FINAL CSS CLEANUP: consistent category headings and visible resource numbers */
+.store-category-heading > div {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 14px !important;
+  min-width: 0;
+}
+.store-category-heading .number {
+  display: inline-block !important;
+  flex: 0 0 auto !important;
+  align-self: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: clamp(2.4rem, 4.2vw, 3.4rem) !important;
+  line-height: .95 !important;
+  font-weight: 900 !important;
+  letter-spacing: -2px !important;
+  color: #f2b300 !important;
+  transform: none !important;
+}
+.store-category-heading h2 {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: clamp(2.4rem, 4.2vw, 3.4rem) !important;
+  line-height: .95 !important;
+  font-weight: 900 !important;
+  letter-spacing: -2px !important;
+  color: #fff !important;
+}
+.free-resources-section .resource-number {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  border: 1px solid rgba(242,179,0,.6) !important;
+  border-radius: 50% !important;
+  color: #f2b300 !important;
+  font-size: 17px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
+  text-align: center !important;
+  opacity: 1 !important;
+}
+.start-section .container .path-grid {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: stretch !important;
+  gap: 14px !important;
+  width: 100% !important;
+  margin: 32px auto 0 !important;
+  float: none !important;
+  flex-wrap: wrap !important;
+}
+.start-section .container .path-grid .path-card {
+  flex: 0 1 255px !important;
+  width: 255px !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+@media (max-width:760px) {
+  .store-category-heading > div {
+    align-items: baseline !important;
+    gap: 9px !important;
+  }
+  .store-category-heading .number,
+  .store-category-heading h2 {
+    font-size: clamp(1.8rem, 7vw, 2.25rem) !important;
+    letter-spacing: -1px !important;
+  }
+  .free-resources-section .resource-row {
+    grid-template-columns: 42px 84px minmax(0,1fr) !important;
+    column-gap: 7px !important;
+  }
+  .free-resources-section .resource-number {
+    display: flex !important;
+    grid-column: 1 !important;
+    grid-row: 1 / 3 !important;
+    align-self: center !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    font-size: 13px !important;
+  }
+  .free-resources-section .resource-cover {
+    grid-column: 2 !important;
+    grid-row: 1 / 3 !important;
+    width: 84px !important;
+  }
+  .free-resources-section .resource-main {
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+  }
+  .free-resources-section .resource-download {
+    grid-column: 3 !important;
+    grid-row: 2 !important;
+  }
+  .start-section .container .path-grid {
+    flex-direction: row !important;
+    align-items: stretch !important;
+  }
+}
+@media (max-width:580px) {
+  .start-section .container .path-grid {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .start-section .container .path-grid .path-card {
+    width: 100% !important;
+    max-width: 360px !important;
+    flex-basis: auto !important;
+  }
+}
+/* BookOra — clean quantity controls */
+.quantity-controls,
+.quantity-selector,
+.cart-quantity {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+}
+
+/* Plus and minus buttons */
+.quantity-controls button,
+.quantity-selector button,
+.cart-quantity button {
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  padding: 0 !important;
+  border: 1px solid #f2b300 !important;
+  border-radius: 50% !important;
+  background: #151515 !important;
+  color: #f2b300 !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: background 0.2s ease, color 0.2s ease !important;
+}
+
+.quantity-controls button:hover,
+.quantity-selector button:hover,
+.cart-quantity button:hover {
+  background: #f2b300 !important;
+  color: #050505 !important;
+}
+
+/* Quantity number inside a circle */
+.quantity-controls span,
+.quantity-selector span,
+.cart-quantity span {
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  border: 1px solid #f2b300 !important;
+  border-radius: 50% !important;
+  background: #f2b300 !important;
+  color: #050505 !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+
+
+
+/* FINAL FIX — quantity controls used inside bookstore product buttons */
+.store-buy-btn.bookora-added {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 14px !important;
+  width: 100% !important;
+  min-height: 46px !important;
+  height: auto !important;
+  padding: 6px 12px !important;
+  background: #111 !important;
+  color: #fff !important;
+  border: 1px solid #f2b300 !important;
+  border-radius: 9px !important;
+  box-shadow: inset 0 0 0 1px rgba(242,179,0,.08) !important;
+  white-space: nowrap !important;
+}
+.store-buy-btn.bookora-added .qty-minus,
+.store-buy-btn.bookora-added .qty-plus {
+  display: inline-flex !important;
+  flex: 0 0 32px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 32px !important;
+  min-width: 32px !important;
+  height: 32px !important;
+  padding: 0 !important;
+  border: 1.5px solid #f2b300 !important;
+  border-radius: 50% !important;
+  background: #202020 !important;
+  color: #f2b300 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 23px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  transition: background .18s ease, color .18s ease, transform .18s ease !important;
+}
+.store-buy-btn.bookora-added .qty-minus:hover,
+.store-buy-btn.bookora-added .qty-plus:hover {
+  background: #f2b300 !important;
+  color: #050505 !important;
+  transform: scale(1.06);
+}
+.store-buy-btn.bookora-added .qty-value {
+  display: inline-flex !important;
+  flex: 0 0 34px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 34px !important;
+  min-width: 34px !important;
+  height: 34px !important;
+  padding: 0 !important;
+  border: 2px solid #f2b300 !important;
+  border-radius: 50% !important;
+  background: #f2b300 !important;
+  color: #050505 !important;
+  font-size: 15px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  font-variant-numeric: tabular-nums !important;
+}
+.store-buy-btn.bookora-added:focus-visible .qty-minus,
+.store-buy-btn.bookora-added:focus-visible .qty-plus {
+  outline: 2px solid #fff !important;
+  outline-offset: 3px !important;
+}
+@media (max-width: 760px) {
+  .store-buy-btn.bookora-added {
+    min-height: 24px !important;
+    height: auto !important;
+    margin-top: 2px !important;
+    padding: 3px 4px !important;
+    gap: 8px !important;
+    border-radius: 6px !important;
+  }
+  .store-buy-btn.bookora-added .qty-minus,
+  .store-buy-btn.bookora-added .qty-plus {
+    flex-basis: 20px !important;
+    width: 20px !important;
+    min-width: 20px !important;
+    height: 20px !important;
+    font-size: 16px !important;
+  }
+  .store-buy-btn.bookora-added .qty-value {
+    flex-basis: 22px !important;
+    width: 22px !important;
+    min-width: 22px !important;
+    height: 22px !important;
+    font-size: 11px !important;
+  }
+}
+
+
+/* BOOKORA FINAL DESKTOP PRODUCT WALL — 3 columns, taller full-cover images.
+   Desktop-only override. Existing mobile/tablet CSS below 1061px is untouched. */
+@media (min-width: 1061px) {
+  .store-book-grid,
+  .digital-products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 20px 20px !important;
+    align-items: start !important;
+  }
+  .store-book-grid .store-book-card,
+  .digital-products-grid .store-book-card,
+  .digital-products-grid .digital-product-card {
+    position: relative;
+    min-width: 0;
+    height: auto !important;
+    overflow: hidden;
+    border-radius: 10px !important;
+    transition: transform .22s ease, filter .22s ease, opacity .22s ease, box-shadow .22s ease;
+    cursor: pointer;
+  }
+  .store-book-grid .store-book-image,
+  .digital-products-grid .store-book-image {
+    height: 285px !important;
+    min-height: 285px !important;
+    aspect-ratio: auto !important;
+    overflow: hidden;
+    background: #101010;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .store-book-grid .store-book-image img,
+  .digital-products-grid .store-book-image img {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    transition: transform .25s ease;
+  }
+  .store-book-grid .store-book-content,
+  .digital-products-grid .store-book-content {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 12px 13px 13px !important;
+  }
+  /* Keep cards compact, but always show price, offer price and Add to Cart. */
+  .store-book-grid .store-book-content .type,
+  .store-book-grid .store-book-content p,
+  .digital-products-grid .store-book-content .type,
+  .digital-products-grid .store-book-content p {
+    display: none !important;
+  }
+  .store-book-grid .store-book-content .price-row,
+  .digital-products-grid .store-book-content .price-row {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 7px !important;
+    margin: 10px 0 9px !important;
+    min-height: 24px;
+  }
+  .store-book-grid .store-book-content .store-buy-btn,
+  .digital-products-grid .store-book-content .store-buy-btn {
+    display: block !important;
+    width: 100% !important;
+    min-height: 36px !important;
+    margin: 0 !important;
+    padding: 9px 12px !important;
+    font-size: 11px !important;
+    line-height: 1.2 !important;
+  }
+  .store-book-grid .store-book-content .offer-tag,
+  .digital-products-grid .store-book-content .offer-tag {
+    font-size: 9px !important;
+    padding: 4px 7px !important;
+  }
+  .store-book-grid .store-book-content h3,
+  .digital-products-grid .store-book-content h3 {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 0 !important;
+    margin: 0 !important;
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+    font-weight: 700 !important;
+    text-align: left;
+  }
+  .store-book-grid .store-book-card:hover,
+  .digital-products-grid .store-book-card:hover,
+  .digital-products-grid .digital-product-card:hover {
+    z-index: 5;
+    transform: translateY(-3px) scale(1.035);
+    box-shadow: 0 12px 35px rgba(0,0,0,.55), 0 0 0 1px rgba(242,179,0,.45);
+  }
+  .store-book-grid:hover .store-book-card:not(:hover),
+  .digital-products-grid:hover .store-book-card:not(:hover),
+  .digital-products-grid:hover .digital-product-card:not(:hover) {
+    filter: blur(1.2px) brightness(.62);
+  }
+}
+
+/* Focused product preview. The source card and all existing cart/payment code stay intact. */
+.bookora-product-preview-backdrop {
+  position: fixed !important; inset: 0 !important; z-index: 2147483000 !important;
+  display: flex; align-items: center; justify-content: center;
+  box-sizing: border-box; width: 100vw; height: 100vh; height: 100dvh;
+  margin: 0 !important; padding: 24px; background: rgba(0,0,0,.70);
+  backdrop-filter: blur(9px); -webkit-backdrop-filter: blur(9px);
+}
+.bookora-product-preview {
+  position: relative !important; display: grid; grid-template-columns: minmax(220px, 42%) minmax(260px, 1fr);
+  gap: 25px; width: min(860px, 92vw); max-height: min(82vh, 760px); overflow: auto;
+  padding: 24px; border: 1px solid rgba(242,179,0,.55); border-radius: 16px;
+  color: #f7f3e8; background: linear-gradient(145deg,#171717,#050505);
+  box-shadow: 0 30px 100px rgba(0,0,0,.7), 0 0 45px rgba(242,179,0,.12);
+}
+.bookora-product-preview-cover { width: 100%; max-height: 65vh; object-fit: contain; align-self: start; border-radius: 8px; background: #101010; }
+.bookora-product-preview-copy { min-width: 0; align-self: center; }
+.bookora-product-preview-copy .type { display: block; margin-bottom: 10px; color: #f2b300; font-size: 10px; font-weight: 800; letter-spacing: 2px; }
+.bookora-product-preview-copy h2 { margin: 0 35px 14px 0; color: #fff; font: 700 clamp(23px,2.5vw,34px)/1.12 Georgia,serif; }
+.bookora-product-preview-copy p { color: #d0d0d0; font-size: 14px; line-height: 1.65; }
+.bookora-product-preview-copy .price-row { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin:18px 0; }
+.bookora-product-preview-copy .store-buy-btn { display:block !important; width:100%; margin-top:12px; }
+.bookora-preview-close { position:absolute; top:10px; right:12px; z-index:2; width:36px; height:36px; border:1px solid #555; border-radius:50%; background:#111; color:#fff; font-size:24px; line-height:1; cursor:pointer; }
+@media (max-width: 760px) {
+  .bookora-product-preview-backdrop { padding: 12px; }
+  .bookora-product-preview { display:block; width:100%; max-height:90vh; padding:18px; }
+  .bookora-product-preview-cover { display:block; width:auto; max-width:100%; height: min(38vh,300px); margin:0 auto 18px; }
+}
+
+
+/* BookOra — compact floating cart */
+#floatingCart,
+.floating-cart,
+.bookora-floating-cart {
+  position: fixed !important;
+  right: 16px !important;
+  top: 50% !important;
+  bottom: auto !important;
+  left: auto !important;
+  transform: translateY(-50%) !important;
+  z-index: 9999 !important;
+
+  width: 58px !important;
+  height: 58px !important;
+  min-width: 58px !important;
+  min-height: 58px !important;
+  padding: 5px !important;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+
+  color: #F5B800 !important;
+  background: #0B0B0B !important;
+  border: 2px solid #F5B800 !important;
+  border-radius: 50% !important;
+  box-shadow: 0 3px 14px rgba(245, 184, 0, 0.22) !important;
+
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+#floatingCart:hover,
+.floating-cart:hover,
+.bookora-floating-cart:hover {
+  box-shadow: 0 4px 18px rgba(245, 184, 0, 0.4) !important;
+  border-color: #FFD95A !important;
+}
+
+/* Keep the cart count badge compact */
+#floatingCart .cart-count,
+.floating-cart .cart-count,
+.bookora-floating-cart .cart-count {
+  position: absolute;
+  top: -5px;
+  right: -4px;
+  min-width: 19px;
+  height: 19px;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #080808;
+  background: #F5B800;
+  border: 1px solid #080808;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* Prevent hover effects from enlarging the cart */
+@media (max-width: 600px) {
+  #floatingCart,
+  .floating-cart,
+  .bookora-floating-cart {
+    right: 10px !important;
+    width: 52px !important;
+    height: 52px !important;
+    min-width: 52px !important;
+    min-height: 52px !important;
+  }
+}
+
+
+</style>
+<script>
+/* BookOra desktop product preview. Click a product card to focus it; click outside or close to return. */
+(function () {
+  if (window.__bookoraProductPreviewInstalled) return;
+  window.__bookoraProductPreviewInstalled = true;
+  let backdrop = null;
+  function closePreview() {
+    if (backdrop) { backdrop.remove(); backdrop = null; document.body.style.overflow = ''; }
+  }
+  function openPreview(card) {
+    closePreview();
+    const image = card.querySelector('.store-book-image img');
+    const content = card.querySelector('.store-book-content');
+    if (!content) return;
+    backdrop = document.createElement('div');
+    backdrop.className = 'bookora-product-preview-backdrop';
+    /* Force the preview to the viewport, not the end of the document flow. */
+    Object.assign(backdrop.style, {
+      position: 'fixed', inset: '0', width: '100vw', height: '100vh',
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      boxSizing: 'border-box', zIndex: '2147483000', margin: '0', padding: '24px'
+    });
+    backdrop.setAttribute('role','dialog');
+    backdrop.setAttribute('aria-modal','true');
+    backdrop.setAttribute('aria-label','Product details');
+    const panel = document.createElement('div');
+    panel.className = 'bookora-product-preview';
+    Object.assign(panel.style, { position: 'relative', margin: 'auto', maxHeight: 'min(82vh, 760px)', overflow: 'auto' });
+    const close = document.createElement('button');
+    close.className = 'bookora-preview-close'; close.type = 'button'; close.setAttribute('aria-label','Close product preview'); close.textContent = '×';
+    close.addEventListener('click', closePreview);
+    panel.appendChild(close);
+    if (image && image.src) {
+      const cover = document.createElement('img'); cover.className = 'bookora-product-preview-cover'; cover.src = image.src; cover.alt = image.alt || 'Product cover'; panel.appendChild(cover);
+    }
+    const copy = document.createElement('div'); copy.className = 'bookora-product-preview-copy';
+    const type = content.querySelector('.type'); if (type) copy.appendChild(type.cloneNode(true));
+    const title = content.querySelector('h3'); if (title) { const h = document.createElement('h2'); h.textContent = title.textContent.trim(); copy.appendChild(h); }
+    content.querySelectorAll('p').forEach(p => copy.appendChild(p.cloneNode(true)));
+    const price = content.querySelector('.price-row'); if (price) copy.appendChild(price.cloneNode(true));
+    const buy = content.querySelector('.store-buy-btn');
+    if (buy) {
+      const buyClone = buy.cloneNode(true);
+      buyClone.addEventListener('click', function (event) { event.stopPropagation(); closePreview(); });
+      copy.appendChild(buyClone);
+    }
+    panel.appendChild(copy); backdrop.appendChild(panel); document.body.appendChild(backdrop); document.body.style.overflow = 'hidden';
+    backdrop.addEventListener('click', function (event) { if (event.target === backdrop) closePreview(); });
+    close.focus();
+  }
+  document.addEventListener('click', function (event) {
+    if (window.matchMedia('(max-width: 1060px)').matches) return;
+    const card = event.target.closest('.store-book-grid .store-book-card, .digital-products-grid .store-book-card, .digital-products-grid .digital-product-card');
+    if (!card) return;
+    if (event.target.closest('button, a, input, select, textarea')) return;
+    openPreview(card);
+  });
+  document.addEventListener('keydown', function (event) { if (event.key === 'Escape') closePreview(); });
+})();
+</script>
+<a aria-label="Open shopping cart, 0 items" class="bookora-floating-cart" href="cart.html" title="Open cart">
+<span aria-hidden="true" class="floating-cart-icon">🛒</span>
+<span class="floating-cart-label">CART</span>
+<span aria-live="polite" class="floating-cart-count" id="floatingCartCount">0</span>
+</a>
+</body>
+</html>

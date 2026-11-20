@@ -50,6 +50,210 @@
     <script src="js/ajuverse-master-enhance.js?v=20260920-master" defer></script>
 
     <link rel="stylesheet" href="css/ajuverse-nova.css?v=1">
+
+    <link rel="stylesheet" href="css/ajuverse-selected-work-desktop.css?v=20261015-compact-v2">
+
+<style id="ajuverse-start-section-centering-fix">
+/* START HERE — center the section content without changing other home sections */
+@media (min-width: 761px) {
+  body.home-page .start-section > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body.home-page .start-section .section-title {
+    width: min(100%, 900px);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  
+
+body.home-page #start.start-section > .container > .path-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    gap: 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 32px auto 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+body.home-page #start.start-section .path-card {
+    flex: 0 1 255px !important;
+    width: 255px !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+@media (max-width: 580px) {
+    body.home-page #start.start-section > .container > .path-grid {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    body.home-page #start.start-section .path-card {
+        flex-basis: auto !important;
+        width: 100% !important;
+        max-width: 360px !important;
+    }
+}
+
+
+  body.home-page .start-section .path-card {
+    text-align: left;
+  }
+}
+@media (max-width: 760px) {
+  body.home-page .start-section .section-title,
+  body.home-page .start-section .path-grid {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+</style>
+
+<style id="bookora-split-navigation-fix">.main-nav{flex-wrap:wrap}@media(max-width:760px){.main-nav{grid-template-rows:repeat(2,auto);grid-template-columns:repeat(3,minmax(0,1fr))}.main-nav a{min-height:34px}}
+
+
+/* ========================================
+   UNIFIED BRAND HEADER — AJUVERSE + BOOKORA
+   ======================================== */
+
+.site-header .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.site-header .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.site-header .brand img {
+    width: 72px;
+    height: 72px;
+    flex: 0 0 72px;
+    object-fit: contain;
+    display: block;
+}
+
+.site-header .brand > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+}
+
+.site-header .brand strong {
+    margin: 0;
+    font-size: 36px;
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    color: #fff;
+}
+
+.site-header .brand span {
+    display: block;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.3;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #a8a8a8;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+    .site-header .brand img {
+        width: 64px;
+        height: 64px;
+        flex-basis: 64px;
+    }
+
+    .site-header .brand strong {
+        font-size: 32px;
+    }
+
+    .site-header .brand span {
+        font-size: 14px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+    .site-header .header-inner {
+        gap: 12px;
+    }
+
+    .site-header .brand {
+        gap: 9px;
+    }
+
+    .site-header .brand img {
+        width: 52px;
+        height: 52px;
+        flex-basis: 52px;
+    }
+
+    .site-header .brand strong {
+        font-size: 27px;
+        letter-spacing: -0.5px;
+    }
+
+    .site-header .brand span {
+        font-size: 12px;
+        letter-spacing: 0.4px;
+    }
+}
+
+/* Very small mobile screens */
+@media (max-width: 390px) {
+    .site-header .brand img {
+        width: 46px;
+        height: 46px;
+        flex-basis: 46px;
+    }
+
+    .site-header .brand strong {
+        font-size: 24px;
+    }
+
+    .site-header .brand span {
+        font-size: 11px;
+    }
+}
+
+
+
+
+
+/* AjuVerse header — match BookOra's bright white brand name */
+body.home-page .site-header .brand-text .brand-name {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    opacity: 1 !important;
+    filter: none !important;
+    text-shadow: none !important;
+    font-weight: 800 !important;
+}
+
+
+</style>
 </head>
 
 
@@ -99,9 +303,10 @@
                 Home
             </a>
 
-           <a href="bookstore.html">Bookstore</a>
+           <a href="BookOra-Digital.html">BookOra Digital</a>
+            <a href="BookOra-Printable.html">BookOra Printable</a>
 
-            <a href="bookstore.html#free-resources">
+            <a href="BookOra-Digital.html#free-resources">
                   Free Resources
                 </a>
 <a href="academy.html">
@@ -332,7 +537,7 @@
                 </p>
 
                 <a
-                    href="bookstore.html"
+                    href="BookOra-Digital.html"
                     class="text-link"
 >
                     Buy Products →
@@ -498,7 +703,7 @@
                         for creators and learners.
                     </p>
 
-                    <a href="bookstore.html">
+                    <a href="BookOra-Digital.html">
                         View Project →
                     </a>
 
@@ -639,7 +844,7 @@
             <div class="cta-buttons">
 
                 <a
-                    href="bookstore.html"
+                    href="BookOra-Digital.html"
                     class="btn btn-primary"
                 >
                     Explore Products
@@ -716,19 +921,19 @@
                 </li>
 
                 <li>
-                    <a href="books.html">
+                    <a href="BookOra-Printable.html">
                         Books
                     </a>
                 </li>
 
                 <li>
-                    <a href="bookstore.html">
+                    <a href="BookOra-Digital.html">
                         Store
                     </a>
                 </li>
 
                 <li>
-                    <a href="bookstore.html#free-resources">
+                    <a href="BookOra-Digital.html#free-resources">
                            Free Resources
                         </a>
                 </li>
@@ -750,19 +955,19 @@
             <ul>
 
                 <li>
-    <a href="bookstore.html">Books</a>
+    <a href="BookOra-Printable.html">Printed Books</a>
 </li>
 
 <li>
-    <a href="bookstore.html#free-resources">PDFs</a>
+    <a href="BookOra-Digital.html#free-resources">PDFs</a>
 </li>
 
 <li>
-    <a href="bookstore.html#free-resources">Documents</a>
+    <a href="BookOra-Digital.html#free-resources">Documents</a>
 </li>
 
 <li>
-    <a href="bookstore.html">Digital Products</a>
+    <a href="BookOra-Digital.html">Digital Products</a>
 </li>
 
             </ul>
